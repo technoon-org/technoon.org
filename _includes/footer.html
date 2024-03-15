@@ -3,21 +3,18 @@
   <div class="wrapper">
 
 <!--     <h2 class="footer-heading">{{ site.schoolname }}</h2> -->
-         <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
- 
+    <div class="footer-col-wrapper">
 
-         <p class="text">
-{{ site.address | newline_to_br  }}
-      </div>
-
-      <div class="footer-col  footer-col-2">
+      <div class="footer-col" style="flex: 1;">
        <ul class="social-media-list">
-     
 
-          {% if site.github_username %}
-
-{% endif %}
+         {% if site.github_username %}
+  <li>
+    <a href="https://github.com/{{ site.github_username }}">
+      <i class="fab fa-github" style="color:gray"></i> {{ site.github_username }}
+    </a>
+  </li>
+         {% endif %}
 
           {% if site.twitter_username %}
   <li>
@@ -53,7 +50,7 @@
 
 
 
-       
+
         </ul>
       </div>
     </div>

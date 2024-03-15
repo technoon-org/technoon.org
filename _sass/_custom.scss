@@ -1,0 +1,71 @@
+.site-title, .site-title a {
+    letter-spacing: initial;
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+}
+
+h2 {
+    margin-top: 1.2em;
+}
+
+.instructor-list {
+
+    .image--cover-container {
+        width: 100%;
+        display: flex;
+        float: initial;
+
+        .profile-pic {
+            width: 20%;
+        }
+
+        .bio {
+            width: 80%;
+            text-align: left;
+            margin-left: 2em;
+            font-size: 0.9em;
+        }
+
+        @media only screen and (max-width: 600px) {
+            display: block;
+
+            .profile-pic {
+                width: 100%;
+            }
+            .bio {
+                width: 100%;
+                margin-left: 0;
+                text-align: center;
+            }
+        }
+
+    }
+
+}
+
+.footer-col-wrapper {
+    display: flex;
+}
+
+.register-block {
+    background: $primary-color;
+    color: white;
+    padding: 1em;
+    border-radius: 1em;
+    font-size: 1.1em;
+
+    h3 {
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+
+    ul {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

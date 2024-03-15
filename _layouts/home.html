@@ -4,14 +4,19 @@ layout: default
 
 <div class="home">
 
-    <h1>{{ site.course_name }} <span style="font-size: 20px;color: #0006;">/ {{ site.course_semester }} </span></h1>
+    {% include register_block.html %}
+    <br>
 
     {% include announcements.html %}
-    <br />
+    <br>
 
+    <h1>About {{ site.course_name }} <span style="font-size: 20px;color: #0006;">{% if site.course_semester %}/ {{ site.course_semester }} {% endif %}</span></h1>
+
+    {% if site.course_description  %}
     <h2>Course Description</h2>
     <p>{{ site.course_description }}</p>
-    
+    {% endif %}
+
     {{ content }}
 
     {% if site.data.previous_offering and site.data.previous_offering.offerings and site.data.previous_offering.offerings.size > 0 %}
@@ -23,30 +28,37 @@ layout: default
     </ul>
     {% endif %}
 
-    <br>
     <div>
-        <div style="width:35%; float: left">
+        {% if site.data.people.instructors %}
+        <div>
             <!-- <h2>Instructors</h2> -->
             <!-- <div class="image--cover-container">
                 <img src="{{site.data.people.instructor.profile_pic | prepend: site.baseurl }}" class="image--cover">
                 <p>{{site.data.people.instructor.name}}</p>
             </div> -->
 
-            <div class="profile-pic-gallary ">
-                <h2>Instructors</h2>
-                {% for ins in site.data.people.instructors %}
-                <div class="image--cover-container">
-                    <img src="{{ins.profile_pic | prepend: site.baseurl }}" class="image--cover">
-                    {% if ins.webpage %}
-                    <p><a href="{{ ins.webpage }}">{{ins.name}}</a></p>
-                    {% else %}
-                    <p>{{ins.name}}</p>
-                    {% endif %}
+            <div class="profile-pic-gallary">
+                <h2>Organisers</h2>
+                <div class="instructor-list">
+                    {% for ins in site.data.people.instructors %}
+                    <div class="image--cover-container">
+                        <div class="profile-pic">
+                            <img src="{{ins.profile_pic | prepend: site.baseurl }}" class="image--cover">
+                            {% if ins.webpage %}
+                            <p><a href="{{ ins.webpage }}">{{ins.name}}</a></p>
+                            {% else %}
+                            <p>{{ins.name}}</p>
+                            {% endif %}
+                        </div>
+                        <p class="bio">{{ins.bio}}</p>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
+        {% endif %}
 
+        {% if site.data.people.teaching_assistants %}
         <div style="width:65%; float: left">
             <div class="profile-pic-gallary ">
                 <h2>Teaching Assistants</h2>
@@ -62,5 +74,7 @@ layout: default
                 {% endfor %}
             </div>
         </div>
+        {% endif  %}
     </div>
+
 </div>
