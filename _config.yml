@@ -1,18 +1,18 @@
 # Site settings
-course_name: PLACEHOLDER
+course_name: TechNoon
 course_description: null
 course_semester: null
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://PLACEHOLDER.github.io/" # the base hostname & protocol for your site
+url: "http://technoon.org/" # the base hostname & protocol for your site
 
-title: PLACEHOLDER
-description: PLACEHOLDER
+title: TechNoon
+description: Lunchtime technical training by industry for industry
 
 schoolname: null
 schoolurl: null
 twitter_username: null
-github_username: PLACEHOLDER
+github_username: technoon-org
 
 address: null
 

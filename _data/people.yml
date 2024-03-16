@@ -1,3 +1,34 @@
-instructors: []
+instructors:
+  - name: Dr Grant Paton-Simpson
+    profile_pic: /_images/profile_pictures/grant.jpeg
+
+    bio: "Grant has been an enthusiastic user of Python for many years
+       and has delivered numerous conference talks, meetup
+       presentations, and training sessions on the language. Grant's
+       open source statistics application, SOFA Statistics (over
+       300,000 downloads to date) is completely written in Python as
+       is the forthcoming replacement SOFA Lite. More recently, Grant
+       has collaborated with Ben Denham to launch the When Of Python
+       initiative aimed at ensuring Python lives up to its original
+       promise of simplicity and elegance. Grant currently works in
+       the Tech Insights team at 2degrees and was part of the Data
+       Science Team at Qrious where he processed hundreds of billions
+       of records using PySpark and Python."
+
+  - name: Dr Ben Denham
+    profile_pic: /_images/profile_pictures/ben.jpeg
+
+    bio: "Ben has a passion for teaching others how to get stuff done
+       with technology; he has run training courses and co-presented
+       training courses on a variety of technologies for software
+       development. Ben currently consults as a data scientist
+       applying machine learning and analytical techniques to help
+       stakeholders get more value from their datasets in a variety of
+       contexts. For his recently completed PhD thesis, in
+       collaboration with Fisher & Paykel Appliances, Ben developed
+       machine learning algorithms that can be applied despite common
+       data deficiencies. Ben has over 12 years experience in software
+       development and he previously worked as the original software
+       architect for NZ security software startup DataMasque."
 
 teaching_assistants: null

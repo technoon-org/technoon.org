@@ -1,7 +1,20 @@
 items:
-- url: /
-  name: Home
-  icon_class: fa fa-home fa-lg
+
+- url: /courses/
+  name: Courses
+  icon_class: fas fa-calendar
+
+- url: /get-involved/
+  name: Get Involved
+  icon_class: fas fa-lightbulb
+
+- url: /manifesto/
+  name: Manifesto
+  icon_class: fas fa-feather
+
+- url: /who-we-are/
+  name: Who We Are
+  icon_class: fas fa-user
 
 - url: /contact/
   name: Contact Us

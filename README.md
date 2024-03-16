@@ -1,4 +1,4 @@
-# Website Template
+# technoon.org
 
 ## How to test your website locally
 1. Install [Docker](https://docs.docker.com/engine/install/) and

@@ -1,7 +1,14 @@
-.site-title, .site-title a {
-    letter-spacing: initial;
-    font-family: Arial, sans-serif;
-    font-size: 1.5em;
+#logo {
+    margin-bottom: 12px;
+    @media only screen and (max-width: 600px) {
+        max-width: 80%;
+    }
+}
+
+.site-nav {
+    @media only screen and (max-width: 600px) {
+        right: 9px;
+    }
 }
 
 h2 {
