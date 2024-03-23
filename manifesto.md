@@ -19,11 +19,11 @@ Industry needs training in technical skills that is:
 * **Small weekly commitment**
   * People already in jobs are busy and can't usually devote long
     periods of time to skills training. TechNoon courses will usually
-    be between 3 and 15 sessions of 2-3 hours each (including
-    homework) depending on the topic. Given the practical emphasis of
-    TechNoon, it should be possible to split longer courses into
-    smaller, boot-camp sized courses, each with its own practical
-    focus.
+    have four sessions of 2-3 hours each (including homework)
+    depending on the topic. That seems to be the practical maximum
+    commitment we can expect. Given the practical emphasis of
+    TechNoon, it should be possible to split longer topics into
+    smaller courses, each with its own practical focus.
 * **With multiple sessions**
   * Unlike one-day workshops, TechNoon courses are delivered as
     multiple sessions interspersed with work so that learning can be

@@ -3,8 +3,9 @@ layout: home
 ---
 
 TechNoons are brief, free, industry-led, in-person training courses
-(3-15 sessions) run at lunchtimes for people in technical jobs wanting
-to improve their skills
+run at lunchtimes for people in technical jobs wanting to improve
+their skills. TechNoon courses will usually have four sessions of 2-3
+hours each (including homework).
 
 ![Class learning Python programming at Tower Insurance](_images/pynoon_tower.jpg)
 
