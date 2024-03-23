@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Manifesto
+title: The TechNoon Manifesto
 permalink: /manifesto/
 ---
 

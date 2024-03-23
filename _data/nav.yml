@@ -12,10 +12,10 @@ items:
   name: Manifesto
   icon_class: fas fa-feather
 
-- url: /who-we-are/
-  name: Who We Are
-  icon_class: fas fa-user
-
 - url: /contact/
   name: Contact Us
   icon_class: fas fa-envelope
+
+- url: /more/
+  name: More
+  icon_class: fas fa-sitemap

@@ -1,9 +1,15 @@
 ---
 layout: page
-title: Who We Are
-permalink: /who-we-are/
+title: More about TechNoon
+permalink: /more/
 ---
 
+* [Who We Are](#who-we-are)
+* [Resources](#resources)
+
+---
+
+## Who We Are
 
 {% if site.data.people.instructors %}
 <div>
@@ -50,3 +56,15 @@ permalink: /who-we-are/
     </div>
 </div>
 {% endif  %}
+
+---
+
+## Resources
+
+* [Auckland Tech Hub Challenges – TechNoon Solutions](/static-files/technoon_auckland-tech-hub.pdf){:target="_blank"}{:rel="noopener"}
+  * How TechNoon addresses the skills gap of the
+    [Auckland Tech Hub](https://aucklandchamber.co.nz/2024/01/25/three-sectors-can-transform-auckland-into-a-global-tech-hub-report/)
+    vision
+* [Boosting NZ Digital Skills - Slide Deck](/static-files/technoon_boosting-nz-digital-skills.pdf){:target="_blank"}{:rel="noopener"}
+  * Presentation on improving digital skills training in New Zealand -
+    ideas that led to the development of TechNoon.
