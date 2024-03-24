@@ -9,12 +9,16 @@ depending on community interest. Watch this space!
 
 ---
 
-## <img src="https://pynoon.github.io/_images/logo.svg" height="100"> [PyNoon](https://pynoon.github.io/){:target="_blank"}{:rel="noopener"}
+## <img src="https://pynoon.github.io/_images/logo.svg" height="100"> [PyNoon - Introductory Python Programming](https://pynoon.github.io/){:target="_blank"}{:rel="noopener"}
 
 PyNoon was originally run between November 2023 and March 2024 to
 up-skill people in the world’s most popular programming language:
 Python, which is used for automation, data science, web development,
 and much more.
+
+PyNoon covers the fundamentals of the Python programming language and
+how to use Python to analyse and plot tabular data (e.g. spreadsheets)
+and to interact with web services and AI models.
 
 **Visit the PyNoon website to register your interest in attending a
 future course:
@@ -35,5 +39,25 @@ participants will already know how to write basic SQL queries.
 
 **Register your interest by completing the [Sign Up
 Form](https://docs.google.com/forms/d/13CkfxWp7ZZVbQsJwtFcJ6err6JcqtRq9bU7JSx82izs/edit?ts=65f6602d){:target="_blank"}{:rel="noopener"}.**
+
+---
+
+## <img src="/_images/course-images/git-icon.svg" height="100" style="margin-right: 15px;"> [GitNoon - Confidently Track File Versions with Git](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJELIplfUF_v8_7cUw/viewform?usp=sf_link)
+
+The more important your code or your queries, the more important it is
+to store it safely and to be able to track all your changes. This is
+where Git comes in. Git is a powerful version control tool which is
+now industry-standard. This 4-session course starts from scratch,
+explaining why, and how you should use Git. No previous experience is
+required.
+
+**Register your interest by completing the [Sign Up
+Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJELIplfUF_v8_7cUw/viewform?usp=sf_link){:target="_blank"}{:rel="noopener"}.**
+
+<p style="font-size: 0.7em; font-style: italic;">
+    Git Logo by Jason Long is licensed under the
+    <a href="https://creativecommons.org/licenses/by/3.0/">Creative
+    Commons Attribution 3.0 Unported License</a>.
+</p>
 
 ---
