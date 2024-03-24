@@ -63,8 +63,10 @@ permalink: /more/
 
 * [Auckland Tech Hub Challenges – TechNoon Solutions](/static-files/technoon_auckland-tech-hub.pdf){:target="_blank"}{:rel="noopener"}
   * How TechNoon addresses the skills gap of the
-    [Auckland Tech Hub](https://aucklandchamber.co.nz/2024/01/25/three-sectors-can-transform-auckland-into-a-global-tech-hub-report/)
+    [Auckland Tech Hub](https://aucklandchamber.co.nz/2024/01/25/three-sectors-can-transform-auckland-into-a-global-tech-hub-report/){:target="_blank"}{:rel="noopener"}
     vision
+* [What can industry do to benefit from TechNoon?](/static-files/technoon_industry-action.pdf){:target="_blank"}{:rel="noopener"}
+  * Shareable slide with practical steps that business can take to benefit from TechNoon.
 * [Boosting NZ Digital Skills - Slide Deck](/static-files/technoon_boosting-nz-digital-skills.pdf){:target="_blank"}{:rel="noopener"}
   * Presentation on improving digital skills training in New Zealand -
     ideas that led to the development of TechNoon.

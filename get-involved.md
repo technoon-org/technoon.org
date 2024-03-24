@@ -12,19 +12,24 @@ Form](/contact) and we'll get back to you.
 
 # What can Industry do to support TechNoon?
 
-* **Supply training venues** - Some courses will be small and
-  specialised; others will be larger (the first PyNoon had nearly 40
-  trainees, three helpers, and two trainers). A variety of venues in
-  central locations will be needed - perhaps you can help.
-* **Supply trainers** - Support suitable staff to deliver training -
-  perhaps starting with a brief course and building up from there.
-  What would improve your organisation's own technical infrastructure
-  and practices most? Start there.
-* **Send trainees** - Encourage staff to upskill through TechNoon.
+* **Send trainees** - Encourage staff to up-skill through TechNoon -
   TechNoon is a lightweight, targeted, practical way of increasing the
-  productivity and motivation of technical staff. The question to ask
-  your staff at the end of a course is: "What did you improve as a
-  result?"
+  productivity and motivation of technical staff. At the end of a
+  course, ask your staff "what did you improve as a result?"
+* **Supply training venues** - Some courses will be small and
+  specialised; others will be larger (the first TechNoon Python course
+  had nearly 40 trainees, three helpers, and two trainers). A variety
+  of venues in central locations will be needed - perhaps you can
+  help.
+* **Supply trainers** - Support suitable staff to deliver training.
+  What would improve your technical infrastructure and practices most?
+  Start there. Message staff with a list of possible courses asking 1)
+  do you want to run any of them and 2) do you want to write and run a
+  course not on the list? Over time, more course materials will be
+  available for reuse.
+* **Promote your involvement** - Let everyone know about your
+  involvement in this exciting initiative. Promote your brand as a
+  desired workplace for tech talent.
 
 # Examples of possible courses
 
