@@ -9,7 +9,7 @@ depending on community interest. Watch this space!
 
 ---
 
-## <img src="https://pynoon.github.io/_images/logo.svg" height="100"> [PyNoon](https://pynoon.github.io/)
+## <img src="https://pynoon.github.io/_images/logo.svg" height="100"> [PyNoon](https://pynoon.github.io/){:target="_blank"}{:rel="noopener"}
 
 PyNoon was originally run between November 2023 and March 2024 to
 up-skill people in the world’s most popular programming language:
@@ -22,7 +22,7 @@ future course:
 
 ---
 
-## <img src="/_images/course-images/sql-hell.png" height="100" style="margin-right: 15px;"> Avoiding SQL Hell
+## <img src="/_images/course-images/sql-hell.png" height="100" style="margin-right: 15px;"> [SQLNoon - Avoiding SQL Hell](https://docs.google.com/forms/d/13CkfxWp7ZZVbQsJwtFcJ6err6JcqtRq9bU7JSx82izs/edit?ts=65f6602d){:target="_blank"}{:rel="noopener"}
 
 SQL queries are commonly mission critical for accurate reporting and
 analysis but all too often they are unintelligible, difficult to
