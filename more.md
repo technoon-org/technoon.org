@@ -70,3 +70,4 @@ permalink: /more/
 * [Boosting NZ Digital Skills - Slide Deck](/static-files/technoon_boosting-nz-digital-skills.pdf){:target="_blank"}{:rel="noopener"}
   * Presentation on improving digital skills training in New Zealand -
     ideas that led to the development of TechNoon.
+* [Guide for Organisers](/organisers)
