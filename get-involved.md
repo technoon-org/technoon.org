@@ -10,6 +10,11 @@ If you are wanting to get involved, or if you want to make a
 suggestion, please give us some brief details in the [TechNoon Contact
 Form](/contact) and we'll get back to you.
 
+# How can I run a TechNoon?
+
+We've created a [guide for organisers](/organisers) that takes you
+through everything you'll need to run your own course.
+
 # What can Industry do to support TechNoon?
 
 * **Send trainees** - Encourage staff to up-skill through TechNoon -

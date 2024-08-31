@@ -20,8 +20,10 @@ Contact Form](/contact) and we'll get back to you to find out more.
 We'd love to talk to you. Just fill in the [TechNoon Contact
 Form](/contact) and we'll get back to you to find out more. Read the
 [TechNoon Manifesto](/manifesto) first to get a feel for the core
-concepts of TechNoon. If a course on the topic has already been run
-there may be resources you could reuse.
+concepts of TechNoon, and then read our [guide for
+organisers](/organisers) to see what you'll need to run your own
+course. If a course on the topic has already been run there may be
+resources you could reuse.
 
 ## If your company wants to participate…
 
