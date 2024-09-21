@@ -1,0 +1,43 @@
+images:
+  - path: pynoon_2degrees.jpg
+    thumbnail_path: pynoon_2degrees_thumbnail.jpg
+    caption: PyNoon at 2degrees
+  - path: pynoon_tower.jpg
+    thumbnail_path: pynoon_tower_thumbnail.jpg
+    caption: PyNoon at Tower Insurance
+  - path: kiwipycon2024-1-large.jpg
+    thumbnail_path: kiwipycon2024-1-small.jpg
+    caption: Promoting PyNoon at Kiwi Pycon 2024. Photo by Kristina D.C. Hoeppner, CC BY-SA 2.0.
+  - path: kiwipycon2024-2-large.jpg
+    thumbnail_path: kiwipycon2024-2-small.jpg
+    caption: Promoting PyNoon at Kiwi Pycon 2024. Photo by Kristina D.C. Hoeppner, CC BY-SA 2.0.
+  - path: kiwipycon2024-3-large.jpg
+    thumbnail_path: kiwipycon2024-3-small.jpg
+    caption: Promoting PyNoon at Kiwi Pycon 2024. Photo by Kristina D.C. Hoeppner, CC BY-SA 2.0.
+  - path: kiwipycon2024-4-large.jpg
+    thumbnail_path: kiwipycon2024-4-small.jpg
+    caption: Promoting PyNoon at Kiwi Pycon 2024. Photo by Kristina D.C. Hoeppner, CC BY-SA 2.0.
+  - path: kiwipycon2024-5-large.jpg
+    thumbnail_path: kiwipycon2024-5-small.jpg
+    caption: Promoting PyNoon at Kiwi Pycon 2024. Photo by Kristina D.C. Hoeppner, CC BY-SA 2.0.
+  - path: kiwipycon2024-6-large.jpg
+    thumbnail_path: kiwipycon2024-6-small.jpg
+    caption: Promoting PyNoon at Kiwi Pycon 2024. Photo by Kristina D.C. Hoeppner, CC BY-SA 2.0.
+  - path: kiwipycon2024-7-large.jpg
+    thumbnail_path: kiwipycon2024-7-small.jpg
+    caption: Promoting PyNoon at Kiwi Pycon 2024. Photo by Kristina D.C. Hoeppner, CC BY-SA 2.0.
+  - path: kiwipycon2024-8-large.jpg
+    thumbnail_path: kiwipycon2024-8-small.jpg
+    caption: Promoting PyNoon at Kiwi Pycon 2024. Photo by Kristina D.C. Hoeppner, CC BY-SA 2.0.
+  - path: kiwipycon2024-9-large.jpg
+    thumbnail_path: kiwipycon2024-9-small.jpg
+    caption: Promoting PyNoon at Kiwi Pycon 2024. Photo by Kristina D.C. Hoeppner, CC BY-SA 2.0.
+  - path: kiwipycon2024-10-large.jpg
+    thumbnail_path: kiwipycon2024-10-small.jpg
+    caption: Promoting PyNoon at Kiwi Pycon 2024. Photo by Kristina D.C. Hoeppner, CC BY-SA 2.0.
+  - path: kiwipycon2024-11-large.jpg
+    thumbnail_path: kiwipycon2024-11-small.jpg
+    caption: Promoting PyNoon at Kiwi Pycon 2024. Photo by Kristina D.C. Hoeppner, CC BY-SA 2.0.
+  - path: kiwipycon2024-12-large.jpg
+    thumbnail_path: kiwipycon2024-12-small.jpg
+    caption: Promoting PyNoon at Kiwi Pycon 2024. Photo by Kristina D.C. Hoeppner, CC BY-SA 2.0.
