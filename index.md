@@ -69,6 +69,7 @@ programming training) before broadening out and PyNoon's logo is a
 cowboy snake logo. PyNoon is a reference to the classic movie *High
 Noon*, thus the Western, cowboy theme.
 
+## TechNoon in the wild
 
 <div id="nanogallery">
   {% for image in site.data.gallery.images %}
