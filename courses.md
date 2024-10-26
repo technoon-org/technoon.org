@@ -9,7 +9,7 @@ depending on community interest. Watch this space!
 
 ---
 
-## <img src="https://pynoon.github.io/_images/logo.svg" height="100"> [PyNoon - Introductory Python Programming](https://pynoon.github.io/){:target="_blank"}{:rel="noopener"}
+## <img src="https://pynoon.github.io/_images/cooper.svg" height="100"> [PyNoon - Introductory Python Programming](https://pynoon.github.io/){:target="_blank"}{:rel="noopener"}
 
 PyNoon was originally run between November 2023 and March 2024 to
 up-skill people in the world’s most popular programming language:
