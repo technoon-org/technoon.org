@@ -106,9 +106,9 @@ title: GitNoon Lesson 1
 | Lesson | Presentation             | Tutorial                         |
 |--------|--------------------------|----------------------------------|
 | **1**  | Intro to Git             | Tracking changes in Git          |
-| **2**  | Exploring History        | Working with remote repositories |
-| **3**  | Collaboration Strategies | Branching and merging            |
-| **4**  | Rewriting History        | Rebasing your branch             |
+| **2**  | Exploring history        | Working with remote repositories |
+| **3**  | Collaboration strategies | Branching and merging            |
+| **4**  | Rewriting history        | Rebasing your branch             |
 
 </div>
 
@@ -127,7 +127,7 @@ title: GitNoon Lesson 1
    * Use an editor that can preview Markdown, like VS Code
    * Try more Markdown syntax:
      [markdownguide.org/basic-syntax](https://markdownguide.org/basic-syntax/)
-   * Read some tips for good commit messages: https://www.gitkraken.com/learn/git/best-practices/git-commit-message
+   * Read some tips for good commit messages: [gitkraken.com/learn/git/best-practices/git-commit-message](https://www.gitkraken.com/learn/git/best-practices/git-commit-message)
 2. **Prepare for the next tutorial on remote repos**
    * Create an account on [github.com](https://github.com/)
    * Add an SSH key to your account: [docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)

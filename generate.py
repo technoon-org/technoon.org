@@ -81,11 +81,12 @@ Slides and tutorials for GitNoon.
             subprocess.run([
                 'pandoc',
                 '-s', '--embed-resources',
+                '--include-in-header', str(curriculum_dir / 'revealjs' / 'tutorial-head.html'),
                 '--css', str(curriculum_dir / 'revealjs' / 'tutorial.css'),
-                '-o', str(lesson_dir / 'tutorial_speaker_notes.html'),
+                '-o', str(lesson_dir / 'tutorial.html'),
                 str(lesson_dir / 'tutorial.md'),
             ], check=True)
-            lesson_links.append(f'[Tutorial Speaker Notes]({base_url}/{lesson_dir.name}/tutorial_speaker_notes.html)')
+            lesson_links.append(f'[Tutorial Speaker Notes]({base_url}/{lesson_dir.name}/tutorial.html)')
 
         lesson_link_bullets = '\n'.join([f'* {lesson_link}' for lesson_link in lesson_links])
         index_markdown += f'''
