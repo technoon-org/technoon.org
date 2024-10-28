@@ -23,4 +23,4 @@ title: GitNoon Lesson X
 ### Tutorial Objectives
 
 
-### Independent Work/Homework
+### Homework

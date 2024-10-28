@@ -118,7 +118,7 @@ title: GitNoon Lesson 1
 2. Create your first Git repository (aka repo)
 3. Track changes to some files
 
-### Independent Work/Homework
+### Homework
 
 <div style="font-size: 0.75em;">
 
@@ -127,6 +127,7 @@ title: GitNoon Lesson 1
    * Use an editor that can preview Markdown, like VS Code
    * Try more Markdown syntax:
      [markdownguide.org/basic-syntax](https://markdownguide.org/basic-syntax/)
+   * Read some tips for good commit messages: https://www.gitkraken.com/learn/git/best-practices/git-commit-message
 2. **Prepare for the next tutorial on remote repos**
    * Create an account on [github.com](https://github.com/)
    * Add an SSH key to your account: [docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
