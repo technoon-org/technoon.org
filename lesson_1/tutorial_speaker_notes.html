@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>GitNoon Lesson 1 - Tutorial</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">body {
+font-family: Arial, sans-serif;
+font-size: 16px;
+}
+pre {
+padding: 1em;
+border: 1px solid #333333;
+}
+blockquote {
+font-style: italic;
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">GitNoon Lesson 1 - Tutorial</h1>
+</header>
+<p>In this tutorial, you will learn how to use Git to track versions of
+your files in a personal project:</p>
+<ol type="1">
+<li>Configure Git on your machine</li>
+<li>Create your first Git repository (aka repo)</li>
+<li>Track changes to some files</li>
+</ol>
+<h2 id="configuring-git">Configuring Git</h2>
+<ul>
+<li>Before we start using Git, we’re going to set a few important
+configuration options.</li>
+<li>Open your terminal (“Git Bash” on Windows) and run each of the
+following configuration commands</li>
+<li><strong>For anyone new to using the command-line:</strong> type out
+one line at a time, then press the enter key to run the command</li>
+</ul>
+<p><strong>Set the name and email address that will be associated with
+your changes:</strong></p>
+<pre><code>git config --global user.name &quot;Your Name&quot;
+git config --global user.email &quot;your.email@example.com&quot;</code></pre>
+<p><strong>Use the nano command-line text editor (which we will use in
+this course):</strong></p>
+<pre><code>git config --global core.editor nano</code></pre>
+<p><strong>Use <code>main</code> as the name of the default branch (for
+consistency across versions of Git):</strong></p>
+<pre><code>git config --global init.defaultBranch main</code></pre>
+<p><strong>Use native line-endings locally, but commit UNIX-style
+line-endings:</strong></p>
+<pre><code># For Linux or macOS:
+git config --global core.autocrlf input
+# For Windows:
+git config --global core.autocrlf true</code></pre>
+<p><strong>If you’re behind a corporate proxy on Windows, tell Git to
+use the Windows certificate store:</strong></p>
+<pre><code>git config --global http.sslBackend schannel</code></pre>
+<blockquote>
+<p>NOTE: All of these settings will be stored in a
+<code>.gitconfig</code> file in your user’s home directory.</p>
+</blockquote>
+<h2 id="creating-a-git-repository">Creating a Git repository</h2>
+<p>Let’s create a <strong>Git repository (aka repo)</strong> to track
+entries in a personal journal.</p>
+<p>A Git repo is just a directory of files we are tracking with Git, so
+let’s start by creating a directory:</p>
+<pre><code>mkdir journal</code></pre>
+<ul>
+<li>You may like to open your file explorer to see the files we are
+creating.</li>
+<li><code>journal/</code> should be in the Home directory that opens by
+default in your operating system’s file explorer.</li>
+<li>On Windows, you can run <code>explorer .</code> to open Explorer to
+the current directory.</li>
+</ul>
+<p>Now change into the <code>journal/</code> directory, and list its
+contents:</p>
+<pre><code>cd journal
+ls -la</code></pre>
+<ul>
+<li>There’s nothing in the <code>journal/</code> directory yet except
+for the standard pointers to the current directory (<code>.</code>) and
+the parent directory (<code>..</code>)</li>
+</ul>
+<p>Now let’s initialise the <code>journal/</code> directory as a Git
+repo:</p>
+<pre><code>git init</code></pre>
+<p>Now list the contents again:</p>
+<blockquote>
+<p>TIP: If you want to repeat a command at the command-line, you can
+browse recent commands with the up and down arrow keys.</p>
+</blockquote>
+<pre><code>ls -la</code></pre>
+<ul>
+<li>You’ll see a new <code>.git/</code> sub-directory</li>
+<li>Because it starts with <code>.</code>, it will be “hidden” by
+default in file explorers on Linux and macOS</li>
+<li>This is where Git will store past versions and all other data about
+the repo - <strong>so don’t delete it!</strong></li>
+<li>Any time you run a Git command, Git will look for a
+<code>.git/</code> directory inside the current directory or any of its
+parent directories</li>
+</ul>
+<p>Now let’s check that status of the repo:</p>
+<pre><code>git status</code></pre>
+<ul>
+<li>You’re going to get used to running <code>git status</code> a lot to
+see Git’s view of your files.</li>
+<li>You should be on a branch called <strong>main</strong> - we’ll talk
+about branches in a future lesson.</li>
+<li>There are no <strong>commits (aka versions)</strong> yet - we’ll fix
+that now!</li>
+</ul>
+<h2 id="committing-a-new-file">Committing a new file</h2>
+<p>Now let’s add a first entry into your journal. Open a new file called
+<code>entry_1.md</code> in the <code>nano</code> text editor:</p>
+<blockquote>
+<p>TIP: You could use any text editor to create this file, but we’ll use
+nano so that attendees on different operating systems will have the same
+experience.</p>
+</blockquote>
+<pre><code>nano entry_1.md</code></pre>
+<ul>
+<li>The <code>.md</code> extension indicates this file a Markdown file -
+a plain text format with simple markup to indicate formatting.</li>
+<li>Let’s enter a heading and a simple entry:</li>
+<li>Using <code>nano</code>:
+<ul>
+<li>Type to enter text at the cursor</li>
+<li>Use arrow keys to navigate the document</li>
+<li>When you’re finished:
+<ul>
+<li>Press <code>Ctrl + x</code> to exit (hinted at the bottom of the
+editor)</li>
+<li>Type <code>y</code> to save your changes</li>
+<li>Press <code>Enter</code> to confirm the filename</li>
+</ul></li>
+</ul></li>
+</ul>
+<pre><code># Entry 1
+
+This is my first journal entry!</code></pre>
+<p>Now check the status of your repository</p>
+<pre><code>git status</code></pre>
+<p>You should see your <code>entry_1.md</code>, and that it is currently
+untracked by Git.</p>
+<p>Let’s tell Git to track the file by <em>adding</em> it:</p>
+<pre><code>git add entry_1.md</code></pre>
+<p>Running Git status again, we can see that the file has been added to
+the <strong>staging area</strong> of changes that are ready to be
+committed:</p>
+<pre><code>git status</code></pre>
+<p>Now let’s create the first <strong>commit (aka version)</strong> of
+our journal repo:</p>
+<pre><code>git commit</code></pre>
+<ul>
+<li>Git will drop you into a text editor
+<ul>
+<li>Because of our configuration earlier, this will be
+<code>nano</code></li>
+</ul></li>
+<li>Enter a commit message to describe the change you have made:
+<ul>
+<li><code>Add first journal entry</code></li>
+</ul></li>
+<li>Then exit <code>nano</code> while saving changes:
+<ul>
+<li><code>Ctrl + x</code></li>
+<li><code>y</code></li>
+<li><code>Enter</code></li>
+</ul></li>
+</ul>
+<p>Now check the status again (there should be no uncommitted
+changes):</p>
+<pre><code>git status</code></pre>
+<p><code>git log</code> will show us a history of commits, so we can use
+it to see our first commit:</p>
+<pre><code>git log</code></pre>
+<ul>
+<li>Note that our commit has been recorded with:
+<ul>
+<li>The author</li>
+<li>The date/time</li>
+<li>The commit message</li>
+<li>A SHA hash that uniquely identifies this commit</li>
+</ul></li>
+</ul>
+<h2 id="modifying-a-file">Modifying a file</h2>
+<p>Now let’s modify our journal entry:</p>
+<pre><code>nano entry_1.md</code></pre>
+<blockquote>
+<p>TIP: If you don’t want to type out the entire filename, try typing
+<code>ent</code> and then pressing <code>TAB</code> to auto-complete
+it.</p>
+</blockquote>
+<p>Replace the <code>This is my first journal entry!</code> with:</p>
+<pre><code>I&#39;ve just learned how to commit changes in Git!</code></pre>
+<p>Save and exit, then check <code>git status</code>:</p>
+<pre><code>git status</code></pre>
+<p>Git sees that we’ve modified our file, and it can tell us what has
+changed:</p>
+<pre><code>git diff</code></pre>
+<ul>
+<li>The output of <code>git diff</code> includes:
+<ul>
+<li>The path to each file that has changed</li>
+<li>Each contiguous “chunk” that has changed</li>
+<li>Red lines starting with <code>-</code> have been removed by your
+changes</li>
+<li>Green lines starting with <code>+</code> have been added by your
+changes</li>
+</ul></li>
+</ul>
+<p>Now let’s stage our changes for commit:</p>
+<pre><code>git add entry_1.md
+git status</code></pre>
+<p>It is prudent to check the “diff” of staged changes before we commit
+them:</p>
+<pre><code>git diff --staged</code></pre>
+<p>Now commit a new version, use a message with
+<code>Update first entry with more detail</code>:</p>
+<pre><code>git commit</code></pre>
+<p>Check the status and log:</p>
+<pre><code>git status
+git log</code></pre>
+<p>We can also see what changed in each commit:</p>
+<pre><code>git log -p</code></pre>
+<h2 id="undoing-uncommitted-changes">Undoing uncommitted changes</h2>
+<p>Once a version has been committed, we can always restore that
+previous version. This gives us confidence to make radical (and
+potentially breaking) changes to our files without worrying about losing
+a good/working version.</p>
+<p>Let’s say we accidentally deleted our journal entry:</p>
+<pre><code>rm entry_1.md</code></pre>
+<p>We can see that Git notices it’s deletion:</p>
+<pre><code>git status</code></pre>
+<p>And <code>git status</code> even reminds us how to undo that
+deletion, by <strong>restoring</strong> the file to whatever content it
+had in the last commit:</p>
+<pre><code>git restore entry_1.md</code></pre>
+<p>Now let’s check the file has been restored by printing its contents
+and checking Git status:</p>
+<pre><code>cat entry_1.md
+git status</code></pre>
+<p>In future lessons, you’ll learn tools that let you restore the
+contents of earlier commits.</p>
+<h2 id="telling-git-to-ignore-certain-files">Telling Git to ignore
+certain files</h2>
+<p>Sometimes we have files that we don’t want Git to track:</p>
+<ul>
+<li>Local configuration that doesn’t need to be shared</li>
+<li>Secrets that shouldn’t be shared (like API keys)</li>
+<li>Temporary editor lock files</li>
+<li>Locally-installed dependency packages</li>
+<li>Outputs of build/compilation processes</li>
+</ul>
+<p>For example, let’s say we have a file containing some secrets:</p>
+<pre><code>touch secrets.txt</code></pre>
+<p>Git is ready for us to start tracking it:</p>
+<pre><code>git status</code></pre>
+<p>But we will tell Git to never track that file by adding its path to a
+<code>.gitignore</code> file:</p>
+<pre><code>nano .gitignore</code></pre>
+<p>Add the following line into <code>.gitignore</code>:</p>
+<pre><code>secrets.txt</code></pre>
+<p>Now Git will ignore <code>secrets.txt</code>, though we will need to
+make sure we commit the <code>.gitignore</code> file:</p>
+<pre><code>git status</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<ul>
+<li>You have now learned how to track versions of your files in a
+personal project</li>
+<li>In the next lesson, you’ll learn how to use git
+<strong>remotes</strong> to share your repo with others.</li>
+<li>In future lessons, we’ll learn more of Git’s tools for collaborating
+with others.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>GitNoon Lesson 1</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../revealjs/dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../revealjs/dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="../revealjs/dist/theme/white.css">
+  <link rel="stylesheet" href="../revealjs/custom.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">GitNoon Lesson 1</h1>
+</section>
+
+<section id="get-ready-for-gitnoon" class="slide level3">
+<h3>Get Ready for GitNoon!</h3>
+<ol type="1">
+<li>Install <code>git</code> if you haven’t already:
+https://git-scm.com/downloads
+<ul>
+<li>On Windows, choose <code>Git Bash</code> when installing</li>
+</ul></li>
+<li>Open a terminal (or <code>Git Bash</code> on Windows)</li>
+<li>Make sure you can run the <code>git</code> command</li>
+<li>You should see usage instructions for <code>git</code></li>
+</ol>
+</section>
+<section id="thanks" class="slide level3">
+<h3>Thanks</h3>
+<ul>
+<li>To the host for the great venue!</li>
+<li>To our sponsors</li>
+</ul>
+</section>
+<section id="administrivia" class="slide level3">
+<h3>Administrivia</h3>
+<ul>
+<li>Fire escapes</li>
+<li>Toilets</li>
+<li>Cleaning up after ourselves</li>
+<li>WiFi</li>
+</ul>
+</section>
+<section id="lunch-talk-intro-to-git" class="slide level3">
+<h3>Lunch Talk: Intro to Git</h3>
+<ul>
+<li>What is Git?</li>
+<li>Why use Git?</li>
+<li>When should I use Git?</li>
+<li>What are GitHub, GitLab, etc?</li>
+<li>What to expect from GitNoon</li>
+</ul>
+</section>
+<section id="what-is-git" class="slide level3">
+<h3>What is Git?</h3>
+<div>
+<ul>
+<li class="fragment">Git is a tool to record <strong>versions</strong>
+of files over time</li>
+<li class="fragment">Git works with <strong>any type of file</strong>
+<ul>
+<li class="fragment">Works <em>especially well</em> with
+<strong>plain-text</strong> like source-code and config</li>
+</ul></li>
+<li class="fragment">The most popular Version Control System (VCS)
+<ul>
+<li class="fragment"><a
+href="https://stackoverflow.blog/2023/01/09/beyond-git-the-other-version-control-systems-developers-use/">About
+<strong>90%</strong> of devs use Git for version control</a></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="why-use-git" class="slide level3">
+<h3>Why use Git?</h3>
+<div>
+<ol type="1">
+<li class="fragment"><strong>Backup every version of your files</strong>
+<ul>
+<li class="fragment">Being able to <em>restore any previous version</em>
+gives you confidence to make radical changes</li>
+</ul></li>
+<li class="fragment"><strong>Seamlessly collaborate with others</strong>
+<ul>
+<li class="fragment">Everyone can <em>work on the same files at the same
+time</em>, then combine their changes later</li>
+</ul></li>
+<li class="fragment"><strong>Explore file history</strong>
+<ul>
+<li class="fragment">Every version in Git records the author, date, and
+change description</li>
+<li class="fragment">Find <em>who</em> made a change, <em>when</em>, and
+<em>why</em></li>
+</ul></li>
+</ol>
+</div>
+</section>
+<section id="what-about-github-gitlab-bitbucket-etc"
+class="slide level3">
+<h3>What about GitHub, GitLab, BitBucket, etc?</h3>
+<div style="font-size: 0.8em;">
+<ul>
+<li>Online services for <strong>hosting/sharing Git
+repositories</strong>
+<ul>
+<li>Many can be self-hosted in your corporate environment</li>
+<li>GitLab even has an open-source version</li>
+</ul></li>
+</ul>
+<div>
+<ul>
+<li class="fragment">Provide features for:
+<ul>
+<li class="fragment"><strong>Change Control</strong>
+<ul>
+<li class="fragment"><em>Merge/Pull requests</em> with discussions and
+approvals</li>
+</ul></li>
+<li class="fragment"><strong>Continuous Integration/Delivery
+(CI/CD)</strong>
+<ul>
+<li class="fragment">Automated checks and tests, deploying code</li>
+</ul></li>
+<li class="fragment"><strong>Static web hosting</strong>
+<ul>
+<li class="fragment">Turn a Git repository into a website - great for
+docs!</li>
+</ul></li>
+<li class="fragment"><strong>And more</strong>
+<ul>
+<li class="fragment">Issues, security scanning, container
+registries</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="what-to-expect-from-gitnoon" class="slide level3">
+<h3>What to expect from GitNoon</h3>
+<div>
+<ul>
+<li class="fragment">Each lesson will have:
+<ul>
+<li class="fragment">A <strong>15 minute presentation</strong></li>
+<li class="fragment">A <strong>30 minute hands-on tutorial</strong></li>
+</ul></li>
+<li class="fragment">We’ll use Git from the
+<strong>command-line</strong> / <strong>terminal</strong>
+<ul>
+<li class="fragment">The fundamentals you’ll learn apply to any GUI</li>
+<li class="fragment">A GUI is not always available (e.g. on a
+server)</li>
+<li class="fragment">No previous command-line experience required</li>
+</ul></li>
+<li class="fragment">We’ll focus on <strong>Git itself</strong>
+<ul>
+<li class="fragment">Less on specific features of services like
+GitHub</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="structure-of-this-course" class="slide level3">
+<h3>Structure of this Course</h3>
+<div style="font-size: 0.7em;">
+<table>
+<thead>
+<tr class="header">
+<th>Lesson</th>
+<th>Presentation</th>
+<th>Tutorial</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td>Intro to Git</td>
+<td>Tracking changes in Git</td>
+</tr>
+<tr class="even">
+<td><strong>2</strong></td>
+<td>Exploring History</td>
+<td>Working with remote repositories</td>
+</tr>
+<tr class="odd">
+<td><strong>3</strong></td>
+<td>Collaboration Strategies</td>
+<td>Branching and merging</td>
+</tr>
+<tr class="even">
+<td><strong>4</strong></td>
+<td>Rewriting History</td>
+<td>Rebasing your branch</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="tutorial-objectives" class="slide level3">
+<h3>Tutorial Objectives</h3>
+<ol type="1">
+<li>Configure Git on your machine</li>
+<li>Create your first Git repository (aka repo)</li>
+<li>Track changes to some files</li>
+</ol>
+</section>
+<section id="independent-workhomework" class="slide level3">
+<h3>Independent Work/Homework</h3>
+<div style="font-size: 0.75em;">
+<ol type="1">
+<li><strong>Set a daily reminder to commit a journal entry</strong>
+<ul>
+<li>Build up your Git muscle memory</li>
+<li>Use an editor that can preview Markdown, like VS Code</li>
+<li>Try more Markdown syntax: <a
+href="https://markdownguide.org/basic-syntax/">markdownguide.org/basic-syntax</a></li>
+</ul></li>
+<li><strong>Prepare for the next tutorial on remote repos</strong>
+<ul>
+<li>Create an account on <a
+href="https://github.com/">github.com</a></li>
+<li>Add an SSH key to your account: <a
+href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account</a></li>
+<li>If you have any issues, please contact the instructor well ahead of
+the next lesson!</li>
+</ul></li>
+</ol>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="../revealjs/dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="../revealjs/plugin/notes/notes.js"></script>
+  <script src="../revealjs/plugin/search/search.js"></script>
+  <script src="../revealjs/plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

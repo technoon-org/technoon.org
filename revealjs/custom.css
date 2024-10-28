@@ -1,0 +1,47 @@
+:root {
+    --r-heading-color: #AB2F1A;
+    --r-link-color: #F05033;
+    --r-link-color-dark: #AB2F1A;
+    --r-link-color-hover: #F08A78;
+    --r-selection-background-color: #F08A78;
+}
+
+.reveal,
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-family: Arial, sans-serif;
+    text-transform: none;
+}
+
+.reveal .backgrounds {
+    border-style: solid;
+    border-width: 300px;
+    border-image: url(img/gitnoon-border.svg);
+    border-image-slice: 38%;
+    box-sizing: border-box;
+}
+
+.reveal .slides {
+    margin: 0 30px;
+}
+
+.reveal-viewport {
+    --r-controls-spacing: 4em;
+}
+
+.reveal span.left-heading {
+    display: block;
+    text-align: left;
+}
+
+.reveal code {
+    background: #F5F5F5;
+}
+
+.reveal li > p {
+    margin: 0;
+}
