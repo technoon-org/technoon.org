@@ -2,7 +2,7 @@ from pathlib import Path
 import re
 import subprocess
 
-base_url = 'https://technoon.github.io/gitnoon'
+base_url = 'https://technoon-org.github.io/gitnoon'
 curriculum_dir = Path(__file__).parent
 
 def main():
