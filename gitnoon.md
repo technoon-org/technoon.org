@@ -1,0 +1,97 @@
+---
+layout: default
+title: GitNoon
+permalink: /gitnoon/
+---
+
+# <img src="https://technoon-org.github.io/gitnoon/gitnoon-logo.svg" alt="GitNoon logo" height="100"> GitNoon
+
+The more important your code, documentation, or database queries, the
+more important it is to store it safely and to be able to track all
+your changes. This is where Git comes in. Git is a powerful version
+control tool which is now industry-standard. This 4-session course
+starts from scratch, explaining why, and how you should use Git. No
+previous experience is required.
+
+By the end of this course, you will be able to:
+
+* Use Git from the command-line
+* Save, inspect, restore every change to your files over time
+* Collaborate with others using industry standard practices for branch
+  management
+
+**Register your interest by completing the [Sign Up
+Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJELIplfUF_v8_7cUw/viewform?usp=sf_link){:target="_blank"}{:rel="noopener"}.**
+
+**Each week's lesson comprises:**
+
+* A 20 minute presentation during lunch
+* A 30 minute hands-on coding tutorial
+* Homework exercises
+
+## GitNoon Lessons
+
+<style>
+    .responsive-table .col-1 {
+        flex-basis: 15%;
+    }
+    .responsive-table .col-2 {
+        flex-basis: 25%;
+    }
+    .responsive-table .col-3 {
+        flex-basis: 35%;
+    }
+    .responsive-table .col-4 {
+        flex-basis: 25%;
+    }
+</style>
+<ul class="responsive-table" style="margin-left: 0;">
+    <li class="table-header">
+        <div class="col col-1">Lesson</div>
+        <div class="col col-2">Presentation</div>
+        <div class="col col-3">Tutorial</div>
+        <div class="col col-4">Course Material</div>
+    </li>
+    <li>
+        <div class="col col-1">gitnoon-1</div>
+        <div class="col col-2">Intro to Git</div>
+        <div class="col col-3">Tracking changes in Git</div>
+        <div class="col col-4 markdown-content">
+            <ul>
+                <li><a href="https://technoon-org.github.io/gitnoon/lesson_1/slides.html" target="_blank" rel="noopener">Slides</a></li>
+                <li><a href="https://technoon-org.github.io/gitnoon/lesson_1/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
+                <li><a href="https://technoon-org.github.io/gitnoon/lesson_1/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="col col-1">gitnoon-2</div>
+        <div class="col col-2">Exploring history</div>
+        <div class="col col-3">Working with remote repositories</div>
+        <div class="col col-4 markdown-content">
+            Coming soon
+        </div>
+    </li>
+    <li>
+        <div class="col col-1">gitnoon-3</div>
+        <div class="col col-2">Collaboration strategies</div>
+        <div class="col col-3">Branching and merging</div>
+        <div class="col col-4 markdown-content">
+            Coming soon
+        </div>
+    </li>
+    <li>
+        <div class="col col-1">gitnoon-4</div>
+        <div class="col col-2">Rewriting history</div>
+        <div class="col col-3">Rebasing your branch</div>
+        <div class="col col-4 markdown-content">
+            Coming soon
+        </div>
+    </li>
+</ul>
+
+
+## Additional Resources
+
+Instructors can find tips for presenting in the [full course material
+listing](https://technoon-org.github.io/gitnoon/).

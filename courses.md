@@ -42,22 +42,25 @@ Form](https://docs.google.com/forms/d/13CkfxWp7ZZVbQsJwtFcJ6err6JcqtRq9bU7JSx82i
 
 ---
 
-## <img src="/_images/course-images/git-icon.svg" height="100" style="margin-right: 15px;"> [GitNoon - Confidently Track File Versions with Git](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJELIplfUF_v8_7cUw/viewform?usp=sf_link)
+## <img src="https://technoon-org.github.io/gitnoon/gitnoon-logo.svg" alt="GitNoon logo" height="100" style="margin-right: 15px;"> [GitNoon - Confidently Track File Versions with Git](/gitnoon)
 
-The more important your code or your queries, the more important it is
-to store it safely and to be able to track all your changes. This is
-where Git comes in. Git is a powerful version control tool which is
-now industry-standard. This 4-session course starts from scratch,
-explaining why, and how you should use Git. No previous experience is
-required.
+The more important your code, documentation, or database queries, the
+more important it is to store it safely and to be able to track all
+your changes. This is where Git comes in. Git is a powerful version
+control tool which is now industry-standard. This 4-session course
+starts from scratch, explaining why, and how you should use Git. No
+previous experience is required.
+
+By the end of this course, you will be able to:
+
+* Use Git from the command-line
+* Save, inspect, restore every change to your files over time
+* Collaborate with others using industry standard practices for branch
+  management
 
 **Register your interest by completing the [Sign Up
 Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJELIplfUF_v8_7cUw/viewform?usp=sf_link){:target="_blank"}{:rel="noopener"}.**
 
-<p style="font-size: 0.7em; font-style: italic;">
-    Git Logo by Jason Long is licensed under the
-    <a href="https://creativecommons.org/licenses/by/3.0/">Creative
-    Commons Attribution 3.0 Unported License</a>.
-</p>
+**Check out the [GitNoon course material](/gitnoon){:target="_blank"}{:rel="noopener"}**
 
 ---
