@@ -44,7 +44,8 @@ your files in a personal project:</p>
 <ol type="1">
 <li>Configure Git on your machine</li>
 <li>Create your first Git repository (aka repo)</li>
-<li>Track changes to some files</li>
+<li>Track file changes</li>
+<li>Revert to a previous version</li>
 </ol>
 <h2 id="configuring-git">Configuring Git</h2>
 <ul>
@@ -223,7 +224,7 @@ changed:</p>
 <li>The output of <code>git diff</code> includes:
 <ul>
 <li>The path to each file that has changed</li>
-<li>Each contiguous “chunk” that has changed</li>
+<li>Each contiguous “hunk” that has changed</li>
 <li>Red lines starting with <code>-</code> have been removed by your
 changes</li>
 <li>Green lines starting with <code>+</code> have been added by your
@@ -261,8 +262,60 @@ had in the last commit:</p>
 and checking Git status:</p>
 <pre><code>cat entry_1.md
 git status</code></pre>
-<p>In future lessons, you’ll learn tools that let you restore the
-contents of earlier commits.</p>
+<p>You can also restore the full contents of any previous commit from
+the log by:</p>
+<ol type="1">
+<li>Specifying its unique SHA as the source
+<ul>
+<li>We only need to specify enough of the SHA to uniquely identify it in
+the repository.</li>
+</ul></li>
+<li>Specifying <code>.</code> to target the entire current
+directory</li>
+</ol>
+<pre><code>git log
+git restore --source=&lt;USE SHA FROM OLDEST COMMIT IN LOG&gt; .</code></pre>
+<p>We now have the old version’s content as uncommitted changes on top
+of the latest commit:</p>
+<pre><code>cat entry_1.md
+git status
+git diff</code></pre>
+<ul>
+<li>You will need to add and commit the restored content like any other
+changes.</li>
+<li>Here we’ll add all files at once using <code>.</code>
+<ul>
+<li>You should only do this when you’re sure you want to add all
+files</li>
+<li>It’s best to consider carefully which files to include in a commit,
+and consider breaking up unrelated file changes into multiple
+commits.</li>
+<li>To help us consider what we want to add, we’ll use
+<code>--patch</code> to have Git ask us about whether to add each
+changed “hunk”.</li>
+</ul></li>
+</ul>
+<pre><code>git add --patch .
+git commit
+# Commit message: Restore initial version of first entry
+git log</code></pre>
+<p><strong>IMPORTANT:</strong> You should always be careful running
+<code>git restore</code>, as it might wipe out uncommitted changes.</p>
+<ul>
+<li>If you want to “undo” the changes of a specific commit, you can use
+<code>git revert</code> to automatically add a new commit that is the
+exact opposite of that commit.</li>
+<li>Let’s revert that latest commit - we can use <code>HEAD</code> as a
+for the most recent commit.</li>
+</ul>
+<pre><code>git revert HEAD</code></pre>
+<p>Let’s look at a log of the commits, and here use the
+<code>--patch</code> option to see what changed in each:</p>
+<pre><code>git log --patch</code></pre>
+<p>Having lots of commits changing the content back and forth like this
+is a bit silly, but <strong>it illustrates how we typically undo work in
+Git by <em>adding new commits</em> that restore older content or revert
+earlier commits.</strong></p>
 <h2 id="telling-git-to-ignore-certain-files">Telling Git to ignore
 certain files</h2>
 <p>Sometimes we have files that we don’t want Git to track:</p>

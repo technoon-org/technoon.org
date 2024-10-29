@@ -7,7 +7,8 @@ your files in a personal project:
 
 1. Configure Git on your machine
 2. Create your first Git repository (aka repo)
-3. Track changes to some files
+3. Track file changes
+4. Revert to a previous version
 
 
 ## Configuring Git
@@ -243,7 +244,7 @@ git diff
 
 * The output of `git diff` includes:
   * The path to each file that has changed
-  * Each contiguous "chunk" that has changed
+  * Each contiguous "hunk" that has changed
   * Red lines starting with `-` have been removed by your changes
   * Green lines starting with `+` have been added by your changes
 
@@ -316,8 +317,69 @@ cat entry_1.md
 git status
 ```
 
-In future lessons, you'll learn tools that let you restore the
-contents of earlier commits.
+You can also restore the full contents of any previous commit from the
+log by:
+
+1. Specifying its unique SHA as the source
+   * We only need to specify enough of the SHA to uniquely identify it
+     in the repository.
+2. Specifying `.` to target the entire current directory
+
+```
+git log
+git restore --source=<USE SHA FROM OLDEST COMMIT IN LOG> .
+```
+
+We now have the old version's content as uncommitted changes on top of
+the latest commit:
+
+```
+cat entry_1.md
+git status
+git diff
+```
+
+* You will need to add and commit the restored content like any other
+  changes.
+* Here we'll add all files at once using `.`
+  * You should only do this when you're sure you want to add all files
+  * It's best to consider carefully which files to include in a
+    commit, and consider breaking up unrelated file changes into
+    multiple commits.
+  * To help us consider what we want to add, we'll use `--patch` to
+    have Git ask us about whether to add each changed "hunk".
+
+```
+git add --patch .
+git commit
+# Commit message: Restore initial version of first entry
+git log
+```
+
+**IMPORTANT:** You should always be careful running `git restore`, as
+it might wipe out uncommitted changes.
+
+* If you want to "undo" the changes of a specific commit, you can use
+  `git revert` to automatically add a new commit that is the exact
+  opposite of that commit.
+* Let's revert that latest commit - we can use `HEAD` as a for the
+  most recent commit.
+
+```
+git revert HEAD
+```
+
+Let's look at a log of the commits, and here use the `--patch` option
+to see what changed in each:
+
+```
+git log --patch
+```
+
+Having lots of commits changing the content back and forth like this
+is a bit silly, but **it illustrates how we typically undo work in Git
+by *adding new commits* that restore older content or revert earlier
+commits.**
 
 
 ## Telling Git to ignore certain files

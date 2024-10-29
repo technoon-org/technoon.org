@@ -116,7 +116,8 @@ title: GitNoon Lesson 1
 
 1. Configure Git on your machine
 2. Create your first Git repository (aka repo)
-3. Track changes to some files
+3. Track file changes
+4. Revert to a previous version
 
 ### Homework
 
