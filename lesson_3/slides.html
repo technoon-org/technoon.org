@@ -107,10 +107,22 @@
 </section>
 
 <section id="get-ready-for-lesson-3" class="slide level3">
-<h3>Get Ready for Lesson 3</h3>
-<ul>
-<li>Clone this repo: TODO</li>
-</ul>
+<h3>Get Ready for Lesson 3!</h3>
+<div style="font-size: 0.85em;">
+
+<ol type="1">
+<li><p>Login to your account on <a
+href="https://github.com/">github.com</a></p></li>
+<li><p>If you missed the previous lessons, ask for help setting up a
+<code>blog</code> repository to share:</p>
+<pre><code>mkdir blog
+cd blog
+git init
+echo &quot;# Entry 1&quot; &gt; entry_1.md
+git add entry_1.md
+git commit -m &quot;Add first blog entry&quot;
+git status</code></pre></li>
+</ol>
 </section>
 <section id="thanks" class="slide level3">
 <h3>Thanks</h3>
@@ -128,8 +140,8 @@
 <li>WiFi</li>
 </ul>
 </section>
-<section id="lunch-talk-collaboration-strategies" class="slide level3">
-<h3>Lunch Talk: Collaboration Strategies</h3>
+<section id="lunch-talk-collaboration-workflows" class="slide level3">
+<h3>Lunch Talk: Collaboration Workflows</h3>
 <ul>
 <li>Git is a very <strong>flexible</strong> tool - there are many ways
 you can collaborate with Git</li>
@@ -157,12 +169,12 @@ gitGraph
 </div>
 <p>You can add <em>annotated</em> tags to mark specific commits as
 released versions:</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag <span class="at">-a</span> v1.0.0 <span class="at">-m</span> <span class="st">&quot;Release of version 1.0.0&quot;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Push tags to the remote</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin <span class="at">--tags</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Any command that accepts a commit SHA will accept a tag:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff v1.0.0</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag <span class="at">-a</span> v1.0.0 <span class="at">-m</span> <span class="st">&quot;Release of version 1.0.0&quot;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Push tags to the remote</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin <span class="at">--tags</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Any command that accepts a commit SHA will accept a tag:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff v1.0.0</span></code></pre></div>
 </section>
 <section id="collaboration-on-a-single-branch" class="slide level3">
 <h3>Collaboration on a Single Branch</h3>
@@ -328,33 +340,166 @@ lesson)</li>
 </div>
 </div>
 </section>
-<section id="workflow-3-feature-release-branches" class="slide level3">
-<h3>Workflow 3: Feature &amp; Release Branches</h3>
-</section>
-<section id="advanced-workflows" class="slide level3">
-<h3>Advanced Workflows</h3>
+<section id="workflow-3-release-branches" class="slide level3">
+<h3>Workflow 3: Release Branches</h3>
+<div class="mermaid" style="transform: scale(1); margin: 1em 0;">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': false} } }%%
+gitGraph
+  commit tag: "v1.0.0"
+  branch 1234-add-birthday-notifications
+  branch v1.0
+  checkout 1234-add-birthday-notifications
+  commit
+  commit
+  commit
+  checkout v1.0
+  commit
+  commit tag: "v1.0.1"
+  checkout main
+  merge v1.0
+  checkout 1234-add-birthday-notifications
+  checkout main
+  merge 1234-add-birthday-notifications tag: "v1.1.0"
+</pre>
+</div>
+<div style="font-size: 0.9em;">
 <ul>
-<li>GitLab Flow</li>
-<li>Git Flow</li>
-<li>Octo-merges</li>
+<li>Useful if you need to support <code>v1.0</code> while working on new
+features for <code>v1.1</code></li>
+<li>A <em>hotfix</em> on release branch <code>v1.0</code> is tagged as
+<em>point release</em> <code>v1.0.1</code> and merged forward into
+<code>main</code>.</li>
 </ul>
+</div>
+</section>
+<section id="environment-branches" class="slide level3">
+<h3>Environment Branches</h3>
+<p>Any workflow can be augmented with branches that track the commit
+that is deployed in each environment:</p>
+<div class="mermaid" style="transform: scale(1.5);">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true, 'mainBranchName': 'origin/main'} } }%%
+gitGraph
+  commit id: " "
+  commit id: "  "
+  commit id: "prod"
+  commit id: "   "
+  commit id: "    "
+  commit id: "test"
+  commit id: "     "
+  commit id: "dev"
+  commit id: "      "
+</pre>
+</div>
+<p>(continuous deployments could even be triggered by updates to those
+branches)</p>
+</section>
+<section id="other-workflows" class="slide level3">
+<h3>Other Workflows</h3>
+<div>
+<div class="top-fragment-only" style="font-size: 0.8em;">
+<ul>
+<li class="fragment"><a
+href="https://about.gitlab.com/blog/2020/03/05/what-is-gitlab-flow/"><strong>GitLab
+Flow</strong></a>
+<ul>
+<li class="fragment">Extends the Feature Branches workflow (i.e. GitHub
+Flow) with environment branches and process recommendations</li>
+</ul></li>
+<li class="fragment"><a
+href="https://nvie.com/posts/a-successful-git-branching-model/"><strong>Git
+Flow</strong></a>
+<ul>
+<li class="fragment">Extends the Release Branches workflow with
+additional branch types</li>
+<li class="fragment">Increases complexity, but allows for more process
+control</li>
+</ul></li>
+<li class="fragment"><strong>Octopus Merges</strong>
+<ul>
+<li class="fragment">Many feature branches are “octopus merged” to
+create a release</li>
+<li class="fragment">Allows you to delay deciding which features to
+include in a release, but risks octopus conflicts!</li>
+</ul></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="other-considerations" class="slide level3">
 <h3>Other considerations</h3>
+<div>
+<div class="top-fragment-only" style="font-size: 0.8em;">
 <ul>
-<li>Database Migrations</li>
-<li>Branches to track environments</li>
-<li>Set up branch protection</li>
-<li>Create review checklists</li>
-<li>Set up CI pipelines to automatically check pull requests</li>
-<li>Document your team’s process</li>
+<li class="fragment"><strong>Versioning non-files</strong>
+<ul>
+<li class="fragment">Database schemas → database migrations</li>
+<li class="fragment">Datasets → <a href="https://dvc.org/">dvc</a>, <a
+href="https://docs.dagster.io/getting-started/what-why-dagster">dagster</a></li>
+</ul></li>
+<li class="fragment"><strong>Conventions</strong>
+<ul>
+<li class="fragment">Branch naming, commit messages</li>
+<li class="fragment">Versioning, e.g. <a
+href="https://semver.org/">Semantic Versioning</a></li>
+</ul></li>
+<li class="fragment"><strong>Processes</strong>
+<ul>
+<li class="fragment">Configure branch protection rules</li>
+<li class="fragment">Pull request code review checklists</li>
+<li class="fragment">Automate checks (e.g. linting, tests) for Continous
+Integration (CI)</li>
+<li class="fragment">Automate deployments for Continous Deployment
+(CD)</li>
+</ul></li>
 </ul>
+</div>
+</div>
+</section>
+<section id="choosing-your-workflow" class="slide level3">
+<h3>Choosing your Workflow</h3>
+<p>Adapt your workflow to fit <strong>how your team works</strong> and
+<strong>the requirements of your project</strong></p>
+<div class="fragment">
+<blockquote>
+<p><strong>But make sure to document your workflow and the reasons for
+your decisions!</strong></p>
+</blockquote>
+</div>
 </section>
 <section id="tutorial-objectives" class="slide level3">
 <h3>Tutorial Objectives</h3>
+<ol type="1">
+<li>Work on a separate branch</li>
+<li>Merge your branch into <code>main</code></li>
+<li>Resolve a merge conflict</li>
+<li>Make and merge a pull request</li>
+</ol>
 </section>
 <section id="homework" class="slide level3">
 <h3>Homework</h3>
+<div style="font-size: 0.8em;">
+<ol type="1">
+<li><strong>Make a pull request to a neighbour’s repo</strong>
+<ol type="1">
+<li>Visit the repo’s GitHub page, and select <code>Fork</code></li>
+<li>Clone your fork, make a branch with some changes</li>
+<li>Push your local branch up to your fork</li>
+<li><a
+href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork">Make
+a pull request from your fork to your neighbour’s repo</a></li>
+<li>Good practice for contributing to open-source projects!</li>
+</ol></li>
+<li><strong>Continue your daily blog entries</strong>
+<ul>
+<li>Instead of working directly on <code>main</code>, make each entry in
+a new branch</li>
+<li>Practice 1) pull requests and 2) merging into <code>main</code>
+locally</li>
+</ul></li>
+</ol>
+</div>
 </section>
     </div>
   </div>

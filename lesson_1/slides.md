@@ -119,12 +119,12 @@ title: GitNoon Lesson 1
 
 <div style="font-size: 0.7em;">
 
-| Lesson | Presentation             | Tutorial                         |
-|--------|--------------------------|----------------------------------|
-| **1**  | Intro to Git             | Tracking a project in Git        |
-| **2**  | Exploring history        | Sharing repositories with others |
-| **3**  | Collaboration strategies | Branching and merging            |
-| **4**  | Rewriting history        | Rebasing your branch             |
+| Lesson | Presentation            | Tutorial                         |
+|--------|-------------------------|----------------------------------|
+| **1**  | Intro to Git            | Tracking a project in Git        |
+| **2**  | Exploring history       | Sharing repositories with others |
+| **3**  | Collaboration workflows | Branching and merging            |
+| **4**  | Rewriting history       | Rebasing your branch             |
 
 </div>
 

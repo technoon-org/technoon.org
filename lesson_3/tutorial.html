@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>GitNoon Lesson X</title>
+  <title>GitNoon Lesson 3</title>
   <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,8 +37,29 @@ font-style: italic;
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">GitNoon Lesson X</h1>
+<h1 class="title">GitNoon Lesson 3</h1>
 </header>
-
+<p>In this lesson, you will learn how to:</p>
+<ol type="1">
+<li>Work on a separate branch</li>
+<li>Merge your branch into <code>main</code></li>
+<li>Resolve a merge conflict</li>
+<li>Make and merge a pull request</li>
+</ol>
+<pre><code>git branch my-feature</code></pre>
+<pre><code>git commit</code></pre>
+<pre><code>git switch my-feature</code></pre>
+<pre><code>git commit</code></pre>
+<pre><code>git switch main</code></pre>
+<pre><code>git merge my-feature</code></pre>
+<p>Then do it again, but this time with a conflict.</p>
+<h2 id="todo">TODO</h2>
+<p><strong>Add an alias to conveniently view a graphical history with
+<code>git graph</code>:</strong></p>
+<pre><code>git config --global alias.graph &quot;log --graph --oneline --all&quot;</code></pre>
+<ul>
+<li>git log a..b</li>
+<li>git log a…b</li>
+</ul>
 </body>
 </html>

@@ -2,10 +2,21 @@
 title: GitNoon Lesson 3
 ---
 
-### Get Ready for Lesson 3
+### Get Ready for Lesson 3!
 
-* Clone this repo: TODO
+<div style="font-size: 0.85em;">
 
+1. Login to your account on [github.com](https://github.com/)
+2. If you missed the previous lessons, ask for help setting up a `blog` repository to share:
+   ```
+   mkdir blog
+   cd blog
+   git init
+   echo "# Entry 1" > entry_1.md
+   git add entry_1.md
+   git commit -m "Add first blog entry"
+   git status
+   ```
 
 ### Thanks
 
@@ -19,7 +30,7 @@ title: GitNoon Lesson 3
 * Cleaning up after ourselves
 * WiFi
 
-### Lunch Talk: Collaboration Strategies
+### Lunch Talk: Collaboration Workflows
 
 * Git is a very **flexible** tool - there are many ways you can
   collaborate with Git
@@ -213,25 +224,140 @@ gitGraph
 
 :::
 
-### Workflow 3: Feature & Release Branches
+### Workflow 3: Release Branches
 
-### Advanced Workflows
+<div class="mermaid" style="transform: scale(1); margin: 1em 0;">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': false} } }%%
+gitGraph
+  commit tag: "v1.0.0"
+  branch 1234-add-birthday-notifications
+  branch v1.0
+  checkout 1234-add-birthday-notifications
+  commit
+  commit
+  commit
+  checkout v1.0
+  commit
+  commit tag: "v1.0.1"
+  checkout main
+  merge v1.0
+  checkout 1234-add-birthday-notifications
+  checkout main
+  merge 1234-add-birthday-notifications tag: "v1.1.0"
+</pre>
+</div>
 
-* GitLab Flow
-* Git Flow
-* Octo-merges
+<div style="font-size: 0.9em;">
+
+* Useful if you need to support `v1.0` while working on new features for `v1.1`
+* A *hotfix* on release branch `v1.0` is tagged as *point release*
+  `v1.0.1` and merged forward into `main`.
+
+</div>
+
+### Environment Branches
+
+Any workflow can be augmented with branches that track the commit that
+is deployed in each environment:
+
+<div class="mermaid" style="transform: scale(1.5);">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true, 'mainBranchName': 'origin/main'} } }%%
+gitGraph
+  commit id: " "
+  commit id: "  "
+  commit id: "prod"
+  commit id: "   "
+  commit id: "    "
+  commit id: "test"
+  commit id: "     "
+  commit id: "dev"
+  commit id: "      "
+</pre>
+</div>
+
+(continuous deployments could even be triggered by updates to those
+branches)
+
+
+### Other Workflows
+
+::: incremental
+
+<div class="top-fragment-only" style="font-size: 0.8em;">
+
+* [**GitLab Flow**](https://about.gitlab.com/blog/2020/03/05/what-is-gitlab-flow/)
+  * Extends the Feature Branches workflow (i.e. GitHub Flow) with
+    environment branches and process recommendations
+* [**Git Flow**](https://nvie.com/posts/a-successful-git-branching-model/)
+  * Extends the Release Branches workflow with additional branch types
+  * Increases complexity, but allows for more process control
+* **Octopus Merges**
+  * Many feature branches are "octopus merged" to create a release
+  * Allows you to delay deciding which features to include in a
+    release, but risks octopus conflicts!
+
+</div>
+
+:::
 
 ### Other considerations
 
-* Database Migrations
-* Branches to track environments
-* Set up branch protection
-* Create review checklists
-* Set up CI pipelines to automatically check pull requests
-* Document your team's process
+::: incremental
+
+<div class="top-fragment-only" style="font-size: 0.8em;">
+
+* **Versioning non-files**
+  * Database schemas → database migrations
+  * Datasets → [dvc](https://dvc.org/), [dagster](https://docs.dagster.io/getting-started/what-why-dagster)
+* **Conventions**
+  * Branch naming, commit messages
+  * Versioning, e.g. [Semantic Versioning](https://semver.org/)
+* **Processes**
+  * Configure branch protection rules
+  * Pull request code review checklists
+  * Automate checks (e.g. linting, tests) for Continous Integration (CI)
+  * Automate deployments for Continous Deployment (CD)
+
+</div>
+
+:::
+
+### Choosing your Workflow
+
+Adapt your workflow to fit **how your team works** and **the
+requirements of your project**
+
+<div class="fragment">
+
+> **But make sure to document your workflow and the reasons for your
+> decisions!**
+
+</div>
 
 
 ### Tutorial Objectives
 
+1. Work on a separate branch
+2. Merge your branch into `main`
+3. Resolve a merge conflict
+4. Make and merge a pull request
+
 
 ### Homework
+
+<div style="font-size: 0.8em;">
+
+1. **Make a pull request to a neighbour's repo**
+   1. Visit the repo's GitHub page, and select `Fork`
+   2. Clone your fork, make a branch with some changes
+   3. Push your local branch up to your fork
+   4. [Make a pull request from your fork to your neighbour's repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
+   5. Good practice for contributing to open-source projects!
+2. **Continue your daily blog entries**
+   * Instead of working directly on `main`, make each entry in a new
+     branch
+   * Practice 1) pull requests and 2) merging into `main` locally
+
+</div>
