@@ -78,7 +78,7 @@ Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJ
     </li>
     <li>
         <div class="col col-1">gitnoon-3</div>
-        <div class="col col-2">Collaboration strategies</div>
+        <div class="col col-2">Collaboration workflows</div>
         <div class="col col-3">Branching and merging</div>
         <div class="col col-4 markdown-content">
             Coming soon
