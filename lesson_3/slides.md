@@ -17,6 +17,8 @@ title: GitNoon Lesson 3
    git commit -m "Add first blog entry"
    git status
    ```
+3. Make sure you have no uncommitted changes and that you are up to
+   date with `origin/main` by checking the output of `git status`
 
 ### Thanks
 

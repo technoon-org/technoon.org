@@ -46,20 +46,412 @@ font-style: italic;
 <li>Resolve a merge conflict</li>
 <li>Make and merge a pull request</li>
 </ol>
-<pre><code>git branch my-feature</code></pre>
-<pre><code>git commit</code></pre>
-<pre><code>git switch my-feature</code></pre>
-<pre><code>git commit</code></pre>
-<pre><code>git switch main</code></pre>
-<pre><code>git merge my-feature</code></pre>
-<p>Then do it again, but this time with a conflict.</p>
-<h2 id="todo">TODO</h2>
-<p><strong>Add an alias to conveniently view a graphical history with
-<code>git graph</code>:</strong></p>
-<pre><code>git config --global alias.graph &quot;log --graph --oneline --all&quot;</code></pre>
+<h2 id="viewing-a-repo-as-a-graph">Viewing a repo as a graph</h2>
+<p>Before we get started, we’re going to create a git <em>alias</em> to
+conveniently run <code>git log</code> with options that will display a
+succinct graphical view of all branches in our repo:</p>
+<pre><code>git config --global alias.graph &quot;log --all --graph --oneline --decorate&quot;</code></pre>
+<p>Open your terminal to your <code>blog</code> repo
+(<code>cd blog</code>), and try running it:</p>
+<pre><code>git graph</code></pre>
+<h3 id="understanding-the-graph">Understanding the graph</h3>
 <ul>
-<li>git log a..b</li>
-<li>git log a…b</li>
+<li>You should see a commit on each line</li>
+<li>You should see labels for your <code>main</code> branch and the
+<code>origin/main</code> remote branch.
+<ul>
+<li><strong>The key idea</strong> to understand branches in Git is that
+<strong>a branch is effectively a pointer to a specific
+commit</strong>.</li>
+</ul></li>
+<li>You should also see a <code>HEAD</code> label pointing to your
+<code>main</code> branch.
+<ul>
+<li><code>HEAD</code> indicates the branch that our repo has
+<em>checked-out</em>, which has two key implications:
+<ol type="1">
+<li><code>HEAD</code> represents the current version of the files in our
+directory - any file changes will be compared to <code>HEAD</code></li>
+<li>When you run <code>git commit</code>, the new commit will have the
+current <code>HEAD</code> commit as its <em>parent</em>, and the
+<code>HEAD</code> branch will be updated to point to the new commit
+<ul>
+<li>You can already see these parent/child links between commits by the
+chain/history of commits in the log.</li>
+</ul></li>
+</ol></li>
+<li>Think of <code>HEAD</code> like the head on a spinning hard disk -
+it points to the data that is currently being read or written.</li>
+</ul></li>
+<li>You may also see <code>origin/HEAD</code>, which just indicates the
+<em>default branch</em> for new clones of the <code>origin</code>
+remote.</li>
+</ul>
+<h2 id="working-on-a-separate-branch">Working on a separate branch</h2>
+<p>We can keep our work isolated from the <code>main</code> branch while
+it is still a work-in-progress by committing to a separate branch.</p>
+<p>To do so, let’s create a new branch for some additions to the
+README:</p>
+<pre><code>git branch readme-additions</code></pre>
+<p>We can see our newly created branch in the graph; it points to the
+same commit as whatever branch <code>HEAD</code> was pointing to:</p>
+<pre><code>git graph</code></pre>
+<p>Now let’s <em>check-out</em> our new branch:</p>
+<pre><code>git switch readme-additions</code></pre>
+<p>We can confirm our current branch by again checking the graph and
+also by checking <code>git status</code>:</p>
+<pre><code>git graph
+git status</code></pre>
+<p>Now let’s make some changes on our new branch, open up the
+README:</p>
+<pre><code>nano README.md</code></pre>
+<p>And add more information at <strong>the bottom of the
+file</strong>:</p>
+<pre><code>## Built with
+
+* Markdown</code></pre>
+<p>Save and exit <code>nano</code> (<code>Ctrl + x</code>,
+<code>y</code>, <code>Enter</code>), then add and commit the README:</p>
+<pre><code>git status
+git add README.md
+git status
+# We&#39;ll use a shortcut to write the message inline
+git commit -m &quot;Add tool info to README&quot;
+git status</code></pre>
+<p>Now let’s see what that’s done to the graph:</p>
+<pre><code>git graph</code></pre>
+<p>Success! The new commit has been added to the
+<code>readme-additions</code> branch, but not <code>main</code>.</p>
+<p>Now let’s switch back to the <code>main</code> branch, again
+confirming the change to <code>HEAD</code> in the graph and status:</p>
+<pre><code>git switch main
+git graph
+git status</code></pre>
+<p>When we look at the log from <code>main</code>, we don’t see that
+commit:</p>
+<pre><code>git log</code></pre>
+<p>And when we look at the README, we don’t see our latest
+additions:</p>
+<pre><code>cat README.md</code></pre>
+<h2 id="merge-your-branch-into-main">Merge your branch into
+<code>main</code></h2>
+<p>Now that we’ve finished the work on our <em>feature branch</em> let’s
+merge it back into <code>main</code>.</p>
+<p>This is as simple as running:</p>
+<pre><code>git merge readme-additions</code></pre>
+<ul>
+<li><strong>TIP: To remember which branch will be updated by a merge,
+always remember that almost all git commands will only change the branch
+you are checked-out on.</strong>
+<ul>
+<li>In this case, we are checked-out on <code>main</code>, so we will be
+updating the <code>main</code> by <em>merging in</em>
+<code>readme-additions</code></li>
+</ul></li>
+</ul>
+<p>Now let’s see what that’s done to the graph:</p>
+<pre><code>git graph</code></pre>
+<p>We can see that <code>main</code> has been updated to the same commit
+as <code>readme-additions</code>, and the README on <code>main</code>
+now has the additions:</p>
+<pre><code>cat README.md</code></pre>
+<h2 id="fast-forward-merges">Fast-forward merges</h2>
+<p>Notice that Git told us this was a <strong>fast-forward</strong>
+merge:</p>
+<ul>
+<li>A fast-forward merge is only possible when the current branch has no
+commits that aren’t already in the branch we are merging in
+<ul>
+<li>i.e. Our current branch is linearly/directly behind the branch being
+merged in.</li>
+</ul></li>
+<li>A fast-forward merge just updates the current branch to point to the
+same commit as the named branch.</li>
+<li>We also saw a fast-forward merge in the last lesson when updating
+our local <code>main</code> branch with the latest commits fetched from
+<code>origin/main</code>.</li>
+</ul>
+<h2 id="non-fast-forward-merges">Non-fast-forward merges</h2>
+<p>Let’s see what happens when a fast-forward merge is not possible.</p>
+<p>First off, let’s undo that previous merge by <em>resetting</em> the
+<code>main</code> branch to point to the same commit as
+<code>origin/main</code> again:</p>
+<pre><code>git reset --hard origin/main
+git graph</code></pre>
+<p><strong>IMPORANT:</strong> <code>git reset</code> is a dangerous
+command because it can delete both commits and uncommitted changes.
+We’ll learn more about how to use it responsibly in the next lesson.</p>
+<p>Now let’s add a commit directly to the <code>main</code> branch, as
+if someone else had merged in some changes while we were still working
+on <code>readme-additions</code>:</p>
+<pre><code>nano README.md</code></pre>
+<p>Change the README’s title to something else:</p>
+<pre><code># My Awesome Blog</code></pre>
+<p>Save and exit <code>nano</code> (<code>Ctrl + x</code>,
+<code>y</code>, <code>Enter</code>), then add and commit the README:</p>
+<pre><code>git status
+git add README.md
+git status
+# We&#39;ll use a shortcut to write the message inline
+git commit -m &quot;Update README title&quot;
+git status</code></pre>
+<p>Now let’s look at the graph:</p>
+<pre><code>git graph</code></pre>
+<ul>
+<li>The branches have diverged!</li>
+<li>There is now a commit in <code>main</code> that doesn’t exist in
+<code>readme-additions</code></li>
+<li>This means that <code>main</code> cannot be fast-forwarded to
+<code>readme-additions</code></li>
+<li>Aside: <code>git log</code> can be used to check which commits exist
+in one branch but not another with the “two dots” syntax:</li>
+</ul>
+<pre><code># Commits in readme-additions but not main
+git log main..readme-additions
+# Commits in main but not readme-additions
+git log readme-additions..main</code></pre>
+<p>Now what happens when we merge :</p>
+<pre><code>git merge readme-additions</code></pre>
+<ul>
+<li>Git opens a text editor for us to edit a commit message for a
+<em>merge commit</em>
+<ul>
+<li>Just save and exit to confirm the message (<code>Ctrl + x</code>,
+<code>y</code>, <code>Enter</code>)</li>
+</ul></li>
+</ul>
+<p>Now check the graph:</p>
+<pre><code>git graph</code></pre>
+<ul>
+<li>Git has added a <em>merge commit</em> that combines the commits from
+both branches.</li>
+<li>The <code>main</code> branch has been updated to point to the new
+merge commit.</li>
+</ul>
+<p>So what does the README look like now on the <code>main</code>
+branch?</p>
+<pre><code>cat README.md</code></pre>
+<p>Because each branch had made changes to different parts of the same
+file, Git was able to combine both sets of changes into a single file
+without us having to do anything!</p>
+<h2 id="resolve-a-merge-conflict">Resolve a merge conflict</h2>
+<p>But what if both branches had changed the same part of the same
+file?</p>
+<p>Let’s find out!</p>
+<p>Again, let’s undo the previous merge and the commit we made on
+<code>main</code> by <em>resetting</em> the <code>main</code> branch to
+point to the same commit as <code>origin/main</code> again:</p>
+<pre><code>git reset --hard origin/main
+git graph</code></pre>
+<p>Now let’s make a commit directly on <code>main</code> again, but this
+time editing the same part of the file as our commit on
+<code>readme-additions</code>:</p>
+<pre><code>nano README.md</code></pre>
+<p>Add some different content to <strong>the bottom of the
+file</strong>:</p>
+<pre><code>## Thanks
+
+* Git</code></pre>
+<p>Save and exit <code>nano</code> (<code>Ctrl + x</code>,
+<code>y</code>, <code>Enter</code>), then add and commit the README:</p>
+<pre><code>git status
+git add README.md
+git status
+# We&#39;ll use a shortcut to write the message inline
+git commit -m &quot;Add thanks to README&quot;
+git status</code></pre>
+<p>Look at the graph, and you should see the branches diverging
+again:</p>
+<pre><code>git graph</code></pre>
+<p>Now let’s see what happens when we try to merge
+<code>readme-additions</code> into <code>main</code>:</p>
+<pre><code>git merge readme-additions</code></pre>
+<ul>
+<li>Aha! Git tells us that there is a merge conflict in the README</li>
+<li>A merge conflict is not a cause for panic!</li>
+<li>Let’s see more about the conflict by checking the status:</li>
+</ul>
+<pre><code>git status</code></pre>
+<ul>
+<li>We can see <code>README.md</code> is an <em>unmerged path</em> where
+both branches made modifications</li>
+<li>Let’s see what’s going on in the README:</li>
+</ul>
+<pre><code>git diff README.md</code></pre>
+<ul>
+<li>We see two alternative hunks at the bottom of the file
+<ul>
+<li>One from our current branch (i.e. <code>HEAD</code>, which is
+<code>main</code>)</li>
+<li>One from the branch we are merging in
+(i.e. <code>readme-additions</code>)</li>
+</ul></li>
+<li>We need to manually edit the file to have the correct content that
+resolves this conflict
+<ul>
+<li><strong>This should often involve a conversation with whomever wrote
+the other code</strong></li>
+<li><strong>Don’t just blindly choose to keep one or the
+other</strong></li>
+</ul></li>
+<li>(press <code>q</code> to exit <code>git diff</code>)</li>
+</ul>
+<pre><code>nano README.md</code></pre>
+<p>To resolve this conflict, let’s remove the conflict markers and
+combine the two changes into one:</p>
+<pre><code>## Thanks
+
+* Git
+* Markdown</code></pre>
+<ul>
+<li>Save and exit <code>nano</code> (<code>Ctrl + x</code>,
+<code>y</code>, <code>Enter</code>)</li>
+<li>Check <code>git status</code>:</li>
+</ul>
+<pre><code>git status</code></pre>
+<p>The README is still unmerged, let’s check <code>git diff</code>
+again:</p>
+<pre><code>git diff README.md</code></pre>
+<ul>
+<li>The two columns of pluses and minuses can see the results of our
+manual conflict resolution:
+<ul>
+<li>The changes from <code>readme-additions</code> will effectively lose
+<code>Built   with</code> but gain <code>Thanks</code> and
+<code>Git</code></li>
+<li>The changes from <code>main</code> will effectively gain
+<code>Markdown</code></li>
+</ul></li>
+</ul>
+<p>We can now add our resolution:</p>
+<pre><code>git add README.md
+git status</code></pre>
+<p>The resolution is now staged and ready to be committed, so let’s
+complete the merge with a merge commit:</p>
+<pre><code>git commit</code></pre>
+<ul>
+<li>Git opens a text editor for us to edit a commit message for a
+<em>merge commit</em>
+<ul>
+<li>Just save and exit to confirm the message (<code>Ctrl + x</code>,
+<code>y</code>, <code>Enter</code>)</li>
+</ul></li>
+<li>The merge is now complete!</li>
+<li>Let’s check what that’s done to the repo:</li>
+</ul>
+<pre><code>git status
+git graph</code></pre>
+<ul>
+<li>We see a merge commit just like we did for the previous merge</li>
+<li>This was a relatively straightforward conflict</li>
+<li>Sometimes Git is able to automatically merge changes that may still
+be incompatible with each other
+<ul>
+<li>For example, maybe one branch renamed a variable, while the other
+branch added a new reference to the old variable name.</li>
+<li>So you should validate and test after any merge!</li>
+</ul></li>
+</ul>
+<h2 id="make-and-merge-a-pull-request">Make and merge a pull
+request</h2>
+<ul>
+<li>Finally, let’s look at one last way to merge a branch.</li>
+<li>Many teams will use a <strong>pull request</strong> (also know as a
+<strong>merge request</strong>) to manage merges back into the
+<code>main</code> branch.</li>
+<li>We’ll try that ourselves now.</li>
+</ul>
+<p>Let’s undo the last merge and commit on <code>master</code> by
+resetting again:</p>
+<pre><code>git reset --hard origin/main
+git graph</code></pre>
+<p>Now switch back to the <code>readme-additions</code> branch:</p>
+<pre><code>git switch
+git graph</code></pre>
+<p>Now let’s push the <code>readme-additions</code> branch to the
+<code>origin</code> remote:</p>
+<pre><code>git push origin</code></pre>
+<ul>
+<li>Now open your repo’s page on GitHub</li>
+<li>You’ll see various shortcuts to create a pull request, but let’s do
+it the standard way:
+<ol type="1">
+<li>Open the <code>Pull requests</code> tab</li>
+<li>Select <code>New pull request</code></li>
+<li>Make sure the <strong>base</strong> branch is <code>main</code></li>
+<li>Choose <code>readme-additions</code> for the
+<strong>compare</strong> branch
+<ul>
+<li>You’ll see a summary showing the commit to be merged in from
+<code>readme-additions</code>, along with a diff of the changes</li>
+</ul></li>
+<li>Select <code>Create pull request</code></li>
+<li>You can fill in some details for the pull request:
+<ul>
+<li>Change the title and description if more context is needed</li>
+<li>If you were in a team, you could add a reviewer</li>
+</ul></li>
+<li>Finally, click <code>Create pull request</code></li>
+</ol></li>
+<li>Because there are no merge conflicts, GitHub will say the branch is
+ready to merge.</li>
+<li>Normally, this would be the point for someone else to review and
+merge your pull request.</li>
+<li>But let’s just merge it ourselves today:
+<ul>
+<li>Select <code>Merge pull request</code> and then
+<code>Confirm merge</code></li>
+</ul></li>
+</ul>
+<p>Now let’s fetch the results of that merge from the
+<code>origin</code> remote to our local repo:</p>
+<pre><code>git fetch
+git graph</code></pre>
+<ul>
+<li>We can see <code>origin/main</code> contains a new merge commit</li>
+<li>Even though a fast-forward merge was possible, a pull request will
+always create a merge commit by default
+<ul>
+<li>This keeps a log of significant merges into <code>main</code></li>
+</ul></li>
+</ul>
+<p>You’ll now need to switch back to your main branch and “fast-forward”
+merge it to the latest state of <code>origin/main</code> - just like we
+did last week:</p>
+<pre><code>git switch main
+git merge --ff-only origin/main</code></pre>
+<ul>
+<li>Now you see why we say fast-forward only:
+<ul>
+<li>If there were local commits that weren’t in the remote branch, then
+we’d want to stop and think about what to do next</li>
+<li>We may want to merge, or as we’ll see next week, we may want to
+rebase</li>
+</ul></li>
+</ul>
+<p>Finally, now that our branch is merged, we should tidy-up by deleting
+our feature branch on the remote and locally:</p>
+<pre><code># Delete the remote branch
+git push -d origin readme-additions
+# Delete the local branch
+git branch -d readme-additions</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<ul>
+<li>You’ve learned a lot about branching and merging in this lesson,
+including four different kinds of merging:
+<ul>
+<li>Fast-forward merges</li>
+<li>Non-fast-forward merges with merge commits</li>
+<li>Merges with conflicts</li>
+<li>Merging via a pull request</li>
+</ul></li>
+<li>In the next lesson, you’ll learn some more powerful (and potentially
+dangerous!) tools for manipulating commits and branches.
+<ul>
+<li>In particular, we’ll learn how to rebase a feature branch that is
+conflicting with <code>main</code> in order to avoid unnecessary merge
+commits.</li>
+</ul></li>
 </ul>
 </body>
 </html>

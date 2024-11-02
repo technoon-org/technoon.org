@@ -246,6 +246,7 @@ git diff
   * Each contiguous "hunk" that has changed
   * Red lines starting with `-` have been removed by your changes
   * Green lines starting with `+` have been added by your changes
+* (press `q` to exit `git diff`)
 
 Now let's stage our changes for commit:
 
