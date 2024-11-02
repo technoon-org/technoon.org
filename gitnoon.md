@@ -81,7 +81,11 @@ Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJ
         <div class="col col-2">Collaboration workflows</div>
         <div class="col col-3">Branching and merging</div>
         <div class="col col-4 markdown-content">
-            Coming soon
+            <ul>
+                <li><a href="https://technoon-org.github.io/gitnoon/lesson_3/slides.html" target="_blank" rel="noopener">Slides</a></li>
+                <li><a href="https://technoon-org.github.io/gitnoon/lesson_3/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
+                <li><a href="https://technoon-org.github.io/gitnoon/lesson_3/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
+            </ul>
         </div>
     </li>
     <li>
