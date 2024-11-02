@@ -55,7 +55,7 @@ Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJ
     <li>
         <div class="col col-1">gitnoon-1</div>
         <div class="col col-2">Intro to Git</div>
-        <div class="col col-3">Tracking changes in Git</div>
+        <div class="col col-3">Tracking a project in Git</div>
         <div class="col col-4 markdown-content">
             <ul>
                 <li><a href="https://technoon-org.github.io/gitnoon/lesson_1/slides.html" target="_blank" rel="noopener">Slides</a></li>
@@ -67,9 +67,13 @@ Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJ
     <li>
         <div class="col col-1">gitnoon-2</div>
         <div class="col col-2">Exploring history</div>
-        <div class="col col-3">Working with remote repositories</div>
+        <div class="col col-3">Sharing repositories with others</div>
         <div class="col col-4 markdown-content">
-            Coming soon
+            <ul>
+                <li><a href="https://technoon-org.github.io/gitnoon/lesson_2/slides.html" target="_blank" rel="noopener">Slides</a></li>
+                <li><a href="https://technoon-org.github.io/gitnoon/lesson_2/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
+                <li><a href="https://technoon-org.github.io/gitnoon/lesson_2/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
+            </ul>
         </div>
     </li>
     <li>
