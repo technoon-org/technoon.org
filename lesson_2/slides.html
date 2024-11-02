@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>GitNoon Lesson 1</title>
+  <title>GitNoon Lesson 2</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -39,21 +39,26 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">GitNoon Lesson 1</h1>
+  <h1 class="title">GitNoon Lesson 2</h1>
 </section>
 
-<section id="get-ready-for-gitnoon" class="slide level3">
-<h3>Get Ready for GitNoon!</h3>
+<section id="get-ready-for-lesson-2" class="slide level3">
+<h3>Get Ready for Lesson 2!</h3>
+<div style="font-size: 0.85em;">
 <ol type="1">
-<li>Install <code>git</code> if you haven’t already:
-https://git-scm.com/downloads
-<ul>
-<li>On Windows, choose <code>Git Bash</code> when installing</li>
-</ul></li>
-<li>Open a terminal (or <code>Git Bash</code> on Windows)</li>
-<li>Make sure you can run the <code>git</code> command</li>
-<li>You should see usage instructions for <code>git</code></li>
+<li><p>Login to your account on <a
+href="https://github.com/">github.com</a></p></li>
+<li><p>If you missed the last lesson, ask for help setting up a
+<code>blog</code> repository to share:</p>
+<pre><code>mkdir blog
+cd blog
+git init
+echo &quot;# Entry 1&quot; &gt; entry_1.md
+git add entry_1.md
+git commit -m &quot;Add first blog entry&quot;
+git status</code></pre></li>
 </ol>
+</div>
 </section>
 <section id="thanks" class="slide level3">
 <h3>Thanks</h3>
@@ -71,198 +76,204 @@ https://git-scm.com/downloads
 <li>WiFi</li>
 </ul>
 </section>
-<section id="lunch-talk-intro-to-git" class="slide level3">
-<h3>Lunch Talk: Intro to Git</h3>
+<section id="lunch-talk-exploring-history" class="slide level3">
+<h3>Lunch Talk: Exploring History</h3>
 <ul>
-<li>What is Git?</li>
-<li>Why use Git?</li>
-<li>When should I use Git?</li>
-<li>What are GitHub, GitLab, etc?</li>
-<li>What to expect from GitNoon</li>
+<li>Getting value from the time you spend crafting clean commits and
+helpful commit messages</li>
+<li>Our key tools:
+<ul>
+<li><code>git log</code></li>
+<li><code>git blame</code></li>
+<li><code>git bisect</code></li>
+</ul></li>
+<li>The power of plain text</li>
 </ul>
 </section>
-<section id="what-is-git" class="slide level3">
-<h3>What is Git?</h3>
-<div>
-<div class="top-fragment-only">
+<section id="answering-questions-with-git-log" class="slide level3">
+<h3>Answering Questions with <code>git log</code></h3>
 <ul>
-<li class="fragment">Git is a tool to record <strong>versions</strong>
-of files over time</li>
-<li class="fragment">Git works with <strong>any type of file</strong>
-<ul>
-<li class="fragment">Works <em>especially well</em> with
-<strong>plain-text</strong> like source-code and config</li>
-</ul></li>
-<li class="fragment">The most popular Version Control System (VCS)
-<ul>
-<li class="fragment"><a
-href="https://stackoverflow.blog/2023/01/09/beyond-git-the-other-version-control-systems-developers-use/">About
-<strong>90%</strong> of devs use Git for version control</a></li>
-</ul></li>
+<li>We’ve already used <code>git log</code> to list commits</li>
+<li><code>git log</code> can be customised with
+<strong>options</strong></li>
+<li>Hold <strong>arrow keys</strong> to scroll up and down</li>
+<li><code>git log --help</code> lists the available options</li>
 </ul>
-</div>
-</div>
+<p><img src="images/git-log-help.png" width="65%"></p>
 </section>
-<section id="why-use-git" class="slide level3">
-<h3>Why use Git?</h3>
-<div>
-<div class="top-fragment-only">
-<ol type="1">
-<li class="fragment"><strong>Backup every version of your files</strong>
+<section id="what-has-guido-worked-on-lately" class="slide level3">
+<h3><em>What has Guido worked on lately?</em></h3>
+<p><code>git log --stat --author "Guido"</code></p>
+<p><img src="images/git-log-author.png" width="65%"></p>
 <ul>
-<li class="fragment">Being able to <em>restore any previous version</em>
-gives you confidence to make radical changes</li>
-</ul></li>
-<li class="fragment"><strong>Seamlessly collaborate with others</strong>
-<ul>
-<li class="fragment">Everyone can <em>work on the same files at the same
-time</em>, then combine their changes later</li>
-</ul></li>
-<li class="fragment"><strong>Explore file history</strong>
-<ul>
-<li class="fragment">Every version in Git records the author, date, and
-change description</li>
-<li class="fragment">Find <em>who</em> made a change, <em>when</em>, and
-<em>why</em></li>
-</ul></li>
-</ol>
-</div>
-</div>
+<li><code>--stat</code> counts lines changed in each file</li>
+</ul>
 </section>
-<section id="what-about-github-gitlab-bitbucket-etc"
-class="slide level3">
-<h3>What about GitHub, GitLab, BitBucket, etc?</h3>
+<section id="what-is-the-history-of-our-readme" class="slide level3">
+<h3><em>What is the history of our README?</em></h3>
+<p><code>git log --stat --follow -- README.rst</code></p>
+<p><img src="images/git-log-file.png" width="65%"></p>
 <div style="font-size: 0.8em;">
 <ul>
-<li>Online services for <strong>hosting/sharing Git
-repositories</strong>
-<ul>
-<li>Many can be self-hosted in your corporate environment</li>
-<li>GitLab even has an open-source version</li>
-</ul></li>
-<li>Provide features for:</li>
+<li><code>--follow</code> includes commits made when the file had
+another name (Git can follow most renames)</li>
+<li>The <code>--</code> tells Git that what comes next is a file</li>
 </ul>
-<div>
-<div class="top-fragment-only">
+</div>
+</section>
+<section id="how-was-issue-123458-fixed" class="slide level3">
+<h3><em>How was issue 123458 fixed?</em></h3>
+<p><code>git log --grep "gh-123458:"</code></p>
+<p><img src="images/git-log-grep.png" width="80%"></p>
+<div style="font-size: 0.8em;">
 <ul>
-<li class="fragment"><strong>Change Control</strong>
+<li><code>--grep</code> searches commit messages - so make them useful!
 <ul>
-<li class="fragment"><em>Merge/Pull requests</em> with discussions and
-approvals</li>
-</ul></li>
-<li class="fragment"><strong>Continuous Integration/Delivery
-(CI/CD)</strong>
-<ul>
-<li class="fragment">Automated checks and tests, deploying code</li>
-</ul></li>
-<li class="fragment"><strong>Static web hosting</strong>
-<ul>
-<li class="fragment">Turn a Git repository into a website - great for
-docs!</li>
-</ul></li>
-<li class="fragment"><strong>And more</strong>
-<ul>
-<li class="fragment">Issues, security scanning, container
-registries</li>
+<li>Follow project conventions (like including issue numbers)</li>
+<li>Include keywords relating to your work</li>
 </ul></li>
 </ul>
+</div>
+</section>
+<section id="when-was-parse_entry-removed" class="slide level3">
+<h3><em>When was <code>parse_entry</code> removed?</em></h3>
+<p><code>git log --patch -S "parse_entry"</code></p>
+<p><img src="images/git-log-pickaxe.png" width="60%" style="margin: 0;"></p>
+<div style="font-size: 0.8em;">
+<ul>
+<li><code>-S</code> searches the contents of lines changed
+<ul>
+<li>Known as the <em>Git Pickaxe</em></li>
+</ul></li>
+<li><code>--patch</code> shows the diff of each commit</li>
+</ul>
+</div>
+</section>
+<section id="combine-options-for-more-power" class="slide level3">
+<h3>Combine options for more power!</h3>
+<p>Answer very specific questions like:</p>
+<blockquote>
+<p>Didn’t Ben make an important change to <code>login.html</code> the
+week before we went on holiday?</p>
+</blockquote>
+<pre><code>git log \
+    --author Ben \
+    --since 2023-12-18 \
+    --until 2023-12-22 \
+    -- login.html</code></pre>
+</section>
+<section id="who-wrote-this" class="slide level3">
+<h3><em>Who wrote this?</em></h3>
+<p><code>git blame -- README.rst</code></p>
+<p><img src="images/git-blame.png" width="100%" style="margin: 0;"></p>
+<div style="font-size: 0.8em;">
+<ul>
+<li>For each line, find out: <strong>who</strong>,
+<strong>when</strong>, and <strong>which commit</strong></li>
+<li>Use <code>git show 914476</code> to see the contents of a
+commit</li>
+<li>Ignore whitespace changes with <code>-w</code></li>
+<li>Follow copy-pasting within the file (<code>-M</code>) or whole repo
+(-<code>C</code>)</li>
+</ul>
+</div>
+</section>
+<section id="when-did-this-break" class="slide level3">
+<h3><em>When did this break?</em></h3>
+<div style="display: flex;">
+<div style="flex: 2;">
+<ul style="font-size: 0.9em;">
+<li class="fragment" data-fragment-index="1">
+<code>git bisect start bad1 g00d</code>
+<ul>
+<li>
+Git “checks out” commit halfway between for you to inspect
+</li>
+</ul>
+</li>
+<li class="fragment" data-fragment-index="2">
+<code>git bisect good</code>
+</li>
+<li class="fragment" data-fragment-index="3">
+<code>git bisect bad</code>
+</li>
+<li class="fragment" data-fragment-index="4">
+<code>git bisect bad</code>
+</li>
+<li class="fragment" data-fragment-index="5">
+To clean up:<br><code>git bisect reset</code>
+</li>
+<li class="fragment" data-fragment-index="6">
+If you can’t test a commit:<br><code>git bisect skip</code>
+</li>
+<li class="fragment" data-fragment-index="7">
+You can even supply a test script!
+</li>
+</ul>
+</div>
+<div style="flex: 1;">
+<div class="r-stack">
+<img class="fragment" data-fragment-index="1" src="images/git-bisect-1.png"><img class="fragment" data-fragment-index="2" src="images/git-bisect-2.png"><img class="fragment" data-fragment-index="3" src="images/git-bisect-3.png"><img class="fragment" data-fragment-index="4" src="images/git-bisect-4.png">
 </div>
 </div>
 </div>
 </section>
-<section id="what-to-expect-from-gitnoon" class="slide level3">
-<h3>What to expect from GitNoon</h3>
-<div>
-<div class="top-fragment-only">
+<section id="the-power-of-plain-text" class="slide level3">
+<h3>The Power of Plain Text</h3>
+<div style="font-size: 0.8em;">
 <ul>
-<li class="fragment">Each lesson will have:
+<li>We’ve seen compelling reasons to track your projects with Git</li>
+<li>Like many “Unix” tools, Git is especially good for <strong>plain
+text</strong>
 <ul>
-<li class="fragment">A <strong>15 minute presentation</strong></li>
-<li class="fragment">A <strong>30 minute hands-on tutorial</strong></li>
+<li><code>git diff</code>, <code>git blame</code>, Git pickaxe,
+etc.</li>
 </ul></li>
-<li class="fragment">We’ll use Git from the
-<strong>command-line</strong> / <strong>terminal</strong>
-<ul>
-<li class="fragment">The fundamentals you’ll learn apply to any GUI</li>
-<li class="fragment">A GUI is not always available (e.g. on a
-server)</li>
-<li class="fragment">No previous command-line experience required</li>
-</ul></li>
-<li class="fragment">We’ll focus on <strong>Git itself</strong>
-<ul>
-<li class="fragment">Less on specific features of services like
-GitHub</li>
-</ul></li>
+<li>E.g. <strong>Markdown</strong> for formatted text as readable plain
+text:</li>
 </ul>
 </div>
-</div>
+<p><a href="https://dillinger.io/"><img src="images/dillinger.png" width="100%" style="margin: 0;"></a></p>
 </section>
-<section id="structure-of-this-course" class="slide level3">
-<h3>Structure of this Course</h3>
-<div style="font-size: 0.7em;">
-<table>
-<thead>
-<tr class="header">
-<th>Lesson</th>
-<th>Presentation</th>
-<th>Tutorial</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>1</strong></td>
-<td>Intro to Git</td>
-<td>Tracking a project in Git</td>
-</tr>
-<tr class="even">
-<td><strong>2</strong></td>
-<td>Exploring history</td>
-<td>Sharing repositories with others</td>
-</tr>
-<tr class="odd">
-<td><strong>3</strong></td>
-<td>Collaboration strategies</td>
-<td>Branching and merging</td>
-</tr>
-<tr class="even">
-<td><strong>4</strong></td>
-<td>Rewriting history</td>
-<td>Rebasing your branch</td>
-</tr>
-</tbody>
-</table>
-</div>
+<section id="plain-text-tools" class="slide level3">
+<h3>Plain Text Tools</h3>
+<ul>
+<li>Conversion (e.g. <code>.md</code> to <code>.docx</code>) → <a
+href="https://pandoc.org/">Pandoc</a></li>
+<li>Diagrams → <a href="https://mermaid.js.org/">Mermaid</a></li>
+<li>Markdown/HTML Slides → <a
+href="https://revealjs.com/">Reveal.js</a></li>
+<li>Markdown Websites → <a href="https://jekyllrb.com/">Jekyll</a>, <a
+href="https://decapcms.org/">Decap CMS</a></li>
+<li>“Infrastructure as Code” → <a
+href="https://opentofu.org/">OpenTofu</a>, <a
+href="https://www.ansible.com/">Ansible</a></li>
+<li>Accounting → <a
+href="https://plaintextaccounting.org/">plaintextaccounting.org</a></li>
+</ul>
 </section>
 <section id="tutorial-objectives" class="slide level3">
 <h3>Tutorial Objectives</h3>
 <ol type="1">
-<li>Configure Git on your machine</li>
-<li>Create your first Git repository (aka repo)</li>
-<li>Track file changes</li>
-<li>Revert to a previous version</li>
+<li>Configuring your GitHub account to support SSH authentication</li>
+<li>Sharing repos on GitHub</li>
+<li>Updating remote and local repos</li>
+<li>Instructing Git to ignore certain files</li>
+<li>Publishing a repo as a website on GitHub</li>
 </ol>
 </section>
 <section id="homework" class="slide level3">
 <h3>Homework</h3>
-<div style="font-size: 0.75em;">
 <ol type="1">
-<li><strong>Set a daily reminder to commit a blog entry</strong>
+<li>Continue your daily blog entries
 <ul>
-<li>You’ll share it publicly in the next lesson</li>
-<li>Build up your Git muscle memory by practising every day</li>
-<li>Use an editor that can preview Markdown, like VS Code</li>
-<li>Read some tips for good commit messages: <a
-href="https://www.gitkraken.com/learn/git/best-practices/git-commit-message">gitkraken.com/learn/git/best-practices/git-commit-message</a></li>
-</ul></li>
-<li><strong>Prepare for the next tutorial on remote repos</strong>
-<ul>
-<li>Create an account on <a
-href="https://github.com/">github.com</a></li>
-<li>If you have any issues, please contact the instructor well ahead of
-the next lesson!</li>
+<li>Start pushing to your remote repo as well</li>
+<li>Try more Markdown syntax: <a
+href="https://markdownguide.org/basic-syntax/">markdownguide.org/basic-syntax</a></li>
+<li>Try adding a <a href="https://mermaid.js.org/">mermaid</a>
+diagram</li>
 </ul></li>
 </ol>
-</div>
 </section>
     </div>
   </div>

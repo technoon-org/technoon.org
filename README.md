@@ -47,3 +47,8 @@ Slides and tutorials for GitNoon.
 
 * [Slides](https://technoon-org.github.io/gitnoon/lesson_1/slides.html)
 * [Tutorial Speaker Notes](https://technoon-org.github.io/gitnoon/lesson_1/tutorial.html)
+
+### Lesson 2
+
+* [Slides](https://technoon-org.github.io/gitnoon/lesson_2/slides.html)
+* [Tutorial Speaker Notes](https://technoon-org.github.io/gitnoon/lesson_2/tutorial.html)

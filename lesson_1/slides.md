@@ -34,17 +34,23 @@ title: GitNoon Lesson 1
 
 ::: incremental
 
+<div class="top-fragment-only">
+
 * Git is a tool to record **versions** of files over time
 * Git works with **any type of file**
   * Works *especially well* with **plain-text** like source-code and config
 * The most popular Version Control System (VCS)
   * [About **90%** of devs use Git for version control](https://stackoverflow.blog/2023/01/09/beyond-git-the-other-version-control-systems-developers-use/)
 
+</div>
+
 :::
 
 ### Why use Git?
 
 ::: incremental
+
+<div class="top-fragment-only">
 
 1. **Backup every version of your files**
    * Being able to *restore any previous version* gives you confidence
@@ -57,6 +63,8 @@ title: GitNoon Lesson 1
      description
    * Find *who* made a change, *when*, and *why*
 
+</div>
+
 :::
 
 ### What about GitHub, GitLab, BitBucket, etc?
@@ -66,18 +74,22 @@ title: GitNoon Lesson 1
 * Online services for **hosting/sharing Git repositories**
   * Many can be self-hosted in your corporate environment
   * GitLab even has an open-source version
+* Provide features for:
 
 ::: incremental
 
-* Provide features for:
-  * **Change Control**
-    * *Merge/Pull requests* with discussions and approvals
-  * **Continuous Integration/Delivery (CI/CD)**
-    * Automated checks and tests, deploying code
-  * **Static web hosting**
-    * Turn a Git repository into a website - great for docs!
-  * **And more**
-    * Issues, security scanning, container registries
+<div class="top-fragment-only">
+
+* **Change Control**
+  * *Merge/Pull requests* with discussions and approvals
+* **Continuous Integration/Delivery (CI/CD)**
+  * Automated checks and tests, deploying code
+* **Static web hosting**
+  * Turn a Git repository into a website - great for docs!
+* **And more**
+  * Issues, security scanning, container registries
+
+</div>
 
 :::
 
@@ -86,6 +98,8 @@ title: GitNoon Lesson 1
 ### What to expect from GitNoon
 
 ::: incremental
+
+<div class="top-fragment-only">
 
 * Each lesson will have:
   * A **15 minute presentation**
@@ -97,6 +111,8 @@ title: GitNoon Lesson 1
 * We'll focus on **Git itself**
   * Less on specific features of services like GitHub
 
+</div>
+
 :::
 
 ### Structure of this Course
@@ -105,8 +121,8 @@ title: GitNoon Lesson 1
 
 | Lesson | Presentation             | Tutorial                         |
 |--------|--------------------------|----------------------------------|
-| **1**  | Intro to Git             | Tracking changes in Git          |
-| **2**  | Exploring history        | Working with remote repositories |
+| **1**  | Intro to Git             | Tracking a project in Git        |
+| **2**  | Exploring history        | Sharing repositories with others |
 | **3**  | Collaboration strategies | Branching and merging            |
 | **4**  | Rewriting history        | Rebasing your branch             |
 
@@ -123,15 +139,13 @@ title: GitNoon Lesson 1
 
 <div style="font-size: 0.75em;">
 
-1. **Set a daily reminder to commit a journal entry**
-   * Build up your Git muscle memory
+1. **Set a daily reminder to commit a blog entry**
+   * You'll share it publicly in the next lesson
+   * Build up your Git muscle memory by practising every day
    * Use an editor that can preview Markdown, like VS Code
-   * Try more Markdown syntax:
-     [markdownguide.org/basic-syntax](https://markdownguide.org/basic-syntax/)
    * Read some tips for good commit messages: [gitkraken.com/learn/git/best-practices/git-commit-message](https://www.gitkraken.com/learn/git/best-practices/git-commit-message)
 2. **Prepare for the next tutorial on remote repos**
    * Create an account on [github.com](https://github.com/)
-   * Add an SSH key to your account: [docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
    * If you have any issues, please contact the instructor well ahead
      of the next lesson!
 

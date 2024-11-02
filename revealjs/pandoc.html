@@ -90,8 +90,13 @@ $body$
 $if(mathjax)$
   <script src="$revealjs-url$/plugin/math/math.js"></script>
 $endif$
+  <script src="$revealjs-url$/plugin/mermaid/mermaid.js"></script>
 
   <script>
+
+     document.querySelectorAll('.top-fragment-only .fragment .fragment').forEach(function(el) {
+         el.classList.remove('fragment');
+     });
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -313,7 +318,8 @@ $if(mathjax)$
 $endif$
           RevealNotes,
           RevealSearch,
-          RevealZoom
+          RevealZoom,
+          RevealMermaid
         ]
       });
     </script>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>GitNoon Lesson 2</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">body {
+font-family: Arial, sans-serif;
+font-size: 16px;
+}
+pre {
+padding: 1em;
+border: 1px solid #333333;
+}
+blockquote {
+font-style: italic;
+}
+</style>
+  <link href="data:image/vnd.microsoft.icon;base64,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" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">GitNoon Lesson 2</h1>
+</header>
+<p>In this tutorial, you will learn how to use Git to track versions of
+your files in a personal project:</p>
+<ol type="1">
+<li>Configuring your GitHub account to support SSH authentication</li>
+<li>Sharing repos on GitHub</li>
+<li>Updating remote and local repos</li>
+<li>Instructing Git to ignore certain files</li>
+<li>Publishing a repo as a website on GitHub</li>
+</ol>
+<blockquote>
+<p>Note: While this tutorial makes use of GitHub, it should be
+reasonably straightforward to adapt its contents to an alternative
+hosting provider, like GitLab.</p>
+</blockquote>
+<h2 id="configuring-your-github-account-to-support-ssh-authentication">Configuring
+your GitHub account to support SSH authentication</h2>
+<p><em>Following instructions from:
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account</em></p>
+<p>GitHub (and most Git hosting providers) support two types of
+connection:</p>
+<ol type="1">
+<li><code>HTTPS</code>, with authentication based on username and
+password</li>
+<li><code>SSH</code>, with authentication based on a <em>private
+key</em> you keep on your machine, and a <em>public key</em> that you
+share with GitHub</li>
+</ol>
+<p>We’re going to use <code>SSH</code>, which is generally the preferred
+option and is simpler when your account has Two-Factor Authentication
+enabled.</p>
+<p>To do so, whenever we want to use Git on a new machine, we’ll need
+to:</p>
+<ol type="1">
+<li>Generate an SSH keypair to identify your machine
+<ul>
+<li>You can skip this if you already have a key on your machine that you
+want to use</li>
+</ul></li>
+<li>Add your public key to your GitHub account</li>
+</ol>
+<h3 id="generating-an-ssh-keypair">Generating an SSH keypair</h3>
+<p>To generate a new SSH keypair, open a terminal and run:</p>
+<pre><code>ssh-keygen -t ed25519 -C &quot;your.email@example.com&quot;</code></pre>
+<ul>
+<li>If you have an older system that doesn’t support
+<code>ed25519</code>, use:
+<code>ssh-keygen -t rsa -b 4096 -C &quot;your.email@example.com&quot;</code></li>
+<li>You will be asked if you want to protect your private key with a new
+password
+<ul>
+<li>You should ideally use a password generated by a password
+manager</li>
+</ul></li>
+</ul>
+<p>This will create two files in an <code>.ssh</code> directory under
+your home directory, which we can list with:</p>
+<pre><code>ls -l ~/.ssh</code></pre>
+<p>You should see:</p>
+<ul>
+<li>A private key: <code>id_ed25519</code> (or similar)</li>
+<li>A public key: <code>id_ed25519.pub</code> (or similar)</li>
+</ul>
+<h3 id="adding-your-public-key-to-your-github-account">Adding your
+public key to your GitHub account</h3>
+<ol type="1">
+<li>Visit <code>github.com</code> in your web browser</li>
+<li>Click on your profile picture, and select <code>Settings</code></li>
+<li>Under <code>SSH and GPG keys</code>, select
+<code>New SSH key</code></li>
+<li>Fill in the following details:
+<ol type="1">
+<li>Title: Use a name that identifies your machine,
+e.g. <code>work-laptop</code></li>
+<li>Key type: <code>Authentication Key</code></li>
+<li>Key: Paste the contents of your <strong>public</strong> key, which
+you can get by running:</li>
+</ol></li>
+</ol>
+<pre><code>cat ~/.ssh/id_ed25519.pub</code></pre>
+<ul>
+<li>Git also supports using keys to cryptographically sign your commits
+- providing evidence that it was actually you who made a commit bearing
+your name and email address.</li>
+<li>If anyone else ever gains access to your private key, you should
+delete it from your GitHub account.</li>
+</ul>
+<h2 id="sharing-repos-on-github">Sharing repos on GitHub</h2>
+<h3 id="pushing-your-repo">Pushing your repo</h3>
+<p>Let’s create a repository on GitHub to publicly share the blog we
+made last week:</p>
+<ol type="1">
+<li>Visit <code>github.com</code> in your web browser</li>
+<li>From the <code>+</code> dropdown at the top-right, select
+<code>New Repository</code></li>
+<li>Fill in the following details:
+<ul>
+<li>Name: <code>blog</code></li>
+<li>Visibility: <code>Public</code></li>
+<li><strong>Don’t</strong> add a README or any other files</li>
+</ul></li>
+</ol>
+<p>Your new repository will be completely empty, with no commits.</p>
+<p>Now let’s connect your local <code>blog</code> repo to this remote
+repo on GitHub:</p>
+<ol type="1">
+<li>From your repo’s GitHub page, find the <code>Qucik setup</code>
+instructions</li>
+<li>Select the <code>SSH</code> tab, and copy the URL</li>
+<li>Open your repo’s directory in a terminal (<code>cd blog</code>)</li>
+<li>Add the <strong>remote</strong> to your repository:</li>
+</ol>
+<pre><code>git remote add origin git@github.com:&lt;username&gt;/blog.git</code></pre>
+<blockquote>
+<p><strong>IMPORTANT:</strong> If the network you are on does not allow
+traffic over SSH port 22, you will need to use a different URL
+format:</p>
+<pre><code>git remote add ssh://git@ssh.github.com:443/&lt;username&gt;/blog.git</code></pre>
+</blockquote>
+<p>To check our remote has been added successfully, run:</p>
+<pre><code>git remote -v</code></pre>
+<ul>
+<li>We can potentially connect multiple remote repository to push/fetch
+code to/from.</li>
+<li><code>origin</code> is the conventional name for the primary
+remote.</li>
+</ul>
+<p>Now let’s push the current state of the local repository
+(specifically, the <code>main</code> branch we have been working on) to
+the <code>origin</code> remote:</p>
+<pre><code>git push -u origin main</code></pre>
+<ul>
+<li>You may need to accept the authenticity of the Git remote’s
+fingerprint - you can double-check it at:
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints</li>
+<li>You may also be prompted for your SSH private key’s password</li>
+</ul>
+<p>Go back to your repo on GitHub and you should see your blog
+files!</p>
+<h3 id="cloning-your-neighbours-repo">Cloning your neighbour’s repo</h3>
+<p>Now try cloning your neighbour’s repo:</p>
+<ol type="1">
+<li>Ask your neighbour for the link to their repo on GitHub</li>
+<li>From the repo page, find the <code>Code</code> dropdown, and copy
+the SSH URL</li>
+<li>In a new terminal, clone their entire repository into a new
+directory called <code>friend-blog</code> by running:</li>
+</ol>
+<pre><code>git clone git@github.com:&lt;friend-username&gt;/blog.git friend-blog</code></pre>
+<blockquote>
+<p>Again, if the network you are on does not allow traffic over SSH port
+22, you will need to use a different URL format:</p>
+<pre><code>git clone ssh://git@ssh.github.com:443/&lt;username&gt;/blog.git friend-blog</code></pre>
+</blockquote>
+<p>Have a look at their blog posts!</p>
+<pre><code>cd friend-blog
+ls -l
+cat entry_1.md</code></pre>
+<h2 id="updating-remote-and-local-repos">Updating remote and local
+repos</h2>
+<p>We should add a README file to every repo to provide a starting point
+for anyone looking at it (including our future selves!).</p>
+<p>Let’s each add a README to our own repo, then fetch the README that
+our neighbour added into our local clone of their repo.</p>
+<h3 id="pushing-a-readme-to-our-remote-repo">Pushing a README to our
+remote repo</h3>
+<p>First, go back to the terminal opened to your own blog’s directory,
+and create a <code>README.md</code> file:</p>
+<pre><code>nano README.md</code></pre>
+<p>Give it the following content’s</p>
+<pre><code># My Blog
+
+## Contents
+
+* [Entry 1](entry_1.md)</code></pre>
+<p>Save and exit <code>nano</code> (<code>Ctrl + x</code>,
+<code>y</code>, <code>Enter</code>), then add and commit the README:</p>
+<pre><code>git status
+git add README.md
+git status
+git commit
+# Commit message: Add README
+git status</code></pre>
+<ul>
+<li>With that last <code>git status</code>, you should see that your
+branch is “ahead of origin/main by 1 commit”</li>
+<li><code>origin/main</code> is a <strong>remote reference</strong> that
+tells us what the <code>main</code> branch looked like on the
+<code>origin</code> remote the last time we cloned or “fetched” from
+that remote.</li>
+<li>We can indeed see that (based on our last fetch),
+<code>origin/main</code> does not yet have our latest commit:</li>
+</ul>
+<pre><code>git log</code></pre>
+<p>To publish the latest commits from the local copy of our branch to
+the remote, we just need to run:</p>
+<pre><code>git push</code></pre>
+<p>Now check the status and log again, and see that
+<code>origin/main</code> has been updated:</p>
+<pre><code>git status
+git log</code></pre>
+<p>Finally, refresh your repo’s page on GitHub, and see that you have a
+fancy-looking README file!</p>
+<h3 id="fetching-the-readme-of-our-neighbours-repo">Fetching the README
+of our neighbour’s repo</h3>
+<p>Now go back to the terminal open in your <code>friend-blog/</code>
+directory, and fetch the latest commits:</p>
+<pre><code>git fetch</code></pre>
+<p>Now <code>git status</code> tells us that our local repo is
+<em>behind</em> the remote by 1 commit:</p>
+<pre><code>git status</code></pre>
+<p>We can also see this from the log:</p>
+<pre><code>git log origin/main</code></pre>
+<ul>
+<li>Because <code>git log</code> defaults to showing us commits on our
+current local branch, we need to tell it to look at commits on the
+remote branch</li>
+</ul>
+<p>Because we haven’t made any commits of our own since we last
+cloned/fetched, we can simply tell Git to update our local branch by
+“fast-forwarding” through all of the commits on the remote branch:</p>
+<pre><code>git merge --ff-only origin/main</code></pre>
+<ul>
+<li><code>--ff-only</code> tells Git to only update our local branch if
+it is possible to “fast-forward”.</li>
+<li>If we <em>had</em> made our own local commits, fast-forwarding
+wouldn’t be possible, and we’d need to take a different approach.</li>
+<li>We’ll look at that case along with branches and
+<code>git merge</code> in more detail in the next lessons.</li>
+</ul>
+<h2 id="telling-git-to-ignore-certain-files">Telling Git to ignore
+certain files</h2>
+<p>Sometimes we have files that we don’t want Git to track, especially
+when sharing repos with others:</p>
+<ul>
+<li>Local configuration that doesn’t need to be shared</li>
+<li>Secrets that shouldn’t be shared (like API keys)</li>
+<li>Temporary editor lock files</li>
+<li>Locally-installed dependency packages</li>
+<li>Outputs of build/compilation processes</li>
+</ul>
+<p>For example, let’s say we have a file containing some secrets:</p>
+<pre><code>touch secrets.txt</code></pre>
+<p>Git is ready for us to start tracking it:</p>
+<pre><code>git status</code></pre>
+<p>But we will tell Git to never track that file by adding its path to a
+<code>.gitignore</code> file:</p>
+<pre><code>nano .gitignore</code></pre>
+<p>Add the following line into <code>.gitignore</code>:</p>
+<pre><code>secrets.txt</code></pre>
+<p>Now Git will ignore <code>secrets.txt</code>, though we will need to
+make sure we commit the <code>.gitignore</code> file:</p>
+<pre><code>git status</code></pre>
+<h2 id="publishing-your-repo-as-a-website-on-github">Publishing your
+repo as a website on GitHub</h2>
+<p>Finally, let’s use GitHub’s <strong>Pages</strong> feature to publish
+your blog as a static website!</p>
+<ol type="1">
+<li>Open your repo’s page on GitHub</li>
+<li>Go to <code>Settings -&gt; Pages</code></li>
+<li>Select <code>Deploy from a branch</code>, select the
+<code>main</code> branch, then <code>Save</code></li>
+<li>Open your website at:
+<code>https://&lt;username&gt;.github.io/blog</code>
+<ul>
+<li>You may need to wait a minute for it to be published.</li>
+</ul></li>
+</ol>
+<p>You can make a pretty fancy blog or documentation website on GitHub
+pages with a static site tool like Jekyll, or by crafting your own HTML
+and CSS.</p>
+<h2 id="conclusion">Conclusion</h2>
+<ul>
+<li>You have now learned how to work with remote Git repositories</li>
+<li>In the next lesson, you’ll learn how to use Git’s branching and
+merging features, which are especially important for managing multiple
+people working on the same repository.</li>
+</ul>
+</body>
+</html>

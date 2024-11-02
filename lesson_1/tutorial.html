@@ -81,28 +81,28 @@ use the Windows certificate store:</strong></p>
 </blockquote>
 <h2 id="creating-a-git-repository">Creating a Git repository</h2>
 <p>Let’s create a <strong>Git repository (aka repo)</strong> to track
-entries in a personal journal.</p>
+entries in a personal blog.</p>
 <p>A Git repo is just a directory of files we are tracking with Git, so
 let’s start by creating a directory:</p>
-<pre><code>mkdir journal</code></pre>
+<pre><code>mkdir blog</code></pre>
 <ul>
 <li>You may like to open your file explorer to see the files we are
 creating.</li>
-<li><code>journal/</code> should be in the Home directory that opens by
+<li><code>blog/</code> should be in the Home directory that opens by
 default in your operating system’s file explorer.</li>
 <li>On Windows, you can run <code>explorer .</code> to open Explorer to
 the current directory.</li>
 </ul>
-<p>Now change into the <code>journal/</code> directory, and list its
+<p>Now change into the <code>blog/</code> directory, and list its
 contents:</p>
-<pre><code>cd journal
+<pre><code>cd blog
 ls -la</code></pre>
 <ul>
-<li>There’s nothing in the <code>journal/</code> directory yet except
-for the standard pointers to the current directory (<code>.</code>) and
-the parent directory (<code>..</code>)</li>
+<li>There’s nothing in the <code>blog/</code> directory yet except for
+the standard pointers to the current directory (<code>.</code>) and the
+parent directory (<code>..</code>)</li>
 </ul>
-<p>Now let’s initialise the <code>journal/</code> directory as a Git
+<p>Now let’s initialise the <code>blog/</code> directory as a Git
 repo:</p>
 <pre><code>git init</code></pre>
 <p>Now list the contents again:</p>
@@ -132,7 +132,7 @@ about branches in a future lesson.</li>
 that now!</li>
 </ul>
 <h2 id="committing-a-new-file">Committing a new file</h2>
-<p>Now let’s add a first entry into your journal. Open a new file called
+<p>Now let’s add a first entry into your blog. Open a new file called
 <code>entry_1.md</code> in the <code>nano</code> text editor:</p>
 <blockquote>
 <p>TIP: You could use any text editor to create this file, but we’ll use
@@ -159,7 +159,7 @@ editor)</li>
 </ul>
 <pre><code># Entry 1
 
-This is my first journal entry!</code></pre>
+This is my first blog entry!</code></pre>
 <p>Now check the status of your repository</p>
 <pre><code>git status</code></pre>
 <p>You should see your <code>entry_1.md</code>, and that it is currently
@@ -171,7 +171,7 @@ the <strong>staging area</strong> of changes that are ready to be
 committed:</p>
 <pre><code>git status</code></pre>
 <p>Now let’s create the first <strong>commit (aka version)</strong> of
-our journal repo:</p>
+our blog repo:</p>
 <pre><code>git commit</code></pre>
 <ul>
 <li>Git will drop you into a text editor
@@ -181,7 +181,7 @@ our journal repo:</p>
 </ul></li>
 <li>Enter a commit message to describe the change you have made:
 <ul>
-<li><code>Add first journal entry</code></li>
+<li><code>Add first blog entry</code></li>
 </ul></li>
 <li>Then exit <code>nano</code> while saving changes:
 <ul>
@@ -206,14 +206,14 @@ it to see our first commit:</p>
 </ul></li>
 </ul>
 <h2 id="modifying-a-file">Modifying a file</h2>
-<p>Now let’s modify our journal entry:</p>
+<p>Now let’s modify our blog entry:</p>
 <pre><code>nano entry_1.md</code></pre>
 <blockquote>
 <p>TIP: If you don’t want to type out the entire filename, try typing
 <code>ent</code> and then pressing <code>TAB</code> to auto-complete
 it.</p>
 </blockquote>
-<p>Replace the <code>This is my first journal entry!</code> with:</p>
+<p>Replace the <code>This is my first blog entry!</code> with:</p>
 <pre><code>I&#39;ve just learned how to commit changes in Git!</code></pre>
 <p>Save and exit, then check <code>git status</code>:</p>
 <pre><code>git status</code></pre>
@@ -250,7 +250,7 @@ git log</code></pre>
 previous version. This gives us confidence to make radical (and
 potentially breaking) changes to our files without worrying about losing
 a good/working version.</p>
-<p>Let’s say we accidentally deleted our journal entry:</p>
+<p>Let’s say we accidentally deleted our blog entry:</p>
 <pre><code>rm entry_1.md</code></pre>
 <p>We can see that Git notices it’s deletion:</p>
 <pre><code>git status</code></pre>
@@ -316,28 +316,6 @@ for the most recent commit.</li>
 is a bit silly, but <strong>it illustrates how we typically undo work in
 Git by <em>adding new commits</em> that restore older content or revert
 earlier commits.</strong></p>
-<h2 id="telling-git-to-ignore-certain-files">Telling Git to ignore
-certain files</h2>
-<p>Sometimes we have files that we don’t want Git to track:</p>
-<ul>
-<li>Local configuration that doesn’t need to be shared</li>
-<li>Secrets that shouldn’t be shared (like API keys)</li>
-<li>Temporary editor lock files</li>
-<li>Locally-installed dependency packages</li>
-<li>Outputs of build/compilation processes</li>
-</ul>
-<p>For example, let’s say we have a file containing some secrets:</p>
-<pre><code>touch secrets.txt</code></pre>
-<p>Git is ready for us to start tracking it:</p>
-<pre><code>git status</code></pre>
-<p>But we will tell Git to never track that file by adding its path to a
-<code>.gitignore</code> file:</p>
-<pre><code>nano .gitignore</code></pre>
-<p>Add the following line into <code>.gitignore</code>:</p>
-<pre><code>secrets.txt</code></pre>
-<p>Now Git will ignore <code>secrets.txt</code>, though we will need to
-make sure we commit the <code>.gitignore</code> file:</p>
-<pre><code>git status</code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
 <li>You have now learned how to track versions of your files in a

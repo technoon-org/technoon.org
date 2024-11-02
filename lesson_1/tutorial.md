@@ -61,34 +61,34 @@ git config --global http.sslBackend schannel
 ## Creating a Git repository
 
 Let's create a **Git repository (aka repo)** to track entries in a
-personal journal.
+personal blog.
 
 A Git repo is just a directory of files we are tracking with Git, so
 let's start by creating a directory:
 
 ```
-mkdir journal
+mkdir blog
 ```
 
 * You may like to open your file explorer to see the files we are
   creating.
-* `journal/` should be in the Home directory that opens by default in
+* `blog/` should be in the Home directory that opens by default in
   your operating system's file explorer.
 * On Windows, you can run `explorer .` to open Explorer to the current
   directory.
 
-Now change into the `journal/` directory, and list its contents:
+Now change into the `blog/` directory, and list its contents:
 
 ```
-cd journal
+cd blog
 ls -la
 ```
 
-* There's nothing in the `journal/` directory yet except for the
+* There's nothing in the `blog/` directory yet except for the
   standard pointers to the current directory (`.`) and the parent
   directory (`..`)
 
-Now let's initialise the `journal/` directory as a Git repo:
+Now let's initialise the `blog/` directory as a Git repo:
 
 ```
 git init
@@ -127,7 +127,7 @@ git status
 
 ## Committing a new file
 
-Now let's add a first entry into your journal. Open a new file called
+Now let's add a first entry into your blog. Open a new file called
 `entry_1.md` in the `nano` text editor:
 
 > TIP: You could use any text editor to create this file, but we'll
@@ -152,7 +152,7 @@ nano entry_1.md
 ```
 # Entry 1
 
-This is my first journal entry!
+This is my first blog entry!
 ```
 
 Now check the status of your repository
@@ -176,8 +176,7 @@ the **staging area** of changes that are ready to be committed:
 git status
 ```
 
-Now let's create the first **commit (aka version)** of our journal
-repo:
+Now let's create the first **commit (aka version)** of our blog repo:
 
 ```
 git commit
@@ -186,7 +185,7 @@ git commit
 * Git will drop you into a text editor
   * Because of our configuration earlier, this will be `nano`
 * Enter a commit message to describe the change you have made:
-  * `Add first journal entry`
+  * `Add first blog entry`
 * Then exit `nano` while saving changes:
   * `Ctrl + x`
   * `y`
@@ -214,7 +213,7 @@ git log
 
 ## Modifying a file
 
-Now let's modify our journal entry:
+Now let's modify our blog entry:
 
 ```
 nano entry_1.md
@@ -223,7 +222,7 @@ nano entry_1.md
 > TIP: If you don't want to type out the entire filename, try typing
 > `ent` and then pressing `TAB` to auto-complete it.
 
-Replace the `This is my first journal entry!` with:
+Replace the `This is my first blog entry!` with:
 
 ```
 I've just learned how to commit changes in Git!
@@ -290,7 +289,7 @@ version. This gives us confidence to make radical (and potentially
 breaking) changes to our files without worrying about losing a
 good/working version.
 
-Let's say we accidentally deleted our journal entry:
+Let's say we accidentally deleted our blog entry:
 
 ```
 rm entry_1.md
@@ -380,49 +379,6 @@ Having lots of commits changing the content back and forth like this
 is a bit silly, but **it illustrates how we typically undo work in Git
 by *adding new commits* that restore older content or revert earlier
 commits.**
-
-
-## Telling Git to ignore certain files
-
-Sometimes we have files that we don't want Git to track:
-
-* Local configuration that doesn't need to be shared
-* Secrets that shouldn't be shared (like API keys)
-* Temporary editor lock files
-* Locally-installed dependency packages
-* Outputs of build/compilation processes
-
-For example, let's say we have a file containing some secrets:
-
-```
-touch secrets.txt
-```
-
-Git is ready for us to start tracking it:
-
-```
-git status
-```
-
-But we will tell Git to never track that file by adding its path to a
-`.gitignore` file:
-
-```
-nano .gitignore
-```
-
-Add the following line into `.gitignore`:
-
-```
-secrets.txt
-```
-
-Now Git will ignore `secrets.txt`, though we will need to make sure we
-commit the `.gitignore` file:
-
-```
-git status
-```
 
 
 ## Conclusion
