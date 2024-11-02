@@ -299,9 +299,13 @@ changed “hunk”.</li>
 git commit
 # Commit message: Restore initial version of first entry
 git log</code></pre>
-<p><strong>IMPORTANT:</strong> You should always be careful running
-<code>git restore</code>, as it might wipe out uncommitted changes.</p>
 <ul>
+<li><strong>IMPORTANT:</strong> You should always be careful running
+<code>git restore</code>, as it might wipe out uncommitted changes.
+<ul>
+<li>You should also commit often to avoid losing work and give yourself
+more flexibility on which point to restore!</li>
+</ul></li>
 <li>If you want to “undo” the changes of a specific commit, you can use
 <code>git revert</code> to automatically add a new commit that is the
 exact opposite of that commit.</li>

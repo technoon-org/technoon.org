@@ -355,9 +355,10 @@ git commit
 git log
 ```
 
-**IMPORTANT:** You should always be careful running `git restore`, as
-it might wipe out uncommitted changes.
-
+* **IMPORTANT:** You should always be careful running `git restore`,
+  as it might wipe out uncommitted changes.
+  * You should also commit often to avoid losing work and give
+    yourself more flexibility on which point to restore!
 * If you want to "undo" the changes of a specific commit, you can use
   `git revert` to automatically add a new commit that is the exact
   opposite of that commit.

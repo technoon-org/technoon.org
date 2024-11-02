@@ -157,9 +157,10 @@ git log \
 
 ### The Power of Plain Text
 
-<div style="font-size: 0.8em;">
+<div style="font-size: 0.65em;">
 
 * We've seen compelling reasons to track your projects with Git
+  * And why to write small, self-contained commits with good messages!
 * Like many "Unix" tools, Git is especially good for **plain text**
   * `git diff`, `git blame`, Git pickaxe, etc.
 * E.g. **Markdown** for formatted text as readable plain text:
@@ -173,9 +174,10 @@ git log \
 
 * Conversion (e.g. `.md` to `.docx`) → [Pandoc](https://pandoc.org/)
 * Diagrams → [Mermaid](https://mermaid.js.org/)
-* Markdown/HTML Slides → [Reveal.js](https://revealjs.com/)
-* Markdown Websites → [Jekyll](https://jekyllrb.com/), [Decap CMS](https://decapcms.org/)
-* "Infrastructure as Code" → [OpenTofu](https://opentofu.org/),
+* Markdown/HTML slides → [Reveal.js](https://revealjs.com/)
+* Markdown websites → [Jekyll](https://jekyllrb.com/), [Decap CMS](https://decapcms.org/)
+* Documentation sites → [Docsify](https://docsify.js.org/), [MkDocs](https://www.mkdocs.org/)
+* "Infrastructure as code" → [OpenTofu](https://opentofu.org/),
   [Ansible](https://www.ansible.com/)
 * Accounting → [plaintextaccounting.org](https://plaintextaccounting.org/)
 
@@ -191,8 +193,20 @@ git log \
 
 ### Homework
 
-1. Continue your daily blog entries
+<div style="font-size: 0.75em;">
+
+1. **History exploration exercises**
+   * Clone the "awesome lists" repo:
+     [github.com/sindresorhus/awesome](https://github.com/sindresorhus/awesome)
+   * Use Git to answer the following questions:
+     1. Who was the last person to edit the license and why?
+     2. When was "ChatGPT" added to the list?
+     3. Find all commits with the message "Meta tweaks"
+     4. What was the first commit by user `RichardLitt`?
+2. **Continue your daily blog entries**
    * Start pushing to your remote repo as well
    * Try more Markdown syntax:
      [markdownguide.org/basic-syntax](https://markdownguide.org/basic-syntax/)
    * Try adding a [mermaid](https://mermaid.js.org/) diagram
+
+</div>
