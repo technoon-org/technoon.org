@@ -114,7 +114,7 @@ git remote add origin git@github.com:<username>/blog.git
 > **IMPORTANT:** If the network you are on does not allow traffic over
 > SSH port 22, you will need to use a different URL format:
 > ```
-> git remote add ssh://git@ssh.github.com:443/<username>/blog.git
+> git remote add origin ssh://git@ssh.github.com:443/<username>/blog.git
 > ```
 
 To check our remote has been added successfully, run:

@@ -124,7 +124,7 @@ title: GitNoon Lesson 1
 | **1**  | Intro to Git            | Tracking a project in Git        |
 | **2**  | Exploring history       | Sharing repositories with others |
 | **3**  | Collaboration workflows | Branching and merging            |
-| **4**  | Rewriting history       | Rebasing your branch             |
+| **4**  | Rewriting history       | Pull requests and rebasing       |
 
 </div>
 

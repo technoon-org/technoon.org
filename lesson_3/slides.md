@@ -6,19 +6,46 @@ title: GitNoon Lesson 3
 
 <div style="font-size: 0.85em;">
 
-1. Login to your account on [github.com](https://github.com/)
-2. If you missed the previous lessons, ask for help setting up a `blog` repository to share:
-   ```
-   mkdir blog
-   cd blog
-   git init
-   echo "# Entry 1" > entry_1.md
-   git add entry_1.md
-   git commit -m "Add first blog entry"
-   git status
-   ```
-3. Make sure you have no uncommitted changes and that you are up to
+1. Make sure you have no uncommitted changes and that you are up to
    date with `origin/main` by checking the output of `git status`
+2. If you missed the previous lesson, ask for help with the
+   quick-setup on the next slide
+   * [technoon-org.github.io/gitnoon/lesson_3/slides.html](https://technoon-org.github.io/gitnoon/lesson_3/slides.html#/quick-setup)
+
+</div>
+
+### Quick Setup
+
+<div style="font-size: 0.55em;">
+
+1. Configuring Git:
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+git config --global core.editor nano
+git config --global init.defaultBranch main
+# For Linux or macOS:
+git config --global core.autocrlf input
+# For Windows:
+git config --global core.autocrlf true
+# If you're behind a corporate proxy on Windows
+git config --global http.sslBackend schannel
+```
+2. Setting up a `blog` repository:
+```bash
+mkdir blog
+cd blog
+git init
+echo "# Entry 1" > entry_1.md
+git add entry_1.md
+git commit -m "Add first blog entry"
+git status
+```
+3. Creating a new public `blog` repository on GitHub, and pushing your local repo to it:
+```bash
+git remote add origin ssh://git@ssh.github.com:443/<username>/blog.git
+git push -u origin main
+```
 
 </div>
 
