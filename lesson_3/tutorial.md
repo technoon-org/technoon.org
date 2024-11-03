@@ -26,6 +26,8 @@ it:
 git graph
 ```
 
+* (press `q` to exit `git graph`)
+
 ### Understanding the graph
 
 * You should see a commit on each line
@@ -440,8 +442,7 @@ git graph
   * Fast-forward merges
   * Non-fast-forward merges with merge commits
   * Merges with conflicts
-* In the next lesson, you'll learn some more powerful (and potentially
-  dangerous!) tools for manipulating commits and branches.
-  * In particular, we'll learn how to rebase a feature branch that is
-    conflicting with `main` in order to avoid unnecessary merge
-    commits.
+* In the next lesson, you'll learn how to:
+  1. Make a pull request for your feature branch
+  2. Rebase a feature branch that is conflicting with `main` in order
+     to avoid unnecessary merge commits.

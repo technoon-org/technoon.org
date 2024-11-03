@@ -356,15 +356,8 @@ requirements of your project**
 
 <div style="font-size: 0.8em;">
 
-1. **Make a pull request to a neighbour's repo**
-   1. Visit the repo's GitHub page, and select `Fork`
-   2. Clone your fork, make a branch with some changes
-   3. Push your local branch up to your fork
-   4. [Make a pull request from your fork to your neighbour's repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
-   5. Good practice for contributing to open-source projects!
-2. **Continue your daily blog entries**
+1. **Continue your daily blog entries**
    * Instead of working directly on `main`, make each entry in a new
-     branch
-   * Practice 1) pull requests and 2) merging into `main` locally
+     branch that you then merge into `main`
 
 </div>

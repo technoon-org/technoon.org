@@ -44,7 +44,7 @@
 
 <section id="get-ready-for-lesson-4" class="slide level3">
 <h3>Get Ready for Lesson 4</h3>
-<div style="font-size: 0.85em;">
+<div style="font-size: 0.75em;">
 <ol type="1">
 <li><p>Login to your account on <a
 href="https://github.com/">github.com</a></p></li>
@@ -57,8 +57,14 @@ echo &quot;# Entry 1&quot; &gt; entry_1.md
 git add entry_1.md
 git commit -m &quot;Add first blog entry&quot;
 git status</code></pre></li>
+<li><p>If you missed last week, add the <code>git graph</code> alias for
+visualising branches:</p>
+<ul>
+<li><span
+style="font-size: 0.65em;"><code>git config --global alias.graph "log --all --graph --oneline --decorate"</code></span></li>
+</ul></li>
 <li><p>Make sure you have no uncommitted changes and that you are up to
-date with <code>origin/main</code> by checking the output of
+date with <code>origin/main</code> by checking
 <code>git status</code></p></li>
 </ol>
 </div>
@@ -306,14 +312,6 @@ history</li>
 </ul>
 </div>
 </section>
-<section id="tutorial-objectives" class="slide level3">
-<h3>Tutorial Objectives</h3>
-<ol type="1">
-<li>Make a pull request</li>
-<li>Rebase a pull request</li>
-<li>Perform an interactive rebase</li>
-</ol>
-</section>
 <section id="further-learning" class="slide level3">
 <h3>Further Learning</h3>
 <div style="font-size: 0.85em;">
@@ -336,6 +334,37 @@ href="https://meldmerge.org/">meld</a></li>
 <li>Checkout more TechNoon courses: <a
 href="https://technoon.org">technoon.org</a></li>
 </ul>
+</div>
+</section>
+<section id="tutorial-objectives" class="slide level3">
+<h3>Tutorial Objectives</h3>
+<ol type="1">
+<li>Make a pull request</li>
+<li>Rebase a pull request</li>
+<li>Complete a pull request</li>
+</ol>
+</section>
+<section id="homework" class="slide level3">
+<h3>Homework</h3>
+<div style="font-size: 0.8em;">
+<ol type="1">
+<li><strong>Make a pull request to a neighbour’s repo</strong>
+<ol type="1">
+<li>Visit the repo’s GitHub page, and select <code>Fork</code></li>
+<li>Clone your fork, make a branch with some changes</li>
+<li>Push your local branch up to your fork</li>
+<li><a
+href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork">Make
+a pull request from your fork to your neighbour’s repo</a></li>
+<li>Good practice for contributing to open-source projects!</li>
+</ol></li>
+<li><strong>Continue your daily blog entries</strong>
+<ul>
+<li>Instead of working directly on <code>main</code>, make each entry in
+a new branch, and merge them into <code>main</code> with pull
+requests</li>
+</ul></li>
+</ol>
 </div>
 </section>
     </div>

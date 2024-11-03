@@ -4,7 +4,7 @@ title: GitNoon Lesson 4
 
 ### Get Ready for Lesson 4
 
-<div style="font-size: 0.85em;">
+<div style="font-size: 0.75em;">
 
 1. Login to your account on [github.com](https://github.com/)
 2. If you missed the previous lessons, ask for help setting up a `blog` repository to share:
@@ -17,8 +17,11 @@ title: GitNoon Lesson 4
    git commit -m "Add first blog entry"
    git status
    ```
-3. Make sure you have no uncommitted changes and that you are up to
-    date with `origin/main` by checking the output of `git status`
+3. If you missed last week, add the `git graph` alias for visualising
+   branches:
+   * <span style="font-size: 0.65em;">`git config --global alias.graph "log --all --graph --oneline --decorate"`</span>
+4. Make sure you have no uncommitted changes and that you are up to
+   date with `origin/main` by checking `git status`
 
 </div>
 
@@ -256,13 +259,6 @@ commands that can learn more about to help you sort out Git messes:
 
 </div>
 
-### Tutorial Objectives
-
-1. Make a pull request
-2. Rebase a pull request
-3. Perform an interactive rebase
-
-
 ### Further Learning
 
 <div style="font-size: 0.85em;">
@@ -276,5 +272,29 @@ commands that can learn more about to help you sort out Git messes:
   editor extension, or a graphical diff tool like
   [meld](https://meldmerge.org/)
 * Checkout more TechNoon courses: [technoon.org](https://technoon.org)
+
+</div>
+
+
+### Tutorial Objectives
+
+1. Make a pull request
+2. Rebase a pull request
+3. Complete a pull request
+
+
+### Homework
+
+<div style="font-size: 0.8em;">
+
+1. **Make a pull request to a neighbour's repo**
+   1. Visit the repo's GitHub page, and select `Fork`
+   2. Clone your fork, make a branch with some changes
+   3. Push your local branch up to your fork
+   4. [Make a pull request from your fork to your neighbour's repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
+   5. Good practice for contributing to open-source projects!
+2. **Continue your daily blog entries**
+   * Instead of working directly on `main`, make each entry in a new
+     branch, and merge them into `main` with pull requests
 
 </div>
