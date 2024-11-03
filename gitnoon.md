@@ -91,9 +91,13 @@ Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJ
     <li>
         <div class="col col-1">gitnoon-4</div>
         <div class="col col-2">Rewriting history</div>
-        <div class="col col-3">Rebasing your branch</div>
+        <div class="col col-3">Pull requests and rebasing</div>
         <div class="col col-4 markdown-content">
-            Coming soon
+            <ul>
+                <li><a href="https://technoon-org.github.io/gitnoon/lesson_4/slides.html" target="_blank" rel="noopener">Slides</a></li>
+                <li><a href="https://technoon-org.github.io/gitnoon/lesson_4/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
+                <li><a href="https://technoon-org.github.io/gitnoon/lesson_4/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
+            </ul>
         </div>
     </li>
 </ul>
