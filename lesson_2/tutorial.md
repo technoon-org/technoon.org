@@ -279,6 +279,11 @@ git merge --ff-only origin/main
   possible, and we'd need to take a different approach.
 * We'll look at that case along with branches and `git merge` in more
   detail in the next lessons.
+* **NOTE:** Some tutorials might teach you to use `git pull`, which
+  performs both a `fetch` and `merge` from one command
+  * Recommendation: Avoid using `pull` until you fully understand how
+    merges work, and the implications of the different ways the `pull`
+    command can be configured.
 
 
 ## Telling Git to ignore certain files

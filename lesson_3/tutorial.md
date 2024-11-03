@@ -2,12 +2,11 @@
 title: GitNoon Lesson 3
 ---
 
-In this lesson, you will learn how to:
+In this tutorial, you will learn how to:
 
 1. Work on a separate branch
 2. Merge your branch into `main`
 3. Resolve a merge conflict
-4. Make and merge a pull request
 
 
 ## Viewing a repo as a graph
@@ -356,6 +355,7 @@ git diff README.md
   * **This should often involve a conversation with whomever wrote the
     other code**
   * **Don't just blindly choose to keep one or the other**
+  * **If you don't want to resolve it now**, you could run `git merge --abort`
 * (press `q` to exit `git diff`)
 
 ```
@@ -424,91 +424,12 @@ git graph
     branch added a new reference to the old variable name.
   * So you should validate and test after any merge!
 
-
-## Make and merge a pull request
-
-* Finally, let's look at one last way to merge a branch.
-* Many teams will use a **pull request** (also know as a **merge
-  request**) to manage merges back into the `main` branch.
-* We'll try that ourselves now.
-
-Let's undo the last merge and commit on `master` by resetting again:
+To wrap-up, let's undo the last merge and commit on `master` by
+resetting again:
 
 ```
 git reset --hard origin/main
 git graph
-```
-
-Now switch back to the `readme-additions` branch:
-
-```
-git switch
-git graph
-```
-
-Now let's push the `readme-additions` branch to the `origin` remote:
-
-```
-git push origin
-```
-
-* Now open your repo's page on GitHub
-* You'll see various shortcuts to create a pull request, but let's do
-  it the standard way:
-  1. Open the `Pull requests` tab
-  2. Select `New pull request`
-  3. Make sure the **base** branch is `main`
-  4. Choose `readme-additions` for the **compare** branch
-     * You'll see a summary showing the commit to be merged in from
-       `readme-additions`, along with a diff of the changes
-  5. Select `Create pull request`
-  6. You can fill in some details for the pull request:
-     * Change the title and description if more context is needed
-     * If you were in a team, you could add a reviewer
-  7. Finally, click `Create pull request`
-* Because there are no merge conflicts, GitHub will say the branch is
-  ready to merge.
-* Normally, this would be the point for someone else to review and
-  merge your pull request.
-* But let's just merge it ourselves today:
-  * Select `Merge pull request` and then `Confirm merge`
-
-Now let's fetch the results of that merge from the `origin` remote to
-our local repo:
-
-```
-git fetch
-git graph
-```
-
-* We can see `origin/main` contains a new merge commit
-* Even though a fast-forward merge was possible, a pull request will
-  always create a merge commit by default
-  * This keeps a log of significant merges into `main`
-
-You'll now need to switch back to your main branch and "fast-forward"
-merge it to the latest state of `origin/main` - just like we did last
-week:
-
-```
-git switch main
-git merge --ff-only origin/main
-```
-
-* Now you see why we say fast-forward only:
-  * If there were local commits that weren't in the remote branch,
-    then we'd want to stop and think about what to do next
-  * We may want to merge, or as we'll see next week, we may want to
-    rebase
-
-Finally, now that our branch is merged, we should tidy-up by deleting
-our feature branch on the remote and locally:
-
-```
-# Delete the remote branch
-git push -d origin readme-additions
-# Delete the local branch
-git branch -d readme-additions
 ```
 
 
@@ -519,7 +440,6 @@ git branch -d readme-additions
   * Fast-forward merges
   * Non-fast-forward merges with merge commits
   * Merges with conflicts
-  * Merging via a pull request
 * In the next lesson, you'll learn some more powerful (and potentially
   dangerous!) tools for manipulating commits and branches.
   * In particular, we'll learn how to rebase a feature branch that is

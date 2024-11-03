@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>GitNoon Lesson 4</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">body {
+font-family: Arial, sans-serif;
+font-size: 16px;
+}
+pre {
+padding: 1em;
+border: 1px solid #333333;
+}
+blockquote {
+font-style: italic;
+}
+</style>
+  <link href="data:image/vnd.microsoft.icon;base64,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" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">GitNoon Lesson 4</h1>
+</header>
+<p>In this tutorial, you will learn how to:</p>
+<ol type="1">
+<li>Make a pull request</li>
+<li>Rebase a pull request</li>
+<li>Perform an interactive rebase</li>
+</ol>
+<h2 id="making-sure-our-main-branch-is-clean">Making sure our
+<code>main</code> branch is clean</h2>
+<pre><code>git switch main</code></pre>
+<pre><code>git fetch
+git reset --hard origin/main</code></pre>
+<h2 id="setting-up-a-branch-for-a-pull-request">Setting up a branch for
+a pull request</h2>
+<pre><code>git branch contributing-guide
+git switch contributing-guide</code></pre>
+<pre><code>nano CONTRIBUTING.md</code></pre>
+<pre><code>* Pull requests are welcome!</code></pre>
+<p>Save and exit <code>nano</code> (<code>Ctrl + x</code>,
+<code>y</code>, <code>Enter</code>), then add and commit
+<code>CONTRIBUTING.md</code>:</p>
+<pre><code>git status
+git add CONTRIBUTING.md
+git status
+# We&#39;ll use a shortcut to write the message inline
+git commit -m &quot;Add contributing guide&quot;
+git status</code></pre>
+<pre><code>git graph</code></pre>
+<h2 id="making-a-pull-request">Making a pull request</h2>
+<ul>
+<li>Many teams will use a <strong>pull request</strong> (also know as a
+<strong>merge request</strong>) to manage the merging of a feature
+branch back into the <code>main</code> branch.</li>
+<li>We’ll do that ourselves now.</li>
+</ul>
+<p>First, let’s push the <code>contributing-guide</code> branch to the
+<code>origin</code> remote:</p>
+<pre><code>git push -u origin contributing-guide</code></pre>
+<ul>
+<li><code>-u</code> is only needed the first time you push a particular
+branch</li>
+</ul>
+<p>Now open your repo’s page on GitHub, you’ll see various shortcuts to
+create a pull request, but let’s do it the standard way:</p>
+<ol type="1">
+<li>Open the <code>Pull requests</code> tab</li>
+<li>Select <code>New pull request</code></li>
+<li>Make sure the <strong>base</strong> branch is <code>main</code></li>
+<li>Choose <code>contributing-guide</code> for the
+<strong>compare</strong> branch
+<ul>
+<li>You’ll see a summary showing the commit to be merged in from
+<code>contributing-guide</code>, along with a diff of the changes</li>
+</ul></li>
+<li>Select <code>Create pull request</code></li>
+<li>You can fill in some details for the pull request:
+<ul>
+<li>Change the title and description if more context is needed</li>
+<li>If you were in a team, you could add a reviewer</li>
+</ul></li>
+<li>Finally, click <code>Create pull request</code></li>
+</ol>
+<ul>
+<li>Because there are no merge conflicts, GitHub will say the branch is
+ready to merge.</li>
+<li>Normally, this would be the point for someone else to review and
+merge your pull request.</li>
+</ul>
+<h2 id="creating-a-merge-conflict-with-your-pull-request">Creating a
+merge conflict with your pull request</h2>
+<p>Now what happens if someone updates <code>main</code> and causes a
+merge conflict between your pull request branch and
+<code>main</code>?</p>
+<pre><code>git switch main</code></pre>
+<pre><code>nano CONTRIBUTING.md</code></pre>
+<pre><code>* Please rebase conflicting pull requests</code></pre>
+<p>Save and exit <code>nano</code> (<code>Ctrl + x</code>,
+<code>y</code>, <code>Enter</code>), then add and commit
+<code>CONTRIBUTING.md</code>:</p>
+<pre><code>git status
+git add CONTRIBUTING.md
+git status
+# We&#39;ll use a shortcut to write the message inline
+git commit -m &quot;Remind contributors to rebase&quot;
+git status</code></pre>
+<pre><code>git push origin main</code></pre>
+<pre><code>git graph</code></pre>
+<h2 id="rebasing-the-pull-request">Rebasing the pull request</h2>
+<pre><code>git switch</code></pre>
+<pre><code>git fetch</code></pre>
+<pre><code>git rebase origin/main</code></pre>
+<p>CONFLICT RESOLUTION</p>
+<pre><code>git graph</code></pre>
+<pre><code>git push origin contributing-guide</code></pre>
+<h2 id="completing-the-pull-request">Completing the pull request</h2>
+<ul>
+<li>Select <code>Merge pull request</code> and then
+<code>Confirm merge</code></li>
+</ul>
+<p>Now let’s fetch the results of that merge from the
+<code>origin</code> remote to our local repo:</p>
+<pre><code>git fetch
+git graph</code></pre>
+<ul>
+<li>We can see <code>origin/main</code> contains a new merge commit</li>
+<li>Even though a fast-forward merge was possible, a pull request will
+always create a merge commit by default
+<ul>
+<li>This keeps a log of significant merges into <code>main</code></li>
+</ul></li>
+</ul>
+<p>You’ll now need to switch back to your main branch and “fast-forward”
+merge it to the latest state of <code>origin/main</code> - just like we
+did last week:</p>
+<pre><code>git switch main
+git merge --ff-only origin/main</code></pre>
+<ul>
+<li>Note why we use the “fast-forward only” option:
+<ul>
+<li>If there were local commits that weren’t in the remote branch, then
+we’d want to stop and think about what to do next</li>
+<li>We may want to merge, or as we’ll see next week, we may want to
+rebase</li>
+</ul></li>
+</ul>
+<p>Finally, now that our branch is merged, we should tidy-up by deleting
+our feature branch on the remote and locally:</p>
+<pre><code># Delete the remote branch
+git push -d origin readme-additions
+# Delete the local branch
+git branch -d readme-additions</code></pre>
+<h2 id="performing-an-interactive-rebase">Performing an interactive
+rebase</h2>
+<p>Example: Accidentally committed a password, need to edit the
+commit</p>
+</body>
+</html>

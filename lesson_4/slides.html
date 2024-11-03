@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>GitNoon Lesson 4</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="shortcut icon" type="image/x-icon" href="../revealjs/favicon.ico">
+  <link rel="stylesheet" href="../revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../revealjs/dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../revealjs/dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="../revealjs/dist/theme/white.css">
+  <link rel="stylesheet" href="../revealjs/custom.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">GitNoon Lesson 4</h1>
+</section>
+
+<section id="get-ready-for-lesson-4" class="slide level3">
+<h3>Get Ready for Lesson 4</h3>
+<div style="font-size: 0.85em;">
+<ol type="1">
+<li><p>Login to your account on <a
+href="https://github.com/">github.com</a></p></li>
+<li><p>If you missed the previous lessons, ask for help setting up a
+<code>blog</code> repository to share:</p>
+<pre><code>mkdir blog
+cd blog
+git init
+echo &quot;# Entry 1&quot; &gt; entry_1.md
+git add entry_1.md
+git commit -m &quot;Add first blog entry&quot;
+git status</code></pre></li>
+<li><p>Make sure you have no uncommitted changes and that you are up to
+date with <code>origin/main</code> by checking the output of
+<code>git status</code></p></li>
+</ol>
+</div>
+</section>
+<section id="thanks" class="slide level3">
+<h3>Thanks</h3>
+<ul>
+<li>To the host for the great venue!</li>
+<li>To our sponsors</li>
+</ul>
+</section>
+<section id="administrivia" class="slide level3">
+<h3>Administrivia</h3>
+<ul>
+<li>Fire escapes</li>
+<li>Toilets</li>
+<li>Cleaning up after ourselves</li>
+<li>WiFi</li>
+</ul>
+</section>
+<section id="lunch-talk-rewriting-history" class="slide level3">
+<h3>Lunch Talk: Rewriting History</h3>
+<ul>
+<li>Git has features for <strong>rewriting commit history</strong></li>
+<li>These can be <strong>dangerous</strong> if used incorrectly</li>
+<li>But, they can be <strong>very useful</strong> for:
+<ul>
+<li>Keeping a tidy, readable commit history</li>
+<li>Fixing “Git messes”</li>
+</ul></li>
+</ul>
+</section>
+<section id="merging-vs-rebasing" class="slide level3">
+<h3>Merging vs Rebasing</h3>
+<div class="mermaid" style="transform: scale(1.5); margin: 2em 0;">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true} } }%%
+gitGraph
+  commit id: "A"
+  commit id: "B"
+  branch feature
+  checkout feature
+  commit id: "X"
+  commit id: "Y"
+  checkout main
+  commit id: "C"
+  commit id: "D"
+</pre>
+</div>
+<div style="font-size: 0.9em;">
+<p><strong>Problem:</strong> <code>feature</code> conflicts with
+<code>main</code>, how do I update <code>feature</code> so that it will
+merge cleanly back into <code>main</code>?</p>
+</div>
+</section>
+<section id="merging-vs-rebasing-1" class="slide level3">
+<h3>Merging vs Rebasing</h3>
+<div style="font-size: 0.75em;">
+<div style="display: flex; align-items: center;">
+<div style="width: 65%;">
+<p><strong>Option 1:</strong> <code>git merge main</code></p>
+<div class="mermaid" style="transform: scale(1);">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true} } }%%
+gitGraph
+  commit id: "A"
+  commit id: "B"
+  branch feature
+  checkout feature
+  commit id: "X"
+  commit id: "Y"
+  checkout main
+  commit id: "C"
+  commit id: "D"
+  checkout feature
+  merge main
+</pre>
+</div>
+</div>
+<div style="width: 35%; font-size: 0.8em;">
+<ul>
+<li>Clutters history with merge commits</li>
+<li>Especially if you update <code>feature</code> multiple times</li>
+</ul>
+</div>
+</div>
+<div class="fragment" style="display: flex; align-items: center;">
+<div style="width: 65%;">
+<p><strong>Option 2:</strong> <code>git rebase main</code></p>
+<div class="mermaid" style="transform: scale(1);">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true} } }%%
+gitGraph
+  commit id: "A"
+  commit id: "B"
+  branch "feature (old)"
+  checkout "feature (old)"
+  commit id: "X"
+  commit id: "Y"
+  checkout main
+  commit id: "C"
+  commit id: "D"
+  branch "feature (rebased)"
+  checkout "feature (rebased)"
+  commit id: "X*"
+  commit id: "Y*"
+</pre>
+</div>
+</div>
+<div style="width: 35%; font-size: 0.8em;">
+<ul>
+<li><code>X</code> and <code>Y</code> are “replayed” on top of
+<code>main</code></li>
+<li>Keeps a linear history</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="implications-of-rebasing" class="slide level3">
+<h3>Implications of Rebasing</h3>
+<div class="mermaid" style="transform: scale(1.25); margin: 1em 0;">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true} } }%%
+gitGraph
+  commit id: "A"
+  commit id: "B"
+  branch "feature (old)"
+  checkout "feature (old)"
+  commit id: "X"
+  commit id: "Y"
+  checkout main
+  commit id: "C"
+  commit id: "D"
+  branch "feature (rebased)"
+  checkout "feature (rebased)"
+  commit id: "X*"
+  commit id: "Y*"
+</pre>
+</div>
+<div style="font-size: 0.75em;">
+<ul>
+<li>Every commit’s identifying SHA is determined by its
+<em>content</em>, <em>message</em>, <em>author</em>, <em>date</em>, and
+<strong><em>parent</em></strong></li>
+<li>Changing the parent commit changes the SHA, so Git will see the
+rebased commits as <strong>different commits!</strong></li>
+<li>If you already pushed <code>feature</code>, Git will stop you from
+overwriting the “old commits” unless you use
+<code>git push --force</code></li>
+</ul>
+</div>
+</section>
+<section id="when-to-rebase" class="slide level3">
+<h3>When to Rebase?</h3>
+<div>
+<div class="top-fragment-only" style="font-size: 0.8em;">
+<ul>
+<li class="fragment"><strong>Avoid rebasing if others are using the
+branch</strong>
+<ul>
+<li class="fragment">Otherwise they must rebase or reset to get the new
+history</li>
+<li class="fragment">Personal feature branches are usually safe</li>
+</ul></li>
+<li class="fragment">Some teams avoid rewriting history to treat commits
+like an <strong>unchanging audit log</strong>
+<ul>
+<li class="fragment">This can come at the cost of a <em>clean, readable
+history</em></li>
+</ul></li>
+<li class="fragment">Rebasing replays commits one-by-one, so conflicts
+can <strong>require multiple resolutions</strong>
+<ul>
+<li class="fragment">If in doubt, <code>git rebase --abort</code> and
+merge instead</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="fixing-git-messes" class="slide level3">
+<h3>Fixing “Git Messes”</h3>
+<div style="font-size: 0.9em;">
+<p>A bad rebase or merge might leave users feeling confused and like
+they’ve “messed up” their repo</p>
+<p><strong>Here’s a general process for sorting out a mess:</strong></p>
+<div>
+<div class="top-fragment-only" style="font-size: 0.75em;">
+<ol type="1">
+<li class="fragment"><strong>Understand the current state of the
+repo</strong>
+<ul>
+<li class="fragment">Use
+<code>git log --graph --all --oneline</code><br>and
+<code>git status</code></li>
+<li class="fragment">Draw a Git graph on a piece of paper</li>
+</ul></li>
+<li class="fragment"><strong>Determine the desired state</strong>
+<ul>
+<li class="fragment">Draw a graph of what you’d like the repo to look
+like</li>
+<li class="fragment">(if it’s not your repo, confirm it with the
+owner)</li>
+</ul></li>
+<li class="fragment"><strong>Draft a series of commands</strong> to get
+from the current to the desired state</li>
+<li class="fragment"><strong>Make backups:</strong> copy the repo, make
+a new branch, etc.</li>
+<li class="fragment"><strong>Execute the steps, checking the repo state
+as you go</strong></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="your-git-tool-belt" class="slide level3">
+<h3>Your Git Tool Belt</h3>
+<div style="font-size: 0.65em;">
+<p>Here’s a quick cheat sheet of useful (but potentially dangerous)
+commands that can learn more about to help you sort out Git messes:</p>
+<ul>
+<li><code>git cherry-pick</code>: Replay a single commit on top of the
+current branch</li>
+<li><code>commit --amend</code>: Instead of making a new commit, rewrite
+the last one</li>
+<li><code>git rebase --interactive</code>: Rewrite a branch by deleting,
+editing, or re-ordering commits</li>
+<li><code>git reset</code>: Force a branch to point to a different
+commit</li>
+<li><code>git restore</code>: Update files in the working directory with
+content from a specific commit</li>
+<li><a
+href="https://github.com/newren/git-filter-repo"><code>git filter-repo</code></a>:
+Power tool for rewriting history
+<ul>
+<li>E.g. removing a file from every commit in the history</li>
+</ul></li>
+<li><code>git reflog</code>: Get a list of commit SHAs <code>HEAD</code>
+has pointed to recently
+<ul>
+<li>In case you accidentally remove important commits from the
+history</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="tutorial-objectives" class="slide level3">
+<h3>Tutorial Objectives</h3>
+<ol type="1">
+<li>Make a pull request</li>
+<li>Rebase a pull request</li>
+<li>Perform an interactive rebase</li>
+</ol>
+</section>
+<section id="further-learning" class="slide level3">
+<h3>Further Learning</h3>
+<div style="font-size: 0.85em;">
+<ul>
+<li><a href="https://www.youtube.com/watch?v=1ffBJ4sVUb4">Git for Ages 4
+and Up</a>
+<ul>
+<li>Great visual explanation of Git branching, merging, rebasing,
+etc.</li>
+<li>Uses <code>git checkout</code>, while we’ve used the modern
+<code>git switch</code> and <code>git restore</code></li>
+</ul></li>
+<li>Free e-book: <a href="https://git-scm.com/book/en/v2">Pro Git</a>
+<ul>
+<li>To learn more about Git commands for your “tool belt”</li>
+</ul></li>
+<li>Try a <a href="https://git-scm.com/downloads/guis">graphical
+client</a>, a text editor extension, or a graphical diff tool like <a
+href="https://meldmerge.org/">meld</a></li>
+<li>Checkout more TechNoon courses: <a
+href="https://technoon.org">technoon.org</a></li>
+</ul>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="../revealjs/dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="../revealjs/plugin/notes/notes.js"></script>
+  <script src="../revealjs/plugin/search/search.js"></script>
+  <script src="../revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../revealjs/plugin/mermaid/mermaid.js"></script>
+
+  <script>
+
+     document.querySelectorAll('.top-fragment-only .fragment .fragment').forEach(function(el) {
+         el.classList.remove('fragment');
+     });
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom,
+          RevealMermaid
+        ]
+      });
+    </script>
+    </body>
+</html>

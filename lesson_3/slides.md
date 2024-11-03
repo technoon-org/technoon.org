@@ -20,6 +20,8 @@ title: GitNoon Lesson 3
 3. Make sure you have no uncommitted changes and that you are up to
    date with `origin/main` by checking the output of `git status`
 
+</div>
+
 ### Thanks
 
 * To the host for the great venue!
@@ -308,7 +310,7 @@ branches)
 
 ::: incremental
 
-<div class="top-fragment-only" style="font-size: 0.8em;">
+<div class="top-fragment-only" style="font-size: 0.7em;">
 
 * **Versioning non-files**
   * Database schemas → database migrations
@@ -316,6 +318,10 @@ branches)
 * **Conventions**
   * Branch naming, commit messages
   * Versioning, e.g. [Semantic Versioning](https://semver.org/)
+* **What belongs in the same repo?**
+  * Usually: different team or project = different repo
+  * Some organisations use [monorepos](https://monorepo.tools/)
+  * Keep docs close to code so they change together
 * **Processes**
   * Configure branch protection rules
   * Pull request code review checklists
@@ -344,7 +350,6 @@ requirements of your project**
 1. Work on a separate branch
 2. Merge your branch into `main`
 3. Resolve a merge conflict
-4. Make and merge a pull request
 
 
 ### Homework

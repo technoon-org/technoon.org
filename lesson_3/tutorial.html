@@ -39,12 +39,11 @@ font-style: italic;
 <header id="title-block-header">
 <h1 class="title">GitNoon Lesson 3</h1>
 </header>
-<p>In this lesson, you will learn how to:</p>
+<p>In this tutorial, you will learn how to:</p>
 <ol type="1">
 <li>Work on a separate branch</li>
 <li>Merge your branch into <code>main</code></li>
 <li>Resolve a merge conflict</li>
-<li>Make and merge a pull request</li>
 </ol>
 <h2 id="viewing-a-repo-as-a-graph">Viewing a repo as a graph</h2>
 <p>Before we get started, we’re going to create a git <em>alias</em> to
@@ -293,6 +292,8 @@ resolves this conflict
 the other code</strong></li>
 <li><strong>Don’t just blindly choose to keep one or the
 other</strong></li>
+<li><strong>If you don’t want to resolve it now</strong>, you could run
+<code>git merge --abort</code></li>
 </ul></li>
 <li>(press <code>q</code> to exit <code>git diff</code>)</li>
 </ul>
@@ -352,89 +353,10 @@ branch added a new reference to the old variable name.</li>
 <li>So you should validate and test after any merge!</li>
 </ul></li>
 </ul>
-<h2 id="make-and-merge-a-pull-request">Make and merge a pull
-request</h2>
-<ul>
-<li>Finally, let’s look at one last way to merge a branch.</li>
-<li>Many teams will use a <strong>pull request</strong> (also know as a
-<strong>merge request</strong>) to manage merges back into the
-<code>main</code> branch.</li>
-<li>We’ll try that ourselves now.</li>
-</ul>
-<p>Let’s undo the last merge and commit on <code>master</code> by
-resetting again:</p>
+<p>To wrap-up, let’s undo the last merge and commit on
+<code>master</code> by resetting again:</p>
 <pre><code>git reset --hard origin/main
 git graph</code></pre>
-<p>Now switch back to the <code>readme-additions</code> branch:</p>
-<pre><code>git switch
-git graph</code></pre>
-<p>Now let’s push the <code>readme-additions</code> branch to the
-<code>origin</code> remote:</p>
-<pre><code>git push origin</code></pre>
-<ul>
-<li>Now open your repo’s page on GitHub</li>
-<li>You’ll see various shortcuts to create a pull request, but let’s do
-it the standard way:
-<ol type="1">
-<li>Open the <code>Pull requests</code> tab</li>
-<li>Select <code>New pull request</code></li>
-<li>Make sure the <strong>base</strong> branch is <code>main</code></li>
-<li>Choose <code>readme-additions</code> for the
-<strong>compare</strong> branch
-<ul>
-<li>You’ll see a summary showing the commit to be merged in from
-<code>readme-additions</code>, along with a diff of the changes</li>
-</ul></li>
-<li>Select <code>Create pull request</code></li>
-<li>You can fill in some details for the pull request:
-<ul>
-<li>Change the title and description if more context is needed</li>
-<li>If you were in a team, you could add a reviewer</li>
-</ul></li>
-<li>Finally, click <code>Create pull request</code></li>
-</ol></li>
-<li>Because there are no merge conflicts, GitHub will say the branch is
-ready to merge.</li>
-<li>Normally, this would be the point for someone else to review and
-merge your pull request.</li>
-<li>But let’s just merge it ourselves today:
-<ul>
-<li>Select <code>Merge pull request</code> and then
-<code>Confirm merge</code></li>
-</ul></li>
-</ul>
-<p>Now let’s fetch the results of that merge from the
-<code>origin</code> remote to our local repo:</p>
-<pre><code>git fetch
-git graph</code></pre>
-<ul>
-<li>We can see <code>origin/main</code> contains a new merge commit</li>
-<li>Even though a fast-forward merge was possible, a pull request will
-always create a merge commit by default
-<ul>
-<li>This keeps a log of significant merges into <code>main</code></li>
-</ul></li>
-</ul>
-<p>You’ll now need to switch back to your main branch and “fast-forward”
-merge it to the latest state of <code>origin/main</code> - just like we
-did last week:</p>
-<pre><code>git switch main
-git merge --ff-only origin/main</code></pre>
-<ul>
-<li>Now you see why we say fast-forward only:
-<ul>
-<li>If there were local commits that weren’t in the remote branch, then
-we’d want to stop and think about what to do next</li>
-<li>We may want to merge, or as we’ll see next week, we may want to
-rebase</li>
-</ul></li>
-</ul>
-<p>Finally, now that our branch is merged, we should tidy-up by deleting
-our feature branch on the remote and locally:</p>
-<pre><code># Delete the remote branch
-git push -d origin readme-additions
-# Delete the local branch
-git branch -d readme-additions</code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
 <li>You’ve learned a lot about branching and merging in this lesson,
@@ -443,7 +365,6 @@ including four different kinds of merging:
 <li>Fast-forward merges</li>
 <li>Non-fast-forward merges with merge commits</li>
 <li>Merges with conflicts</li>
-<li>Merging via a pull request</li>
 </ul></li>
 <li>In the next lesson, you’ll learn some more powerful (and potentially
 dangerous!) tools for manipulating commits and branches.
