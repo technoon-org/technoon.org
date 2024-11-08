@@ -60,8 +60,9 @@ one line at a time, then press the enter key to run the command</li>
 your changes:</strong></p>
 <pre><code>git config --global user.name &quot;Your Name&quot;
 git config --global user.email &quot;your.email@example.com&quot;</code></pre>
-<p><strong>Use the nano command-line text editor (which we will use in
-this course):</strong></p>
+<p><strong>Use the nano command-line text editor when Git needs you to
+write some text (we’ll all use this in this course for
+consistency):</strong></p>
 <pre><code>git config --global core.editor nano</code></pre>
 <p><strong>Use <code>main</code> as the name of the default branch (for
 consistency across versions of Git):</strong></p>
@@ -113,7 +114,7 @@ browse recent commands with the up and down arrow keys.</p>
 <pre><code>ls -la</code></pre>
 <ul>
 <li>You’ll see a new <code>.git/</code> sub-directory</li>
-<li>Because it starts with <code>.</code>, it will be “hidden” by
+<li>Because it starts with “<code>.</code>” it will be “hidden” by
 default in file explorers on Linux and macOS</li>
 <li>This is where Git will store past versions and all other data about
 the repo - <strong>so don’t delete it!</strong></li>
@@ -121,7 +122,7 @@ the repo - <strong>so don’t delete it!</strong></li>
 <code>.git/</code> directory inside the current directory or any of its
 parent directories</li>
 </ul>
-<p>Now let’s check that status of the repo:</p>
+<p>Now let’s check the <em>status</em> of the repo:</p>
 <pre><code>git status</code></pre>
 <ul>
 <li>You’re going to get used to running <code>git status</code> a lot to
@@ -232,7 +233,7 @@ changes</li>
 </ul></li>
 <li>(press <code>q</code> to exit <code>git diff</code>)</li>
 </ul>
-<p>Now let’s stage our changes for commit:</p>
+<p>Now let’s stage our changes:</p>
 <pre><code>git add entry_1.md
 git status</code></pre>
 <p>It is prudent to check the “diff” of staged changes before we commit
@@ -275,26 +276,24 @@ the repository.</li>
 directory</li>
 </ol>
 <pre><code>git log
-git restore --source=&lt;USE SHA FROM OLDEST COMMIT IN LOG&gt; .</code></pre>
+git restore --source=SHA_FROM_OLDEST_COMMIT_IN_LOG .</code></pre>
 <p>We now have the old version’s content as uncommitted changes on top
 of the latest commit:</p>
 <pre><code>cat entry_1.md
 git status
 git diff</code></pre>
-<ul>
-<li>You will need to add and commit the restored content like any other
-changes.</li>
-<li>Here we’ll add all files at once using <code>.</code>
+<p>You will need to add and commit the restored content like any other
+changes.</p>
+<p>Here we’ll add all files at once using “<code>.</code>”</p>
 <ul>
 <li>You should only do this when you’re sure you want to add all
-files</li>
+files.</li>
 <li>It’s best to consider carefully which files to include in a commit,
 and consider breaking up unrelated file changes into multiple
 commits.</li>
 <li>To help us consider what we want to add, we’ll use
 <code>--patch</code> to have Git ask us about whether to add each
 changed “hunk”.</li>
-</ul></li>
 </ul>
 <pre><code>git add --patch .
 git commit
@@ -307,12 +306,12 @@ git log</code></pre>
 <li>You should also commit often to avoid losing work and give yourself
 more flexibility on which point to restore!</li>
 </ul></li>
-<li>If you want to “undo” the changes of a specific commit, you can use
-<code>git revert</code> to automatically add a new commit that is the
-exact opposite of that commit.</li>
-<li>Let’s revert that latest commit - we can use <code>HEAD</code> as a
-for the most recent commit.</li>
 </ul>
+<p>If you want to “undo” the changes of a specific commit, you can use
+<code>git revert</code> to automatically add a new commit that is the
+exact opposite of that commit.</p>
+<p>Let’s revert that latest commit - we can use <code>HEAD</code> as an
+alias for the most recent commit.</p>
 <pre><code>git revert HEAD</code></pre>
 <p>Let’s look at a log of the commits, and here use the
 <code>--patch</code> option to see what changed in each:</p>

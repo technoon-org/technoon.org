@@ -88,7 +88,8 @@ git push -u origin contributing-guide
 * `-u` is only needed the first time you push a particular branch
 
 Now open your repo's page on GitHub, you'll see various shortcuts to
-create a pull request, but let's do it the standard way:
+create a pull request for your newly pushed branch, but let's do it
+the standard way:
 
 1. Open the `Pull requests` tab
 2. Select `New pull request`

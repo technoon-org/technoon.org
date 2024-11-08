@@ -39,14 +39,13 @@ font-style: italic;
 <header id="title-block-header">
 <h1 class="title">GitNoon Lesson 2</h1>
 </header>
-<p>In this tutorial, you will learn how to use Git to track versions of
-your files in a personal project:</p>
+<p>In this tutorial, you will learn how to:</p>
 <ol type="1">
-<li>Configuring your GitHub account to support SSH authentication</li>
-<li>Sharing repos on GitHub</li>
-<li>Updating remote and local repos</li>
-<li>Instructing Git to ignore certain files</li>
-<li>Publishing a repo as a website on GitHub</li>
+<li>Configure your GitHub account to support SSH authentication</li>
+<li>Share repos on GitHub</li>
+<li>Update remote and local repos</li>
+<li>Instruct Git to ignore certain files</li>
+<li>Publish a repo as a website on GitHub</li>
 </ol>
 <blockquote>
 <p>Note: While this tutorial makes use of GitHub, it should be
@@ -55,8 +54,7 @@ hosting provider, like GitLab.</p>
 </blockquote>
 <h2 id="configuring-your-github-account-to-support-ssh-authentication">Configuring
 your GitHub account to support SSH authentication</h2>
-<p><em>Following instructions from:
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account</em></p>
+<p><em>Following instructions from: <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account</a></em></p>
 <p>GitHub (and most Git hosting providers) support two types of
 connection:</p>
 <ol type="1">
@@ -85,7 +83,9 @@ want to use</li>
 <ul>
 <li>If you have an older system that doesn’t support
 <code>ed25519</code>, use:
-<code>ssh-keygen -t rsa -b 4096 -C &quot;your.email@example.com&quot;</code></li>
+<ul>
+<li><code>ssh-keygen -t rsa -b 4096 -C &quot;your.email@example.com&quot;</code></li>
+</ul></li>
 <li>You will be asked if you want to protect your private key with a new
 password
 <ul>
@@ -144,7 +144,7 @@ made last week:</p>
 <p>Now let’s connect your local <code>blog</code> repo to this remote
 repo on GitHub:</p>
 <ol type="1">
-<li>From your repo’s GitHub page, find the <code>Qucik setup</code>
+<li>From your repo’s GitHub page, find the <code>Quick setup</code>
 instructions</li>
 <li>Select the <code>SSH</code> tab, and copy the URL</li>
 <li>Open your repo’s directory in a terminal (<code>cd blog</code>)</li>
@@ -160,8 +160,8 @@ format:</p>
 <p>To check our remote has been added successfully, run:</p>
 <pre><code>git remote -v</code></pre>
 <ul>
-<li>We can potentially connect multiple remote repository to push/fetch
-code to/from.</li>
+<li>We can potentially connect multiple remote repositories to
+push/fetch code to/from.</li>
 <li><code>origin</code> is the conventional name for the primary
 remote.</li>
 </ul>
@@ -171,8 +171,7 @@ the <code>origin</code> remote:</p>
 <pre><code>git push -u origin main</code></pre>
 <ul>
 <li>You may need to accept the authenticity of the Git remote’s
-fingerprint - you can double-check it at:
-https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints</li>
+fingerprint - you can double-check it at: <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints">docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints</a></li>
 <li>You may also be prompted for your SSH private key’s password</li>
 </ul>
 <p>Go back to your repo on GitHub and you should see your blog

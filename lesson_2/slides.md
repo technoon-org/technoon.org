@@ -69,8 +69,8 @@ git status
 
 * We've already used `git log` to list commits
 * `git log` can be customised with **options**
-* Hold **arrow keys** to scroll up and down
 * `git log --help` lists the available options
+  * Hold **arrow keys** to scroll up and down
 
 <img src="images/git-log-help.png" width="65%">
 
@@ -81,7 +81,7 @@ git status
 
 <img src="images/git-log-author.png" width="65%">
 
-* `--stat` counts lines changed in each file
+`--stat` counts lines changed in each file
 
 ### *What is the history of our README?*
 

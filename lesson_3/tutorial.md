@@ -155,7 +155,7 @@ git merge readme-additions
   remember that almost all git commands will only change the branch
   you are checked-out on.**
   * In this case, we are checked-out on `main`, so we will be updating
-    the `main` by *merging in* `readme-additions`
+    the `main` branch by *merging in* `readme-additions`
 
 Now let's see what that's done to the graph:
 
@@ -199,8 +199,8 @@ git graph
 ```
 
 **IMPORANT:** `git reset` is a dangerous command because it can delete
-both commits and uncommitted changes. We'll learn more about how to
-use it responsibly in the next lesson.
+both commits and uncommitted changes. We'll learn more about it in the
+next lesson.
 
 Now let's add a commit directly to the `main` branch, as if someone
 else had merged in some changes while we were still working on
@@ -438,7 +438,7 @@ git graph
 ## Conclusion
 
 * You've learned a lot about branching and merging in this lesson,
-  including four different kinds of merging:
+  including three different kinds of merging:
   * Fast-forward merges
   * Non-fast-forward merges with merge commits
   * Merges with conflicts

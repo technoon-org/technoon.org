@@ -4,7 +4,8 @@ title: GitNoon Lesson 1
 
 ### Get Ready for GitNoon!
 
-1. Install `git` if you haven't already: https://git-scm.com/downloads
+1. Install `git` if you haven't already:<br>
+   [git-scm.com/downloads](https://git-scm.com/downloads)
    * On Windows, choose `Git Bash` when installing
 2. Open a terminal (or `Git Bash` on Windows)
 3. Make sure you can run the `git` command
@@ -26,7 +27,6 @@ title: GitNoon Lesson 1
 
 * What is Git?
 * Why use Git?
-* When should I use Git?
 * What are GitHub, GitLab, etc?
 * What to expect from GitNoon
 
@@ -38,7 +38,8 @@ title: GitNoon Lesson 1
 
 * Git is a tool to record **versions** of files over time
 * Git works with **any type of file**
-  * Works *especially well* with **plain-text** like source-code and config
+  * Git works *especially well* with **plain-text** like source-code
+    and config
 * The most popular Version Control System (VCS)
   * [About **90%** of devs use Git for version control](https://stackoverflow.blog/2023/01/09/beyond-git-the-other-version-control-systems-developers-use/)
 
@@ -73,7 +74,7 @@ title: GitNoon Lesson 1
 
 * Online services for **hosting/sharing Git repositories**
   * Many can be self-hosted in your corporate environment
-  * GitLab even has an open-source version
+  * Some have an open-source edition, like GitLab
 * Provide features for:
 
 ::: incremental
@@ -81,13 +82,13 @@ title: GitNoon Lesson 1
 <div class="top-fragment-only">
 
 * **Change Control**
-  * *Merge/Pull requests* with discussions and approvals
+  * *Pull/Merge requests* with discussions and approvals
 * **Continuous Integration/Delivery (CI/CD)**
   * Automated checks and tests, deploying code
 * **Static web hosting**
   * Turn a Git repository into a website - great for docs!
 * **And more**
-  * Issues, security scanning, container registries
+  * Issue tracker, security scanning, container registries
 
 </div>
 
@@ -102,8 +103,8 @@ title: GitNoon Lesson 1
 <div class="top-fragment-only">
 
 * Each lesson will have:
-  * A **15 minute presentation**
-  * A **30 minute hands-on tutorial**
+  * A **20-30 minute presentation**
+  * A **30-60 minute hands-on tutorial**
 * We'll use Git from the **command-line** / **terminal**
   * The fundamentals you'll learn apply to any GUI
   * A GUI is not always available (e.g. on a server)

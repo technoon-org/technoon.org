@@ -6,8 +6,8 @@ title: GitNoon Lesson 3
 
 <div style="font-size: 0.85em;">
 
-1. Make sure you have no uncommitted changes and that you are up to
-   date with `origin/main` by checking the output of `git status`
+1. Make sure your blog has no uncommitted changes and that you are up
+   to date with `origin/main` by checking the output of `git status`
 2. If you missed the previous lesson, ask for help with the
    quick-setup on the next slide
    * [technoon-org.github.io/gitnoon/lesson_3/slides.html](https://technoon-org.github.io/gitnoon/lesson_3/slides.html#/quick-setup)
@@ -88,7 +88,8 @@ gitGraph
 </pre>
 </div>
 
-You can add *annotated* tags to mark specific commits as released versions:
+You may like to add *annotated* tags to mark specific commits as
+released versions:
 
 ```bash
 git tag -a v1.0.0 -m "Release of version 1.0.0"

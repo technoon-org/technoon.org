@@ -4,11 +4,11 @@ title: GitNoon Lesson 4
 
 ### Get Ready for Lesson 4
 
-<div style="font-size: 0.75em;">
+<div style="font-size: 0.7em;">
 
 1. Login to your account on [github.com](https://github.com/)
-2. Make sure you have no uncommitted changes and that you are up to
-   date with `origin/main` by checking `git status`
+2. Make sure your blog has no uncommitted changes and that you are up
+   to date with `origin/main` by checking the output of `git status`
 3. If you missed the previous lesson, ask for help with the
    quick-setup on the next slide
    * [technoon-org.github.io/gitnoon/lesson_4/slides.html](https://technoon-org.github.io/gitnoon/lesson_4/slides.html#/quick-setup)
@@ -204,11 +204,11 @@ gitGraph
 <div style="font-size: 0.75em;">
 
 * Every commit's identifying SHA is determined by its *content*,
-  *message*, *author*, *date*, and **_parent_**
+  *message*, *author*, *date*, and **_parent commit_**
 * Changing the parent commit changes the SHA, so Git will see the
   rebased commits as **different commits!**
 * If you already pushed `feature`, Git will stop you from overwriting
-  the "old commits" unless you use `git push --force`
+  the "old commits" unless you push with `git push --force`
 
 </div>
 
@@ -264,7 +264,7 @@ they've "messed up" their repo
 
 ### Your Git Tool Belt
 
-<div style="font-size: 0.65em;">
+<div style="font-size: 0.68em;">
 
 Here's a quick cheat sheet of useful (but potentially dangerous)
 commands that can learn more about to help you sort out Git messes:
@@ -281,12 +281,31 @@ commands that can learn more about to help you sort out Git messes:
 * [`git filter-repo`](https://github.com/newren/git-filter-repo):
   Power tool for rewriting history
   * E.g. removing a file from every commit in the history
-* `git reflog`: Get a list of commit SHAs `HEAD` has pointed to
-  recently
-  * In case you accidentally remove important commits from the
-    history
 
 </div>
+
+### Is rewritten history truly gone?
+
+::: incremental
+
+<div class="top-fragment-only" style="font-size: 0.7em;">
+
+* **Old commits might still exist in your local repo**
+  * Once a commit is two weeks old and not part of any branch or tag,
+    it may be removed by garbage collection (`git gc`)
+  * `git reflog` lists commits that `HEAD` has pointed to recently
+    * Useful for recovering accidentally rewritten commits
+* **If you've pushed a commit, it might still exist on the remote**
+  * If you need to delete passwords, keys, or other sensitive data,
+    contact the service provider
+  * GitHub has some [unintuitive behaviours](https://trufflesecurity.com/blog/anyone-can-access-deleted-and-private-repo-data-github)
+    around forks and what happens when a private repo is made public
+    that you should be aware of
+
+</div>
+
+:::
+
 
 ### Further Learning
 
@@ -318,7 +337,7 @@ commands that can learn more about to help you sort out Git messes:
 
 1. **Make a pull request to a neighbour's repo**
    1. Visit the repo's GitHub page, and select `Fork`
-   2. Clone your fork, make a branch with some changes
+   2. Clone your fork and make a branch with some changes
    3. Push your local branch up to your fork
    4. [Make a pull request from your fork to your neighbour's repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
    5. Good practice for contributing to open-source projects!

@@ -108,12 +108,12 @@
 
 <section id="get-ready-for-lesson-4" class="slide level3">
 <h3>Get Ready for Lesson 4</h3>
-<div style="font-size: 0.75em;">
+<div style="font-size: 0.7em;">
 <ol type="1">
 <li>Login to your account on <a
 href="https://github.com/">github.com</a></li>
-<li>Make sure you have no uncommitted changes and that you are up to
-date with <code>origin/main</code> by checking
+<li>Make sure your blog has no uncommitted changes and that you are up
+to date with <code>origin/main</code> by checking the output of
 <code>git status</code></li>
 <li>If you missed the previous lesson, ask for help with the quick-setup
 on the next slide
@@ -306,11 +306,11 @@ gitGraph
 <ul>
 <li>Every commit’s identifying SHA is determined by its
 <em>content</em>, <em>message</em>, <em>author</em>, <em>date</em>, and
-<strong><em>parent</em></strong></li>
+<strong><em>parent commit</em></strong></li>
 <li>Changing the parent commit changes the SHA, so Git will see the
 rebased commits as <strong>different commits!</strong></li>
 <li>If you already pushed <code>feature</code>, Git will stop you from
-overwriting the “old commits” unless you use
+overwriting the “old commits” unless you push with
 <code>git push --force</code></li>
 </ul>
 </div>
@@ -380,7 +380,7 @@ as you go</strong></li>
 </section>
 <section id="your-git-tool-belt" class="slide level3">
 <h3>Your Git Tool Belt</h3>
-<div style="font-size: 0.65em;">
+<div style="font-size: 0.68em;">
 <p>Here’s a quick cheat sheet of useful (but potentially dangerous)
 commands that can learn more about to help you sort out Git messes:</p>
 <ul>
@@ -400,13 +400,39 @@ Power tool for rewriting history
 <ul>
 <li>E.g. removing a file from every commit in the history</li>
 </ul></li>
-<li><code>git reflog</code>: Get a list of commit SHAs <code>HEAD</code>
-has pointed to recently
+</ul>
+</div>
+</section>
+<section id="is-rewritten-history-truly-gone" class="slide level3">
+<h3>Is rewritten history truly gone?</h3>
+<div>
+<div class="top-fragment-only" style="font-size: 0.7em;">
 <ul>
-<li>In case you accidentally remove important commits from the
-history</li>
+<li class="fragment"><strong>Old commits might still exist in your local
+repo</strong>
+<ul>
+<li class="fragment">Once a commit is two weeks old and not part of any
+branch or tag, it may be removed by garbage collection
+(<code>git gc</code>)</li>
+<li class="fragment"><code>git reflog</code> lists commits that
+<code>HEAD</code> has pointed to recently
+<ul>
+<li class="fragment">Useful for recovering accidentally rewritten
+commits</li>
+</ul></li>
+</ul></li>
+<li class="fragment"><strong>If you’ve pushed a commit, it might still
+exist on the remote</strong>
+<ul>
+<li class="fragment">If you need to delete passwords, keys, or other
+sensitive data, contact the service provider</li>
+<li class="fragment">GitHub has some <a
+href="https://trufflesecurity.com/blog/anyone-can-access-deleted-and-private-repo-data-github">unintuitive
+behaviours</a> around forks and what happens when a private repo is made
+public that you should be aware of</li>
 </ul></li>
 </ul>
+</div>
 </div>
 </section>
 <section id="further-learning" class="slide level3">
@@ -448,7 +474,7 @@ href="https://technoon.org">technoon.org</a></li>
 <li><strong>Make a pull request to a neighbour’s repo</strong>
 <ol type="1">
 <li>Visit the repo’s GitHub page, and select <code>Fork</code></li>
-<li>Clone your fork, make a branch with some changes</li>
+<li>Clone your fork and make a branch with some changes</li>
 <li>Push your local branch up to your fork</li>
 <li><a
 href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork">Make

@@ -27,7 +27,7 @@ git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
 
-**Use the nano command-line text editor (which we will use in this course):**
+**Use the nano command-line text editor when Git needs you to write some text (we'll all use this in this course for consistency):**
 
 ```
 git config --global core.editor nano
@@ -104,7 +104,7 @@ ls -la
 ```
 
 * You'll see a new `.git/` sub-directory
-* Because it starts with `.`, it will be "hidden" by default in file
+* Because it starts with "`.`" it will be "hidden" by default in file
   explorers on Linux and macOS
 * This is where Git will store past versions and all other data about
   the repo - **so don't delete it!**
@@ -112,7 +112,7 @@ ls -la
   directory inside the current directory or any of its parent
   directories
 
-Now let's check that status of the repo:
+Now let's check the *status* of the repo:
 
 ```
 git status
@@ -248,7 +248,7 @@ git diff
   * Green lines starting with `+` have been added by your changes
 * (press `q` to exit `git diff`)
 
-Now let's stage our changes for commit:
+Now let's stage our changes:
 
 ```
 git add entry_1.md
@@ -327,7 +327,7 @@ log by:
 
 ```
 git log
-git restore --source=<USE SHA FROM OLDEST COMMIT IN LOG> .
+git restore --source=SHA_FROM_OLDEST_COMMIT_IN_LOG .
 ```
 
 We now have the old version's content as uncommitted changes on top of
@@ -339,15 +339,17 @@ git status
 git diff
 ```
 
-* You will need to add and commit the restored content like any other
-  changes.
-* Here we'll add all files at once using `.`
-  * You should only do this when you're sure you want to add all files
-  * It's best to consider carefully which files to include in a
-    commit, and consider breaking up unrelated file changes into
-    multiple commits.
-  * To help us consider what we want to add, we'll use `--patch` to
-    have Git ask us about whether to add each changed "hunk".
+You will need to add and commit the restored content like any other
+changes.
+
+Here we'll add all files at once using "`.`"
+
+* You should only do this when you're sure you want to add all files.
+* It's best to consider carefully which files to include in a commit,
+  and consider breaking up unrelated file changes into multiple
+  commits.
+* To help us consider what we want to add, we'll use `--patch` to have
+  Git ask us about whether to add each changed "hunk".
 
 ```
 git add --patch .
@@ -360,11 +362,13 @@ git log
   as it might wipe out uncommitted changes.
   * You should also commit often to avoid losing work and give
     yourself more flexibility on which point to restore!
-* If you want to "undo" the changes of a specific commit, you can use
-  `git revert` to automatically add a new commit that is the exact
-  opposite of that commit.
-* Let's revert that latest commit - we can use `HEAD` as a for the
-  most recent commit.
+
+If you want to "undo" the changes of a specific commit, you can use
+`git revert` to automatically add a new commit that is the exact
+opposite of that commit.
+
+Let's revert that latest commit - we can use `HEAD` as an alias for
+the most recent commit.
 
 ```
 git revert HEAD
