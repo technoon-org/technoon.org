@@ -48,13 +48,13 @@ The more important your code, documentation, or database queries, the
 more important it is to store it safely and to be able to track all
 your changes. This is where Git comes in. Git is a powerful version
 control tool which is now industry-standard. This 4-session course
-starts from scratch, explaining why, and how you should use Git. No
+starts from scratch, explaining why and how you should use Git. No
 previous experience is required.
 
 By the end of this course, you will be able to:
 
 * Use Git from the command-line
-* Save, inspect, restore every change to your files over time
+* Save, inspect, and restore every change to your files over time
 * Collaborate with others using industry standard practices for branch
   management
 
