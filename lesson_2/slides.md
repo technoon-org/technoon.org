@@ -182,11 +182,12 @@ git log \
 
 <div style="font-size: 0.65em;">
 
-* We've seen compelling reasons to track your projects with Git
-  * And why to write small, self-contained commits with good messages!
-* Like many "Unix" tools, Git is especially good for **plain text**
-  * `git diff`, `git blame`, Git pickaxe, etc.
-* E.g. **Markdown** for formatted text as readable plain text:
+* *"And we believe that the best format for storing important knowledge
+  persistently is plain text"* - [The Pragmatic Programmer](https://www.oreilly.com/library/view/the-pragmatic-programmer/9780135956977/f_0035.xhtml)
+* Like most command-line tools, **Git loves plain text** (`diff`, `blame`, pickaxe)
+* Plain text can be easily **manipulated both manually and programmatically**
+* Plain text **avoids lock-in** to a particular system
+* Write in plain text, then **convert to any format** you need
 
 </div>
 
@@ -195,15 +196,35 @@ git log \
 
 ### Plain Text Tools
 
-* Conversion (e.g. `.md` to `.docx`) → [Pandoc](https://pandoc.org/)
+* Markdown to pdf, docx, html, etc. → [Pandoc](https://pandoc.org/)
 * Diagrams → [Mermaid](https://mermaid.js.org/)
 * Markdown/HTML slides → [Reveal.js](https://revealjs.com/)
 * Markdown websites → [Jekyll](https://jekyllrb.com/), [Decap CMS](https://decapcms.org/)
 * Documentation sites → [Docsify](https://docsify.js.org/), [MkDocs](https://www.mkdocs.org/)
 * "Infrastructure as code" → [OpenTofu](https://opentofu.org/),
   [Ansible](https://www.ansible.com/)
+* Jupyter Notebooks → [Jupytext](https://jupytext.readthedocs.io/en/latest/)
 * Accounting → [plaintextaccounting.org](https://plaintextaccounting.org/)
 
+
+### Tutorial 1 Recap
+
+Git commands that alter your repository
+
+<div class="mermaid" style="transform: scale(1.3); margin-top: 80px;">
+<pre>
+---
+config:
+  mirrorActors: false
+---
+sequenceDiagram
+    Working Directory->>Staging Area: git add
+    Staging Area->>Local Branch: git commit
+    Local Branch->>Working Directory: git restore
+    Local Branch->>Local Branch: git revert
+    Local Branch-->>Working Directory: (changing the current commit updates files)
+</pre>
+</div>
 
 ### Tutorial Objectives
 
@@ -212,6 +233,36 @@ git log \
 3. Updating remote and local repos
 4. Instructing Git to ignore certain files
 5. Publishing a repo as a website on GitHub
+
+
+### Tutorial 2 Commands Recap
+
+<div class="mermaid" style="transform: scale(1.3); margin-top: 80px;">
+<pre>
+---
+config:
+  mirrorActors: false
+---
+sequenceDiagram
+    box Local Repository
+        participant Working Directory
+        participant Staging Area
+        participant Local Branch
+        participant Remote Branch Reference
+    end
+    box Remote Repository (e.g. GitHub)
+        participant Remote Branch
+    end
+    Working Directory->>Staging Area: git add
+    Staging Area->>Local Branch: git commit
+    Local Branch->>Working Directory: git restore
+    Local Branch->>Local Branch: git revert
+    Local Branch->>Remote Branch: git push
+    Remote Branch->>Remote Branch Reference: git fetch
+    Remote Branch Reference->>Local Branch: git merge --ff-only origin/*
+    Local Branch-->>Working Directory: (changing the current commit updates files)
+</pre>
+</div>
 
 
 ### Homework

@@ -50,7 +50,11 @@ your files in a personal project:</p>
 <h2 id="configuring-git">Configuring Git</h2>
 <ul>
 <li>Before we start using Git, we’re going to set a few important
-configuration options.</li>
+configuration options.
+<ul>
+<li>You may have done some of this configuration previously, but pay
+attention for anything that you haven’t previously set.</li>
+</ul></li>
 <li>Open your terminal (“Git Bash” on Windows) and run each of the
 following configuration commands</li>
 <li><strong>For anyone new to using the command-line:</strong> type out
@@ -60,6 +64,8 @@ one line at a time, then press the enter key to run the command</li>
 your changes:</strong></p>
 <pre><code>git config --global user.name &quot;Your Name&quot;
 git config --global user.email &quot;your.email@example.com&quot;</code></pre>
+<p>You can check that the config has been successfully set with:</p>
+<pre><code>git config --list</code></pre>
 <p><strong>Use the nano command-line text editor when Git needs you to
 write some text (we’ll all use this in this course for
 consistency):</strong></p>
@@ -91,8 +97,12 @@ let’s start by creating a directory:</p>
 creating.</li>
 <li><code>blog/</code> should be in the Home directory that opens by
 default in your operating system’s file explorer.</li>
-<li>On Windows, you can run <code>explorer .</code> to open Explorer to
-the current directory.</li>
+<li>To open your file browser to the current directory, you can run one
+of the following commands:
+<ul>
+<li>On Windows: <code>explorer .</code></li>
+<li>On macOS or Ubuntu: <code>open .</code></li>
+</ul></li>
 </ul>
 <p>Now change into the <code>blog/</code> directory, and list its
 contents:</p>
@@ -161,6 +171,10 @@ editor)</li>
 <pre><code># Entry 1
 
 This is my first blog entry!</code></pre>
+<p>You can now see your new file in the listing of this directory:</p>
+<pre><code>ls -la</code></pre>
+<p>And you can print out it’s content to check it’s what you expect:</p>
+<pre><code>cat entry_1.md</code></pre>
 <p>Now check the status of your repository</p>
 <pre><code>git status</code></pre>
 <p>You should see your <code>entry_1.md</code>, and that it is currently
@@ -246,7 +260,7 @@ them:</p>
 <pre><code>git status
 git log</code></pre>
 <p>We can also see what changed in each commit:</p>
-<pre><code>git log -p</code></pre>
+<pre><code>git log --patch</code></pre>
 <h2 id="undoing-uncommitted-changes">Undoing uncommitted changes</h2>
 <p>Once a version has been committed, we can always restore that
 previous version. This gives us confidence to make radical (and
@@ -307,9 +321,10 @@ git log</code></pre>
 more flexibility on which point to restore!</li>
 </ul></li>
 </ul>
-<p>If you want to “undo” the changes of a specific commit, you can use
-<code>git revert</code> to automatically add a new commit that is the
-exact opposite of that commit.</p>
+<p>While <code>git restore</code> can restore the state of files from a
+specific commit, if you want to “undo” the changes of a specific commit
+then you can use <code>git revert</code> to automatically add a new
+commit that is the exact opposite of that commit.</p>
 <p>Let’s revert that latest commit - we can use <code>HEAD</code> as an
 alias for the most recent commit.</p>
 <pre><code>git revert HEAD</code></pre>

@@ -78,6 +78,13 @@ You should see:
 cat ~/.ssh/id_ed25519.pub
 ```
 
+* To copy-paste:
+  * In Git Bash on Windows, right-click to get copy/paste options or
+    enable Ctrl+Shift shortcuts in Git Bash options.
+  * On macOS you can pipe content to the clipboard: `cat
+    ~/.ssh/id_ed25519.pub | pbcopy`
+  * On Ubuntu, highlight the text to copy and then middle click to
+    paste.
 * Git also supports using keys to cryptographically sign your
   commits - providing evidence that it was actually you who made a
   commit bearing your name and email address.
@@ -340,6 +347,7 @@ a static website!
 3. Select `Deploy from a branch`, select the `main` branch, then
    `Save`
 4. Open your website at: `https://<username>.github.io/blog`
+   * Refreshing the Pages settings should also display the link.
    * You may need to wait a minute for it to be published.
 
 You can make a pretty fancy blog or documentation website on GitHub

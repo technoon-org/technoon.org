@@ -15,6 +15,8 @@ your files in a personal project:
 
 * Before we start using Git, we're going to set a few important
   configuration options.
+  * You may have done some of this configuration previously, but pay
+    attention for anything that you haven't previously set.
 * Open your terminal ("Git Bash" on Windows) and run each of the
   following configuration commands
 * **For anyone new to using the command-line:** type out one line at a
@@ -25,6 +27,12 @@ your files in a personal project:
 ```
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
+```
+
+You can check that the config has been successfully set with:
+
+```
+git config --list
 ```
 
 **Use the nano command-line text editor when Git needs you to write some text (we'll all use this in this course for consistency):**
@@ -74,8 +82,10 @@ mkdir blog
   creating.
 * `blog/` should be in the Home directory that opens by default in
   your operating system's file explorer.
-* On Windows, you can run `explorer .` to open Explorer to the current
-  directory.
+* To open your file browser to the current directory, you can run one
+  of the following commands:
+  * On Windows: `explorer .`
+  * On macOS or Ubuntu: `open .`
 
 Now change into the `blog/` directory, and list its contents:
 
@@ -153,6 +163,18 @@ nano entry_1.md
 # Entry 1
 
 This is my first blog entry!
+```
+
+You can now see your new file in the listing of this directory:
+
+```
+ls -la
+```
+
+And you can print out it's content to check it's what you expect:
+
+```
+cat entry_1.md
 ```
 
 Now check the status of your repository
@@ -279,7 +301,7 @@ git log
 We can also see what changed in each commit:
 
 ```
-git log -p
+git log --patch
 ```
 
 
@@ -363,9 +385,10 @@ git log
   * You should also commit often to avoid losing work and give
     yourself more flexibility on which point to restore!
 
-If you want to "undo" the changes of a specific commit, you can use
-`git revert` to automatically add a new commit that is the exact
-opposite of that commit.
+While `git restore` can restore the state of files from a specific
+commit, if you want to "undo" the changes of a specific commit then
+you can use `git revert` to automatically add a new commit that is the
+exact opposite of that commit.
 
 Let's revert that latest commit - we can use `HEAD` as an alias for
 the most recent commit.
