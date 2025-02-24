@@ -290,10 +290,12 @@ gitGraph
 
 ### Environment Branches
 
-Any workflow can be augmented with branches that track the commit that
+<div style="font-size: 0.95em;">
+
+Instead of release tags, you might use branches to track which commit
 is deployed in each environment:
 
-<div class="mermaid" style="transform: scale(1.5);">
+<div class="mermaid" style="transform: scale(1.5); margin-top: 1.8em;">
 <pre>
 %%{init: { 'gitGraph': {'showCommitLabel': true, 'mainBranchName': 'origin/main'} } }%%
 gitGraph
@@ -312,21 +314,24 @@ gitGraph
 (continuous deployments could even be triggered by updates to those
 branches)
 
+</div>
+
 
 ### Other Workflows
 
 ::: incremental
 
-<div class="top-fragment-only" style="font-size: 0.8em;">
+<div class="top-fragment-only" style="font-size: 0.74em;">
 
 * [**GitLab Flow**](https://about.gitlab.com/blog/2020/03/05/what-is-gitlab-flow/)
   * Extends the Feature Branches workflow (i.e. GitHub Flow) with
     environment branches and process recommendations
 * [**Git Flow**](https://nvie.com/posts/a-successful-git-branching-model/)
-  * Extends the Release Branches workflow with additional branch types
+  * Extends the Release Branches workflow with more branch types
   * Increases complexity, but allows for more process control
 * **Octopus Merges**
-  * Many feature branches are "octopus merged" to create a release
+  * Instead of merging into `main` one-by-one, many feature branches
+    are "octopus merged" to create a release on-demand
   * Allows you to delay deciding which features to include in a
     release, but risks octopus conflicts!
 
@@ -345,7 +350,7 @@ branches)
   * Datasets → [dvc](https://dvc.org/), [dagster](https://docs.dagster.io/getting-started/what-why-dagster)
 * **Conventions**
   * Branch naming, commit messages
-  * Versioning, e.g. [Semantic Versioning](https://semver.org/)
+  * Versioning, e.g. date-based versions, [Semantic Versioning](https://semver.org/)
 * **What belongs in the same repo?**
   * Usually: different team or project = different repo
   * Some organisations use [monorepos](https://monorepo.tools/)
@@ -365,10 +370,10 @@ branches)
 Adapt your workflow to fit **how your team works** and **the
 requirements of your project**
 
-<div class="fragment">
+<div class="fragment" style="font-size: 0.85em;">
 
-> **But make sure to document your workflow and the reasons for your
-> decisions!**
+> **Document your workflow and reasons** for decisions so that
+> everyone understands how the team uses Git!
 
 </div>
 
