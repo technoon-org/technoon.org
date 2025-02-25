@@ -387,10 +387,10 @@ The README is still unmerged, let's check `git diff` again:
 git diff README.md
 ```
 
-* The two columns of pluses and minuses can see the results of our
+* The two columns of pluses and minuses show the results of our
   manual conflict resolution:
-  * The changes from `readme-additions` will effectively lose `Built
-    with` but gain `Thanks` and `Git`
+  * The changes from `readme-additions` will effectively lose `Built with`
+    but gain `Thanks` and `Git`
   * The changes from `main` will effectively gain `Markdown`
 
 We can now add our resolution:
