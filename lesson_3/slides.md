@@ -239,7 +239,7 @@ gitGraph
 
 ::: incremental
 
-<div style="font-size: 0.9em;">
+<div style="font-size: 0.85em;">
 
 1. Make a feature branch of the latest `main`
 2. Make commits to your feature branch
@@ -248,7 +248,8 @@ gitGraph
      [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)
      of the repo
 4. Respond to reviewer feedback and suggestions by pushing more commits
-5. Once the reviewer is happy, they will merge your branch into `main`
+5. Open a *Pull Request* / *Merge Request*
+6. Once the reviewer is happy, they will merge your branch into `main`
    * If your branch conflicts with `main`, you will need to *rebase*
      your branch (we'll cover that next lesson)
 
