@@ -241,7 +241,7 @@ gitGraph
 
 <div style="font-size: 0.85em;">
 
-1. Make a feature branch of the latest `main`
+1. Make a feature branch off the latest `main`
 2. Make commits to your feature branch
 3. Push your feature branch to the remote
    * If you don't have permission, you'll need to push to your own
