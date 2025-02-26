@@ -247,8 +247,8 @@ gitGraph
    * If you don't have permission, you'll need to push to your own
      [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)
      of the repo
-4. Respond to reviewer feedback and suggestions by pushing more commits
-5. Open a *Pull Request* / *Merge Request*
+4. Open a *Pull Request* / *Merge Request*
+5. Respond to reviewer feedback and suggestions by pushing more commits
 6. Once the reviewer is happy, they will merge your branch into `main`
    * If your branch conflicts with `main`, you will need to *rebase*
      your branch (we'll cover that next lesson)
