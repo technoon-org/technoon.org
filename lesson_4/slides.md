@@ -314,10 +314,13 @@ commands that can learn more about to help you sort out Git messes:
 * [Git for Ages 4 and Up](https://www.youtube.com/watch?v=1ffBJ4sVUb4)
   * Great visual explanation of Git branching, merging, rebasing, etc.
   * Uses `git checkout`, while we've used the modern `git switch` and `git restore`
+* [Learn Git Branching](https://learngitbranching.js.org/)
+  * Interactive of various branch-related git commands.
 * Free e-book: [Pro Git](https://git-scm.com/book/en/v2)
   * To learn more about Git commands for your "tool belt"
 * Try a [graphical client](https://git-scm.com/downloads/guis), a text
-  editor extension, or a graphical diff tool like
+  editor extension, a graphical git log like
+  [gitk](https://git-scm.com/docs/gitk), or a graphical diff tool like
   [meld](https://meldmerge.org/)
 * Checkout more TechNoon courses: [technoon.org](https://technoon.org)
 
