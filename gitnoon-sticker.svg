@@ -27,9 +27,9 @@
      fit-margin-left="1"
      fit-margin-right="1"
      fit-margin-bottom="1"
-     inkscape:zoom="8"
-     inkscape:cx="48.375"
-     inkscape:cy="107.0625"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="51.972348"
+     inkscape:cy="72.566833"
      inkscape:window-width="1856"
      inkscape:window-height="1016"
      inkscape:window-x="0"
@@ -92,7 +92,7 @@
          style="fill:#306998;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path1718-6-3-3-3-7-2-7-4-9-3-6"
          cx="-133.48242"
-         cy="109.01142"
+         cy="108.98661"
          r="3"
          transform="rotate(-90)" />
       <path
@@ -111,7 +111,7 @@
          id="rect4684-2-3-1-47-4-1-2-2"
          width="0.60941869"
          height="3.8323419"
-         x="108.6702"
+         x="108.6819"
          y="126.63721" />
       <circle
          style="fill:#306998;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -132,21 +132,24 @@
          style="fill:#306998;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path1718-6-3-3-3-7-6-7-0-3-2-8"
          cx="-143.03693"
-         cy="108.8059"
+         cy="108.98661"
          r="3"
          transform="rotate(-90)" />
       <rect
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.408028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect4684-2-3-0-8-6-9-7-7"
          width="0.60941869"
-         height="3.8323419"
-         x="108.46468"
-         y="136.19171" />
+         height="3.5571463"
+         x="108.6819"
+         y="136.4669" />
     </g>
     <g
        id="g27114"
        transform="matrix(0.57466741,0,0,0.57466741,40.615459,53.701198)"
-       style="stroke-width:1.74014">
+       style="stroke-width:1.74014"
+       inkscape:export-filename="/home/ben/src/technoon/gitnoon/g27114.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600">
       <path
          d="m 104.12867,163.91185 q -1.23514,0 -1.79039,0.69122 -0.54391,0.6799 -0.54391,1.86972 0,0.57791 0.13597,1.05384 0.13598,0.46459 0.40794,0.80454 0.27196,0.33995 0.6799,0.53259 0.40794,0.1813 0.95185,0.1813 0.29462,0 0.49859,-0.0113 0.2153,-0.0113 0.37395,-0.0453 v -2.73091 h 1.76773 v 3.88674 q -0.31729,0.12464 -1.01985,0.26062 -0.70256,0.14731 -1.73373,0.14731 -0.88387,0 -1.60909,-0.27195 -0.71389,-0.27196 -1.22377,-0.79322 -0.50986,-0.52125 -0.79314,-1.28047 -0.271955,-0.75921 -0.271955,-1.73373 0,-0.98585 0.305955,-1.74507 0.30593,-0.75922 0.83846,-1.28047 0.53254,-0.53258 1.24643,-0.80454 0.72523,-0.27196 1.5411,-0.27196 0.55525,0 0.99718,0.0793 0.45327,0.068 0.77055,0.16997 0.32862,0.0907 0.53259,0.19264 0.2153,0.10199 0.30595,0.15864 l -0.50992,1.41645 q -0.36261,-0.19263 -0.83854,-0.32861 -0.4646,-0.14731 -1.01985,-0.14731 z"
          style="font-weight:bold;font-size:11.3316px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Bold';fill:#422400;fill-opacity:1;stroke-width:0.460411"
