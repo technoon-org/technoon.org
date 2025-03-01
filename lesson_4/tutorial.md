@@ -201,8 +201,7 @@ git diff
 ```
 
 * Just like a merge, if you ever reach this point and don't want to
-  handle the conflicts right now, you can just run `git rebase
-  --abort`
+  handle the conflicts right now, you can just run `git rebase --abort`
 
 Just like last lesson, we need to manually resolve the conflict by
 editing `CONTRIBUTING.md`

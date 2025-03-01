@@ -226,7 +226,9 @@ gitGraph
   * This can come at the cost of a *clean, readable history*
 * Rebasing replays commits one-by-one, so conflicts can **require
   multiple resolutions**
-  * If in doubt, `git rebase --abort` and merge instead
+  * If in doubt, `git rebase --abort` and either:
+    * *Squash* commits with an *interactive rebase*
+    * Merge instead of rebasing
 
 </div>
 
@@ -250,11 +252,11 @@ they've "messed up" their repo
    * Draw a Git graph on a piece of paper
 2. **Determine the desired state**
    * Draw a graph of what you'd like the repo to look like
-   * (if it's not your repo, confirm it with the owner)
+   * (if it's not your repo, confirm your plan with the owner)
 3. **Draft a series of commands** to get from the current to the
    desired state
 4. **Make backups:** copy the repo, make a new branch, etc.
-5. **Execute the steps, checking the repo state as you go**
+5. **Execute the commands, checking the repo state as you go**
 
 </div>
 
@@ -264,18 +266,20 @@ they've "messed up" their repo
 
 ### Your Git Tool Belt
 
-<div style="font-size: 0.68em;">
+<div style="font-size: 0.63em;">
 
 Here's a quick cheat sheet of useful (but potentially dangerous)
-commands that can learn more about to help you sort out Git messes:
+commands that you can learn more about to help you sort out Git messes:
 
 * `git cherry-pick`: Replay a single commit on top of the current
   branch
-* `commit --amend`: Instead of making a new commit, rewrite the last
+* `git commit --amend`: Instead of making a new commit, modify the last
   one
 * `git rebase --interactive`: Rewrite a branch by deleting, editing,
   or re-ordering commits
 * `git reset`: Force a branch to point to a different commit
+  * The `--soft`, `--mixed`, and `--hard` options determine what
+    happens to your working directory and staging area
 * `git restore`: Update files in the working directory with content
   from a specific commit
 * [`git filter-repo`](https://github.com/newren/git-filter-repo):
@@ -315,7 +319,7 @@ commands that can learn more about to help you sort out Git messes:
   * Great visual explanation of Git branching, merging, rebasing, etc.
   * Uses `git checkout`, while we've used the modern `git switch` and `git restore`
 * [Learn Git Branching](https://learngitbranching.js.org/)
-  * Interactive of various branch-related git commands.
+  * Interactive tutorial on branch-related git commands
 * Free e-book: [Pro Git](https://git-scm.com/book/en/v2)
   * To learn more about Git commands for your "tool belt"
 * Try a [graphical client](https://git-scm.com/downloads/guis), a text

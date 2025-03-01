@@ -337,7 +337,12 @@ history</em></li>
 can <strong>require multiple resolutions</strong>
 <ul>
 <li class="fragment">If in doubt, <code>git rebase --abort</code> and
-merge instead</li>
+either:
+<ul>
+<li class="fragment"><em>Squash</em> commits with an <em>interactive
+rebase</em></li>
+<li class="fragment">Merge instead of rebasing</li>
+</ul></li>
 </ul></li>
 </ul>
 </div>
@@ -364,15 +369,15 @@ repo</strong>
 <ul>
 <li class="fragment">Draw a graph of what you’d like the repo to look
 like</li>
-<li class="fragment">(if it’s not your repo, confirm it with the
+<li class="fragment">(if it’s not your repo, confirm your plan with the
 owner)</li>
 </ul></li>
 <li class="fragment"><strong>Draft a series of commands</strong> to get
 from the current to the desired state</li>
 <li class="fragment"><strong>Make backups:</strong> copy the repo, make
 a new branch, etc.</li>
-<li class="fragment"><strong>Execute the steps, checking the repo state
-as you go</strong></li>
+<li class="fragment"><strong>Execute the commands, checking the repo
+state as you go</strong></li>
 </ol>
 </div>
 </div>
@@ -380,18 +385,24 @@ as you go</strong></li>
 </section>
 <section id="your-git-tool-belt" class="slide level3">
 <h3>Your Git Tool Belt</h3>
-<div style="font-size: 0.68em;">
+<div style="font-size: 0.63em;">
 <p>Here’s a quick cheat sheet of useful (but potentially dangerous)
-commands that can learn more about to help you sort out Git messes:</p>
+commands that you can learn more about to help you sort out Git
+messes:</p>
 <ul>
 <li><code>git cherry-pick</code>: Replay a single commit on top of the
 current branch</li>
-<li><code>commit --amend</code>: Instead of making a new commit, rewrite
-the last one</li>
+<li><code>git commit --amend</code>: Instead of making a new commit,
+modify the last one</li>
 <li><code>git rebase --interactive</code>: Rewrite a branch by deleting,
 editing, or re-ordering commits</li>
 <li><code>git reset</code>: Force a branch to point to a different
-commit</li>
+commit
+<ul>
+<li>The <code>--soft</code>, <code>--mixed</code>, and
+<code>--hard</code> options determine what happens to your working
+directory and staging area</li>
+</ul></li>
 <li><code>git restore</code>: Update files in the working directory with
 content from a specific commit</li>
 <li><a
@@ -449,7 +460,7 @@ etc.</li>
 </ul></li>
 <li><a href="https://learngitbranching.js.org/">Learn Git Branching</a>
 <ul>
-<li>Interactive of various branch-related git commands.</li>
+<li>Interactive tutorial on branch-related git commands</li>
 </ul></li>
 <li>Free e-book: <a href="https://git-scm.com/book/en/v2">Pro Git</a>
 <ul>
