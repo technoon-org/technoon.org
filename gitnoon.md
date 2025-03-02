@@ -25,8 +25,8 @@ Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJ
 
 **Each week's lesson comprises:**
 
-* A 20-30 minute presentation during lunch
-* A 30-60 minute hands-on tutorial
+* A 10-20 minute presentation during lunch
+* A 25-45 minute hands-on tutorial
 * Homework exercises
 
 ## GitNoon Lessons
