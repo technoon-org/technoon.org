@@ -352,17 +352,158 @@ rebase</em></li>
 <h3>Fixing “Git Messes”</h3>
 <div style="font-size: 0.9em;">
 <p>A bad rebase or merge might leave users feeling confused and like
-they’ve “messed up” their repo</p>
-<p><strong>Here’s a general process for sorting out a mess:</strong></p>
+they’ve “messed up” their repo:</p>
+</div>
+<div class="r-stack" style="font-size: 0.8em; margin-top: 0.5em;">
+<div class="fragment fade-out" data-fragment-index="1">
+<ol type="1">
+<li>To collaborate on your colleague’s <code>origin/feature</code>, you
+fetch it and make commits in your local <code>feature</code>
+branch:</li>
+</ol>
+<div class="mermaid" style="transform: scale(1.25); margin: 1em 0;">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true} } }%%
+gitGraph
+  commit id: "A"
+  commit id: "B"
+  branch "origin/feature" order: 1
+  checkout "origin/feature"
+  commit id: "X"
+  commit id: "Y"
+  branch "feature" order: 2
+  checkout "feature"
+  commit id: "Z"
+  checkout main
+  commit id: "C"
+  commit id: "D"
+</pre>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+<ol start="2" type="1">
+<li>Your colleague then rebases and force pushes to
+<code>origin/feature</code>, meaning your push will now fail:</li>
+</ol>
+<div class="mermaid" style="transform: scale(1.25); margin: 1em 0;">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true} } }%%
+gitGraph
+  commit id: "A"
+  commit id: "B"
+  branch "feature" order: 2
+  checkout "feature"
+  commit id: "X"
+  commit id: "Y"
+  commit id: "Z"
+  checkout main
+  commit id: "C"
+  commit id: "D"
+  branch "origin/feature" order: 1
+  checkout "origin/feature"
+  commit id: "X*"
+  commit id: "Y*"
+</pre>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<ol start="3" type="1">
+<li><strong>Mess:</strong> You fetch <code>origin/feature</code>, but
+instead of rebasing, you merge
+<code>git merge origin/feature</code>:</li>
+</ol>
+<div class="mermaid" style="transform: scale(1.25); margin: 1em 0;">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true} } }%%
+gitGraph
+  commit id: "A"
+  commit id: "B"
+  branch "feature" order: 2
+  checkout "feature"
+  commit id: "X"
+  commit id: "Y"
+  commit id: "Z"
+  checkout main
+  commit id: "C"
+  commit id: "D"
+  branch "origin/feature" order: 1
+  checkout "origin/feature"
+  commit id: "X*"
+  commit id: "Y*"
+  checkout "feature"
+  merge "origin/feature"
+</pre>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+<ol start="4" type="1">
+<li><strong>Resolution Step 1:</strong> <code>git reset Z</code> to get
+back to the state prior to the merge:</li>
+</ol>
+<div class="mermaid" style="transform: scale(1.25); margin: 1em 0;">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true} } }%%
+gitGraph
+  commit id: "A"
+  commit id: "B"
+  branch "feature" order: 2
+  checkout "feature"
+  commit id: "X"
+  commit id: "Y"
+  commit id: "Z"
+  checkout main
+  commit id: "C"
+  commit id: "D"
+  branch "origin/feature" order: 1
+  checkout "origin/feature"
+  commit id: "X*"
+  commit id: "Y*"
+</pre>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="4">
+<ol start="4" type="1">
+<li><strong>Resolution Step 2:</strong> Now
+<code>git rebase origin/feature</code>:</li>
+</ol>
+<div class="mermaid" style="transform: scale(1.25); margin: 1em 0;">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true} } }%%
+gitGraph
+  commit id: "A"
+  commit id: "B"
+  branch "feature (old)" order: 2
+  checkout "feature (old)"
+  commit id: "X"
+  commit id: "Y"
+  commit id: "Z"
+  checkout main
+  commit id: "C"
+  commit id: "D"
+  branch "origin/feature" order: 1
+  checkout "origin/feature"
+  commit id: "X*"
+  commit id: "Y*"
+  branch "feature" order: 3
+  checkout "feature"
+  commit id: "Z*"
+</pre>
+</div>
+</div>
+</div>
+</section>
+<section id="general-process-for-fixing-messes" class="slide level3">
+<h3>General Process for Fixing Messes</h3>
+<div style="font-size: 0.9em;">
 <div>
-<div class="top-fragment-only" style="font-size: 0.75em;">
+<div class="top-fragment-only" style="font-size: 0.85em;">
 <ol type="1">
 <li class="fragment"><strong>Understand the current state of the
 repo</strong>
 <ul>
-<li class="fragment">Use
-<code>git log --graph --all --oneline</code><br>and
-<code>git status</code></li>
+<li class="fragment"><code>git graph</code> (aka
+<code>git log --graph --all --oneline</code>)</li>
+<li class="fragment"><code>git status</code></li>
 <li class="fragment">Draw a Git graph on a piece of paper</li>
 </ul></li>
 <li class="fragment"><strong>Determine the desired state</strong>
@@ -373,7 +514,7 @@ like</li>
 owner)</li>
 </ul></li>
 <li class="fragment"><strong>Draft a series of commands</strong> to get
-from the current to the desired state</li>
+from the current state to the desired state</li>
 <li class="fragment"><strong>Make backups:</strong> copy the repo, make
 a new branch, etc.</li>
 <li class="fragment"><strong>Execute the commands, checking the repo

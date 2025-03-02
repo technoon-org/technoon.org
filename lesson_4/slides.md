@@ -239,21 +239,173 @@ gitGraph
 <div style="font-size: 0.9em;">
 
 A bad rebase or merge might leave users feeling confused and like
-they've "messed up" their repo
+they've "messed up" their repo:
 
-**Here's a general process for sorting out a mess:**
+</div>
+
+<div class="r-stack" style="font-size: 0.8em; margin-top: 0.5em;">
+
+<div class="fragment fade-out" data-fragment-index="1">
+
+1. To collaborate on your colleague's `origin/feature`, you fetch it
+   and make commits in your local `feature` branch:
+
+<div class="mermaid" style="transform: scale(1.25); margin: 1em 0;">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true} } }%%
+gitGraph
+  commit id: "A"
+  commit id: "B"
+  branch "origin/feature" order: 1
+  checkout "origin/feature"
+  commit id: "X"
+  commit id: "Y"
+  branch "feature" order: 2
+  checkout "feature"
+  commit id: "Z"
+  checkout main
+  commit id: "C"
+  commit id: "D"
+</pre>
+</div>
+
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+
+2. Your colleague then rebases and force pushes to `origin/feature`,
+   meaning your push will now fail:
+
+<div class="mermaid" style="transform: scale(1.25); margin: 1em 0;">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true} } }%%
+gitGraph
+  commit id: "A"
+  commit id: "B"
+  branch "feature" order: 2
+  checkout "feature"
+  commit id: "X"
+  commit id: "Y"
+  commit id: "Z"
+  checkout main
+  commit id: "C"
+  commit id: "D"
+  branch "origin/feature" order: 1
+  checkout "origin/feature"
+  commit id: "X*"
+  commit id: "Y*"
+</pre>
+</div>
+
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+
+3. **Mess:** You fetch `origin/feature`, but instead of rebasing, you merge
+   `git merge origin/feature`:
+
+<div class="mermaid" style="transform: scale(1.25); margin: 1em 0;">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true} } }%%
+gitGraph
+  commit id: "A"
+  commit id: "B"
+  branch "feature" order: 2
+  checkout "feature"
+  commit id: "X"
+  commit id: "Y"
+  commit id: "Z"
+  checkout main
+  commit id: "C"
+  commit id: "D"
+  branch "origin/feature" order: 1
+  checkout "origin/feature"
+  commit id: "X*"
+  commit id: "Y*"
+  checkout "feature"
+  merge "origin/feature"
+</pre>
+</div>
+
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+
+4. **Resolution Step 1:** `git reset Z` to get back to the state prior
+   to the merge:
+
+<div class="mermaid" style="transform: scale(1.25); margin: 1em 0;">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true} } }%%
+gitGraph
+  commit id: "A"
+  commit id: "B"
+  branch "feature" order: 2
+  checkout "feature"
+  commit id: "X"
+  commit id: "Y"
+  commit id: "Z"
+  checkout main
+  commit id: "C"
+  commit id: "D"
+  branch "origin/feature" order: 1
+  checkout "origin/feature"
+  commit id: "X*"
+  commit id: "Y*"
+</pre>
+</div>
+
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="4">
+
+4. **Resolution Step 2:** Now `git rebase origin/feature`:
+
+<div class="mermaid" style="transform: scale(1.25); margin: 1em 0;">
+<pre>
+%%{init: { 'gitGraph': {'showCommitLabel': true} } }%%
+gitGraph
+  commit id: "A"
+  commit id: "B"
+  branch "feature (old)" order: 2
+  checkout "feature (old)"
+  commit id: "X"
+  commit id: "Y"
+  commit id: "Z"
+  checkout main
+  commit id: "C"
+  commit id: "D"
+  branch "origin/feature" order: 1
+  checkout "origin/feature"
+  commit id: "X*"
+  commit id: "Y*"
+  branch "feature" order: 3
+  checkout "feature"
+  commit id: "Z*"
+</pre>
+</div>
+
+</div>
+
+</div>
+
+
+### General Process for Fixing Messes
+
+<div style="font-size: 0.9em;">
 
 ::: incremental
 
-<div class="top-fragment-only" style="font-size: 0.75em;">
+<div class="top-fragment-only" style="font-size: 0.85em;">
 
 1. **Understand the current state of the repo**
-   * Use `git log --graph --all --oneline`<br>and `git status`
+   * `git graph` (aka `git log --graph --all --oneline`)
+   * `git status`
    * Draw a Git graph on a piece of paper
 2. **Determine the desired state**
    * Draw a graph of what you'd like the repo to look like
    * (if it's not your repo, confirm your plan with the owner)
-3. **Draft a series of commands** to get from the current to the
+3. **Draft a series of commands** to get from the current state to the
    desired state
 4. **Make backups:** copy the repo, make a new branch, etc.
 5. **Execute the commands, checking the repo state as you go**
