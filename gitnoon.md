@@ -105,5 +105,5 @@ Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJ
 
 ## Additional Resources
 
-Instructors can find tips for presenting in the [full course material
-listing](https://technoon-org.github.io/gitnoon/).
+* [Cheat sheet of Git commands covered in GitNoon](https://technoon-org.github.io/gitnoon/cheatsheet/gitnoon_cheatsheet.pdf)
+* Instructors can find tips for presenting in the [full course material listing](https://technoon-org.github.io/gitnoon/).
