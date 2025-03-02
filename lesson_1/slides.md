@@ -103,8 +103,8 @@ title: GitNoon Lesson 1
 <div class="top-fragment-only">
 
 * Each lesson will have:
-  * A **20-30 minute presentation**
-  * A **30-60 minute hands-on tutorial**
+  * A **10-20 minute presentation**
+  * A **25-45 minute hands-on tutorial**
 * We'll use Git from the **command-line** / **terminal**
   * The fundamentals you'll learn apply to any GUI
   * A GUI is not always available (e.g. on a server)
