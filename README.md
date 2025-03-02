@@ -39,6 +39,7 @@ Slides and tutorials for GitNoon.
 
 ### Assets
 
+* [Cheat sheet of Git commands covered in GitNoon](https://technoon-org.github.io/gitnoon/cheatsheet/gitnoon_cheatsheet.pdf)
 * Find more tips for presenting from [Software Carpentry](https://carpentries.github.io/instructor-training/instructor/17-live.html#top-ten-tips-for-participatory-live-coding-in-a-workshop)
 
 ## Lessons
