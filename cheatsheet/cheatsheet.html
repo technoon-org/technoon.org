@@ -9,7 +9,7 @@
          box-sizing: border-box;
          position: relative;
          margin: auto;
-         padding: 0.6cm 0.8cm;
+         padding: 0.6cm 0.6cm;
 
          border-style: solid;
          border-image: url(img/gitnoon-border.svg);
@@ -32,7 +32,24 @@
      }
 
      dl, pre {
-         margin: 0 0 0.5em 0;
+         margin: 0 0 0.3em 0;
+     }
+
+     dl {
+         padding-left: 10pt;
+         text-indent: -10pt;
+     }
+
+     dt {
+         font-weight: bold;
+     }
+
+     dd {
+         margin-inline-start: 4pt;
+     }
+
+     dt, dd {
+         display: inline;
      }
 
      a, a:visited {
@@ -41,6 +58,10 @@
 
      h2 {
          margin: 0 0 0.1em 0;
+     }
+
+     p, section {
+         margin: 0 0 0.4em 0;
      }
 
      header {
@@ -56,6 +77,11 @@
      }
      .titles a {
          text-decoration: none;
+     }
+
+     .columns {
+         margin: 0.3em 0;
+         column-count: 2;
      }
 
      /* Printing */
@@ -75,132 +101,302 @@
           <span style="font-size: 30pt;">Cheat Sheet</span>
         </div>
         <div>
-          <a href="https://technoon.org/" target="_blank" rel="noopener noreferrer"><img src="img/technoon-badge.svg" alt="Part of the TechNoon.org Movement" style="height: 35pt; margin-left: 8pt;"></a>
+          <a href="https://technoon.org/" target="_blank" rel="noopener noreferrer"><img src="img/technoon-badge.svg" alt="Part of the TechNoon.org Movement" style="height: 35pt; margin-left: 8pt; margin-right: 6pt;"></a>
         </div>
       </h1>
     </header>
 
     <main>
 
-      <section>
+      <div class="columns">
 
-        <h2 id="standard-machine-config">Standard Machine Config</h2>
+        <section>
 
-        <code><pre>
+          <h2 id="standard-machine-configuration">Standard Machine Configuration</h2>
+
+          <code><pre style="font-size: 8pt;">
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 git config --global core.editor nano
 git config --global init.defaultBranch main
-git config --global alias.graph "log --all --graph --oneline --decorate"
-# For Linux or macOS:
+git config --global alias.graph \
+    "log --all --graph --oneline --decorate"
+# For Linux or macOS only:
 git config --global core.autocrlf input
-# For Windows:
+# For Windows only:
 git config --global core.autocrlf true
-# If you're behind a corporate proxy on Windows
+# Only if you're behind a corporate proxy on Windows:
 git config --global http.sslBackend schannel
-# Check configuration
+# Check configuration:
 git config -l</pre></code>
 
-      </section>
+        </section>
 
-      <section>
+        <section>
 
-        <h2 id="basic-versioning">Basic Versioning</h2>
+          <h2 id="basic-versioning">Basic Versioning</h2>
 
-        <dl>
-          <dt><code>git &lt;command&gt; --help</code></dt>
-          <dd>Show help for any <code>&lt;command&gt;</code>.</dd>
-        </dl>
+          <dl>
+            <dt><code>git &lt;command&gt; --help</code></dt>
+            <dd>Show help for any <code>&lt;command&gt;</code>.</dd>
+          </dl>
 
-        <dl>
-          <dt><code>git init</code></dt>
-          <dd>Create a <code>.git</code> directory to setup the current directory as a Git repository.</dd>
-        </dl>
+          <dl>
+            <dt><code>git init</code></dt>
+            <dd>Setup repository by creating <code>.git/</code> in current directory.</dd>
+          </dl>
 
-        <dl>
-          <dt><code>git status</code></dt>
-          <dd>Show the current state of the branch, uncommitted changes, and staged changes.</dd>
-        </dl>
+          <dl>
+            <dt><code>git status</code></dt>
+            <dd>Show the current state of the branch, uncommitted changes, and staged changes.</dd>
+          </dl>
 
-        <dl>
-          <dt><code>git add &lt;files&gt;</code></dt>
-          <dd>Add uncommitted changes in <code>&lt;files&gt;</code> to the staging area. Add <code>--patch</code> to prompt before adding each change.</dd>
-        </dl>
+          <dl>
+            <dt><code>git add &lt;files&gt;</code></dt>
+            <dd>Add uncommitted changes in <code>&lt;files&gt;</code> to the staging area. Adding <code>--patch</code> prompts for each change.</dd>
+          </dl>
 
-        <dl>
-          <dt><code>git commit</code></dt>
-          <dd>Create a new commit from changes in the staging area.</dd>
-        </dl>
+          <dl>
+            <dt><code>git commit</code></dt>
+            <dd>Create a new commit from staged changes.</dd>
+          </dl>
 
-        <dl>
-          <dt><code>git tag -a &lt;name&gt; -m "&lt;message&gt;"</code></dt>
-          <dd>Add an annotated tag to the current commit with the given <code>&lt;message&gt;</code>.</dd>
-        </dl>
+          <dl>
+            <dt><code>git tag -a &lt;name&gt; -m "&lt;message&gt;"</code></dt>
+            <dd>Add an annotated tag to the current commit with the given <code>&lt;message&gt;</code>.</dd>
+          </dl>
 
-        <dl>
-          <dt><code>git diff</code></dt>
-          <dd>Show differences between uncommitted changes and the last commit. Optionally add a <code>&lt;commit&gt;</code> to compare against a different commit.</dd>
-        </dl>
+          <dl>
+            <dt><code>git diff</code></dt>
+            <dd>Compare uncommitted changes to the last commit. Optionally add <code>&lt;commit&gt;</code> to compare to that commit.</dd>
+          </dl>
 
-        <dl>
-          <dt><code>git diff --staged</code></dt>
-          <dd>Show differences between the staging area and the last commit (useful before committing).</dd>
-        </dl>
+          <dl>
+            <dt><code>git diff --staged</code></dt>
+            <dd>Show differences between the staging area and the last commit (useful before committing).</dd>
+          </dl>
 
-        <dl>
-          <dt><code>git restore &lt;files&gt;</code></dt>
-          <dd>Update <code>&lt;files&gt;</code> with content from the last commit.</dd>
-        </dl>
+          <dl>
+            <dt><code>git restore &lt;files&gt;</code></dt>
+            <dd>Update <code>&lt;files&gt;</code> to match the last commit.</dd>
+          </dl>
 
-        <dl>
-          <dt><code>git restore --source=&lt;commit&gt; &lt;files&gt;</code></dt>
-          <dd>Update <code>&lt;files&gt;</code> with content from the specified <code>&lt;commit&gt;</code> (e.g. HEAD, a SHA, branch, or tag).</dd>
-        </dl>
+          <dl>
+            <dt><code>git restore --source=&lt;commit&gt; &lt;files&gt;</code></dt>
+            <dd>Update <code>&lt;files&gt;</code> to match the specified <code>&lt;commit&gt;</code> (e.g. <code>HEAD</code>, SHA, branch, or tag).</dd>
+          </dl>
 
-        <dl>
-          <dt><code>git revert </code></dt>
-          <dd>Create a new commit that reverses the change from the specified <code>&lt;commit&gt;</code>.</dd>
-        </dl>
+          <dl>
+            <dt><code>git revert </code></dt>
+            <dd>Create a commit that reverses changes in <code>&lt;commit&gt;</code>.</dd>
+          </dl>
 
-      </section>
+        </section>
 
-      <section>
+        <section>
 
-        <h2 id="working-with-remotes">Working with Remotes</h2>
+          <h2 id="exploring-history">Exploring History</h2>
 
-        <dl>
-          <dt><code>git clone &lt;remote-url&gt;</code></dt>
-          <dd>Clone the specified remote repoistory as a local repository in a new directory.</dd>
-        </dl>
+          <dl>
+            <dt><code>git log</code></dt>
+            <dd>Show the history of commits in the current branch.</dd>
+          </dl>
 
-        <dl>
-          <dt><code>git remote add origin &lt;remote-url&gt;</code></dt>
-          <dd>Add a remote named <code>origin</code> to an existing local repository.</dd>
-        </dl>
+          <dl>
+            <dt><code>git log &lt;branch&gt;</code></dt>
+            <dd>Show commits in the specified <code>&lt;branch&gt;</code>, or specify <code>--all</code> for all branches.</dd>
+          </dl>
 
-        <dl>
-          <dt><code>git remote -v</code></dt>
-          <dd>List remotes that a local repository can push to and fetch from.</dd>
-        </dl>
+          <dl>
+            <dt><code>git log &lt;files&gt;</code></dt>
+            <dd>Show commits that changed the specified <code>&lt;files&gt;</code>. Add <code>--follow</code> to trace history across file renames.</dd>
+          </dl>
 
-        <dl>
-          <dt><code>git push -u origin &lt;branch&gt;</code></dt>
-          <dd>Push the current local state of <code>&lt;branch&gt;</code> to the <code>origin</code> remote. Can often be shortened to <code>git push</code> after the first time pushing a particular branch. Include tags with <code>--tags</code>.</dd>
-        </dl>
+          <dl>
+            <dt><code>git log --stat</code></dt>
+            <dd>Include summary of changes for each commit.</dd>
+          </dl>
 
-        <dl>
-          <dt><code>git fetch</code></dt>
-          <dd>Update the local repository's remote branch references for the default remote (usually <code>origin</code>). Include tags with <code>--tags</code>.</dd>
-        </dl>
+          <dl>
+            <dt><code>git log --patch</code></dt>
+            <dd>Show the full diff for each commit.</dd>
+          </dl>
 
-        <dl>
-          <dt><code>git merge --ff-only origin/main</code></dt>
-          <dd>Safely update the local branch with all fetched commits on the <code>origin/main</code> remote branch reference. Fails if commits on the local branch prevent fast-forwarding.</dd>
-        </dl>
+          <dl>
+            <dt><code>git log --author "&lt;author&gt;"</code></dt>
+            <dd>Show commits by <code>&lt;author&gt;</code>.</dd>
+          </dl>
 
-      </section>
+          <dl>
+            <dt><code>git log --since "&lt;start-date&gt;" --until "&lt;end-date&gt;"</code></dt>
+            <dd>Show commits made between <code>&lt;start-date&gt;</code> and <code>&lt;end-date&gt;</code>.</dd>
+          </dl>
 
-      <pre class="mermaid">
+          <dl>
+            <dt><code>git log --grep "&lt;search-term&gt;"</code></dt>
+            <dd>Show commits with a message that contains <code>&lt;search-term&gt;</code>.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git log -S "&lt;search-term&gt;"</code></dt>
+            <dd>Show commits with a diff that contains <code>&lt;search-term&gt;</code>. AKA The Git Pickaxe.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git blame &lt;file&gt;</code></dt>
+            <dd>Show the commit, date, and author of each line in <code>&lt;file&gt;</code>. Ignore whitespace changes with <code>-w</code>, and optionally trace copies within the file (<code>-M</code>) or across files (<code>-C</code>).</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git bisect start &lt;bad&gt; &lt;good&gt;</code></dt>
+            <dd>Binary search to find the first "bad" commit after <code>&lt;good&gt;</code> commit and before <code>&lt;bad&gt;</code> commit.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git bisect good</code></dt>
+            <dd>During bisect, mark current commit as "good".</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git bisect bad</code></dt>
+            <dd>During bisect, mark current commit as "bad".</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git bisect skip</code></dt>
+            <dd>During bisect, mark current commit as "unsure".</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git bisect reset</code></dt>
+            <dd>Restore the state of the repository prior to running <code>git bisect start</code>.</dd>
+          </dl>
+
+        </section>
+
+        <section>
+
+          <h2 id="working-with-remotes">Working with Remotes</h2>
+
+          <dl>
+            <dt><code>git clone &lt;remote-url&gt;</code></dt>
+            <dd>Clone the specified remote repoistory as a local repository in a new directory.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git remote add origin &lt;remote-url&gt;</code></dt>
+            <dd>Add a remote named <code>origin</code> to an existing local repository.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git remote -v</code></dt>
+            <dd>Show remotes that can be pushed and fetched.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git push -u origin &lt;branch&gt;</code></dt>
+            <dd>Push the local state of <code>&lt;branch&gt;</code> to the <code>origin</code> remote. Often shortened to <code>git push</code> after the first push to a particular branch. Include tags with <code>--tags</code>.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git fetch</code></dt>
+            <dd>Update the local references to remote branches for the default remote (usually <code>origin</code>). Include tags with <code>--tags</code>.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git merge --ff-only origin/main</code></dt>
+            <dd>Safely update the local branch with fetched commits on the <code>origin/main</code> remote reference. Fails if local commits prevent fast-forwarding.</dd>
+          </dl>
+
+        </section>
+
+        <section>
+
+          <h2 id="branching-and-merging">Branching and Merging</h2>
+
+          <dl>
+            <dt><code>git graph</code></dt>
+            <dd>Graphically log branches (alias in standard config).</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git branch &lt;branch-name&gt;</code></dt>
+            <dd>Create a new branch named <code>&lt;branch-name&gt;</code> from the currently checked-out branch/commit.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git switch &lt;branch-name&gt;</code></dt>
+            <dd>Check-out the specified branch. Updates <code>HEAD</code> to point to the branch.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git merge &lt;branch-name&gt;</code></dt>
+            <dd>Update the current branch by merging in commits from <code>&lt;branch-name&gt;</code>. Creates a merge commit if fast-forwarding is not possible.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git merge --abort</code></dt>
+            <dd>Restore repo state prior to <code>git merge</code>.</dd>
+          </dl>
+
+        </section>
+
+        <section>
+
+          <h2 id="rewriting-history">Rewriting History (Danger Zone!)</h2>
+
+          <dl>
+            <dt><code>git rebase &lt;branch-name&gt;</code></dt>
+            <dd>Update the current branch by replaying its commits on top of <code>&lt;branch-name&gt;</code>.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git rebase --abort</code></dt>
+            <dd>Restore repo state prior to <code>git rebase</code>.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git rebase --interactive HEAD~5</code></dt>
+            <dd>Rewrite the last 5 commits of the current branch by deleting, editing, or re-ordering commits.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git cherry-pick &lt;commit&gt;</code></dt>
+            <dd>Replay <code>&lt;commit&gt;</code> on the current branch.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git commit --amend</code></dt>
+            <dd>Rewrite the last commit with staged changes.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git reset &lt;commit&gt;</code></dt>
+            <dd>Force current branch to point to <code>&lt;commit&gt;</code>, potentially losing commits. <code>--soft</code>, <code>--mixed</code>, and <code>--hard</code> options control what happens to the working directory and staging area.</dd>
+          </dl>
+
+          <dl>
+            <dt><a href="https://github.com/newren/git-filter-repo" target="_blank" rel="noopener noreferrer"><code>git filter-repo</code></a></dt>
+            <dd>Power tool for rewriting history, e.g. removing a file from every commit in history. Installed independently of Git.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git push --force</code></dt>
+            <dd>Push the current local state of the current branch to its remote equivalent, even if commits on the remote would be lost.</dd>
+          </dl>
+
+          <dl>
+            <dt><code>git reflog</code></dt>
+            <dd>Show commits that <code>HEAD</code> has recently pointed to. Useful for finding a lost commit to <code>reset</code> to.</dd>
+          </dl>
+
+        </section>
+
+        <p xmlns:cc="http://creativecommons.org/ns#" style="font-size: 8pt;">This cheat sheet is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer" style="display: inline-block;">CC BY-SA 4.0</a>.</p>
+
+      </div>
+
+      <pre class="mermaid" style="width: 88%; margin: auto;">
 ---
 config:
   mirrorActors: false
@@ -220,185 +416,18 @@ sequenceDiagram
     Local Branch->>Remote Branch: git push
     Remote Branch->>Remote Branch Reference: git fetch
     Remote Branch Reference->>Local Branch: git merge --ff-only origin/*
-    Local Branch-->>Working Directory: (changing the current commit updates files)
+    Local Branch-->>Working Directory: (merging updates files in the working directory)
     Working Directory->Remote Branch Reference:<br>
       </pre>
 
-      <section>
-
-        <h2 id="exploring-history">Exploring History</h2>
-
-        <dl>
-          <dt><code>git log</code></dt>
-          <dd>Show the history of commits in the current branch.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git log &lt;branch&gt;</code></dt>
-          <dd>Show commits in the specified <code>&lt;branch&gt;</code>, or specify <code>--all</code> for all branches.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git log &lt;files&gt;</code></dt>
-          <dd>Show commits that changed the specified <code>&lt;files&gt;</code>. Add <code>--follow</code> to trace history across file renames.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git log --stat</code></dt>
-          <dd>Show a summary of file changes for each logged commit.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git log --patch</code></dt>
-          <dd>Show the full diff for each logged commit.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git log --author "&lt;author&gt;"</code></dt>
-          <dd>Show commits with an Author that contains <code>&lt;author&gt;</code>.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git log --since "&lt;earliest-date&gt;" --until "&lt;latest-date&gt;"</code></dt>
-          <dd>Show commits that were made on or after <code>&lt;earliest-date&gt;</code> and before or on <code>&lt;latest-date&gt;</code>.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git log --grep "&lt;search-term&gt;"</code></dt>
-          <dd>Show commits with a message that contains <code>&lt;search-term&gt;</code>.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git log -S "&lt;search-term&gt;"</code></dt>
-          <dd>Show commits with a diff that contains <code>&lt;search-term&gt;</code>. AKA The Git Pickaxe.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git blame &lt;file&gt;</code></dt>
-          <dd>Show the commit SHA, date, and author of each line in <code>&lt;file&gt;</code>. Ignore whitespace changes with <code>-w</code>, and optionally trace lines copied within the file (<code>-M</code>) or across files (<code>-C</code>).</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git bisect start &lt;bad-commit&gt; &lt;good-commit&gt;</code></dt>
-          <dd>Start a binary search to find the first "bad" commit after <code>&lt;good-commit&gt;</code> and before <code>&lt;bad-commit&gt;</code>.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git bisect good</code></dt>
-          <dd>During a bisect, mark the current commit as "good".</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git bisect bad</code></dt>
-          <dd>During a bisect, mark the current commit as "bad".</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git bisect skip</code></dt>
-          <dd>During a bisect, mark the current commit as "untestable".</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git bisect reset</code></dt>
-          <dd>Restore the state of the repository prior to running <code>git bisect start</code>.</dd>
-        </dl>
-
-      </section>
-
-      <section>
-
-        <h2 id="branching-and-merging">Branching and Merging</h2>
-
-        <dl>
-          <dt><code>git graph</code></dt>
-          <dd>Alias configured in the standard machine setup to show a graphical log of branch histories.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git branch &lt;branch-name&gt;</code></dt>
-          <dd>Create a new branch named <code>&lt;branch-name&gt;</code> from the currently checked-out branch/commit.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git switch &lt;branch-name&gt;</code></dt>
-          <dd><em>Check-out</em> the specified branch. Updates <code>HEAD</code> to point to the branch.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git merge &lt;branch-name&gt;</code></dt>
-          <dd>Update the current branch by merging in commits from <code>&lt;branch-name&gt;</code>. Creates a merge commit if fast-forwarding is not possible.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git merge --abort</code></dt>
-          <dd>Restore the state of the repository prior to running <code>git merge</code>.</dd>
-        </dl>
-
-      </section>
-
-
-      <section>
-
-        <h2 id="rewriting-history">Rewriting History (Danger Zone!)</h2>
-
-        <dl>
-          <dt><code>git rebase &lt;branch-name&gt;</code></dt>
-          <dd>Update the current branch by replaying its commits on top of <code>&lt;branch-name&gt;</code>.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git rebase --abort</code></dt>
-          <dd>Restore the state of the repository prior to running <code>git rebase</code>.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git rebase --interactive HEAD~5</code></dt>
-          <dd>Rewrite the last 5 commits of the current branch by deleting, editing, or re-ordering commits.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git cherry-pick &lt;commit&gt;</code></dt>
-          <dd>Replay a single <code>&lt;commit&gt;</code> on top of the current branch.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git commit --amend</code></dt>
-          <dd>Rewrite the last commit with additional changes and/or a different message.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git reset &lt;commit&gt;</code></dt>
-          <dd>Forcibly update the current branch to point to the specified <code>&lt;commit&gt;</code>, potentially losing commits. The <code>--soft</code>, <code>--mixed</code>, and <code>--hard</code> options determine what happens to your working directory and staging area.</dd>
-        </dl>
-
-        <dl>
-          <dt><a href="https://github.com/newren/git-filter-repo"><code>git filter-repo</code></a></dt>
-          <dd>Power tool for rewriting history, e.g. removing a file from every commit in the history. Installed independently of Git.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git push --force</code></dt>
-          <dd>Push the current local state of the current branch to its remote equivalent, even if commits on the remote would be lost.</dd>
-        </dl>
-
-        <dl>
-          <dt><code>git reflog</code></dt>
-          <dd>Show commits that <code>HEAD</code> has recently pointed to. Useful for finding a lost commit to <code>reset</code> to.</dd>
-        </dl>
-
-      </section>
-
     </main>
-
-    <footer>
-      <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer" style="display: inline-block;">CC BY-SA 4.0</a>.</p>
-    </footer>
 
     <script type="text/javascript" src="mermaid.min.js"></script>
     <script type="text/javascript">
      mermaid.initialize({
        themeVariables: {
          fontFamily: "'Ubuntu Mono', monospace, sans-serif",
+         actorFontSize: 14,
          actorBkg: '#82b1d7',
          actorBorder: '#306998',
          actorLineColor: '#306998'
