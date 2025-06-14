@@ -20,6 +20,11 @@ By the end of this course, you will be able to:
 * Collaborate with others using industry standard practices for branch
   management
 
+> Your course on Git gave me the knowledge and confidence to
+> contribute to some public repos. It was cool to go through the pull
+> request process and see the changes appear on the website after
+> being approved. - GitNoon Attendee
+
 **Register your interest by completing the [Sign Up
 Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJELIplfUF_v8_7cUw/viewform?usp=sf_link){:target="_blank"}{:rel="noopener"}.**
 
