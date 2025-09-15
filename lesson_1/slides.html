@@ -129,29 +129,29 @@ and assistance</li>
 href="https://technoon.org/ainoon"><strong>technoon.org/ainoon</strong></a></p>
 </section>
 <section id="ainoon-structure" class="slide level3">
-<h3>AINoon structure</h3>
+<h3>AINoon Structure</h3>
 <div style="font-size: 0.8em;">
 <ul>
 <li><strong>Lesson 1:</strong>
 <ul>
-<li><em>Presentation:</em> AI fundamentals</li>
+<li><em>Presentation:</em> AI foundations</li>
 <li><em>Tutorial:</em> Getting the most out of a chatbot</li>
 </ul></li>
 <li><strong>Lesson 2:</strong>
 <ul>
-<li><em>Presentation:</em> Common patterns - RAG and “tool use”</li>
-<li><em>Tutorial:</em> Building a chatbot on your docs with <a
+<li><em>Presentation:</em> How AI works</li>
+<li><em>Tutorial:</em> Building an agent with <a
 href="https://zapier.com/">Zapier</a></li>
 </ul></li>
 <li><strong>Lesson 3:</strong>
 <ul>
-<li><em>Presentation:</em> Common patterns - AI agents</li>
-<li><em>Tutorial:</em> Building an agent with <a
+<li><em>Presentation:</em> Common patterns - agents, RAG, and tools</li>
+<li><em>Tutorial:</em> Building a chatbot on your docs with <a
 href="https://zapier.com/">Zapier</a></li>
 </ul></li>
 <li><strong>Lesson 4:</strong>
 <ul>
-<li><em>Presentation:</em> AI Risks and challenges</li>
+<li><em>Presentation:</em> AI risks and challenges</li>
 <li><em>Tutorial:</em> “Vibe-coding” an app with <a
 href="https://replit.com/">Replit</a></li>
 </ul></li>
@@ -179,24 +179,187 @@ the ideas we’re discussing</li>
 <section id="questions" class="slide level3">
 <h3>Questions?</h3>
 </section>
+<section id="ai-foundations" class="slide level3">
+<h3>AI Foundations</h3>
+<ul>
+<li>Establish a common vocabulary</li>
+<li>Who’s who in the zoo: companies and services</li>
+<li>How generative AI is being used by businesses</li>
+</ul>
+</section>
+<section id="ai-terminology" class="slide level3">
+<h3>AI Terminology</h3>
+<style>
+.venn {
+    border: 5px solid black;
+    text-align: left;
+    padding: 10px 0 0 10px;
+}
+.venn h4 {
+    font-size: 0.7em;
+    margin-bottom: 0px;
+}
+.venn ul {
+    font-size: 0.6em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.venn .venn {
+    margin-top: 10px;
+    margin-left: 50px;
+    border-bottom: none;
+    border-right: none;
+}
+</style>
+<div class="venn">
+<h4>
+Artificial Intelligence (AI) ~1950s
+</h4>
+<ul>
+<li>
+General term for computers making “intelligent” decisions
+</li>
+<li>
+E.g. Hand-crafted programs that can play checkers
+</li>
+</ul>
+<div class="venn fragment">
+<h4>
+Machine Learning (ML) ~1980s
+</h4>
+<ul>
+<li>
+Approach to AI where computers “learn” from patterns in data
+</li>
+<li>
+E.g. Learning from many past emails to identify spam
+</li>
+</ul>
+<div class="venn fragment">
+<h4>
+Deep Learning (DL) ~2000s
+</h4>
+<ul>
+<li>
+Approach to ML based on very large (artificial) “neural networks”
+</li>
+<li>
+E.g. Recognising objects in images, topic-labelling of text
+</li>
+</ul>
+<div class="venn fragment">
+<h4>
+Generative AI (GenAI) ~2020s
+</h4>
+<ul>
+<li>
+Application of DL to generate text, images, audio, video, etc.
+</li>
+<li>
+What most people mean by “AI” these days
+</li>
+<li class="fragment">
+<strong>The focus of this course</strong>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p style="font-size: 0.4em;">
+Source:
+<a href="https://blogs.nvidia.com/blog/whats-difference-artificial-intelligence-machine-learning-deep-learning-ai/">blogs.nvidia.com/blog/whats-difference-artificial-intelligence-machine-learning-deep-learning-ai/</a>
+</p>
+<aside class="notes">
+<ul>
+<li>Except where noted, “AI” will refer to “Generative AI” in this
+course</li>
+</ul>
+</aside>
+</section>
+<section id="chatbots-are-the-most-prominent-application-of-genai"
+class="slide level3">
+<h3>Chatbots are the most prominent application of GenAI</h3>
+<ul>
+<li>ChatGPT (OpenAI)</li>
+<li>Claude (Anthropic)</li>
+<li>Gemini (Google)</li>
+<li>Microsoft Copilot (based on OpenAI LLMs)</li>
+<li>Grok (X)</li>
+<li>DeepSeek</li>
+</ul>
+</section>
+<section id="how-are-businesses-using-chatbots" class="slide level3">
+<h3>How are businesses using chatbots?</h3>
+<div style="font-size: 0.8em;">
+<ul>
+<li><strong>Drafting</strong> emails and documents</li>
+<li><strong>Summarising</strong> documents and meetings</li>
+<li><strong>Brainstorming</strong> a wide variety of ideas</li>
+<li><strong>Personalised tutoring</strong> for learning new
+subjects</li>
+<li><strong>Generating code</strong> to assist programmers</li>
+<li><strong>Data extraction and transformation</strong>
+<ul>
+<li>Turn unstructured text and images into structured data</li>
+<li>E.g. Identify which team an IT ticket should go to</li>
+</ul></li>
+<li><strong>Custom agents</strong>: chatbots that retrieve info and take
+action
+<ul>
+<li>Answering questions from organisation knowledge bases</li>
+<li>Personalised customer service</li>
+<li>Automated handling of events - e.g. IT tickets</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="how-are-businesses-rolling-out-chatbots"
+class="slide level3">
+<h3>How are businesses rolling out chatbots?</h3>
+<p>TODO</p>
+<ul>
+<li>Businesses are often deploying their own internal chatbots so that
+company data is protected</li>
+<li>Either by using business-to-business AI services
+<ul>
+<li>E.g. In Microsoft, Amazon, or Google clouds</li>
+</ul></li>
+<li>Or by running their own copy of openly available models
+<ul>
+<li>E.g. Llama (Meta), DeepSeek</li>
+<li>Important to check whether licenses allow commercial use</li>
+</ul></li>
+</ul>
+</section>
 <section id="tutorial-objectives" class="slide level3">
 <h3>Tutorial Objectives</h3>
 <ul>
-<li>Using a chatbot</li>
-<li>A tour of common features
-<ul>
-<li>Image analysis and generation: Multimodal</li>
-<li>Chat messages and memory: Context</li>
-<li>Think longer: Reasoning</li>
-<li>Chat history and files: RAG</li>
-<li>Web search: Tool</li>
-<li>Deep research: Agent</li>
-</ul></li>
-<li>Tips for prompting</li>
+<li>Using a chatbot for typical use cases</li>
+<li>A tour of common, useful features</li>
+<li>Tips for effective prompting</li>
 </ul>
 </section>
 <section id="homework" class="slide level3">
 <h3>Homework</h3>
+<p>TODO</p>
+<ul>
+<li>Try out some other GenAI applications:
+<ul>
+<li>Generate images from text
+<ul>
+<li>DALL-E (OpenAI), Midjourney, many chatbots</li>
+</ul></li>
+<li>Generate video from text or an image
+<ul>
+<li>Veo (Google), Sora (OpenAI), Midjourney</li>
+</ul></li>
+<li>Read text in a realistic voice
+<ul>
+<li>ElevenLabs</li>
+</ul></li>
+</ul></li>
+</ul>
 </section>
     </div>
   </div>

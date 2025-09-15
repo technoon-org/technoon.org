@@ -80,21 +80,21 @@ Get all the slides, tutorials, and homework from:
 
 [**technoon.org/ainoon**](https://technoon.org/ainoon)
 
-### AINoon structure
+### AINoon Structure
 
 <div style="font-size: 0.8em;">
 
 * **Lesson 1:**
-  * *Presentation:* AI fundamentals
+  * *Presentation:* AI foundations
   * *Tutorial:* Getting the most out of a chatbot
 * **Lesson 2:**
-  * *Presentation:* Common patterns - RAG and "tool use"
-  * *Tutorial:* Building a chatbot on your docs with [Zapier](https://zapier.com/)
-* **Lesson 3:**
-  * *Presentation:* Common patterns - AI agents
+  * *Presentation:* How AI works
   * *Tutorial:* Building an agent with [Zapier](https://zapier.com/)
+* **Lesson 3:**
+  * *Presentation:* Common patterns - agents, RAG, and tools
+  * *Tutorial:* Building a chatbot on your docs with [Zapier](https://zapier.com/)
 * **Lesson 4:**
-  * *Presentation:* AI Risks and challenges
+  * *Presentation:* AI risks and challenges
   * *Tutorial:* "Vibe-coding" an app with [Replit](https://replit.com/)
 
 <span style="font-size: 0.7em;">We'll use convenient tools in tutorials, but the focus is on principles that will apply in any tool</span>
@@ -113,11 +113,129 @@ Get all the slides, tutorials, and homework from:
 ### Questions?
 
 
+### AI Foundations
+
+* Establish a common vocabulary
+* Who's who in the zoo: companies and services
+* How generative AI is being used by businesses
+
+### AI Terminology
+
+<style>
+.venn {
+    border: 5px solid black;
+    text-align: left;
+    padding: 10px 0 0 10px;
+}
+.venn h4 {
+    font-size: 0.7em;
+    margin-bottom: 0px;
+}
+.venn ul {
+    font-size: 0.6em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.venn .venn {
+    margin-top: 10px;
+    margin-left: 50px;
+    border-bottom: none;
+    border-right: none;
+}
+</style>
+<div class="venn">
+<h4>Artificial Intelligence (AI) ~1950s</h4>
+<ul>
+<li>General term for computers making "intelligent" decisions</li>
+<li>E.g. Hand-crafted programs that can play checkers</li>
+</ul>
+<div class="venn fragment">
+<h4>Machine Learning (ML) ~1980s</h4>
+<ul>
+<li>Approach to AI where computers "learn" from patterns in data</li>
+<li>E.g. Learning from many past emails to identify spam</li>
+</ul>
+<div class="venn fragment">
+<h4>Deep Learning (DL) ~2000s</h4>
+<ul>
+<li>Approach to ML based on very large (artificial) "neural networks"</li>
+<li>E.g. Recognising objects in images, topic-labelling of text</li>
+</ul>
+<div class="venn fragment">
+<h4>Generative AI (GenAI) ~2020s</h4>
+<ul>
+<li>Application of DL to generate text, images, audio, video, etc.</li>
+<li>What most people mean by "AI" these days</li>
+<li class="fragment"><strong>The focus of this course</strong></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p style="font-size: 0.4em;">Source: <a href="https://blogs.nvidia.com/blog/whats-difference-artificial-intelligence-machine-learning-deep-learning-ai/">blogs.nvidia.com/blog/whats-difference-artificial-intelligence-machine-learning-deep-learning-ai/</a></p>
+
+<aside class="notes">
+
+* Except where noted, "AI" will refer to "Generative AI" in this course
+
+</aside>
+
+### Chatbots are the most prominent application of GenAI
+
+* ChatGPT (OpenAI)
+* Claude (Anthropic)
+* Gemini (Google)
+* Microsoft Copilot (based on OpenAI LLMs)
+* Grok (X)
+* DeepSeek
+
+### How are businesses using chatbots?
+
+<div style="font-size: 0.8em;">
+
+* **Drafting** emails and documents
+* **Summarising** documents and meetings
+* **Brainstorming** a wide variety of ideas
+* **Personalised tutoring** for learning new subjects
+* **Generating code** to assist programmers
+* **Data extraction and transformation**
+  * Turn unstructured text and images into structured data
+  * E.g. Identify which team an IT ticket should go to
+* **Custom agents**: chatbots that retrieve info and take action
+  * Answering questions from organisation knowledge bases
+  * Personalised customer service
+  * Automated handling of events - e.g. IT tickets
+
+</div>
+
+### How are businesses rolling out chatbots?
+
+TODO
+
+* Businesses are often deploying their own internal chatbots so that
+  company data is protected
+* Either by using business-to-business AI services
+  * E.g. In Microsoft, Amazon, or Google clouds
+* Or by running their own copy of openly available models
+  * E.g. Llama (Meta), DeepSeek
+  * Important to check whether licenses allow commercial use
+
+
 ### Tutorial Objectives
 
-* Using a chatbot
-* A tour of common features
-* Tips for prompting
+* Using a chatbot for typical use cases
+* A tour of common, useful features
+* Tips for effective prompting
 
 
 ### Homework
+
+TODO
+
+* Try out some other GenAI applications:
+  * Generate images from text
+    * DALL-E (OpenAI), Midjourney, many chatbots
+  * Generate video from text or an image
+    * Veo (Google), Sora (OpenAI), Midjourney
+  * Read text in a realistic voice
+    * ElevenLabs
