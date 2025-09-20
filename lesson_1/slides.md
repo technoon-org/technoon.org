@@ -5,7 +5,7 @@ title: AINoon Lesson 1
 ### Get Ready for AINoon!
 
 * Make sure you can open [chatgpt.com](https://chatgpt.com)
-* You don't need to log in
+* You'll need to log in to follow all steps in the tutorial
 
 ### Thanks
 
@@ -189,7 +189,7 @@ Get all the slides, tutorials, and homework from:
 * Grok (X)
 * DeepSeek
 
-### How are businesses using chatbots?
+### What can chatbots do for business?
 
 <div style="font-size: 0.8em;">
 
@@ -208,34 +208,48 @@ Get all the slides, tutorials, and homework from:
 
 </div>
 
-### How are businesses rolling out chatbots?
+### Using chatbots for business
 
-TODO
+<div style="font-size: 0.9em;">
 
-* Businesses are often deploying their own internal chatbots so that
-  company data is protected
-* Either by using business-to-business AI services
-  * E.g. In Microsoft, Amazon, or Google clouds
-* Or by running their own copy of openly available models
-  * E.g. Llama (Meta), DeepSeek
-  * Important to check whether licenses allow commercial use
+* **Public chatbots** train future chatbots with your data
+* Companies deploy **internal chatbots** to protect data
+  * Often using business-to-business service offerings
+  * E.g. From Microsoft, Amazon, or Google clouds
+* You can run ***open* chatbots** on your own computers
+  * E.g. Llama (Meta), gpt-oss (OpenAI), DeepSeek
+  * Most require specialised hardware, but less powerful chatbots can
+    run on a laptop
+  * Check whether licenses allow commercial use
 
+</div>
 
 ### Tutorial Objectives
 
-* Using a chatbot for typical use cases
-* A tour of common, useful features
+* Using a chatbot for business use cases:
+  * Brainstorming and drafting
+  * Automating web searches
+  * Summarising documents
+* Identifying important issues to keep in mind
 * Tips for effective prompting
 
 
-### Homework
+### Homework: try more GenAI
 
-TODO
+<div style="font-size: 0.9em;">
 
-* Try out some other GenAI applications:
-  * Generate images from text
-    * DALL-E (OpenAI), Midjourney, many chatbots
-  * Generate video from text or an image
-    * Veo (Google), Sora (OpenAI), Midjourney
-  * Read text in a realistic voice
-    * ElevenLabs
+**Remember:** Don't use private data with public models!
+
+* Try ChatGPT's **Think longer** (reasoning) mode:
+  * "Make a plan to increase visitors to my website"
+  * Compare level of detail with/without reasoning
+* Try ChatGPT's **Deep Research** mode:
+  * "Find a cheap washing machine for a family of four"
+  * Searches the web and summarises in a few minutes
+* **Generate a video** with Google's [Flow](https://labs.google/fx/tools/flow)
+  * Look at the gallery on
+    [Midjourney](https://www.midjourney.com/explore) - note the detail
+    in the prompts used
+* **Generate speech from text** with [ElevenLabs](https://elevenlabs.io/)
+
+</div>

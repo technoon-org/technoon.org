@@ -80,8 +80,8 @@ TODO
 
 * It's not magic, just simple maths
 * We know *how* it works, but we don't really know *why* it works
-* It doesn't learn during your chats other than getting more context
-  (which can sometimes end up confusing it)
+* It doesn't learn during your chats - "memory" is just context (which
+  can sometimes end up confusing it)
 
 ### GenAI Strengths and Limitations
 
