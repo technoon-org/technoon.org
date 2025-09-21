@@ -67,49 +67,80 @@ How generative AI works and how that informs how to best use it
 
 ### Where do LLM weights come from?
 
-TODO
+<div style="font-size: 0.85em;">
 
-* Training
-* Data sources: internet, books, images
-* Pre-training + human feedback
-* Algorithm
+::: incremental
 
-### What does this teach us about how to use GenAI?
+* Weights start as random numbers
+* Weights are updated by a process called **pre-training**:
+  * Uses millions of *training examples* from **general sources**,
+    like the internet and books
+  * E.g. Leave-one-word-out examples:
+    <br><span style="font-size: 0.9em;">`The Beatles were a ____ from England` → `band`</span>
+  * For each example, weights are updated *slightly* to get closer to
+    the right answer - like tuning a dial
+  * This trains the LLM in **language patterns** AND **general knowledge**
+* Extra training based on **human feedback** makes chatbots respond
+  better to **questions** and **instructions**
+  * E.g. Chatbot gives 5 answers and human picks the best
 
-TODO
+:::
 
-* It's not magic, just simple maths
-* We know *how* it works, but we don't really know *why* it works
-* It doesn't learn during your chats - "memory" is just context (which
-  can sometimes end up confusing it)
+</div>
+
+### You now understand what GPT stands for!
+
+<table>
+<tr><td><strong>Generative</strong></td><td>The model generates text (or other content)</td></tr>
+<tr><td><strong>Pre-trained</strong></td><td>Pre-trained on many examples from general sources</td></tr>
+<tr><td><strong>Transformer</strong></td><td>The kind of neural network architecture used</td></tr>
+</table>
+
+<div style="font-size: 0.78em;">
+
+### What does this teach us about using GenAI?
+
+::: incremental
+
+* The generation process is **not magic, just simple maths!**
+* We know *how* AI works, but **no-one truly knows *why* it works**
+  * The billions of calculations across neurons are too complex
+* **AI doesn't "think" with logic** - it's predicting the best answer
+  based on its training sources
+  * People say AI *sometimes* "hallucinates" wrong answers - but every
+    response is generated the same way
+  * It generates answers that *sound* right - and it's surprising so
+    many actually are right!
+* **It doesn't train during your chats**
+  * It "remembers" by including chat history in the prompt
+  * Even "memory" features just include past chats in the prompt
+  * Public chatbots may use your chats to train later models
+
+:::
+
+</div>
 
 ### GenAI Strengths and Limitations
 
-TODO
+<div style="text-align: left; font-size: 0.8em;">
 
-* Strengths
-  * Generates text that looks similar to what a human would write
-  * Reads lots of text really fast
-  * Surprisingly good responses to a wide variety of tasks
-* Limitations
-  * Everything is a hallucination - but it's correct surprisingly often
-  * It might not "pay attention" to the full context
-  * It might not consistently give the same answer
-  * Different versions of the same model might give very different
-    responses to the same prompt
+#### Key Strengths
 
-### Tips for using GenAI
+* Generates text that looks similar to what a human would write
+* Reads lots of text really fast
+* Surprisingly good responses to a wide variety of tasks
 
-TODO
+<div style="margin-top: 0.5em;"></div>
 
-* Golden rule: Don't trust a response if you can't verify it
-  * Example: meeting and document summarisation - where you
-    attended/read yourself vs didn't
-* Use it to *help* you learn things by providing personalised
-  explanations and answers to questions
-  * Use references to verify
-* Prompt crafting guidelines
-  * "answer step-by-step"
+#### Key Limitations
+
+* Everything is a hallucination - but it's correct surprisingly often
+* It might not always "pay attention" to everything in the prompt
+* It might not consistently give the same answer
+* Different models (or model versions) can give very different
+  responses to the same prompt
+
+</div>
 
 
 ### Tutorial Objectives
@@ -120,4 +151,7 @@ TODO
 ### Homework
 
 * TODO
-* See 3Blue1Brown: https://www.youtube.com/watch?v=wjZofJX0v4M
+* To learn more about how LLMs work, watch these videos from
+  3Blue1Brown:
+  * [Brief explainer](https://www.youtube.com/watch?v=LPZh9BOjkQs)
+  * [Deeper dive (more maths)](https://www.youtube.com/watch?v=wjZofJX0v4M)

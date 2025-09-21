@@ -1,3 +1,3 @@
 ---
-title: AINoon Lesson 2
+title: AINoon Tutorial 2
 ---

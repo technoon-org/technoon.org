@@ -1,5 +1,5 @@
 ---
-title: AINoon Lesson 1
+title: AINoon Tutorial 1
 ---
 
 The goal of this tutorial is to:
@@ -20,61 +20,181 @@ Before we begin, it is **very important** to remember:
 * Check with your IT department for approved AI services and what data
   is appropriate to upload to them
 
+## Open a new chat
+
+* Open [chatgpt.com](https://chatgpt.com/) or a similar tool
+* We'll start working in a new chat
+
 ## Brainstorming and Drafting
 
-TODO
+Let's start by using the chatbot for some brainstorming for kicking
+off a new project at work.
+
+Type in the following request - what's referred to as a **prompt**:
 
 ```
 Write an agenda for a project planning meeting
 ```
 
-* ...very verbose, ask to make it shorter!
-  * It "remembers" what's been said previously in the chat
-* Be specific - what is the project about
-* Sometimes good to start thinking with a clean slate, then get a
-  second opinion
+* **AUDIENCE QUESTION:** Have a quick skim, any feedback on the
+  response?
 
-* Drafting
-  * Turn that into a
-  * It's quite good at mixing ideas:
-    * ...like a pirate
+Some observations:
+
+* It might provide suggestions for follow-up prompts at the end of the
+  response.
+* It's quite verbose, but we can ask to make it shorter:
+  ```
+  Make it shorter
+  ```
+  * It "remembers" the history of the chat, so we don't need to
+    provide the original prompt again.
+* It's quite generic, it would help to be more specific about our
+  project:
+  ```
+  Make it specific to a project to launch a new website
+  ```
+
+Chatbots can be a great source of inspiration when brainstorming:
+
+* They can draw from ideas in a massive amount of text scraped from
+  the internet and other sources.
+* Still need to review the content and decide whether the ideas are
+  relevant.
+* Sometimes coming up with your own ideas first helps you better think
+  through a topic.
+  * You can use a chatbot to provide a second opinion to see if
+    there's anything you've missed.
+
+Similar to brainstorming, chatbot's can also be a good way to make a
+first draft of a document:
+
+```
+Turn this into a meeting invite
+```
+
+Chatbot's are also quite good at mixing ideas together, like applying
+a style of writing to a piece of text:
+
+```
+Say it like a pirate
+```
 
 ## Automating web searches
 
-TODO
+We can also use chatbot's to search the web and summarise results for
+us.
 
-* What tech conferences are coming soon in {city}?
-* Look at the sources
-* Effectively the same thing as Google's "AI Summary"
+Enable the **web search** option in the chat (sometimes chatbot's will
+do this automatically if needed), then prompt it to find out about
+upcoming events you're interested in:
 
-## Summarising Documents
+```
+What {event type e.g. tech conferences} are coming soon in {your city}?
+```
 
-TODO
+* You can see a list of sources it used - it's a good idea to
+  double-check these.
+* This is effectively the same thing as Google's "AI Summary" at the
+  top of search results.
+* **AUDIENCE QUESTION:** Would you trust this answer to be complete?
+  * Probably not, it's only used a source or two.
+  * You can use **Deep research** (as a homework exercise) to get it
+    to search more thoroughly.
+  * But if it's important, you should do your own thorough review.
 
-* Summarisation
-  * Example csv
-    * Re-emphasize data security and privacy
-    * Generated with prompt: "Write 100 unique 3-sentence reviews for a washing machine with associated ratings out of 10 in a table"
-  * What are the common issues? Don't use code.
-    * How can you trust it?
-    * Good for a vibe, not reporting?
-    * Ask it twice, do you get the same result?
-  * How many rows? Mean rating?
-    * If it generates code, you can check the code to trust it (if you can read code)
-    * If it doesn't generate code, you probably can't trust specific answers
+Note that we started discussing a new topic here in the same chat,
+sometimes it's helpful to start a new chat so that:
+
+1. You can easily revisit specific chats in the history along the
+   sidebar.
+2. You avoid the chatbot getting confused by previous messages in the
+   chat.
 
 ## Generating Images
 
-TODO
+Many chatbots now also have built-in capabilities to generate images,
+try asking it to draw a city skyline you know well:
 
-* Images
-  * Draw your city skyline
-    * Spot any mistakes?
+```
+Generate an image of the {city} skyline
+```
+
+* **AUDIENCE QUESTION:** How well did it do?
+* Overall, usually a pretty good approximation
+* But you'll see that it will often make mistakes in the details
+  * *Point out a few mistakes you can see in your image*
+
+## Summarising Documents
+
+* Now let's try using the chatbot to summarise a document.
+* We can upload word docs, PDFs, and more.
+* **Again, it is important to not upload company data into unapproved systems**
+* Let's use a spreadsheet (as a CSV file) of washing machine reviews:
+
+1. From [technoon.org/ainoon](https://technoon.org/ainoon), download
+   [`washing_machine_reviews.csv`](https://technoon-org.github.io/ainoon/lesson_1/washing_machine_reviews.csv)
+   * Each row contains a (fake) review with an associated rating.
+   * *The file was actually generated by ChatGPT 5 with the following
+     prompt: "Write 100 unique 3-sentence reviews for a washing
+     machine with associated ratings out of 10 in a table"*
+2. Upload the file to the chat
+3. Prompt it with:
+   ```
+   What are the common issues in these reviews?
+   ```
+
+* It's given us some issues to investigate, but how do we know these
+  are the most important, or that it hasn't missed any common issues?
+* If we ask twice, we might not get the same result.
+* If it's used code to analyse the data (*which ChatGPT often does*):
+  * We might get more consistency in results
+  * We can check the code to see if we trust it's approach - but only
+    helpful if you can read code
+* In general: **good for getting ideas to investigate, but not for
+  formal reporting or decision making**
+
+What about asking it more detailed questions?
+
+```
+How many rows are in the file?
+```
+
+> *Should be 100*
+
+```
+What is the mean rating?
+```
+
+> *Should be approximately 7.74*
+
+* If it doesn't use code to generate the answer, it is likely going to
+  be wrong because chatbots answer based on patterns in language -
+  they're not a calculator!
+* If it generates code to answer the question, it is more likely to
+  give a better answer, but the code should still be reviewed.
+
+> *You can try force ChatGPT to not use code by saying "don't use code
+> to answer". But do this in a new chat so it can't read the previous
+> code-based answer.*
 
 ## Prompting Tips
 
-TODO
+*Refer to slide in the slide deck.*
 
-* Art, not science, expect this to change over time as models change
-* "You are a..."
-* "Step-by-step"
+## Conclusion
+
+* We've seen how we can use a chatbot for a bunch of useful tasks:
+  * Brainstorming
+  * Drafting
+  * Web searching
+  * Generating images
+  * Summarising documents
+* It's quite useful, but it isn't perfect
+  * It's just a tool
+  * It doesn't actually "think"
+  * You need to do the thinking!
+  * That's why the logo for this course is a just a hat
+  * **Refer to "Golden Rule" slide in the slide deck.**
+* Next week, we'll learn more about how a chatbot generates responses,
+  which will help us better understand these limitations

@@ -4,6 +4,7 @@ title: AINoon Lesson 1
 
 ### Get Ready for AINoon!
 
+* Open [technoon.org/ainoon](https://technoon.org/ainoon)
 * Make sure you can open [chatgpt.com](https://chatgpt.com)
 * You'll need to log in to follow all steps in the tutorial
 
@@ -85,8 +86,8 @@ Get all the slides, tutorials, and homework from:
 <div style="font-size: 0.8em;">
 
 * **Lesson 1:**
-  * *Presentation:* AI foundations
-  * *Tutorial:* Getting the most out of a chatbot
+  * *Presentation:* Intro to AI
+  * *Tutorial:* Using a chatbot for business use-cases
 * **Lesson 2:**
   * *Presentation:* How AI works
   * *Tutorial:* Building an agent with [Zapier](https://zapier.com/)
@@ -113,7 +114,7 @@ Get all the slides, tutorials, and homework from:
 ### Questions?
 
 
-### AI Foundations
+### Intro to AI
 
 * Establish a common vocabulary
 * Who's who in the zoo: companies and services
@@ -234,7 +235,32 @@ Get all the slides, tutorials, and homework from:
 * Tips for effective prompting
 
 
-### Homework: try more GenAI
+### Tips for crafting better prompts
+
+<div style="font-size: 0.9em;">
+
+* Each prompt should request **one thing**
+* Start prompts with a **persona**
+  * E.g. "You are an expert in project management..."
+* Ask it to "explain **step-by-step**"
+  * Can get better answers to more complex questions
+* When it's not doing what you want, **be more specific**
+  * Though it won't always follow instructions exactly!
+* **Seek more tips** online for specific use-cases
+  * It's all art/craft, not science/engineering
+  * Advice will likely change as models change
+
+</div>
+
+### The Golden Rule of AI
+
+> Don't trust the output of an AI unless you can verify it
+
+* **Bad:** Summarising a document you *haven't* read
+* **Good:** Summarising a document you *have* read
+* **But:** For some use cases, speed may be more important than accuracy
+
+### Homework
 
 <div style="font-size: 0.9em;">
 

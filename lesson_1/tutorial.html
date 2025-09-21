@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>AINoon Lesson 1</title>
+  <title>AINoon Tutorial 1</title>
   <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,7 +37,7 @@ font-style: italic;
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">AINoon Lesson 1</h1>
+<h1 class="title">AINoon Tutorial 1</h1>
 </header>
 <p>The goal of this tutorial is to:</p>
 <ul>
@@ -60,77 +60,175 @@ approval, especially:
 <li>Check with your IT department for approved AI services and what data
 is appropriate to upload to them</li>
 </ul>
+<h2 id="open-a-new-chat">Open a new chat</h2>
+<ul>
+<li>Open <a href="https://chatgpt.com/">chatgpt.com</a> or a similar
+tool</li>
+<li>We’ll start working in a new chat</li>
+</ul>
 <h2 id="brainstorming-and-drafting">Brainstorming and Drafting</h2>
-<p>TODO</p>
+<p>Let’s start by using the chatbot for some brainstorming for kicking
+off a new project at work.</p>
+<p>Type in the following request - what’s referred to as a
+<strong>prompt</strong>:</p>
 <pre><code>Write an agenda for a project planning meeting</code></pre>
 <ul>
-<li><p>…very verbose, ask to make it shorter!</p>
+<li><strong>AUDIENCE QUESTION:</strong> Have a quick skim, any feedback
+on the response?</li>
+</ul>
+<p>Some observations:</p>
 <ul>
-<li>It “remembers” what’s been said previously in the chat</li>
+<li><p>It might provide suggestions for follow-up prompts at the end of
+the response.</p></li>
+<li><p>It’s quite verbose, but we can ask to make it shorter:</p>
+<pre><code>Make it shorter</code></pre>
+<ul>
+<li>It “remembers” the history of the chat, so we don’t need to provide
+the original prompt again.</li>
 </ul></li>
-<li><p>Be specific - what is the project about</p></li>
-<li><p>Sometimes good to start thinking with a clean slate, then get a
-second opinion</p></li>
-<li><p>Drafting</p>
+<li><p>It’s quite generic, it would help to be more specific about our
+project:</p>
+<pre><code>Make it specific to a project to launch a new website</code></pre></li>
+</ul>
+<p>Chatbots can be a great source of inspiration when brainstorming:</p>
 <ul>
-<li>Turn that into a</li>
-<li>It’s quite good at mixing ideas:
+<li>They can draw from ideas in a massive amount of text scraped from
+the internet and other sources.</li>
+<li>Still need to review the content and decide whether the ideas are
+relevant.</li>
+<li>Sometimes coming up with your own ideas first helps you better think
+through a topic.
 <ul>
-<li>…like a pirate</li>
-</ul></li>
+<li>You can use a chatbot to provide a second opinion to see if there’s
+anything you’ve missed.</li>
 </ul></li>
 </ul>
+<p>Similar to brainstorming, chatbot’s can also be a good way to make a
+first draft of a document:</p>
+<pre><code>Turn this into a meeting invite</code></pre>
+<p>Chatbot’s are also quite good at mixing ideas together, like applying
+a style of writing to a piece of text:</p>
+<pre><code>Say it like a pirate</code></pre>
 <h2 id="automating-web-searches">Automating web searches</h2>
-<p>TODO</p>
+<p>We can also use chatbot’s to search the web and summarise results for
+us.</p>
+<p>Enable the <strong>web search</strong> option in the chat (sometimes
+chatbot’s will do this automatically if needed), then prompt it to find
+out about upcoming events you’re interested in:</p>
+<pre><code>What {event type e.g. tech conferences} are coming soon in {your city}?</code></pre>
 <ul>
-<li>What tech conferences are coming soon in {city}?</li>
-<li>Look at the sources</li>
-<li>Effectively the same thing as Google’s “AI Summary”</li>
+<li>You can see a list of sources it used - it’s a good idea to
+double-check these.</li>
+<li>This is effectively the same thing as Google’s “AI Summary” at the
+top of search results.</li>
+<li><strong>AUDIENCE QUESTION:</strong> Would you trust this answer to
+be complete?
+<ul>
+<li>Probably not, it’s only used a source or two.</li>
+<li>You can use <strong>Deep research</strong> (as a homework exercise)
+to get it to search more thoroughly.</li>
+<li>But if it’s important, you should do your own thorough review.</li>
+</ul></li>
+</ul>
+<p>Note that we started discussing a new topic here in the same chat,
+sometimes it’s helpful to start a new chat so that:</p>
+<ol type="1">
+<li>You can easily revisit specific chats in the history along the
+sidebar.</li>
+<li>You avoid the chatbot getting confused by previous messages in the
+chat.</li>
+</ol>
+<h2 id="generating-images">Generating Images</h2>
+<p>Many chatbots now also have built-in capabilities to generate images,
+try asking it to draw a city skyline you know well:</p>
+<pre><code>Generate an image of the {city} skyline</code></pre>
+<ul>
+<li><strong>AUDIENCE QUESTION:</strong> How well did it do?</li>
+<li>Overall, usually a pretty good approximation</li>
+<li>But you’ll see that it will often make mistakes in the details
+<ul>
+<li><em>Point out a few mistakes you can see in your image</em></li>
+</ul></li>
 </ul>
 <h2 id="summarising-documents">Summarising Documents</h2>
-<p>TODO</p>
 <ul>
-<li>Summarisation
-<ul>
-<li>Example csv
-<ul>
-<li>Re-emphasize data security and privacy</li>
-<li>Generated with prompt: “Write 100 unique 3-sentence reviews for a
-washing machine with associated ratings out of 10 in a table”</li>
-</ul></li>
-<li>What are the common issues? Don’t use code.
-<ul>
-<li>How can you trust it?</li>
-<li>Good for a vibe, not reporting?</li>
-<li>Ask it twice, do you get the same result?</li>
-</ul></li>
-<li>How many rows? Mean rating?
-<ul>
-<li>If it generates code, you can check the code to trust it (if you can
-read code)</li>
-<li>If it doesn’t generate code, you probably can’t trust specific
-answers</li>
-</ul></li>
-</ul></li>
+<li>Now let’s try using the chatbot to summarise a document.</li>
+<li>We can upload word docs, PDFs, and more.</li>
+<li><strong>Again, it is important to not upload company data into
+unapproved systems</strong></li>
+<li>Let’s use a spreadsheet (as a CSV file) of washing machine
+reviews:</li>
 </ul>
-<h2 id="generating-images">Generating Images</h2>
-<p>TODO</p>
+<ol type="1">
+<li><p>From <a href="https://technoon.org/ainoon">technoon.org/ainoon</a>, download <a href="https://technoon-org.github.io/ainoon/lesson_1/washing_machine_reviews.csv"><code>washing_machine_reviews.csv</code></a></p>
 <ul>
-<li>Images
-<ul>
-<li>Draw your city skyline
-<ul>
-<li>Spot any mistakes?</li>
+<li>Each row contains a (fake) review with an associated rating.</li>
+<li><em>The file was actually generated by ChatGPT 5 with the following
+prompt: “Write 100 unique 3-sentence reviews for a washing machine with
+associated ratings out of 10 in a table”</em></li>
 </ul></li>
+<li><p>Upload the file to the chat</p></li>
+<li><p>Prompt it with:</p>
+<pre><code>What are the common issues in these reviews?</code></pre></li>
+</ol>
+<ul>
+<li>It’s given us some issues to investigate, but how do we know these
+are the most important, or that it hasn’t missed any common issues?</li>
+<li>If we ask twice, we might not get the same result.</li>
+<li>If it’s used code to analyse the data (<em>which ChatGPT often
+does</em>):
+<ul>
+<li>We might get more consistency in results</li>
+<li>We can check the code to see if we trust it’s approach - but only
+helpful if you can read code</li>
 </ul></li>
+<li>In general: <strong>good for getting ideas to investigate, but not
+for formal reporting or decision making</strong></li>
 </ul>
+<p>What about asking it more detailed questions?</p>
+<pre><code>How many rows are in the file?</code></pre>
+<blockquote>
+<p><em>Should be 100</em></p>
+</blockquote>
+<pre><code>What is the mean rating?</code></pre>
+<blockquote>
+<p><em>Should be approximately 7.74</em></p>
+</blockquote>
+<ul>
+<li>If it doesn’t use code to generate the answer, it is likely going to
+be wrong because chatbots answer based on patterns in language - they’re
+not a calculator!</li>
+<li>If it generates code to answer the question, it is more likely to
+give a better answer, but the code should still be reviewed.</li>
+</ul>
+<blockquote>
+<p><em>You can try force ChatGPT to not use code by saying “don’t use
+code to answer”. But do this in a new chat so it can’t read the previous
+code-based answer.</em></p>
+</blockquote>
 <h2 id="prompting-tips">Prompting Tips</h2>
-<p>TODO</p>
+<p><em>Refer to slide in the slide deck.</em></p>
+<h2 id="conclusion">Conclusion</h2>
 <ul>
-<li>Art, not science, expect this to change over time as models
-change</li>
-<li>“You are a…”</li>
-<li>“Step-by-step”</li>
+<li>We’ve seen how we can use a chatbot for a bunch of useful tasks:
+<ul>
+<li>Brainstorming</li>
+<li>Drafting</li>
+<li>Web searching</li>
+<li>Generating images</li>
+<li>Summarising documents</li>
+</ul></li>
+<li>It’s quite useful, but it isn’t perfect
+<ul>
+<li>It’s just a tool</li>
+<li>It doesn’t actually “think”</li>
+<li>You need to do the thinking!</li>
+<li>That’s why the logo for this course is a just a hat</li>
+<li><strong>Refer to “Golden Rule” slide in the slide
+deck.</strong></li>
+</ul></li>
+<li>Next week, we’ll learn more about how a chatbot generates responses,
+which will help us better understand these limitations</li>
 </ul>
 </body>
 </html>

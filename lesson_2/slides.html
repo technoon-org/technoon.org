@@ -127,66 +127,120 @@ which token comes next</li>
 </section>
 <section id="where-do-llm-weights-come-from" class="slide level3">
 <h3>Where do LLM weights come from?</h3>
-<p>TODO</p>
+<div style="font-size: 0.85em;">
+<div>
 <ul>
-<li>Training</li>
-<li>Data sources: internet, books, images</li>
-<li>Pre-training + human feedback</li>
-<li>Algorithm</li>
+<li class="fragment">Weights start as random numbers</li>
+<li class="fragment">Weights are updated by a process called
+<strong>pre-training</strong>:
+<ul>
+<li class="fragment">Uses millions of <em>training examples</em> from
+<strong>general sources</strong>, like the internet and books</li>
+<li class="fragment">E.g. Leave-one-word-out examples: <br><span
+style="font-size: 0.9em;"><code>The Beatles were a ____ from England</code>
+→ <code>band</code></span></li>
+<li class="fragment">For each example, weights are updated
+<em>slightly</em> to get closer to the right answer - like tuning a
+dial</li>
+<li class="fragment">This trains the LLM in <strong>language
+patterns</strong> AND <strong>general knowledge</strong></li>
+</ul></li>
+<li class="fragment">Extra training based on <strong>human
+feedback</strong> makes chatbots respond better to
+<strong>questions</strong> and <strong>instructions</strong>
+<ul>
+<li class="fragment">E.g. Chatbot gives 5 answers and human picks the
+best</li>
+</ul></li>
 </ul>
+</div>
+</div>
 </section>
-<section id="what-does-this-teach-us-about-how-to-use-genai"
+<section id="you-now-understand-what-gpt-stands-for"
 class="slide level3">
-<h3>What does this teach us about how to use GenAI?</h3>
-<p>TODO</p>
+<h3>You now understand what GPT stands for!</h3>
+<table>
+<tr>
+<td>
+<strong>Generative</strong>
+</td>
+<td>
+The model generates text (or other content)
+</td>
+</tr>
+<tr>
+<td>
+<strong>Pre-trained</strong>
+</td>
+<td>
+Pre-trained on many examples from general sources
+</td>
+</tr>
+<tr>
+<td>
+<strong>Transformer</strong>
+</td>
+<td>
+The kind of neural network architecture used
+</td>
+</tr>
+</table>
+</section>
+<section id="what-does-this-teach-us-about-using-genai"
+class="slide level3" style="font-size: 0.78em;">
+<h3>What does this teach us about using GenAI?</h3>
+<div>
 <ul>
-<li>It’s not magic, just simple maths</li>
-<li>We know <em>how</em> it works, but we don’t really know <em>why</em>
-it works</li>
-<li>It doesn’t learn during your chats - “memory” is just context (which
-can sometimes end up confusing it)</li>
+<li class="fragment">The generation process is <strong>not magic, just
+simple maths!</strong></li>
+<li class="fragment">We know <em>how</em> AI works, but <strong>no-one
+truly knows <em>why</em> it works</strong>
+<ul>
+<li class="fragment">The billions of calculations across neurons are too
+complex</li>
+</ul></li>
+<li class="fragment"><strong>AI doesn’t “think” with logic</strong> -
+it’s predicting the best answer based on its training sources
+<ul>
+<li class="fragment">People say AI <em>sometimes</em> “hallucinates”
+wrong answers - but every response is generated the same way</li>
+<li class="fragment">It generates answers that <em>sound</em> right -
+and it’s surprising so many actually are right!</li>
+</ul></li>
+<li class="fragment"><strong>It doesn’t train during your chats</strong>
+<ul>
+<li class="fragment">It “remembers” by including chat history in the
+prompt</li>
+<li class="fragment">Even “memory” features just include past chats in
+the prompt</li>
+<li class="fragment">Public chatbots may use your chats to train later
+models</li>
+</ul></li>
 </ul>
+</div>
 </section>
 <section id="genai-strengths-and-limitations" class="slide level3">
 <h3>GenAI Strengths and Limitations</h3>
-<p>TODO</p>
-<ul>
-<li>Strengths
+<div style="text-align: left; font-size: 0.8em;">
+<h4 id="key-strengths">Key Strengths</h4>
 <ul>
 <li>Generates text that looks similar to what a human would write</li>
 <li>Reads lots of text really fast</li>
 <li>Surprisingly good responses to a wide variety of tasks</li>
-</ul></li>
-<li>Limitations
+</ul>
+<div style="margin-top: 0.5em;">
+
+</div>
+<h4 id="key-limitations">Key Limitations</h4>
 <ul>
 <li>Everything is a hallucination - but it’s correct surprisingly
 often</li>
-<li>It might not “pay attention” to the full context</li>
+<li>It might not always “pay attention” to everything in the prompt</li>
 <li>It might not consistently give the same answer</li>
-<li>Different versions of the same model might give very different
+<li>Different models (or model versions) can give very different
 responses to the same prompt</li>
-</ul></li>
 </ul>
-</section>
-<section id="tips-for-using-genai" class="slide level3">
-<h3>Tips for using GenAI</h3>
-<p>TODO</p>
-<ul>
-<li>Golden rule: Don’t trust a response if you can’t verify it
-<ul>
-<li>Example: meeting and document summarisation - where you
-attended/read yourself vs didn’t</li>
-</ul></li>
-<li>Use it to <em>help</em> you learn things by providing personalised
-explanations and answers to questions
-<ul>
-<li>Use references to verify</li>
-</ul></li>
-<li>Prompt crafting guidelines
-<ul>
-<li>“answer step-by-step”</li>
-</ul></li>
-</ul>
+</div>
 </section>
 <section id="tutorial-objectives" class="slide level3">
 <h3>Tutorial Objectives</h3>
@@ -196,7 +250,14 @@ explanations and answers to questions
 <h3>Homework</h3>
 <ul>
 <li>TODO</li>
-<li>See 3Blue1Brown: https://www.youtube.com/watch?v=wjZofJX0v4M</li>
+<li>To learn more about how LLMs work, watch these videos from
+3Blue1Brown:
+<ul>
+<li><a href="https://www.youtube.com/watch?v=LPZh9BOjkQs">Brief
+explainer</a></li>
+<li><a href="https://www.youtube.com/watch?v=wjZofJX0v4M">Deeper dive
+(more maths)</a></li>
+</ul></li>
 </ul>
 </section>
     </div>
