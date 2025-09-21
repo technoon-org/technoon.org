@@ -4,7 +4,7 @@ title: AINoon
 permalink: /ainoon/
 ---
 
-# <img src="https://technoon-org.github.io/ainoon/ainoon-logo.svg" alt="AINoon logo" height="100"> AINoon
+# <img src="https://technoon-org.github.io/ainoon/ainoon-logo.svg" alt="AINoon logo" height="100"> AINoon - From Hype to Productivity
 
 Generative AI is a powerful tool that individuals and businesses can
 leverage through services like ChatGPT, Microsoft Copilot, and
