@@ -36,7 +36,7 @@ AI and seeking assistance with your own use-cases.
 * A hands-on tutorial
 * Optional homework exercises
 
-## GitNoon Lessons
+## AINoon Lessons
 
 <style>
     .responsive-table .col-1 {
