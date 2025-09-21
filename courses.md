@@ -26,6 +26,37 @@ future course:
 
 ---
 
+## <img src="https://technoon-org.github.io/ainoon/ainoon-logo.svg" alt="AINoon logo" height="100" style="margin-right: 15px;"> [AINoon - From Hype to Productivity](/ainoon)
+
+Generative AI is a powerful tool that individuals and businesses can
+leverage through services like ChatGPT, Microsoft Copilot, and
+Google's Gemini. However, AI has limitations we're not used to in
+other technologies, creating risks of misuse and over-trusting. There
+are also many concerns that AI raises - from practical issues of
+privacy and security to fears of artificial super-intelligences!
+
+AINoon is a course to cut through the hype and give you practical
+hands-on experience using AI while providing you with understanding of
+AI's strengths and limits to make good decisions about when and how to
+use it.
+
+By the end of this course, you will be able to:
+
+* Confidently use AI in a variety of ways to improve productivity
+* Identify opportunities for incorporating AI into business solutions
+* Critically consider the strengths, limitations, and risks of AI,
+  based on a solid foundation of what AI is and how it works
+
+Most importantly, AINoon provides a forum for asking questions about
+AI and seeking assistance with your own use-cases.
+
+**Register your interest in running or attending an AINoon [here](https://technoon.org/contact/){:target="_blank"}{:rel="noopener"}!**
+
+**Check out the [AINoon course material](/ainoon){:target="_blank"}{:rel="noopener"}**
+
+---
+
+
 ## <img src="/_images/course-images/sql-hell.png" height="100" style="margin-right: 15px;"> [SQLNoon - Avoiding SQL Hell](https://docs.google.com/forms/d/13CkfxWp7ZZVbQsJwtFcJ6err6JcqtRq9bU7JSx82izs/edit?ts=65f6602d){:target="_blank"}{:rel="noopener"}
 
 SQL queries are commonly mission critical for accurate reporting and
