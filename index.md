@@ -28,7 +28,7 @@ resources you could reuse.
 ## If your company wants to participate…
 
 Perhaps you would like to improve staff skills in a specific area. Or
-maybe some of your staff would like to provide trining. Either way
+maybe some of your staff would like to provide training. Either way
 we'd love to hear from you. Please fill in the [TechNoon Contact
 Form](/contact) and we'll get back to you to find out more.
 
