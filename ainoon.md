@@ -32,7 +32,7 @@ AI and seeking assistance with your own use-cases.
 
 **Each week's lesson comprises:**
 
-* A presentation during lunch
+* A presentation
 * A hands-on tutorial
 * Optional homework exercises
 
@@ -113,6 +113,6 @@ AI and seeking assistance with your own use-cases.
 ## Resources
 
 <ul>
-    <li><a href="https://technoon-org.github.io/ainoon/lesson_1/washing_machine_reviews.csv" target="_blank" rel="noopener" download><code>washing_machine_reviews.csv</code></a> for lesson 1.</li>
+    <li><a href="https://technoon-org.github.io/ainoon/lesson_1/washing_machine_reviews.csv" target="_blank" rel="noopener" download><code>washing_machine_reviews.csv</code></a> for lesson 1 - (fake AI-generated data).</li>
     <li>Instructors can find tips for presenting in the <a href="https://technoon-org.github.io/ainoon/" target="_blank" rel="noopener">full course material listing</a>.</li>
 </ul>
