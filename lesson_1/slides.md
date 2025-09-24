@@ -71,7 +71,7 @@ Hands up if you've ever:
 
 ### What to expect from AINoon
 
-Each lesson will include:
+Four lessons, each including:
 
 * **Presentation** on important AI concepts
 * **Follow-along tutorial** to get hands-on with AI
@@ -186,7 +186,7 @@ Get all the slides, tutorials, and homework from:
 * ChatGPT (OpenAI)
 * Claude (Anthropic)
 * Gemini (Google)
-* Microsoft Copilot (based on OpenAI LLMs)
+* Microsoft Copilot (based on OpenAI tech)
 * Grok (X)
 * DeepSeek
 

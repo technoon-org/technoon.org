@@ -52,7 +52,7 @@ Some observations:
 * It's quite generic, it would help to be more specific about our
   project:
   ```
-  Make it specific to a project to launch a new website
+  Make it specific to a project to {AUDIENCE CHOICE; e.g. launch a new website}
   ```
 
 Chatbots can be a great source of inspiration when brainstorming:
