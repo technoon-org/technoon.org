@@ -61,7 +61,7 @@ AI and seeking assistance with your own use-cases.
     </li>
     <li>
         <div class="col col-1">ainoon-1</div>
-        <div class="col col-2">Intro to AI</div>
+        <div class="col col-2">Intro to AI: terminology and business use-cases</div>
         <div class="col col-3">Using a chatbot for business use-cases</div>
         <div class="col col-4 markdown-content">
             <ul>
@@ -74,19 +74,19 @@ AI and seeking assistance with your own use-cases.
     <li>
         <div class="col col-1">ainoon-2</div>
         <div class="col col-2">How AI works</div>
-        <div class="col col-3">Building an agent with <a href="https://zapier.com/" target="_blank" rel="noopener">Zapier</a></div>
+        <div class="col col-3">Building a chatbot on your documents with <a href="https://chatbase.co/" target="_blank" rel="noopener">Chatbase</a></div>
         <div class="col col-4 markdown-content">
             <ul>
                 <li><a href="https://technoon-org.github.io/ainoon/lesson_2/slides.html" target="_blank" rel="noopener">Slides</a></li>
-                <li>Tutorial (coming soon)</li>
-                <li>Homework (coming soon)</li>
+                <li><a href="https://technoon-org.github.io/ainoon/lesson_2/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
+                <li><a href="https://technoon-org.github.io/ainoon/lesson_2/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
             </ul>
         </div>
     </li>
     <li>
         <div class="col col-1">ainoon-3</div>
-        <div class="col col-2">Common patterns - agents, RAG, and tools</div>
-        <div class="col col-3">Building a chatbot on your docs with <a href="https://zapier.com/" target="_blank" rel="noopener">Zapier</a></div>
+        <div class="col col-2">Common patterns: agents, RAG, and tools</div>
+        <div class="col col-3">Building an agent with <a href="https://zapier.com/" target="_blank" rel="noopener">Zapier</a></div>
         <div class="col col-4 markdown-content">
             <ul>
                 <li>Slides (coming soon)</li>
@@ -110,9 +110,17 @@ AI and seeking assistance with your own use-cases.
 </ul>
 
 
+## Services used in tutorials
+
+* [chatgpt.com](https://chatgpt.com){:target="_blank"}{:rel="noopener"}
+* [chatbase.co](https://chatbase.co){:target="_blank"}{:rel="noopener"}
+* [zapier.com](https://zapier.com){:target="_blank"}{:rel="noopener"}
+* [replit.com](https://replit.com){:target="_blank"}{:rel="noopener"}
+
 ## Resources
 
 <ul>
     <li><a href="https://technoon-org.github.io/ainoon/lesson_1/washing_machine_reviews.csv" target="_blank" rel="noopener" download><code>washing_machine_reviews.csv</code></a> for lesson 1 - (fake AI-generated data).</li>
+    <li><a href="https://technoon-org.github.io/ainoon/lesson_2/technoon_knowledge.txt" target="_blank" rel="noopener" download><code>technoon_knowledge.txt</code></a> for lesson 2.</li>
     <li>Instructors can find tips for presenting in the <a href="https://technoon-org.github.io/ainoon/" target="_blank" rel="noopener">full course material listing</a>.</li>
 </ul>
