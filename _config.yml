@@ -4,7 +4,7 @@ course_description: null
 course_semester: null
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://technoon.org/" # the base hostname & protocol for your site
+url: "http://technoon.org" # the base hostname & protocol for your site
 
 title: TechNoon
 description: Lunchtime technical training by industry for industry
