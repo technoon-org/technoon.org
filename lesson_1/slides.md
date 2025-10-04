@@ -190,6 +190,12 @@ Get all the slides, tutorials, and homework from:
 * Grok (X)
 * DeepSeek
 
+<aside class="notes">
+
+* Ask the audience if they can name any others?
+
+</aside>
+
 ### What can chatbots do for business?
 
 <div style="font-size: 0.8em;">
