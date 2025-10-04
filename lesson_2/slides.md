@@ -2,6 +2,11 @@
 title: AINoon Lesson 2
 ---
 
+### Get Ready for AINoon!
+
+* Open [technoon.org/ainoon](https://technoon.org/ainoon)
+* Log in with an account to [chatbase.co/dashboard](https://chatbase.co/dashboard)
+
 ### Thanks
 
 * To the host for the great venue!
@@ -143,15 +148,48 @@ How generative AI works and how that informs how to best use it
 </div>
 
 
-### Tutorial Objectives
+### Tutorial Objective
 
-TODO
+Make your own chatbot to answer questions based on information in a
+document
 
+
+### Testing a Chatbot
+
+**Either you test your chatbot, or your users will!**
+
+<div style="font-size: 0.9em;">
+
+* Ask a **list of questions** you want it to answer
+* **Amend instructions or sources** to improve answers
+* Ask each question **multiple times** to check it consistently gives
+  the right answer
+* Re-test all questions **after any change**
+  * Changes to instructions, knowledge, or model
+  * Using a system to automate testing helps!
+* **Test edge cases** - How does it respond to off-topic questions?
+
+</div>
 
 ### Homework
 
-* TODO
-* To learn more about how LLMs work, watch these videos from
-  3Blue1Brown:
-  * [Brief explainer](https://www.youtube.com/watch?v=LPZh9BOjkQs)
-  * [Deeper dive (more maths)](https://www.youtube.com/watch?v=wjZofJX0v4M)
+<div style="font-size: 0.85em;">
+
+1. **Make a list of questions** you want your chatbot to be able to
+   answer
+   * Feel free to use a different source document!
+2. **Ask each question** and note whether it was correct
+3. For questions it got wrong, **modify the source** to help it get
+   the right answer
+4. **Test it again!**
+   * Is it right more often?
+   * Is it wrong for any questions it got right before?
+
+<div style="margin-top: 0.5em;"></div>
+
+**Extra:** Learn more about how LLMs work with
+a [brief explainer](https://www.youtube.com/watch?v=LPZh9BOjkQs) or
+a [deeper dive (more maths)](https://www.youtube.com/watch?v=wjZofJX0v4M) from
+3Blue1Brown.
+
+</div>

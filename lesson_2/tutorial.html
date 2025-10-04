@@ -39,6 +39,196 @@ font-style: italic;
 <header id="title-block-header">
 <h1 class="title">AINoon Tutorial 2</h1>
 </header>
-
+<p>The goal of this tutorial is to <strong>make your own chatbot to
+answer questions based on information in a document.</strong></p>
+<ul>
+<li>Chatbots can answer “general knowledge” questions based on
+information in the text they were trained on</li>
+<li>But we often want them to be able to answer questions about
+domain-specific or company knowledge sources, like:
+<ul>
+<li>Frequently asked questions and other help documents</li>
+<li>Instruction manuals</li>
+<li>Past problems and resolutions from issue tracking systems</li>
+</ul></li>
+</ul>
+<p>We’re going to make a chatbot that can answer questions about
+TechNoon courses, like AINoon.</p>
+<h2 id="create-a-chatbot">Create a chatbot</h2>
+<ol type="1">
+<li>Open <a href="https://chatbase.co">chatbase.co</a></li>
+<li>Go to the <strong>Dashboard</strong></li>
+<li>Click <strong>New AI agent</strong>
+<ul>
+<li>If you already have one, select <strong>Create agent</strong> from
+the agent list dropdown.</li>
+</ul></li>
+<li><em>If it forces you to upload a source:</em>
+<ul>
+<li>We’re going to skip uploading files for now</li>
+<li>Select <strong>Text</strong> from the sidebar, and fill in:
+<ul>
+<li>Title: <code>TechNoon</code></li>
+<li>Text:
+<code>TechNoon delivers free lunchtime industry training courses.</code></li>
+<li>Click <strong>Add text snippet</strong></li>
+</ul></li>
+</ul></li>
+<li>Select <strong>Create agent</strong>
+<ul>
+<li>Note that it tells us the total size of our sources compared to the
+limit - we won’t be getting anywhere near that limit today.</li>
+</ul></li>
+</ol>
+<h2 id="playground-and-settings">Playground and settings</h2>
+<ul>
+<li>You should now be on the <strong>Playground</strong> for your
+agent.</li>
+<li>Let’s ask a simple question about TechNoon:</li>
+</ul>
+<pre><code>What is TechNoon?</code></pre>
+<blockquote>
+<p>It will only give a good answer if you provided the
+<strong>Text</strong> source above.</p>
+</blockquote>
+<p>Now let’s look at the options we have to configure our chatbot:</p>
+<ul>
+<li>We can choose what <strong>Model</strong> it uses
+<ul>
+<li>Lot’s of options from different providers</li>
+<li>You can see a brief description of each model</li>
+<li>Some are only available for a paid account</li>
+</ul></li>
+<li>We can set the <strong>temperature</strong>
+<ul>
+<li>With a higher temperature, you will get more variety in the results
+- which you may or may not want</li>
+<li>Note that Chatbase may re-use answers to questions your chatbot has
+been asked previously</li>
+<li>We’ll leave it at zero for our informative chatbot.</li>
+</ul></li>
+<li>We can customise the <strong>Instructions</strong> to the chatbot:
+<ul>
+<li>Every time a message is sent to the chatbot, the instructions will
+be included in the prompt to the underlying model.</li>
+<li>You can choose from
+<ul>
+<li>e.g. “Customer Service Agent”</li>
+</ul></li>
+<li>Or write your own! Include instructions like:
+<ul>
+<li>Some services might refer to these as a <strong>role</strong> or
+<strong>persona</strong></li>
+<li>The chatbot’s goal - “Encourage the user to attend TechNoon”</li>
+<li>Style - professional, relaxed, or a pirate :)</li>
+<li>Specific instructions
+<ul>
+<li>E.g. Link the user to the TechNoon website</li>
+<li>“Dos” have been found to work better than “don’ts”</li>
+</ul></li>
+<li><strong>Remember:</strong> The user can potentially get the chatbot
+to reveal any details in the prompt, so treat it like a public
+document.</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="providing-more-knowledge">Providing more knowledge</h2>
+<p>What if we ask it for information about TechNoon it doesn’t have the
+answer for?</p>
+<pre><code>List the available TechNoon courses</code></pre>
+<p>Let’s give it more detailed knowledge!</p>
+<ol type="1">
+<li>In a new tab, open <a href="https://technoon.org/ainoon">technoon.org/ainoon</a></li>
+<li>Download the <a href="https://technoon-org.github.io/ainoon/lesson_2/technoon_knowledge.txt"><code>technoon_knowledge.txt</code></a>
+<ul>
+<li>Or share it with everyone in chat.</li>
+</ul></li>
+<li>Open the file and have a quick read
+<ul>
+<li>It contains lots of information about TechNoon courses</li>
+</ul></li>
+<li>From Chatbase, open <strong>Sources -&gt; Files</strong> from the
+sidebar</li>
+<li>Click the big <strong>Upload</strong> button and select the txt
+file.
+<ul>
+<li>Remember, any file you upload can be seen by the service provider,
+or information from it extracted by users asking questions of the
+chatbot</li>
+<li>Check with your organisation before uploading any private files</li>
+</ul></li>
+<li>After uploading, click <strong>Retrain agent</strong>
+<ul>
+<li>It’s not <em>really</em> training the chatbot, it’s just preparing
+the file for the chatbot to use.</li>
+</ul></li>
+<li>After it’s finished “training”, go back to the
+<strong>Playground</strong></li>
+<li>Ask it the question again:</li>
+</ol>
+<pre><code>List the available TechNoon courses</code></pre>
+<p><strong>But how is it using the file?</strong></p>
+<ol type="1">
+<li>Every time a question is asked, it searches through the file for
+chunks that are relevant to the question
+<ul>
+<li>A bit like a Google search</li>
+</ul></li>
+<li>Those chunks are added to the prompt so that the LLM can use them to
+answer the question!
+<ul>
+<li>You can click on <strong>Sources</strong> below the chatbot to see
+the chunks it used - some might be quite large!</li>
+</ul></li>
+</ol>
+<p>This is a technique called <strong>Retrieval Augmented
+Generation</strong> or <strong>RAG</strong> which we’ll talk more about
+next week.</p>
+<h2 id="deploying-your-chatbot">Deploying your chatbot</h2>
+<p>Let’s share our chatbot with the world!</p>
+<ol type="1">
+<li><p>First, let’s give the chatbot a better name</p>
+<ol type="1">
+<li>Open <strong>Settings -&gt; General</strong> from the sidebar</li>
+<li>Change the name to <strong>TechNoon Bot</strong>
+<ul>
+<li>We should make it clear to our users that this isn’t a human they’re
+chatting with.</li>
+</ul></li>
+</ol></li>
+<li><p>Open <strong>Deploy</strong> from the sidebar</p>
+<ul>
+<li>Lots of options for places we could deploy it</li>
+</ul></li>
+<li><p>Select <strong>Help Page</strong></p>
+<ul>
+<li>This will let us serve the chatbot on a web page</li>
+<li>There are lots of options to customise how the page looks</li>
+<li>We’ll keep the defaults</li>
+</ul></li>
+<li><p>Select <strong>Deploy</strong></p></li>
+<li><p>Open the <strong>Domain setup</strong> tab, and click
+<strong>Visit Page</strong></p></li>
+<li><p>Try asking a question!</p>
+<pre><code>What can you help me with?</code></pre></li>
+<li><p>You can now share the link to this page with anyone in the
+world!</p>
+<ul>
+<li>This means the information in your instructions and sources is
+publicly accessible!</li>
+</ul></li>
+</ol>
+<h2 id="testing">Testing</h2>
+<p>It’s important to test chatbots <strong>for their intended use
+case</strong>.</p>
+<p><em>Refer to the <strong>Testing a Chatbot</strong> slide</em></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>You’ve successfully built a chatbot that can answer questions about
+your own documents!</p>
+<p>This is a great example of a pattern for using LLMs to build apps
+that extend their capabilities.</p>
+<p>Next week we’re going to look more at <strong>Retrieval Augmented
+Generation</strong> and other patterns for building applications with
+LLMs.</p>
 </body>
 </html>
