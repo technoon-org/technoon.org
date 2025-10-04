@@ -112,10 +112,14 @@ AI and seeking assistance with your own use-cases.
 
 ## Services used in tutorials
 
-* [chatgpt.com](https://chatgpt.com){:target="_blank"}{:rel="noopener"}
-* [chatbase.co](https://chatbase.co){:target="_blank"}{:rel="noopener"}
-* [zapier.com](https://zapier.com){:target="_blank"}{:rel="noopener"}
-* [replit.com](https://replit.com){:target="_blank"}{:rel="noopener"}
+The tutorials use these particular services because they can be used
+for free, but the focus is on teaching principles that will apply to
+any similar service:
+
+* Tutorial 1: [chatgpt.com](https://chatgpt.com){:target="_blank"}{:rel="noopener"}
+* Tutorial 2: [chatbase.co](https://chatbase.co){:target="_blank"}{:rel="noopener"}
+* Tutorial 3: [zapier.com](https://zapier.com){:target="_blank"}{:rel="noopener"}
+* Tutorial 4: [replit.com](https://replit.com){:target="_blank"}{:rel="noopener"}
 
 ## Resources
 
