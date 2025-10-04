@@ -47,10 +47,16 @@ Slides and tutorials for AINoon.
 
 ### Lesson 1
 
+Instruct attendees to set up a free account on
+[chatgpt.com](https://chatgpt.com) before coming to the lesson.
+
 * [Slides](https://technoon-org.github.io/ainoon/lesson_1/slides.html)
 * [Tutorial Speaker Notes](https://technoon-org.github.io/ainoon/lesson_1/tutorial.html)
 
 ### Lesson 2
+
+Instruct attendees to set up a free account on
+[chatbase.co](https://chatbase.co) before coming to the lesson.
 
 * [Slides](https://technoon-org.github.io/ainoon/lesson_2/slides.html)
 * [Tutorial Speaker Notes](https://technoon-org.github.io/ainoon/lesson_2/tutorial.html)

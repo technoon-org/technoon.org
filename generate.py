@@ -68,6 +68,11 @@ Slides and tutorials for AINoon.
         lesson_links = []
         notebook_paths = []
 
+        prep_text = ''
+        if (lesson_dir / 'prep.md').exists():
+            with open(lesson_dir / 'prep.md') as prep_file:
+                prep_text = prep_file.read().strip() + '\n'
+
         if (lesson_dir / 'slides.md').exists():
             subprocess.run([
                 'pandoc',
@@ -94,6 +99,7 @@ Slides and tutorials for AINoon.
         index_markdown += f'''
 ### {lesson_dir.name.replace('_', ' ').title()}
 
+{prep_text}
 {lesson_link_bullets}
 '''
 
