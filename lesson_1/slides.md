@@ -86,14 +86,14 @@ Get all the slides, tutorials, and homework from:
 <div style="font-size: 0.8em;">
 
 * **Lesson 1:**
-  * *Presentation:* Intro to AI
+  * *Presentation:* Intro to AI: terminology and business use-cases
   * *Tutorial:* Using a chatbot for business use-cases
 * **Lesson 2:**
   * *Presentation:* How AI works
-  * *Tutorial:* Building an agent with [Zapier](https://zapier.com/)
+  * *Tutorial:* Building a chatbot on your documents with [Chatbase](https://chatbase.co/)
 * **Lesson 3:**
-  * *Presentation:* Common patterns - agents, RAG, and tools
-  * *Tutorial:* Building a chatbot on your docs with [Zapier](https://zapier.com/)
+  * *Presentation:* Common patterns: agents, RAG, and tools
+  * *Tutorial:* Building an agent with [Zapier](https://zapier.com/)
 * **Lesson 4:**
   * *Presentation:* AI risks and challenges
   * *Tutorial:* "Vibe-coding" an app with [Replit](https://replit.com/)
@@ -227,12 +227,12 @@ Get all the slides, tutorials, and homework from:
 
 ### Tutorial Objectives
 
-* Using a chatbot for business use cases:
-  * Brainstorming and drafting
-  * Automating web searches
-  * Summarising documents
-* Identifying important issues to keep in mind
-* Tips for effective prompting
+1. Using a chatbot for business use cases:
+   * Brainstorming and drafting
+   * Automating web searches
+   * Summarising documents
+2. Identifying important issues to keep in mind
+3. Tips for effective prompting
 
 
 ### Tips for crafting better prompts
@@ -262,7 +262,7 @@ Get all the slides, tutorials, and homework from:
 
 ### Homework
 
-<div style="font-size: 0.9em;">
+<div style="font-size: 0.75em;">
 
 **Remember:** Don't use private data with public models!
 
@@ -272,10 +272,13 @@ Get all the slides, tutorials, and homework from:
 * Try ChatGPT's **Deep Research** mode:
   * "Find a cheap washing machine for a family of four"
   * Searches the web and summarises in a few minutes
+* **Practice prompting**
+  * Describe a photo with text to prompt ChatGPT to replicate it
+  * Keep refining your prompt to more closely match the photo
 * **Generate a video** with Google's [Flow](https://labs.google/fx/tools/flow)
   * Look at the gallery on
     [Midjourney](https://www.midjourney.com/explore) - note the detail
-    in the prompts used
+    in the prompts
 * **Generate speech from text** with [ElevenLabs](https://elevenlabs.io/)
 
 </div>
