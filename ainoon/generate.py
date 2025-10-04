@@ -2,11 +2,15 @@ from pathlib import Path
 import re
 import subprocess
 
-base_url = 'https://technoon-org.github.io/ainoon'
+base_url = 'https://technoon.org/ainoon'
 curriculum_dir = Path(__file__).parent
 
 def main():
-    index_markdown = f'''
+    index_markdown = f'''---
+layout: default
+title: AINoon Curriculum
+---
+
 # AINoon Curriculum
 
 Slides and tutorials for AINoon.
@@ -103,7 +107,7 @@ Slides and tutorials for AINoon.
 {lesson_link_bullets}
 '''
 
-    with Path(curriculum_dir / 'README.md').open('w') as readme_file:
+    with Path(curriculum_dir / 'course-material.md').open('w') as readme_file:
         readme_file.write(index_markdown.strip())
 
 

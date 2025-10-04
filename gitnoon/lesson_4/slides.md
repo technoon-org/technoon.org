@@ -11,7 +11,7 @@ title: GitNoon Lesson 4
    to date with `origin/main` by checking the output of `git status`
 3. If you missed the previous lesson, ask for help with the
    quick-setup on the next slide
-   * [technoon-org.github.io/gitnoon/lesson_4/slides.html](https://technoon-org.github.io/gitnoon/lesson_4/slides.html#/quick-setup)
+   * [technoon.org/gitnoon/lesson_4/slides.html](https://technoon.org/gitnoon/lesson_4/slides.html#/quick-setup)
 
 </div>
 

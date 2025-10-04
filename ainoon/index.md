@@ -4,7 +4,7 @@ title: AINoon
 permalink: /ainoon/
 ---
 
-# <img src="https://technoon-org.github.io/ainoon/ainoon-logo.svg" alt="AINoon logo" height="100"> AINoon - From Hype to Productivity
+# <img src="https://technoon.org/ainoon/ainoon-logo.svg" alt="AINoon logo" height="100"> AINoon - From Hype to Productivity
 
 Generative AI is a powerful tool that individuals and businesses can
 leverage through services like ChatGPT, Microsoft Copilot, and
@@ -65,9 +65,9 @@ AI and seeking assistance with your own use-cases.
         <div class="col col-3">Using a chatbot for business use-cases</div>
         <div class="col col-4 markdown-content">
             <ul>
-                <li><a href="https://technoon-org.github.io/ainoon/lesson_1/slides.html" target="_blank" rel="noopener">Slides</a></li>
-                <li><a href="https://technoon-org.github.io/ainoon/lesson_1/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
-                <li><a href="https://technoon-org.github.io/ainoon/lesson_1/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
+                <li><a href="https://technoon.org/ainoon/lesson_1/slides.html" target="_blank" rel="noopener">Slides</a></li>
+                <li><a href="https://technoon.org/ainoon/lesson_1/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
+                <li><a href="https://technoon.org/ainoon/lesson_1/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
             </ul>
         </div>
     </li>
@@ -77,9 +77,9 @@ AI and seeking assistance with your own use-cases.
         <div class="col col-3">Building a chatbot on your documents with <a href="https://chatbase.co/" target="_blank" rel="noopener">Chatbase</a></div>
         <div class="col col-4 markdown-content">
             <ul>
-                <li><a href="https://technoon-org.github.io/ainoon/lesson_2/slides.html" target="_blank" rel="noopener">Slides</a></li>
-                <li><a href="https://technoon-org.github.io/ainoon/lesson_2/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
-                <li><a href="https://technoon-org.github.io/ainoon/lesson_2/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
+                <li><a href="https://technoon.org/ainoon/lesson_2/slides.html" target="_blank" rel="noopener">Slides</a></li>
+                <li><a href="https://technoon.org/ainoon/lesson_2/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
+                <li><a href="https://technoon.org/ainoon/lesson_2/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
             </ul>
         </div>
     </li>
@@ -124,7 +124,7 @@ any similar service:
 ## Resources
 
 <ul>
-    <li><a download href="https://technoon-org.github.io/ainoon/lesson_1/washing_machine_reviews.csv" target="_blank" rel="noopener" download><code>washing_machine_reviews.csv</code></a> for lesson 1 - (fake AI-generated data).</li>
-    <li><a download href="https://technoon-org.github.io/ainoon/lesson_2/technoon_knowledge.txt" target="_blank" rel="noopener" download><code>technoon_knowledge.txt</code></a> for lesson 2.</li>
-    <li>Instructors can find tips for presenting in the <a href="https://technoon-org.github.io/ainoon/" target="_blank" rel="noopener">full course material listing</a>.</li>
+    <li><a download href="https://technoon.org/ainoon/lesson_1/washing_machine_reviews.csv" target="_blank" rel="noopener" download><code>washing_machine_reviews.csv</code></a> for lesson 1 - (fake AI-generated data).</li>
+    <li><a download href="https://technoon.org/ainoon/lesson_2/technoon_knowledge.txt" target="_blank" rel="noopener" download><code>technoon_knowledge.txt</code></a> for lesson 2.</li>
+    <li>Instructors can find tips for presenting in the <a href="https://technoon.org/ainoon/course-material" target="_blank" rel="noopener">full course material listing</a>.</li>
 </ul>

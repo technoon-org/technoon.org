@@ -87,7 +87,7 @@ List the available TechNoon courses
 Let's give it more detailed knowledge!
 
 1. In a new tab, open [technoon.org/ainoon](https://technoon.org/ainoon)
-2. Download the [`technoon_knowledge.txt`](https://technoon-org.github.io/ainoon/lesson_2/technoon_knowledge.txt)
+2. Download the [`technoon_knowledge.txt`](https://technoon.org/ainoon/lesson_2/technoon_knowledge.txt)
    * Or share it with everyone in chat.
 3. Open the file and have a quick read
    * It contains lots of information about TechNoon courses

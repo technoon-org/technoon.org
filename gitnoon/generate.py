@@ -2,11 +2,15 @@ from pathlib import Path
 import re
 import subprocess
 
-base_url = 'https://technoon-org.github.io/gitnoon'
+base_url = 'https://technoon.org/gitnoon'
 curriculum_dir = Path(__file__).parent
 
 def main():
-    index_markdown = f'''
+    index_markdown = f'''---
+layout: default
+title: GitNoon Curriculum
+---
+
 # GitNoon Curriculum
 
 Slides and tutorials for GitNoon.
@@ -97,7 +101,7 @@ Slides and tutorials for GitNoon.
 {lesson_link_bullets}
 '''
 
-    with Path(curriculum_dir / 'README.md').open('w') as readme_file:
+    with Path(curriculum_dir / 'course-material.md').open('w') as readme_file:
         readme_file.write(index_markdown.strip())
 
 

@@ -1,3 +1,8 @@
+---
+layout: default
+title: GitNoon Curriculum
+---
+
 # GitNoon Curriculum
 
 Slides and tutorials for GitNoon.
@@ -39,28 +44,28 @@ Slides and tutorials for GitNoon.
 
 ### Assets
 
-* [Cheat sheet of Git commands covered in GitNoon](https://technoon-org.github.io/gitnoon/cheatsheet/gitnoon_cheatsheet.pdf)
-* [Evaluation form to print for attendees](https://technoon-org.github.io/gitnoon/evaluation/gitnoon_evaluation_form.pdf)
+* [Cheat sheet of Git commands covered in GitNoon](https://technoon.org/gitnoon/cheatsheet/gitnoon_cheatsheet.pdf)
+* [Evaluation form to print for attendees](https://technoon.org/gitnoon/evaluation/gitnoon_evaluation_form.pdf)
 * Find more tips for presenting from [Software Carpentry](https://carpentries.github.io/instructor-training/instructor/17-live.html#top-ten-tips-for-participatory-live-coding-in-a-workshop)
 
 ## Lessons
 
 ### Lesson 1
 
-* [Slides](https://technoon-org.github.io/gitnoon/lesson_1/slides.html)
-* [Tutorial Speaker Notes](https://technoon-org.github.io/gitnoon/lesson_1/tutorial.html)
+* [Slides](https://technoon.org/gitnoon/lesson_1/slides.html)
+* [Tutorial Speaker Notes](https://technoon.org/gitnoon/lesson_1/tutorial.html)
 
 ### Lesson 2
 
-* [Slides](https://technoon-org.github.io/gitnoon/lesson_2/slides.html)
-* [Tutorial Speaker Notes](https://technoon-org.github.io/gitnoon/lesson_2/tutorial.html)
+* [Slides](https://technoon.org/gitnoon/lesson_2/slides.html)
+* [Tutorial Speaker Notes](https://technoon.org/gitnoon/lesson_2/tutorial.html)
 
 ### Lesson 3
 
-* [Slides](https://technoon-org.github.io/gitnoon/lesson_3/slides.html)
-* [Tutorial Speaker Notes](https://technoon-org.github.io/gitnoon/lesson_3/tutorial.html)
+* [Slides](https://technoon.org/gitnoon/lesson_3/slides.html)
+* [Tutorial Speaker Notes](https://technoon.org/gitnoon/lesson_3/tutorial.html)
 
 ### Lesson 4
 
-* [Slides](https://technoon-org.github.io/gitnoon/lesson_4/slides.html)
-* [Tutorial Speaker Notes](https://technoon-org.github.io/gitnoon/lesson_4/tutorial.html)
+* [Slides](https://technoon.org/gitnoon/lesson_4/slides.html)
+* [Tutorial Speaker Notes](https://technoon.org/gitnoon/lesson_4/tutorial.html)

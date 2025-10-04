@@ -26,7 +26,7 @@ future course:
 
 ---
 
-## <img src="https://technoon-org.github.io/ainoon/ainoon-logo.svg" alt="AINoon logo" height="100" style="margin-right: 15px;"> [AINoon - From Hype to Productivity](/ainoon)
+## <img src="https://technoon.org/ainoon/ainoon-logo.svg" alt="AINoon logo" height="100" style="margin-right: 15px;"> [AINoon - From Hype to Productivity](/ainoon)
 
 Generative AI is a powerful tool that individuals and businesses can
 leverage through services like ChatGPT, Microsoft Copilot, and
@@ -73,7 +73,7 @@ Form](https://docs.google.com/forms/d/13CkfxWp7ZZVbQsJwtFcJ6err6JcqtRq9bU7JSx82i
 
 ---
 
-## <img src="https://technoon-org.github.io/gitnoon/gitnoon-logo.svg" alt="GitNoon logo" height="100" style="margin-right: 15px;"> [GitNoon - Confidently Track File Versions with Git](/gitnoon)
+## <img src="https://technoon.org/gitnoon/gitnoon-logo.svg" alt="GitNoon logo" height="100" style="margin-right: 15px;"> [GitNoon - Confidently Track File Versions with Git](/gitnoon)
 
 The more important your code, documentation, or database queries, the
 more important it is to store it safely and to be able to track all

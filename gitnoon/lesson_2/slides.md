@@ -9,7 +9,7 @@ title: GitNoon Lesson 2
 1. Login to your account on [github.com](https://github.com/)
 2. If you missed the previous lesson, ask for help with the
    quick-setup on the next slide
-   * [technoon-org.github.io/gitnoon/lesson_2/slides.html](https://technoon-org.github.io/gitnoon/lesson_2/slides.html#/quick-setup)
+   * [technoon.org/gitnoon/lesson_2/slides.html](https://technoon.org/gitnoon/lesson_2/slides.html#/quick-setup)
 
 </div>
 

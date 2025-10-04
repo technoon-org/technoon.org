@@ -37,4 +37,12 @@
   <script type="text/javascript" src="{{ "/vendor/jquery.min.js" | prepend: site.baseurl }}"></script>
   <script type="text/javascript" src="{{ "/vendor/nanogallery2/jquery.nanogallery2.min.js" | prepend: site.baseurl }}"></script>
 
+  {% if page.url contains '/ainoon/' %}
+  <link rel="icon" type="image/x-icon" href="{{ "/_images/favicons/favicon-ainoon.ico" | prepend: site.baseurl }}">
+  {% elsif page.url contains '/gitnoon/' %}
+  <link rel="icon" type="image/x-icon" href="{{ "/_images/favicons/favicon-gitnoon.ico" | prepend: site.baseurl }}">
+  {% else %}
+  <link rel="icon" type="image/x-icon" href="{{ "/_images/favicons/favicon.ico" | prepend: site.baseurl }}">
+  {% endif %}
+
 </head>

@@ -65,7 +65,10 @@ To run a TechNoon training course - here's what you need:
   * [Instructor material](https://pynoon.github.io/curriculum/)
 * GitNoon - Git for version control
   * [Course outline](https://technoon.org/gitnoon/)
-  * [Instructor material](https://technoon-org.github.io/gitnoon/)
+  * [Instructor material](https://technoon.org/gitnoon/course-material)
+* AINoon - Generative AI for business
+  * [Course outline](https://technoon.org/ainoon/)
+  * [Instructor material](https://technoon.org/ainoon/course-material)
 * More coming soon
 
 

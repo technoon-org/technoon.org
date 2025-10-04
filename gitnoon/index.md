@@ -4,7 +4,7 @@ title: GitNoon
 permalink: /gitnoon/
 ---
 
-# <img src="https://technoon-org.github.io/gitnoon/gitnoon-logo.svg" alt="GitNoon logo" height="100"> GitNoon
+# <img src="https://technoon.org/gitnoon/gitnoon-logo.svg" alt="GitNoon logo" height="100"> GitNoon
 
 The more important your code, documentation, or database queries, the
 more important it is to store it safely and to be able to track all
@@ -63,9 +63,9 @@ Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJ
         <div class="col col-3">Tracking a project in Git</div>
         <div class="col col-4 markdown-content">
             <ul>
-                <li><a href="https://technoon-org.github.io/gitnoon/lesson_1/slides.html" target="_blank" rel="noopener">Slides</a></li>
-                <li><a href="https://technoon-org.github.io/gitnoon/lesson_1/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
-                <li><a href="https://technoon-org.github.io/gitnoon/lesson_1/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
+                <li><a href="https://technoon.org/gitnoon/lesson_1/slides.html" target="_blank" rel="noopener">Slides</a></li>
+                <li><a href="https://technoon.org/gitnoon/lesson_1/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
+                <li><a href="https://technoon.org/gitnoon/lesson_1/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
             </ul>
         </div>
     </li>
@@ -75,9 +75,9 @@ Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJ
         <div class="col col-3">Sharing repositories with others</div>
         <div class="col col-4 markdown-content">
             <ul>
-                <li><a href="https://technoon-org.github.io/gitnoon/lesson_2/slides.html" target="_blank" rel="noopener">Slides</a></li>
-                <li><a href="https://technoon-org.github.io/gitnoon/lesson_2/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
-                <li><a href="https://technoon-org.github.io/gitnoon/lesson_2/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
+                <li><a href="https://technoon.org/gitnoon/lesson_2/slides.html" target="_blank" rel="noopener">Slides</a></li>
+                <li><a href="https://technoon.org/gitnoon/lesson_2/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
+                <li><a href="https://technoon.org/gitnoon/lesson_2/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
             </ul>
         </div>
     </li>
@@ -87,9 +87,9 @@ Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJ
         <div class="col col-3">Branching and merging</div>
         <div class="col col-4 markdown-content">
             <ul>
-                <li><a href="https://technoon-org.github.io/gitnoon/lesson_3/slides.html" target="_blank" rel="noopener">Slides</a></li>
-                <li><a href="https://technoon-org.github.io/gitnoon/lesson_3/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
-                <li><a href="https://technoon-org.github.io/gitnoon/lesson_3/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
+                <li><a href="https://technoon.org/gitnoon/lesson_3/slides.html" target="_blank" rel="noopener">Slides</a></li>
+                <li><a href="https://technoon.org/gitnoon/lesson_3/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
+                <li><a href="https://technoon.org/gitnoon/lesson_3/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
             </ul>
         </div>
     </li>
@@ -99,9 +99,9 @@ Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJ
         <div class="col col-3">Pull requests and rebasing</div>
         <div class="col col-4 markdown-content">
             <ul>
-                <li><a href="https://technoon-org.github.io/gitnoon/lesson_4/slides.html" target="_blank" rel="noopener">Slides</a></li>
-                <li><a href="https://technoon-org.github.io/gitnoon/lesson_4/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
-                <li><a href="https://technoon-org.github.io/gitnoon/lesson_4/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
+                <li><a href="https://technoon.org/gitnoon/lesson_4/slides.html" target="_blank" rel="noopener">Slides</a></li>
+                <li><a href="https://technoon.org/gitnoon/lesson_4/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
+                <li><a href="https://technoon.org/gitnoon/lesson_4/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
             </ul>
         </div>
     </li>
@@ -111,6 +111,6 @@ Form](https://docs.google.com/forms/d/e/1FAIpQLSdmqZCS9Fe6wVGb8c_WLskKfjUNG0_3nJ
 ## Additional Resources
 
 <ul>
-    <li><a href="https://technoon-org.github.io/gitnoon/cheatsheet/gitnoon_cheatsheet.pdf" target="_blank" rel="noopener" download>Cheat sheet of Git commands covered in GitNoon</a></li>
-    <li>Instructors can find tips for presenting in the <a href="https://technoon-org.github.io/gitnoon/" target="_blank" rel="noopener">full course material listing</a>.</li>
+    <li><a href="https://technoon.org/gitnoon/cheatsheet/gitnoon_cheatsheet.pdf" target="_blank" rel="noopener" download>Cheat sheet of Git commands covered in GitNoon</a></li>
+    <li>Instructors can find tips for presenting in the <a href="https://technoon.org/gitnoon/course-material" target="_blank" rel="noopener">full course material listing</a>.</li>
 </ul>
