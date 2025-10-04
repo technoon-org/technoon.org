@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>GitNoon Lesson 3</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">body {
+font-family: Arial, sans-serif;
+font-size: 16px;
+}
+pre {
+padding: 1em;
+border: 1px solid #333333;
+}
+blockquote {
+font-style: italic;
+}
+</style>
+  <link href="data:image/vnd.microsoft.icon;base64,AAABAAEAQEAAAAEAIAAoQgAAFgAAACgAAABAAAAAgAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAlAAAATQAAAGkAAAB3AAAAdwAAAGoAAABRAAAAKQAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAATQAAAKUAAADpAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADuAAAArQAAAFYAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAABuAAAA4wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA6gAAAHoAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEMAAADaAAAA/wAAAP8AAAD/AAAA/wEBAf8lHxb/TT8u/21aQv94Y0j/eWRJ/25bQ/9SQzH/KSIZ/wIBAf8AAAD/AAAA/wAAAP8AAAD/AAAA4wAAAFIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAIYAAAD+AAAA/wAAAP8AAAD/JB4W/3plSv/DoHb/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/IpXn/g2xP/y4lHP8AAAD/AAAA/wAAAP8AAAD/AAAAmQAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAK4AAAD/AAAA/wAAAP8bFhD/kXdY/9awgf/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/nIBe/yMdFf8AAAD/AAAA/wAAAP8AAADBAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAALUAAAD/AAAA/wAAAP9URTP/z6p9/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/Trn//ZFM9/wEBAf8AAAD/AAAA/wAAAMkAAAALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJsAAAD/AAAA/wMCAv9+aEz/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv+Qd1f/BgUE/wAAAP8AAAD/AAAAswAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF4AAAD/AAAA/wEBAf+FblH/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/5h9XP8DAwL/AAAA/wAAAP8AAAB3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAAADvAAAA/wAAAP9pVj//17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/fWdL/wAAAP8AAAD/AAAA+AAAACYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACbAAAA/wAAAP8xKB7/1K+A/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv9DOCn/AAAA/wAAAP8AAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfAAAA+gAAAP8DAwL/sZJr/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/v550/woIBv8AAAD/AAAA/wAAADQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhwAAAP8AAAD/TT8u/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv9jUTz/AAAA/wAAAP8AAAChAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAOIAAAD/AAAA/6uNZ//XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/wJ50/wMCAv8AAAD/AAAA8wAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAD/AAAA/yMcFf/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv84LyL/AAAA/wAAAP8AAABJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABvAAAA/wAAAP9fTjr/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/dGBG/wAAAP8AAAD/AAAAiQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmwAAAP8AAAD/j3ZX/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/6WIZP8AAAD/AAAA/wAAALUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL4AAAD/AAAA/7GSa//XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/Go3j/AAAA/wAAAP8AAADZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADlgLQA2Y4gACRD2AAAA/wAAAP/CoHX/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/1rCB/wIBAf8AAAD/AAAA6QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzZgoAN2JwADdk0gA3Y/8AN2P/AAkQ/wAAAP8AAAD/yaV5/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv8IBwX/AAAA/wAAAPIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEltBwA4Ym0AN2PmADdj/wA3Y/8AN2P/ADdj/wALE/8AAAD/AAAA/8CedP/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/VsIH/AQEB/wAAAP8AAADmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADhkKQA3Y9EAN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8ADxv/AAAA/wAAAP+rjWf/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/wZ91/wAAAP8AAAD/AAAB1gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADZifwA4YvYAN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ABUl/wAAAP8AAAD/iXBT/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/5+CYP8AAAD/AAAA/wAQHvkAOGR7ADlVCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADdikQA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wAaLP8AAAD/AAAA/1ZHNP/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv9rWEH/AAAA/wAAAP8AHDL/ADdj/wA3Y+MANmJeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADhlZQA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8ALFD/AAAA/wAAAP8YFA//1bCB/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/LSUb/wAAAP8AAAD/ACpL/wA3Y/8AN2P/ADdj/wA3ZLsANWEdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACRtBwA4Y/cAN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdi/wAQH/8AAAD/AAAA/52BX//XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/tJRt/wAAAP8AAAD/AAQH/wA2Yf8AN2P/ADdj/wA3Y/8AN2P/ADdj6wA1Y0MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3Y5gAN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8ANWH/ABYo/wAAAf87MST/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/1JDMf8AAAD/AAAA/wAQHP8AKkz/ADZi/wA3Y/8AN2P/ADdj/wA3Y/8AN2P7ADdjbwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN2PrADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AK03/ABAd/56BYP/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/7GSa/8DAwL/AAAA/wABAf8AHzn/ACRC/wArTf8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2N5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADdi/gA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8GMlX/dXhy/8SngP/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9SugP8vJx3/AAAA/wAAAP8ADhn/ACRC/wAkQv8AJEL/ADZg/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA4Ym0AAAAAAAAAAAAAAAAAAAAAAEB/BAA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8DOWP/Plps/35/df+7oX7/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv9iUTv/AAAA/wAAAP8AAgT/ACE8/wAkQv8AJEL/ACpN/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P+ADZlTAAAAAAAAAAAAAAAAAAAAAAAN2P+ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/yFKaP9TZ2//hIF2/7Ocff/VsIL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv/XsYL/17GC/9exgv96ZUr/AAAA/wAAAP8AAAD/ABgr/wAkQv8AJkT/ADFX/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA4Y+oAN2QXAAAAAAAAAAAAAAAAADdi8gA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/CDxk/ytPaf9OY27/cXdz/42Hd/+llXv/vqJ//9Ovgf/XsYL/17GC/9exgv/XsYL/17GC/9awgf9uW0P/AQEB/wAAAP8ABAj/ABku/wAwWP8ANV7/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADhj3wAAAAAAAAAAAAAAAAA3Y7YAN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/CTxl/xNCZ/8bR2n/IEpq/x1IaP8KOF3/ADFZ/wA0Xv8ANmL/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AOWFMAAAAAAAAAAAANl4mADZi/gA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj0AAAAAAAAAAAAAAAAAA2YqsAN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AOmf/AD9x/wBDev8AR4H/AEqG/wBJhuUAN2RwADdimQA4Y7wAN2PdADdk+wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3ZPsAAAAAAAAAAAAAAAAAVVUGADdj7gA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AOmn/AEF1/wBHgP8AToz/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJHJAAAAAAAAAAAAAAAAAAAAAAAAAAAANWU1ADZhoAA2Y+gAN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/AAAAAQAAAAAAAAAAAAAAAAA2ZCEANmL5ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AOGT/AD5v/wBFff8ATYv/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCRvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAENvFwA5Yo8AN2PjADdj/wA3Y/8AN2P/ADdj+wAAAAAAAAAAAAAAAAAAAAAAAAAAADdfMwA4Y/cAN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADln/wBAc/8ASIH/AE6O/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBRka4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5VRIAOGODADditAA6YW4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN2QXADZk3AA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA7a/8AQ3j/AEqG/wBQkP8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUZKhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOGN8ADZj9AA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADdj/wA5aP8AQHP/AEd//wBNjP8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AE+RlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANmNkADhjyQA3Y/UAN2P/ADdj/wA3Y/8AN2P/ADdj/wA3Y/8AN2P/ADpo/wA+b/8AQ3n/AEeA/wBNi/8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkYYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/AgAzZjIAOGFXADdkXAA+bGMATo7/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJF5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATZEeAFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFGRawAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFKSHABQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBPkF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABJkg4AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUI9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8BAFCR+gBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCRQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABPkacAUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBRlCYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUo8iAFCR6wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkeUAf38CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQkjYAUJHtAFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUZJ+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE+NHQBQkcIAUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJHSAFWOCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8BAE+QVwBQkdoAUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJHKAFWSFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVaoDAFGQTABQkbMAUJH6AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkfQAUJGCAE2ZCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFWZDwBPklQAT5KaAFCR0ABQkfsAUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH/AFCR/wBQkf8AUJH7AFCSxgBQknAAVZUYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVY4JAFGRLABSkksAUJBjAFCRdgBPkncAT5B6AFGRawBRkVgAUJEzAEmSBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////////////////////////////////////////////+AH////////AAD///////wAAD//////+AAAH//////gAAAH/////8AAAAP/////gAAAAf////+AAAAA/////wAAAAD////+AAAAAH////4AAAAAf////AAAAAA////8AAAAAD////gAAAAAH///+AAAAAAf///4AAAAAB////gAAAAAH///+AAAAAAf///gAAAAAB///wAAAAAAH//8AAAAAAAf//gAAAAAAB//8AAAAAAAB//gAAAAAAAD/8AAAAAAAAD/gAAAAAAAAH+AAAAAAAAAP4AAAAAAAAAfgAAAAAAAAA8AAAAAAAAAB4AAAAAAAAADgAAAAAAAAAOAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAHAAAAAAAD4AOAAAAAAAP8B8AAAAAAA/+H4AAAAAAD///4AAAAAAP///4AAAAAA////8AAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////+AAAAA/////4AAAAD/////wAAAAf/////gAAAB//////AAAAP//////AAAB///////gAAf///////4AP////////////////////////////////////////////////////////8=" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">GitNoon Lesson 3</h1>
+</header>
+<p>In this tutorial, you will learn how to:</p>
+<ol type="1">
+<li>Work on a separate branch</li>
+<li>Merge your branch into <code>main</code></li>
+<li>Resolve a merge conflict</li>
+</ol>
+<h2 id="viewing-a-repo-as-a-graph">Viewing a repo as a graph</h2>
+<p>Before we get started, we’re going to create a git <em>alias</em> to
+conveniently run <code>git log</code> with options that will display a
+succinct graphical view of all branches in our repo:</p>
+<pre><code>git config --global alias.graph &quot;log --all --graph --oneline --decorate&quot;</code></pre>
+<p>Open your terminal to your <code>blog</code> repo
+(<code>cd blog</code>), and try running it:</p>
+<pre><code>git graph</code></pre>
+<ul>
+<li>(press <code>q</code> to exit <code>git graph</code>)</li>
+</ul>
+<h3 id="understanding-the-graph">Understanding the graph</h3>
+<ul>
+<li>You should see a commit on each line</li>
+<li>You should see labels for your <code>main</code> branch and the
+<code>origin/main</code> remote branch.
+<ul>
+<li><strong>The key idea</strong> to understand branches in Git is that
+<strong>a branch is effectively a pointer to a specific
+commit</strong>.</li>
+</ul></li>
+<li>You should also see a <code>HEAD</code> label pointing to your
+<code>main</code> branch.
+<ul>
+<li><code>HEAD</code> indicates the branch that our repo has
+<em>checked-out</em>, which has two key implications:
+<ol type="1">
+<li><code>HEAD</code> represents the current version of the files in our
+directory - any file changes will be compared to <code>HEAD</code></li>
+<li>When you run <code>git commit</code>, the new commit will have the
+current <code>HEAD</code> commit as its <em>parent</em>, and the
+<code>HEAD</code> branch will be updated to point to the new commit
+<ul>
+<li>You can already see these parent/child links between commits by the
+chain/history of commits in the log.</li>
+</ul></li>
+</ol></li>
+<li>Think of <code>HEAD</code> like the head on a spinning hard disk -
+it points to the data that is currently being read or written.</li>
+</ul></li>
+<li>You may also see <code>origin/HEAD</code>, which just indicates the
+<em>default branch</em> for new clones of the <code>origin</code>
+remote.</li>
+</ul>
+<h2 id="working-on-a-separate-branch">Working on a separate branch</h2>
+<p>We can keep our work isolated from the <code>main</code> branch while
+it is still a work-in-progress by committing to a separate branch.</p>
+<p>To do so, let’s create a new branch for some additions to the
+README:</p>
+<pre><code>git branch readme-additions</code></pre>
+<p>We can see our newly created branch in the graph; it points to the
+same commit as whatever branch <code>HEAD</code> was pointing to:</p>
+<pre><code>git graph</code></pre>
+<p>Now let’s <em>check-out</em> our new branch:</p>
+<pre><code>git switch readme-additions</code></pre>
+<p>We can confirm our current branch by again checking the graph and
+also by checking <code>git status</code>:</p>
+<pre><code>git graph
+git status</code></pre>
+<p>Now let’s make some changes on our new branch, open up the
+README:</p>
+<pre><code>nano README.md</code></pre>
+<p>And add more information at <strong>the bottom of the
+file</strong>:</p>
+<pre><code>## Built with
+
+* Markdown</code></pre>
+<p>Save and exit <code>nano</code> (<code>Ctrl + x</code>,
+<code>y</code>, <code>Enter</code>), then add and commit the README:</p>
+<pre><code>git status
+git add README.md
+git status
+# We&#39;ll use a shortcut to write the message inline
+git commit -m &quot;Add tool info to README&quot;
+git status</code></pre>
+<p>Now let’s see what that’s done to the graph:</p>
+<pre><code>git graph</code></pre>
+<p>Success! The new commit has been added to the
+<code>readme-additions</code> branch, but not <code>main</code>.</p>
+<p>Now let’s switch back to the <code>main</code> branch, again
+confirming the change to <code>HEAD</code> in the graph and status:</p>
+<pre><code>git switch main
+git graph
+git status</code></pre>
+<p>When we look at the log from <code>main</code>, we don’t see that
+commit:</p>
+<pre><code>git log</code></pre>
+<p>And when we look at the README, we don’t see our latest
+additions:</p>
+<pre><code>cat README.md</code></pre>
+<h2 id="merge-your-branch-into-main">Merge your branch into
+<code>main</code></h2>
+<p>Now that we’ve finished the work on our <em>feature branch</em> let’s
+merge it back into <code>main</code>.</p>
+<p>This is as simple as running:</p>
+<pre><code>git merge readme-additions</code></pre>
+<ul>
+<li><strong>TIP: To remember which branch will be updated by a merge,
+always remember that almost all git commands will only change the branch
+you are checked-out on.</strong>
+<ul>
+<li>In this case, we are checked-out on <code>main</code>, so we will be
+updating the <code>main</code> branch by <em>merging in</em>
+<code>readme-additions</code></li>
+</ul></li>
+</ul>
+<p>Now let’s see what that’s done to the graph:</p>
+<pre><code>git graph</code></pre>
+<p>We can see that <code>main</code> has been updated to the same commit
+as <code>readme-additions</code>, and the README on <code>main</code>
+now has the additions:</p>
+<pre><code>cat README.md</code></pre>
+<h2 id="fast-forward-merges">Fast-forward merges</h2>
+<p>Notice that Git told us this was a <strong>fast-forward</strong>
+merge:</p>
+<ul>
+<li>A fast-forward merge is only possible when the current branch has no
+commits that aren’t already in the branch we are merging in
+<ul>
+<li>i.e. Our current branch is linearly/directly behind the branch being
+merged in.</li>
+</ul></li>
+<li>A fast-forward merge just updates the current branch to point to the
+same commit as the named branch.</li>
+<li>We also saw a fast-forward merge in the last lesson when updating
+our local <code>main</code> branch with the latest commits fetched from
+<code>origin/main</code>.</li>
+</ul>
+<h2 id="non-fast-forward-merges">Non-fast-forward merges</h2>
+<p>Let’s see what happens when a fast-forward merge is not possible.</p>
+<p>First off, let’s undo that previous merge by <em>resetting</em> the
+<code>main</code> branch to point to the same commit as
+<code>origin/main</code> again:</p>
+<pre><code>git reset --hard origin/main
+git graph</code></pre>
+<p><strong>IMPORANT:</strong> <code>git reset</code> is a dangerous
+command because it can delete both commits and uncommitted changes.
+We’ll learn more about it in the next lesson.</p>
+<p>Now let’s add a commit directly to the <code>main</code> branch, as
+if someone else had merged in some changes while we were still working
+on <code>readme-additions</code>:</p>
+<pre><code>nano README.md</code></pre>
+<p>Change the README’s title to something else:</p>
+<pre><code># My Awesome Blog</code></pre>
+<p>Save and exit <code>nano</code> (<code>Ctrl + x</code>,
+<code>y</code>, <code>Enter</code>), then add and commit the README:</p>
+<pre><code>git status
+git add README.md
+git status
+# We&#39;ll use a shortcut to write the message inline
+git commit -m &quot;Update README title&quot;
+git status</code></pre>
+<p>Now let’s look at the graph:</p>
+<pre><code>git graph</code></pre>
+<ul>
+<li>The branches have diverged!</li>
+<li>There is now a commit in <code>main</code> that doesn’t exist in
+<code>readme-additions</code></li>
+<li>This means that <code>main</code> cannot be fast-forwarded to
+<code>readme-additions</code></li>
+<li>Aside: <code>git log</code> can be used to check which commits exist
+in one branch but not another with the “two dots” syntax:</li>
+</ul>
+<pre><code># Commits in readme-additions but not main
+git log main..readme-additions
+# Commits in main but not readme-additions
+git log readme-additions..main</code></pre>
+<p>Now what happens when we merge :</p>
+<pre><code>git merge readme-additions</code></pre>
+<ul>
+<li>Git opens a text editor for us to edit a commit message for a
+<em>merge commit</em>
+<ul>
+<li>Just save and exit to confirm the message (<code>Ctrl + x</code>,
+<code>y</code>, <code>Enter</code>)</li>
+</ul></li>
+</ul>
+<p>Now check the graph:</p>
+<pre><code>git graph</code></pre>
+<ul>
+<li>Git has added a <em>merge commit</em> that combines the commits from
+both branches.</li>
+<li>The <code>main</code> branch has been updated to point to the new
+merge commit.</li>
+</ul>
+<p>So what does the README look like now on the <code>main</code>
+branch?</p>
+<pre><code>cat README.md</code></pre>
+<p>Because each branch had made changes to different parts of the same
+file, Git was able to combine both sets of changes into a single file
+without us having to do anything!</p>
+<h2 id="resolve-a-merge-conflict">Resolve a merge conflict</h2>
+<p>But what if both branches had changed the same part of the same
+file?</p>
+<p>Let’s find out!</p>
+<p>Again, let’s undo the previous merge and the commit we made on
+<code>main</code> by <em>resetting</em> the <code>main</code> branch to
+point to the same commit as <code>origin/main</code> again:</p>
+<pre><code>git reset --hard origin/main
+git graph</code></pre>
+<p>Now let’s make a commit directly on <code>main</code> again, but this
+time editing the same part of the file as our commit on
+<code>readme-additions</code>:</p>
+<pre><code>nano README.md</code></pre>
+<p>Add some different content to <strong>the bottom of the
+file</strong>:</p>
+<pre><code>## Thanks
+
+* Git</code></pre>
+<p>Save and exit <code>nano</code> (<code>Ctrl + x</code>,
+<code>y</code>, <code>Enter</code>), then add and commit the README:</p>
+<pre><code>git status
+git add README.md
+git status
+# We&#39;ll use a shortcut to write the message inline
+git commit -m &quot;Add thanks to README&quot;
+git status</code></pre>
+<p>Look at the graph, and you should see the branches diverging
+again:</p>
+<pre><code>git graph</code></pre>
+<p>Now let’s see what happens when we try to merge
+<code>readme-additions</code> into <code>main</code>:</p>
+<pre><code>git merge readme-additions</code></pre>
+<ul>
+<li>Aha! Git tells us that there is a merge conflict in the README</li>
+<li>A merge conflict is not a cause for panic!</li>
+<li>Let’s see more about the conflict by checking the status:</li>
+</ul>
+<pre><code>git status</code></pre>
+<ul>
+<li>We can see <code>README.md</code> is an <em>unmerged path</em> where
+both branches made modifications</li>
+<li>Let’s see what’s going on in the README:</li>
+</ul>
+<pre><code>git diff README.md</code></pre>
+<ul>
+<li>We see two alternative hunks at the bottom of the file
+<ul>
+<li>One from our current branch (i.e. <code>HEAD</code>, which is
+<code>main</code>)</li>
+<li>One from the branch we are merging in
+(i.e. <code>readme-additions</code>)</li>
+</ul></li>
+<li>We need to manually edit the file to have the correct content that
+resolves this conflict
+<ul>
+<li><strong>This should often involve a conversation with whomever wrote
+the other code</strong></li>
+<li><strong>Don’t just blindly choose to keep one or the
+other</strong></li>
+<li><strong>If you don’t want to resolve it now</strong>, you could run
+<code>git merge --abort</code></li>
+</ul></li>
+<li>(press <code>q</code> to exit <code>git diff</code>)</li>
+</ul>
+<pre><code>nano README.md</code></pre>
+<p>To resolve this conflict, let’s remove the conflict markers and
+combine the two changes into one:</p>
+<pre><code>## Thanks
+
+* Git
+* Markdown</code></pre>
+<ul>
+<li>Save and exit <code>nano</code> (<code>Ctrl + x</code>,
+<code>y</code>, <code>Enter</code>)</li>
+<li>Check <code>git status</code>:</li>
+</ul>
+<pre><code>git status</code></pre>
+<p>The README is still unmerged, let’s check <code>git diff</code>
+again:</p>
+<pre><code>git diff README.md</code></pre>
+<ul>
+<li>The two columns of pluses and minuses show the results of our manual
+conflict resolution:
+<ul>
+<li>The changes from <code>readme-additions</code> will effectively lose
+<code>Built with</code> but gain <code>Thanks</code> and
+<code>Git</code></li>
+<li>The changes from <code>main</code> will effectively gain
+<code>Markdown</code></li>
+</ul></li>
+</ul>
+<p>We can now add our resolution:</p>
+<pre><code>git add README.md
+git status</code></pre>
+<p>The resolution is now staged and ready to be committed, so let’s
+complete the merge with a merge commit:</p>
+<pre><code>git commit</code></pre>
+<ul>
+<li>Git opens a text editor for us to edit a commit message for a
+<em>merge commit</em>
+<ul>
+<li>Just save and exit to confirm the message (<code>Ctrl + x</code>,
+<code>y</code>, <code>Enter</code>)</li>
+</ul></li>
+<li>The merge is now complete!</li>
+<li>Let’s check what that’s done to the repo:</li>
+</ul>
+<pre><code>git status
+git graph</code></pre>
+<ul>
+<li>We see a merge commit just like we did for the previous merge</li>
+<li>This was a relatively straightforward conflict</li>
+<li>Sometimes Git is able to automatically merge changes that may still
+be incompatible with each other
+<ul>
+<li>For example, maybe one branch renamed a variable, while the other
+branch added a new reference to the old variable name.</li>
+<li>So you should validate and test after any merge!</li>
+</ul></li>
+</ul>
+<p>To wrap-up, let’s undo the last merge and commit on
+<code>master</code> by resetting again:</p>
+<pre><code>git reset --hard origin/main
+git graph</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<ul>
+<li>You’ve learned a lot about branching and merging in this lesson,
+including three different kinds of merging:
+<ul>
+<li>Fast-forward merges</li>
+<li>Non-fast-forward merges with merge commits</li>
+<li>Merges with conflicts</li>
+</ul></li>
+<li>In the next lesson, you’ll learn how to:
+<ol type="1">
+<li>Make a pull request for your feature branch</li>
+<li>Rebase a feature branch that is conflicting with <code>main</code>
+in order to avoid unnecessary merge commits.</li>
+</ol></li>
+</ul>
+</body>
+</html>
