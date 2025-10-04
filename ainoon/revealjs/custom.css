@@ -1,0 +1,44 @@
+:root {
+    --r-main-color: #633700;
+    --r-heading-color: #422400;
+    --r-selection-background-color: #915000;
+}
+
+.reveal,
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-family: Arial, sans-serif;
+    text-transform: none;
+}
+
+.reveal .backgrounds {
+    background-image: url(img/ainoon-logo.svg);
+    background-size: 4em;
+    background-repeat: no-repeat;
+    background-position: 0.5em calc(100% - 0.5em);
+}
+
+.reveal .slides {
+    margin: 0 30px;
+}
+
+.reveal-viewport {
+    --r-controls-spacing: 4em;
+}
+
+.reveal span.left-heading {
+    display: block;
+    text-align: left;
+}
+
+.reveal code {
+    background: #F5F5F5;
+}
+
+.reveal li > p {
+    margin: 0;
+}

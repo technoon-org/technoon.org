@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>AINoon Lesson 1</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="shortcut icon" type="image/x-icon" href="../revealjs/favicon.ico">
+  <link rel="stylesheet" href="../revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../revealjs/dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../revealjs/dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="../revealjs/dist/theme/white.css">
+  <link rel="stylesheet" href="../revealjs/custom.css">
+  <base target="_blank">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">AINoon Lesson 1</h1>
+</section>
+
+<section id="get-ready-for-ainoon" class="slide level3">
+<h3>Get Ready for AINoon!</h3>
+<ul>
+<li>Open <a
+href="https://technoon.org/ainoon">technoon.org/ainoon</a></li>
+<li>Make sure you can open <a
+href="https://chatgpt.com">chatgpt.com</a></li>
+<li>You’ll need to log in to follow all steps in the tutorial</li>
+</ul>
+</section>
+<section id="thanks" class="slide level3">
+<h3>Thanks</h3>
+<ul>
+<li>To the host for the great venue!</li>
+<li>To our sponsors</li>
+</ul>
+</section>
+<section id="administrivia" class="slide level3">
+<h3>Administrivia</h3>
+<ul>
+<li>Fire escapes</li>
+<li>Toilets</li>
+<li>Cleaning up after ourselves</li>
+<li>WiFi</li>
+</ul>
+</section>
+<section id="welcome-to-ainoon" class="slide level3">
+<h3>Welcome to AINoon!</h3>
+<p>Hands up if you’ve ever:</p>
+<div>
+<ul>
+<li class="fragment">Used Google’s “AI Overview” instead of opening
+search results?</li>
+<li class="fragment">Asked ChatGPT a question?</li>
+<li class="fragment">Used AI to automate a task?</li>
+<li class="fragment">Used AI to build an app or write code?</li>
+</ul>
+</div>
+<aside class="notes">
+<ul>
+<li>Introduce yourself and your background with AI</li>
+</ul>
+</aside>
+</section>
+<section id="why-ainoon" class="slide level3">
+<h3>Why AINoon?</h3>
+<div>
+<ul>
+<li class="fragment"><strong>Generative AI is a powerful tool</strong>
+<br>- It unlocks new opportunities for productivity</li>
+<li class="fragment"><strong>It has limitations we’re not used
+to</strong> <br>- Risk of misuse and over-trusting</li>
+<li class="fragment"><strong>There are many valid concerns</strong>
+<br>- Important to understand risks and issues</li>
+<li class="fragment"><strong>There’s a lot of hype</strong> <br>- It’s
+hard to know where to start!</li>
+</ul>
+</div>
+</section>
+<section id="what-well-cover-in-ainoon" class="slide level3">
+<h3>What we’ll cover in AINoon</h3>
+<div>
+<ul>
+<li class="fragment"><strong>Hands-on practice</strong> with Generative
+AI</li>
+<li class="fragment"><strong>Leading applications</strong> of Generative
+AI <br>- Be equipped to spot opportunities</li>
+<li class="fragment"><strong>Demystifying</strong> how Generative AI
+works <br>- Understand its strengths and limitations</li>
+<li class="fragment"><strong>Risks and issues</strong> to consider when
+using AI</li>
+<li class="fragment"><strong>Providing a forum</strong> for questions
+and assistance</li>
+</ul>
+</div>
+</section>
+<section id="what-to-expect-from-ainoon" class="slide level3">
+<h3>What to expect from AINoon</h3>
+<p>Four lessons, each including:</p>
+<ul>
+<li><strong>Presentation</strong> on important AI concepts</li>
+<li><strong>Follow-along tutorial</strong> to get hands-on with AI</li>
+<li><em>Optional homework</em> if you want to go further</li>
+</ul>
+<p>Get all the slides, tutorials, and homework from:</p>
+<p><a
+href="https://technoon.org/ainoon"><strong>technoon.org/ainoon</strong></a></p>
+</section>
+<section id="ainoon-structure" class="slide level3">
+<h3>AINoon Structure</h3>
+<div style="font-size: 0.8em;">
+<ul>
+<li><strong>Lesson 1:</strong>
+<ul>
+<li><em>Presentation:</em> Intro to AI: terminology and business
+use-cases</li>
+<li><em>Tutorial:</em> Using a chatbot for business use-cases</li>
+</ul></li>
+<li><strong>Lesson 2:</strong>
+<ul>
+<li><em>Presentation:</em> How AI works</li>
+<li><em>Tutorial:</em> Building a chatbot on your documents with <a
+href="https://chatbase.co/">Chatbase</a></li>
+</ul></li>
+<li><strong>Lesson 3:</strong>
+<ul>
+<li><em>Presentation:</em> Common patterns: agents, RAG, and tools</li>
+<li><em>Tutorial:</em> Building an agent with <a
+href="https://zapier.com/">Zapier</a></li>
+</ul></li>
+<li><strong>Lesson 4:</strong>
+<ul>
+<li><em>Presentation:</em> AI risks and challenges</li>
+<li><em>Tutorial:</em> “Vibe-coding” an app with <a
+href="https://replit.com/">Replit</a></li>
+</ul></li>
+</ul>
+<p><span style="font-size: 0.7em;">We’ll use convenient tools in
+tutorials, but the focus is on principles that will apply in any
+tool</span></p>
+</div>
+</section>
+<section id="how-to-get-the-most-out-of-ainoon" class="slide level3">
+<h3>How to get the most out of AINoon</h3>
+<ul>
+<li>As much as possible, <strong>don’t do emails and work</strong>
+<ul>
+<li>A lot of the value comes from carefully considering ideas and
+engaging in the conversation</li>
+</ul></li>
+<li><strong>Follow along with the tutorials</strong>
+<ul>
+<li>Even if you’ve used a tool before, look at the results in light of
+the ideas we’re discussing</li>
+</ul></li>
+</ul>
+</section>
+<section id="questions" class="slide level3">
+<h3>Questions?</h3>
+</section>
+<section id="intro-to-ai" class="slide level3">
+<h3>Intro to AI</h3>
+<ul>
+<li>Establish a common vocabulary</li>
+<li>Who’s who in the zoo: companies and services</li>
+<li>How generative AI is being used by businesses</li>
+</ul>
+</section>
+<section id="ai-terminology" class="slide level3">
+<h3>AI Terminology</h3>
+<style>
+.venn {
+    border: 5px solid black;
+    text-align: left;
+    padding: 10px 0 0 10px;
+}
+.venn h4 {
+    font-size: 0.7em;
+    margin-bottom: 0px;
+}
+.venn ul {
+    font-size: 0.6em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.venn .venn {
+    margin-top: 10px;
+    margin-left: 50px;
+    border-bottom: none;
+    border-right: none;
+}
+</style>
+<div class="venn">
+<h4>
+Artificial Intelligence (AI) ~1950s
+</h4>
+<ul>
+<li>
+General term for computers making “intelligent” decisions
+</li>
+<li>
+E.g. Hand-crafted programs that can play checkers
+</li>
+</ul>
+<div class="venn fragment">
+<h4>
+Machine Learning (ML) ~1980s
+</h4>
+<ul>
+<li>
+Approach to AI where computers “learn” from patterns in data
+</li>
+<li>
+E.g. Learning from many past emails to identify spam
+</li>
+</ul>
+<div class="venn fragment">
+<h4>
+Deep Learning (DL) ~2000s
+</h4>
+<ul>
+<li>
+Approach to ML based on very large (artificial) “neural networks”
+</li>
+<li>
+E.g. Recognising objects in images, topic-labelling of text
+</li>
+</ul>
+<div class="venn fragment">
+<h4>
+Generative AI (GenAI) ~2020s
+</h4>
+<ul>
+<li>
+Application of DL to generate text, images, audio, video, etc.
+</li>
+<li>
+What most people mean by “AI” these days
+</li>
+<li class="fragment">
+<strong>The focus of this course</strong>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p style="font-size: 0.4em;">
+Source:
+<a href="https://blogs.nvidia.com/blog/whats-difference-artificial-intelligence-machine-learning-deep-learning-ai/">blogs.nvidia.com/blog/whats-difference-artificial-intelligence-machine-learning-deep-learning-ai/</a>
+</p>
+<aside class="notes">
+<ul>
+<li>Except where noted, “AI” will refer to “Generative AI” in this
+course</li>
+</ul>
+</aside>
+</section>
+<section id="chatbots-are-the-most-prominent-application-of-genai"
+class="slide level3">
+<h3>Chatbots are the most prominent application of GenAI</h3>
+<ul>
+<li>ChatGPT (OpenAI)</li>
+<li>Claude (Anthropic)</li>
+<li>Gemini (Google)</li>
+<li>Microsoft Copilot (based on OpenAI tech)</li>
+<li>Grok (X)</li>
+<li>DeepSeek</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Ask the audience if they can name any others?</li>
+</ul>
+</aside>
+</section>
+<section id="what-can-chatbots-do-for-business" class="slide level3">
+<h3>What can chatbots do for business?</h3>
+<div style="font-size: 0.8em;">
+<ul>
+<li><strong>Drafting</strong> emails and documents</li>
+<li><strong>Summarising</strong> documents and meetings</li>
+<li><strong>Brainstorming</strong> a wide variety of ideas</li>
+<li><strong>Personalised tutoring</strong> for learning new
+subjects</li>
+<li><strong>Generating code</strong> to assist programmers</li>
+<li><strong>Data extraction and transformation</strong>
+<ul>
+<li>Turn unstructured text and images into structured data</li>
+<li>E.g. Identify which team an IT ticket should go to</li>
+</ul></li>
+<li><strong>Custom agents</strong>: chatbots that retrieve info and take
+action
+<ul>
+<li>Answering questions from organisation knowledge bases</li>
+<li>Personalised customer service</li>
+<li>Automated handling of events - e.g. IT tickets</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="using-chatbots-for-business" class="slide level3">
+<h3>Using chatbots for business</h3>
+<div style="font-size: 0.9em;">
+<ul>
+<li><strong>Public chatbots</strong> train future chatbots with your
+data</li>
+<li>Companies deploy <strong>internal chatbots</strong> to protect data
+<ul>
+<li>Often using business-to-business service offerings</li>
+<li>E.g. From Microsoft, Amazon, or Google clouds</li>
+</ul></li>
+<li>You can run <strong><em>open</em> chatbots</strong> on your own
+computers
+<ul>
+<li>E.g. Llama (Meta), gpt-oss (OpenAI), DeepSeek</li>
+<li>Most require specialised hardware, but less powerful chatbots can
+run on a laptop</li>
+<li>Check whether licenses allow commercial use</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="tutorial-objectives" class="slide level3">
+<h3>Tutorial Objectives</h3>
+<ol type="1">
+<li>Using a chatbot for business use cases:
+<ul>
+<li>Brainstorming and drafting</li>
+<li>Automating web searches</li>
+<li>Summarising documents</li>
+</ul></li>
+<li>Identifying important issues to keep in mind</li>
+<li>Tips for effective prompting</li>
+</ol>
+</section>
+<section id="tips-for-crafting-better-prompts" class="slide level3">
+<h3>Tips for crafting better prompts</h3>
+<div style="font-size: 0.9em;">
+<ul>
+<li>Each prompt should request <strong>one thing</strong></li>
+<li>Start prompts with a <strong>persona</strong>
+<ul>
+<li>E.g. “You are an expert in project management…”</li>
+</ul></li>
+<li>Ask it to “explain <strong>step-by-step</strong>”
+<ul>
+<li>Can get better answers to more complex questions</li>
+</ul></li>
+<li>When it’s not doing what you want, <strong>be more specific</strong>
+<ul>
+<li>Though it won’t always follow instructions exactly!</li>
+</ul></li>
+<li><strong>Seek more tips</strong> online for specific use-cases
+<ul>
+<li>It’s all art/craft, not science/engineering</li>
+<li>Advice will likely change as models change</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="the-golden-rule-of-ai" class="slide level3">
+<h3>The Golden Rule of AI</h3>
+<blockquote>
+<p>Don’t trust the output of an AI unless you can verify it</p>
+</blockquote>
+<ul>
+<li><strong>Bad:</strong> Summarising a document you <em>haven’t</em>
+read</li>
+<li><strong>Good:</strong> Summarising a document you <em>have</em>
+read</li>
+<li><strong>But:</strong> For some use cases, speed may be more
+important than accuracy</li>
+</ul>
+</section>
+<section id="homework" class="slide level3">
+<h3>Homework</h3>
+<div style="font-size: 0.75em;">
+<p><strong>Remember:</strong> Don’t use private data with public
+models!</p>
+<ul>
+<li>Try ChatGPT’s <strong>Think longer</strong> (reasoning) mode:
+<ul>
+<li>“Make a plan to increase visitors to my website”</li>
+<li>Compare level of detail with/without reasoning</li>
+</ul></li>
+<li>Try ChatGPT’s <strong>Deep Research</strong> mode:
+<ul>
+<li>“Find a cheap washing machine for a family of four”</li>
+<li>Searches the web and summarises in a few minutes</li>
+</ul></li>
+<li><strong>Practice prompting</strong>
+<ul>
+<li>Describe a photo with text to prompt ChatGPT to replicate it</li>
+<li>Keep refining your prompt to more closely match the photo</li>
+</ul></li>
+<li><strong>Generate a video</strong> with Google’s <a
+href="https://labs.google/fx/tools/flow">Flow</a>
+<ul>
+<li>Look at the gallery on <a
+href="https://www.midjourney.com/explore">Midjourney</a> - note the
+detail in the prompts</li>
+</ul></li>
+<li><strong>Generate speech from text</strong> with <a
+href="https://elevenlabs.io/">ElevenLabs</a></li>
+</ul>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="../revealjs/dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="../revealjs/plugin/notes/notes.js"></script>
+  <script src="../revealjs/plugin/search/search.js"></script>
+  <script src="../revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../revealjs/plugin/mermaid/mermaid.js"></script>
+
+  <script>
+
+     document.querySelectorAll('.top-fragment-only .fragment .fragment').forEach(function(el) {
+         el.classList.remove('fragment');
+     });
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom,
+          RevealMermaid
+        ]
+      });
+    </script>
+    </body>
+</html>

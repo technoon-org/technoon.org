@@ -1,0 +1,234 @@
+# About TechNoon
+
+TechNoons are brief, free, industry-led, in-person training courses
+run at lunchtimes for people in technical jobs wanting to improve
+their skills. TechNoon courses will usually have four sessions of 2-3
+hours each (including homework).
+
+## If you want to learn a new skill…
+
+See if there are any [upcoming courses](https://technoon.org/courses)
+in your area. If you don't see something please make a suggestion
+using the [TechNoon Contact Form](https://technoon.org/contact) and
+we'll get back to you to find out more.
+
+## If you want to teach a short course…
+
+We'd love to talk to you. Just fill in the [TechNoon Contact Form](https://technoon.org/contact)
+and we'll get back to you to find out more. Read the [TechNoon Manifesto](https://technoon.org/manifesto)
+first to get a feel for the core concepts of TechNoon, and then read our
+[guide for organisers](https://technoon.org/organisers) to see what you'll need
+to run your own course. If a course on the topic has already been run
+there may be resources you could reuse.
+
+## If your company wants to participate…
+
+Perhaps you would like to improve staff skills in a specific area. Or
+maybe some of your staff would like to provide training. Either way
+we'd love to hear from you. Please fill in the
+[TechNoon Contact Form](https://technoon.org/contact) and we'll get back to you to find out more.
+
+## Why TechNoon is needed
+
+* **Tertiary degrees and diplomas** are not a good answer for people
+  already in jobs. Even boot-camps are a significant challenge for
+  most people with job commitments. Courses also tend to be too
+  general with hit-and-miss content for people in specific roles.
+* **On-line courses** and **individual articles and documentation**
+ can't provide the individualised support and the motivation that an
+ in-person course can.
+* **Internal corporate training** can't achieve the economies of scale
+  and specialisation of an industry-wide training ecosystem.
+* **Vendor training** doesn't cover the range of skills required and
+  is not focused primarily on what is good for industry.
+
+## Is there a catch?
+
+**No** - TechNoon has emerged from the open source software community
+and brings that ethos to technical training. The open, collaborative
+approach to software development has revolutionised the world of
+programming like it revolutionised science centuries earlier. Now it's
+training's turn.
+
+## Who runs TechNoon?
+
+Anyone who wants to run a TechNoon can do so - people can decide
+whether to attend or not based on the trainer's bio, the course
+outline, and the credibility of the trainer's organisation.
+
+## What's with the cowboy hat logo?
+
+TechNoon started as [PyNoon](https://pynoon.github.io) (Python
+programming training) before broadening out and PyNoon's logo is a
+cowboy snake logo. PyNoon is a reference to the classic movie *High
+Noon*, thus the Western, cowboy theme.
+
+
+# Courses
+
+## PyNoon - Introductory Python Programming
+
+PyNoon was originally run between November 2023 and March 2024 to
+up-skill people in the world’s most popular programming language:
+Python, which is used for automation, data science, web development,
+and much more.
+
+PyNoon covers the fundamentals of the Python programming language and
+how to use Python to analyse and plot tabular data (e.g. spreadsheets)
+and to interact with web services and AI models.
+
+**Visit the PyNoon website to register your interest in attending a
+future course: [pynoon.github.io](https://pynoon.github.io/)**
+
+## AINoon - From Hype to Productivity
+
+Generative AI is a powerful tool that individuals and businesses can
+leverage through services like ChatGPT, Microsoft Copilot, and
+Google's Gemini. However, AI has limitations we're not used to in
+other technologies, creating risks of misuse and over-trusting. There
+are also many concerns that AI raises - from practical issues of
+privacy and security to fears of artificial super-intelligences!
+
+AINoon is a course to cut through the hype and give you practical
+hands-on experience using AI while providing you with understanding of
+AI's strengths and limits to make good decisions about when and how to
+use it.
+
+By the end of this course, you will be able to:
+
+* Confidently use AI in a variety of ways to improve productivity
+* Identify opportunities for incorporating AI into business solutions
+* Critically consider the strengths, limitations, and risks of AI,
+  based on a solid foundation of what AI is and how it works
+
+Most importantly, AINoon provides a forum for asking questions about
+AI and seeking assistance with your own use-cases.
+
+**Register your interest in running or attending an AINoon [here](https://technoon.org/contact/)!**
+
+**Check out the [AINoon course material](https://technoon.org/ainoon)**
+
+## SQLNoon - Avoiding SQL Hell
+
+SQL queries are commonly mission critical for accurate reporting and
+analysis but all too often they are unintelligible, difficult to
+maintain, and potentially returning invalid results. In this 4-session
+course we look at strategies for improving your queries and practices
+around maintaining and documenting them and tracking changes.
+
+Note - this course is not teaching SQL itself - it is expected that
+participants will already know how to write basic SQL queries.
+
+## GitNoon - Confidently Track File Versions with Git
+
+The more important your code, documentation, or database queries, the
+more important it is to store it safely and to be able to track all
+your changes. This is where Git comes in. Git is a powerful version
+control tool which is now industry-standard. This 4-session course
+starts from scratch, explaining why and how you should use Git. No
+previous experience is required.
+
+By the end of this course, you will be able to:
+
+* Use Git from the command-line
+* Save, inspect, and restore every change to your files over time
+* Collaborate with others using industry standard practices for branch
+  management
+
+**Check out the [GitNoon course material](https://technoon.org/gitnoon)**
+
+
+# Manifesto
+
+Industry needs training in technical skills that is:
+
+* **On-the-job**
+  * TechNoon is primarily for people already in technical jobs, not
+    people trying to enter the workforce. There are lots of good
+    training options for students seeking to be work-ready in
+    technical careers - TechNoon is to upskill people already working.
+* **In-person**
+  * Learning technical skills is easier when it is done in a
+    face-to-face community. There will usually be an on-line component
+    of TechNoon but in-person sessions are central. People helping
+    people is part of the TechNoon ethos.
+* **Small weekly commitment**
+  * People already in jobs are busy and can't usually devote long
+    periods of time to skills training. TechNoon courses will usually
+    have four sessions of 2-3 hours each (including homework)
+    depending on the topic. That seems to be the practical maximum
+    commitment we can expect. Given the practical emphasis of
+    TechNoon, it should be possible to split longer topics into
+    smaller courses, each with its own practical focus.
+* **With multiple sessions**
+  * Unlike one-day workshops, TechNoon courses are delivered as
+    multiple sessions interspersed with work so that learning can be
+    applied *between* sessions. This makes it possible for learners to
+    bring practical questions and issues to subsequent sessions and
+    avoid getting "stuck". It is also more motivating to learn
+    something in sessions if there are regular attempts to apply that
+    learning in practice. This is one of the main benefits of
+    on-the-job training compared with academic training.
+  * Learning technical skills takes time - spaced repetition and time
+    *between* learning sessions helps new skills stick.
+* **Around lunch-time**
+  * TechNoon occurs around lunchtime to make it easier to fit into the
+    work week and to build community.
+* **At accessible locations**
+  * Because TechNoon is a lunchtime activity, it is important that it
+    is delivered in locations that are as close as possible to where
+    people work. Industry support in the form of training venues is
+    very important.
+* **Practical and hands-on**
+  * Teaching and homework will typically have a substantial hands-on
+    component where learners are actually making something useful -
+    for example: programming code, configuration, or documentation.
+* **Industry-led**
+  * Teachers will be people in industry with skills to share. TechNoon
+    is about learning so it is crucial that teachers have good
+    communication skills. This doesn't mean TechNoon can only be
+    delivered by superstars. Although there will be individuals who
+    are unicorns with great technical, communication, and
+    administrative skills, a more common pattern is to deliver
+    training as a small team. There needs to be technical expertise in
+    the room but the person actually delivering the bulk of the
+    teaching should have good communication skills and an orientation
+    to teaching.
+* **Free**
+  * Because courses are by industry, for industry, the courses are
+    free. Having said this, before people sign up to a course it is
+    expected will be able to commit to the entire course, and meet the
+    homework requirements.
+  * Free means that managers don't need to get budget approval to send
+    people to a paid course. Managers can just approve the time for
+    their staff.
+  * Furthermore, the overheads of running a paid course (managing
+    payment, tax obligations, implication of some kind of
+    certification) mean that TechNoon would be practical if it wasn't
+    free.
+* **With custom courses**
+  * The flexibility of TechNoon encourages delivery of specialist
+    courses for smaller numbers of learners. Some courses will be
+    larger and more general (for example, an introduction to the
+    Python programming language); but others might be less ambitious,
+    (for example, a course on how to write readable, maintainable
+    SQL); or more advanced, (for example, containerisation best
+    practice).
+* **Focused on practical results, not credentials**
+  * At the end of a course the question to ask is not what
+    certification was gained but *what specific skills were actually
+    put to use in the existing work context*. Did the training make a
+    practical, tangible difference? Is something different as a
+    result?
+  * This is arguably the key question that the trainer needs to keep
+    front of mind while developing a course.
+* **With open sourced content**
+  * Teaching resources should be shared to reduce the effort required
+    to increase technical skills in industry. TechNoon follows the
+    open source ethos of "give a brick, get a building".
+  * Less of an industry need, but more of a practicality to make this
+    training actually happen.
+  * Releasing teaching resources, including code, under a Creative
+    Commons licence that ensures attribution will ensure companies
+    that make successful training resources get the appropriate credit
+    and recognition in return.
