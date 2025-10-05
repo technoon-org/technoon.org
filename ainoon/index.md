@@ -85,7 +85,7 @@ AI and seeking assistance with your own use-cases.
     </li>
     <li>
         <div class="col col-1">ainoon-3</div>
-        <div class="col col-2">Common patterns: agents, RAG, and tools</div>
+        <div class="col col-2">Common patterns: RAG, tools, and agents</div>
         <div class="col col-3">Building an agent with <a href="https://zapier.com/" target="_blank" rel="noopener">Zapier</a></div>
         <div class="col col-4 markdown-content">
             <ul>

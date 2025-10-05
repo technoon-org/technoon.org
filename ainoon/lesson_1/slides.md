@@ -91,7 +91,7 @@ Get all the slides, tutorials, and homework from:
   * *Presentation:* How AI works
   * *Tutorial:* Building a chatbot on your documents with [Chatbase](https://chatbase.co/)
 * **Lesson 3:**
-  * *Presentation:* Common patterns: agents, RAG, and tools
+  * *Presentation:* Common patterns: RAG, tools, and agents
   * *Tutorial:* Building an agent with [Zapier](https://zapier.com/)
 * **Lesson 4:**
   * *Presentation:* AI risks and challenges
