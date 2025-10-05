@@ -27,8 +27,7 @@ title: AINoon Lesson 3
 * Tools
 * Agents
 
-You may not use all of these patterns yourself, but understanding
-what's possible will enable you to spot opportunities.
+Understanding what's possible will enable you to spot opportunities.
 
 
 ### Most AI apps are surprisingly simple
