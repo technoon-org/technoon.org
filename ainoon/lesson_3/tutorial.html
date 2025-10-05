@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>AINoon Tutorial 2</title>
+  <title>AINoon Tutorial 3</title>
   <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,203 +37,142 @@ font-style: italic;
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">AINoon Tutorial 2</h1>
+<h1 class="title">AINoon Tutorial 3</h1>
 </header>
-<p>The goal of this tutorial is to <strong>make your own chatbot to
-answer questions based on information in a document.</strong></p>
+<p>The goal of this tutorial is to <strong>make your own agent to come
+up with movie-themed dessert ideas for a restaurant.</strong></p>
+<h2 id="set-up-a-table-to-store-the-ideas">Set up a table to store the
+ideas</h2>
+<ol type="1">
+<li>Open <a href="https://zapier.com">zapier.com</a></li>
+<li>Open <strong>Tables</strong> from the sidebar
 <ul>
-<li>Chatbots can answer “general knowledge” questions based on
-information in the text they were trained on</li>
-<li>But we often want them to be able to answer questions about
-domain-specific or company knowledge sources, like:
+<li>It’s possible to integrate Zapier to work with tables and
+spreadsheets in other systems</li>
+<li>But we’ll using a table in Zapier itself so that we don’t have to
+set up any integrations</li>
+</ul></li>
+<li>Click the <strong>Create</strong> button</li>
+<li>Select <strong>Blank table</strong></li>
+<li>Name the table <strong>Dessert ideas</strong></li>
+<li>We now see an empty table with no fields/columns</li>
+</ol>
+<p>There’s a <strong>Copilot</strong> on the left side of the screen -
+an agent Zapier has provided to help us set up a table.</p>
+<p>Let’s ask it to add the fields we need:</p>
+<pre><code>Add fields for the name, movie, and description for each dessert idea</code></pre>
 <ul>
-<li>Frequently asked questions and other help documents</li>
-<li>Instruction manuals</li>
-<li>Past problems and resolutions from issue tracking systems</li>
+<li>Notice how it “thought for a moment”
+<ul>
+<li>This is <em>chain-of-thought</em> or <em>reasoning</em></li>
+<li>You can click the dropdown to see what it said to itself</li>
+</ul></li>
+<li>The copilot will ask you to confirm the fields its going to add
+<ul>
+<li>Note how it says its using a tool to add the fields!</li>
 </ul></li>
 </ul>
-<p>We’re going to make a chatbot that can answer questions about
-TechNoon courses, like AINoon.</p>
-<h2 id="create-a-chatbot">Create a chatbot</h2>
+<p>You should now see three fields:</p>
 <ol type="1">
-<li>Open <a href="https://chatbase.co">chatbase.co</a></li>
-<li>Go to the <strong>Dashboard</strong></li>
-<li>Click <strong>New AI agent</strong>
-<ul>
-<li>If you already have one, select <strong>Create agent</strong> from
-the agent list dropdown.</li>
-</ul></li>
-<li><em>If it forces you to upload a source:</em>
-<ul>
-<li>We’re going to skip uploading files for now</li>
-<li>Select <strong>Text</strong> from the sidebar, and fill in:
-<ul>
-<li>Title: <code>TechNoon</code></li>
-<li>Text:
-<code>TechNoon delivers free lunchtime industry training courses.</code></li>
-<li>Click <strong>Add text snippet</strong></li>
-</ul></li>
-</ul></li>
-<li>Select <strong>Create agent</strong>
-<ul>
-<li>Note that it tells us the total size of our sources compared to the
-limit - we won’t be getting anywhere near that limit today.</li>
-</ul></li>
+<li>Name (text)</li>
+<li>Movie (text)</li>
+<li>Description (long text)</li>
 </ol>
-<h2 id="playground-and-settings">Playground and settings</h2>
 <ul>
-<li>You should now be on the <strong>Playground</strong> for your
-agent.</li>
-<li>Let’s ask a simple question about TechNoon:</li>
-</ul>
-<pre><code>What is TechNoon?</code></pre>
-<p><strong>AUDIENCE QUESTION:</strong> Did it give a helpful answer?</p>
-<blockquote>
-<p>It will only give a good answer if you provided the
-<strong>Text</strong> source above.</p>
-</blockquote>
-<p>Now let’s look at the options we have to configure our chatbot:</p>
+<li>If you see those columns your table is ready to go!</li>
+<li>Otherwise add them or change the field types manually
 <ul>
-<li>We can choose what <strong>Model</strong> it uses
-<ul>
-<li>Lot’s of options from different providers</li>
-<li>You can see a brief description of each model</li>
-<li>Some are only available for a paid account</li>
-</ul></li>
-<li>We can set the <strong>temperature</strong>
-<ul>
-<li>With a higher temperature, you will get more variety in the results
-- which you may or may not want</li>
-<li>Note that Chatbase may re-use answers to questions your chatbot has
-been asked previously</li>
-<li>We’ll leave it at zero for our informative chatbot.</li>
-</ul></li>
-<li>We can customise the <strong>Instructions</strong> to the chatbot:
-<ul>
-<li>Every time a message is sent to the chatbot, the instructions will
-be included in the prompt to the underlying model.</li>
-<li>You can choose from
-<ul>
-<li>e.g. “Customer Service Agent”</li>
-</ul></li>
-<li>Or write your own! Include instructions like:
-<ul>
-<li>Some services might refer to these as a <strong>role</strong> or
-<strong>persona</strong></li>
-<li>The chatbot’s goal - “Encourage the user to attend TechNoon”</li>
-<li>Style - professional, relaxed, or a pirate :)</li>
-<li>Specific instructions
-<ul>
-<li>E.g. Link the user to the TechNoon website</li>
-<li>“Dos” have been found to work better than “don’ts”</li>
-</ul></li>
-<li><strong>Remember:</strong> The user can potentially get the chatbot
-to reveal any details in the prompt, so treat it like a public
-document.</li>
-</ul></li>
+<li><em>Demonstrate this if anyone had issues with the copilot</em></li>
 </ul></li>
 </ul>
-<h2 id="providing-more-knowledge">Providing more knowledge</h2>
-<p>What if we ask it for information about TechNoon it doesn’t have the
-answer for?</p>
-<pre><code>List the available TechNoon courses</code></pre>
-<p>Let’s give it more detailed knowledge!</p>
+<h2 id="create-the-agent">Create the agent</h2>
 <ol type="1">
-<li>In a new tab, open <a href="https://technoon.org/ainoon">technoon.org/ainoon</a></li>
-<li>Download the <a href="https://technoon.org/ainoon/lesson_2/technoon_knowledge.txt"><code>technoon_knowledge.txt</code></a>
-<ul>
-<li>Or share it with everyone in chat.</li>
-</ul></li>
-<li>Open the file and have a quick read
-<ul>
-<li>It contains lots of information about TechNoon courses</li>
-</ul></li>
-<li>From Chatbase, open <strong>Sources -&gt; Files</strong> from the
-sidebar</li>
-<li>Click the big <strong>Upload</strong> button and select the txt
-file.
-<ul>
-<li>Remember, any file you upload can be seen by the service provider,
-or information from it extracted by users asking questions of the
-chatbot</li>
-<li>Check with your organisation before uploading any private files</li>
-</ul></li>
-<li>After uploading, click <strong>Retrain agent</strong>
-<ul>
-<li>It’s not <em>really</em> training the chatbot, it’s just preparing
-the file for the chatbot to use.</li>
-</ul></li>
-<li>After it’s finished “training”, go back to the
-<strong>Playground</strong></li>
-<li>Ask it the question again:</li>
+<li>In a new tab, open <a href="https://zapier.com">zapier.com</a>
+again</li>
+<li>Open <strong>Agents</strong> from the sidebar</li>
+<li>Click the <strong>New agent</strong> button</li>
 </ol>
-<pre><code>List the available TechNoon courses</code></pre>
-<p><strong>AUDIENCE QUESTION:</strong> Did it give a helpful answer?</p>
-<p><strong>But how is it using the file?</strong></p>
+<p>Another copilot to help us build our agent! Let’s describe what we
+want the agent to do, and let the copilot configure it for us:</p>
+<pre><code>1. Get the top 3 family movies releasing next month
+2. For each movie, come up with a fun themed dessert to sell at our restaurant
+3. Add each dessert to the &quot;Dessert ideas&quot; Zapier table</code></pre>
+<p>Again, we can see the copilot’s reasoning and tool use:</p>
 <ol type="1">
-<li>Every time a question is asked, it searches through the file for
-chunks that are relevant to the question
+<li>It has set up the instructions based on our description
 <ul>
-<li>A bit like a Google search</li>
+<li>Including a <em>Final goal</em></li>
 </ul></li>
-<li>Those chunks are added to the prompt so that the LLM can use them to
-answer the question!
+<li>It has added and configured the <em>Zapier Tables: Create
+Record</em>
 <ul>
-<li>You can click on <strong>Sources</strong> below the chatbot to see
-the chunks it used - some might be quite large!</li>
+<li>Click on the cog to check the configuration</li>
+<li>It should have selected the <strong>Dessert ideas</strong>
+table</li>
+<li>It should <strong>Let your agent generate a value for this
+field</strong>
+<ul>
+<li>Sometimes it sets it to a hard-coded value, so demonstrate how to
+change this if anyone needs to</li>
+</ul></li>
+</ul></li>
+<li>It doesn’t need to add a tool for web searching, as that tool is
+always available in Zapier agents</li>
+<li>It has even given our agent a descriptive name!</li>
+</ol>
+<p>We still need to add a trigger - when the agent should run:</p>
+<ol type="1">
+<li>Click the <strong>Add trigger</strong> button</li>
+<li>Select <strong>On demand</strong>, so that it will run when we
+manually trigger it
+<ul>
+<li>We could have also selected to run it on a schedule</li>
+<li>Or to be triggered by another system, like email</li>
 </ul></li>
 </ol>
-<p>This is a technique called <strong>Retrieval Augmented
-Generation</strong> or <strong>RAG</strong> which we’ll talk more about
-next week.</p>
-<h2 id="deploying-your-chatbot">Deploying your chatbot</h2>
-<p>Let’s share our chatbot with the world!</p>
+<h2 id="test-the-agent">Test the agent</h2>
 <ol type="1">
-<li><p>First, let’s give the chatbot a better name</p>
-<ol type="1">
-<li>Open <strong>Settings -&gt; General</strong> from the sidebar</li>
-<li>Change the name to <strong>TechNoon Bot</strong>
-<ul>
-<li>We should make it clear to our users that this isn’t a human they’re
-chatting with.</li>
-</ul></li>
-</ol></li>
-<li><p>Open <strong>Deploy</strong> from the sidebar</p>
-<ul>
-<li>Lots of options for places we could deploy it</li>
-</ul></li>
-<li><p>Select <strong>Help Page</strong></p>
-<ul>
-<li>This will let us serve the chatbot on a web page</li>
-<li>There are lots of options to customise how the page looks</li>
-<li>We’ll keep the defaults</li>
-</ul></li>
-<li><p>Select <strong>Deploy</strong></p></li>
-<li><p>Open the <strong>Domain setup</strong> tab, and click
-<strong>Visit Page</strong></p></li>
-<li><p>Try asking a question!</p>
-<pre><code>What can you help me with?</code></pre></li>
-<li><p>You can now share the link to this page with anyone in the
-world!</p>
-<ul>
-<li>This means the information in your instructions and sources is
-publicly accessible!</li>
-</ul></li>
+<li>Click <strong>Agent preview</strong></li>
+<li>Click <strong>Test agent</strong></li>
+<li>Watch what it does!</li>
 </ol>
-<h2 id="testing">Testing</h2>
-<p>It’s important to test chatbots <strong>for their intended use
-case</strong>.</p>
-<p><em>Refer to the <strong>Testing a Chatbot</strong> slide</em></p>
-<p><strong>AUDIENCE QUESTION:</strong> What happens if you ask it an
-off-topic question?</p>
-<pre><code>What is a large language model?</code></pre>
+<p>You should see it:</p>
+<ol type="1">
+<li>Perform one or more calls to the <em>Google Search</em> or <em>Web
+browsing</em> tools to find upcoming family movies</li>
+<li>Come up with a dessert idea for each movie</li>
+<li>Use the <em>Zapier Tables: Create Record</em> tool to add each
+dessert to your table
+<ul>
+<li>It will ask you to approve each time it adds a row</li>
+</ul></li>
+<li>Provide a summary of its work at the end</li>
+</ol>
+<p>Go back to the browser tab of your table, and you should see three
+rows have been added!</p>
+<h3 id="audience-question-how-well-did-your-agent-do"><strong>AUDIENCE
+QUESTION:</strong> How well did your agent do?</h3>
+<ul>
+<li>Did it successfully add desserts to the table?</li>
+<li>Did it get movies from the future?</li>
+<li>Do the dessert ideas sound good?</li>
+<li>Did you notice anything else interesting?</li>
+</ul>
 <h2 id="conclusion">Conclusion</h2>
-<p>You’ve successfully built a chatbot that can answer questions about
-your own documents!</p>
-<p>This is a great example of a pattern for using LLMs to build apps
-that extend their capabilities.</p>
-<p>Next week we’re going to look more at <strong>Retrieval Augmented
-Generation</strong> and other patterns for building applications with
-LLMs.</p>
+<ul>
+<li>You’ve now created an agent <em>and</em> used a couple of “copilot”
+agents to help you do it!</li>
+<li>In your own time:
+<ul>
+<li>Have a look at the list of triggers and tools that Zapier has
+available for integrating with other systems</li>
+<li>Try refining the agent instructions to further control the kind of
+desserts or movies</li>
+<li>Try building an agent to automate something of interest to you!</li>
+</ul></li>
+<li>There is also a homework exercise to extend this agent into a
+“multi-agent” system that uses another agent to generate a recipe for
+each dessert.</li>
+</ul>
 </body>
 </html>

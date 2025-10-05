@@ -44,6 +44,8 @@ courses, like AINoon.
 What is TechNoon?
 ```
 
+**AUDIENCE QUESTION:** Did it give a helpful answer?
+
 > It will only give a good answer if you provided the **Text** source
 > above.
 
@@ -107,6 +109,8 @@ Let's give it more detailed knowledge!
 List the available TechNoon courses
 ```
 
+**AUDIENCE QUESTION:** Did it give a helpful answer?
+
 **But how is it using the file?**
 
 1. Every time a question is asked, it searches through the file for
@@ -153,6 +157,11 @@ It's important to test chatbots **for their intended use case**.
 
 *Refer to the **Testing a Chatbot** slide*
 
+**AUDIENCE QUESTION:** What happens if you ask it an off-topic question?
+
+```
+What is a large language model?
+```
 
 ## Conclusion
 

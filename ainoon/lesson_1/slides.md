@@ -5,8 +5,7 @@ title: AINoon Lesson 1
 ### Get Ready for AINoon!
 
 * Open [technoon.org/ainoon](https://technoon.org/ainoon)
-* Make sure you can open [chatgpt.com](https://chatgpt.com)
-* You'll need to log in to follow all steps in the tutorial
+* Log in with a free account to [chatgpt.com](https://chatgpt.com)
 
 ### Thanks
 
@@ -99,6 +98,18 @@ Get all the slides, tutorials, and homework from:
   * *Tutorial:* "Vibe-coding" an app with [Replit](https://replit.com/)
 
 <span style="font-size: 0.7em;">We'll use convenient tools in tutorials, but the focus is on principles that will apply in any tool</span>
+
+<aside class="notes">
+
+* We're leaving AI risks quite late, given I'm sure you'll have a lot
+  of questions relating to that.
+* However, it will be easier to have a more grounded conversation
+  about the risks once we have a shared understanding of:
+  * What AI actually is
+  * How it works
+  * and what it is capable of
+
+</aside>
 
 </div>
 
@@ -219,15 +230,26 @@ Get all the slides, tutorials, and homework from:
 
 <div style="font-size: 0.9em;">
 
-* **Public chatbots** train future chatbots with your data
-* Companies deploy **internal chatbots** to protect data
-  * Often using business-to-business service offerings
-  * E.g. From Microsoft, Amazon, or Google clouds
-* You can run ***open* chatbots** on your own computers
-  * E.g. Llama (Meta), gpt-oss (OpenAI), DeepSeek
-  * Most require specialised hardware, but less powerful chatbots can
-    run on a laptop
-  * Check whether licenses allow commercial use
+<ul>
+<li class="fragment">
+**Public chatbots** train future chatbots with your data
+</li>
+<li class="fragment">
+Companies deploy **internal chatbots** to protect data
+<ul>
+<li>Often using business-to-business service offerings</li>
+<li>E.g. From Microsoft, Amazon, or Google clouds</li>
+</ul>
+</li>
+<li class="fragment">
+You can run ***open* chatbots** on your own computers
+<ul>
+<li>E.g. Llama (Meta), gpt-oss (OpenAI), DeepSeek</li>
+<li>Most require specialised hardware, but less powerful chatbots can run on a laptop</li>
+<li>Check whether licenses allow commercial use</li>
+</ul>
+</li>
+</ul>
 
 </div>
 
@@ -245,6 +267,8 @@ Get all the slides, tutorials, and homework from:
 
 <div style="font-size: 0.9em;">
 
+::: incremental
+
 * Each prompt should request **one thing**
 * Start prompts with a **persona**
   * E.g. "You are an expert in project management..."
@@ -255,6 +279,8 @@ Get all the slides, tutorials, and homework from:
 * **Seek more tips** online for specific use-cases
   * It's all art/craft, not science/engineering
   * Advice will likely change as models change
+
+:::
 
 </div>
 
@@ -272,12 +298,6 @@ Get all the slides, tutorials, and homework from:
 
 **Remember:** Don't use private data with public models!
 
-* Try ChatGPT's **Think longer** (reasoning) mode:
-  * "Make a plan to increase visitors to my website"
-  * Compare level of detail with/without reasoning
-* Try ChatGPT's **Deep Research** mode:
-  * "Find a cheap washing machine for a family of four"
-  * Searches the web and summarises in a few minutes
 * **Practice prompting**
   * Describe a photo with text to prompt ChatGPT to replicate it
   * Keep refining your prompt to more closely match the photo

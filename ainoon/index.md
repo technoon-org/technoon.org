@@ -89,9 +89,9 @@ AI and seeking assistance with your own use-cases.
         <div class="col col-3">Building an agent with <a href="https://zapier.com/" target="_blank" rel="noopener">Zapier</a></div>
         <div class="col col-4 markdown-content">
             <ul>
-                <li>Slides (coming soon)</li>
-                <li>Tutorial (coming soon)</li>
-                <li>Homework (coming soon)</li>
+                <li><a href="https://technoon.org/ainoon/lesson_3/slides.html" target="_blank" rel="noopener">Slides</a></li>
+                <li><a href="https://technoon.org/ainoon/lesson_3/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
+                <li><a href="https://technoon.org/ainoon/lesson_3/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
             </ul>
         </div>
     </li>

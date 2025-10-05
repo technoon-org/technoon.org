@@ -5,7 +5,7 @@ title: AINoon Lesson 2
 ### Get Ready for AINoon!
 
 * Open [technoon.org/ainoon](https://technoon.org/ainoon)
-* Log in with an account to [chatbase.co/dashboard](https://chatbase.co/dashboard)
+* Log in with a free account to [chatbase.co/dashboard](https://chatbase.co/dashboard)
 
 ### Thanks
 
@@ -52,6 +52,7 @@ How generative AI works and how that informs how to best use it
 * The chatbot predicts what text comes next, one word at a time
 * The prompt is split into tokens (words or parts of words)
   * Image and audio inputs can similarly be split into chunks to act as tokens
+  * Services usually charge you for each input and output token
 * Tokens passed into an LLM, with each token represented as a number
 * Those numbers are processed by layers of "neurons"
 * The final layer outputs a number for each possible token representing the probability that token comes next
@@ -160,6 +161,8 @@ document
 
 <div style="font-size: 0.9em;">
 
+::: incremental
+
 * Ask a **list of questions** you want it to answer
 * **Amend instructions or sources** to improve answers
 * Ask each question **multiple times** to check it consistently gives
@@ -168,6 +171,8 @@ document
   * Changes to instructions, knowledge, or model
   * Using a system to automate testing helps!
 * **Test edge cases** - How does it respond to off-topic questions?
+
+:::
 
 </div>
 

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>AINoon Lesson 3</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="shortcut icon" type="image/x-icon" href="../revealjs/favicon.ico">
+  <link rel="stylesheet" href="../revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../revealjs/dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../revealjs/dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="../revealjs/dist/theme/white.css">
+  <link rel="stylesheet" href="../revealjs/custom.css">
+  <base target="_blank">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">AINoon Lesson 3</h1>
+</section>
+
+<section id="get-ready-for-ainoon" class="slide level3">
+<h3>Get Ready for AINoon!</h3>
+<ul>
+<li>Open <a
+href="https://technoon.org/ainoon">technoon.org/ainoon</a></li>
+<li>Log in with a free account to <a
+href="https://zapier.com">zapier.com</a></li>
+</ul>
+</section>
+<section id="thanks" class="slide level3">
+<h3>Thanks</h3>
+<ul>
+<li>To the host for the great venue!</li>
+<li>To our sponsors</li>
+</ul>
+</section>
+<section id="administrivia" class="slide level3">
+<h3>Administrivia</h3>
+<ul>
+<li>Fire escapes</li>
+<li>Toilets</li>
+<li>Cleaning up after ourselves</li>
+<li>WiFi</li>
+</ul>
+</section>
+<section id="common-patterns-for-ai-apps" class="slide level3">
+<h3>Common Patterns for AI Apps</h3>
+<ul>
+<li>Retrieval Augmented Generation (RAG)</li>
+<li>Tools</li>
+<li>Agents</li>
+</ul>
+<p>You may not use all of these patterns yourself, but understanding
+what’s possible will enable you to spot opportunities.</p>
+</section>
+<section id="most-ai-apps-are-surprisingly-simple" class="slide level3">
+<h3>Most AI apps are surprisingly simple</h3>
+<div class="fragment" style="margin-top: 40px;">
+Clever preparation of prompt/context<br>+
+</div>
+GenAI model to generate text, images, etc.
+<div class="fragment">
++<br>Clever use of model outputs
+</div>
+<aside class="notes">
+<ul>
+<li>AI apps are heavily based around using GenAI to generate content,
+just like we’ve seen in earlier lessons</li>
+<li>The rest is just clever tricks of how:
+<ul>
+<li>The prompt (or context) is prepared</li>
+<li>The outputs of the model are used</li>
+</ul></li>
+<li>We’re going to look at the most common tricks</li>
+</ul>
+</aside>
+</section>
+<section id="retrieval-augmented-generation-rag" class="slide level3">
+<h3>Retrieval Augmented Generation (RAG)</h3>
+<div style="font-size: 0.95em;">
+<div>
+<ul>
+<li class="fragment"><strong>Problem:</strong> LLMs can answer questions
+about general knowledge from training data, but have no knowledge of
+your domain/company</li>
+<li class="fragment"><strong>Expensive solution:</strong> Continue to
+train (“fine-tune”) the model on your own text</li>
+<li class="fragment"><strong>Pragmatic solution:</strong>
+<em>Retrieve</em> relevant text and add it to <em>augment</em> the
+prompt</li>
+</ul>
+</div>
+<aside class="notes">
+<ul>
+<li>We saw this in last week’s tutorial where we added knowledge sources
+to a custom chatbot</li>
+</ul>
+</aside>
+</div>
+</section>
+<section id="selecting-relevant-text-for-rag" class="slide level3">
+<h3>Selecting relevant text for RAG</h3>
+<ol>
+<li class="fragment" data-fragment-index="1">
+<strong>Break up documents</strong> into <em>chunks</em> of text
+</li>
+<li class="fragment" data-fragment-index="2">
+When a user’s question comes in, <strong>search</strong> for relevant
+chunks of text
+<ul>
+<li class="fragment" data-fragment-index="3" style="font-size: 0.7em;">
+Usually by finding chunks with the <strong>most similar
+“meaning”</strong> to the question according to a specialised <em>text
+embedding model</em>
+</li>
+</ul>
+</li>
+<li class="fragment" data-fragment-index="4">
+Add relevant chunks to the prompt
+</li>
+</ol>
+<style>
+.rag-diagram > p {
+    display: grid;
+}
+.rag-diagram img {
+    margin: 0;
+    grid-area: 1 / 1;
+    background: white;
+}
+</style>
+<div class="r-stack rag-diagram">
+<p><img src="assets/rag-1.png" class="fragment" data-fragment-index="1">
+<img src="assets/rag-3.png" class="fragment" data-fragment-index="2">
+<img src="assets/rag-4.png" class="fragment" data-fragment-index="3">
+<img src="assets/rag.png" class="fragment" data-fragment-index="4"></p>
+</div>
+</section>
+<section id="challenges-with-rag" class="slide level3">
+<h3>Challenges with RAG</h3>
+<ul>
+<li>Getting accurate knowledge sources
+<ul>
+<li>Garbage in, garbage out</li>
+</ul></li>
+<li>Configuring search to find the best chunks</li>
+<li>Ensuring chunks include <em>all</em> relevant context</li>
+</ul>
+</section>
+<section id="tools---expanding-llm-capabilities" class="slide level3">
+<h3>Tools - Expanding LLM Capabilities</h3>
+<style>
+.tools-diagram > p {
+    display: grid;
+}
+.tools-diagram img {
+    margin: 0;
+    grid-area: 1 / 1;
+    background: white;
+}
+</style>
+<div class="r-stack tools-diagram">
+<p><img src="assets/tools-1.png" class="fragment">
+<img src="assets/tools-2.png" class="fragment">
+<img src="assets/tools-3.png" class="fragment">
+<img src="assets/tools-4.png" class="fragment">
+<img src="assets/tools-5.png" class="fragment">
+<img src="assets/tools-6.png" class="fragment">
+<img src="assets/tools-7.png" class="fragment">
+<img src="assets/tools.png" class="fragment"></p>
+</div>
+<p class="fragment">
+<strong>Key idea:</strong> The LLM decides when to call a tool
+</p>
+<aside class="notes">
+<ol type="1">
+<li>Users asks for something the LLMs can’t answer by itself
+<ul>
+<li>E.g. training data is old, and won’t include upcoming concerts</li>
+</ul></li>
+<li>A set of available tools is described in the prompt
+<ul>
+<li>Includes what the tool does and how to call it</li>
+</ul></li>
+<li>If the LLM output is in the format of a tool call…</li>
+<li>…the output is passed to the tool</li>
+<li>The tool does it’s job, and <em>its</em> output is passed back into
+the LLM as part of the prompt</li>
+<li>Now the LLM is able to generate an answer for the user</li>
+<li>Which is then passed back to the user</li>
+</ol>
+</aside>
+</section>
+<section id="examples-of-tools" class="slide level3">
+<h3>Examples of Tools</h3>
+<div style="font-size: 0.9em;">
+<ul>
+<li><strong>Fetch data:</strong>
+<ul>
+<li>Web or document search (RAG tools)</li>
+<li>Run code (e.g. to analyse a spreadsheet)</li>
+<li>Fetch data from a system (e.g. task management)</li>
+<li>Ask human for input (e.g. review a decision)</li>
+</ul></li>
+<li><strong>Take action:</strong>
+<ul>
+<li>Write to a file</li>
+<li>Send a message</li>
+<li>Update data in a system</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="providing-tools-to-a-chatbot" class="slide level3">
+<h3>Providing Tools to a Chatbot</h3>
+<div>
+<ul>
+<li class="fragment">Many chatbots have built-in tools, or allow you to
+provide your own
+<ul>
+<li class="fragment">E.g. You can enable <em>Web Search</em> in
+ChatGPT</li>
+</ul></li>
+<li class="fragment">Many systems now provide an <a
+href="https://modelcontextprotocol.io/docs/getting-started/intro">MCP
+server</a> that provides tools in a standard format for any AI app
+<ul>
+<li class="fragment">E.g. An MCP server for files on your computer
+allows the LLM to read/write any file it chooses</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="agents-agentic-ai" class="slide level3">
+<h3>Agents / Agentic AI</h3>
+<p>Vague term with lots of meanings, but one useful definition is:</p>
+<blockquote>
+<p>An LLM agent runs tools in a loop to achieve a goal - <a
+href="https://simonwillison.net/2025/Sep/18/agents/">Simon
+Willison</a></p>
+</blockquote>
+<p>(so that tool example was technically an agent)</p>
+</section>
+<section id="example-of-an-agent" class="slide level3">
+<h3>Example of an Agent</h3>
+<style>
+.agent-diagram > p {
+    display: grid;
+}
+.agent-diagram img {
+    margin: 0;
+    grid-area: 1 / 1;
+    background: white;
+}
+</style>
+<div class="r-stack agent-diagram">
+<p><img src="assets/agent-1.png" class="fragment">
+<img src="assets/agent-2.png" class="fragment">
+<img src="assets/agent-3.png" class="fragment">
+<img src="assets/agent-4.png" class="fragment">
+<img src="assets/agent-5.png" class="fragment">
+<img src="assets/agent-6.png" class="fragment">
+<img src="assets/agent-7.png" class="fragment">
+<img src="assets/agent-8.png" class="fragment">
+<img src="assets/agent-9.png" class="fragment">
+<img src="assets/agent.png" class="fragment"></p>
+</div>
+<aside class="notes">
+<p>Let’s say we’re a restaurant who wants to attract diners with
+desserts themed for upcoming movie releases.</p>
+<ol type="1">
+<li>We’ll call the LLM with instructions for the agent’s task
+<ul>
+<li><em>Talk through each step, including the overall goal</em></li>
+</ul></li>
+<li>We need to provide any tools that the agent needs to complete its
+goal:
+<ul>
+<li>A tool to search the web for movies</li>
+<li>A tool to update the spreadsheet</li>
+</ul></li>
+<li>These are good examples of tools that <em>fetch data</em> and
+<em>take action</em></li>
+<li>We’ll configure a trigger to run the agent on the first day of every
+month</li>
+<li>As we saw in the tools example, the LLM will be called in a loop as
+it chooses to execute tools, makes use of the results, executes more
+tools…</li>
+<li>…and so on until the goal is achieved</li>
+</ol>
+<p>Some things to note about this pattern:</p>
+<ol type="1">
+<li>A variety of events can be used to trigger an agent
+<ul>
+<li>When a chatbot receives a message</li>
+<li>When an email lands in your inbox</li>
+</ul></li>
+<li>Agents typically use a <strong>reasoning</strong> LLM
+<ul>
+<li>Specially trained to approach complex tasks with
+<em>chain-of-thought</em></li>
+<li>It basically “talks to itself”</li>
+</ul></li>
+<li>You can expand this into a <strong>multi-agent</strong> system
+<ul>
+<li>A top-level coordinator LLM calls other agents like they are
+tools</li>
+<li>Each agent has instructions and tools to perform a specific
+task</li>
+</ul></li>
+</ol>
+</aside>
+</section>
+<section id="examples-of-agents" class="slide level3">
+<h3>Examples of Agents</h3>
+<div style="font-size: 0.8em;">
+<ul>
+<li><strong>Deep Research</strong> for extensive web searches
+(ChatGPT)</li>
+<li><strong>NotebookLM</strong> for research and study (Google)</li>
+<li><strong>Copilots</strong> that automate tasks in apps (e.g. Outlook,
+Excel)</li>
+<li><strong>GitHub Copilot</strong>, <strong>Claude Code</strong>, and
+<strong>Aider</strong> for writing code</li>
+<li>As one part in an automation workflow (e.g. <strong>n8n</strong>
+workflows)</li>
+</ul>
+</div>
+</section>
+<section id="tutorial-objectives" class="slide level3">
+<h3>Tutorial Objectives</h3>
+<p>Let’s build that movie desserts agent!</p>
+<ul>
+<li>Set up a table to store the dessert ideas</li>
+<li>Configure the agent instructions and tools</li>
+<li>Test the agent!</li>
+</ul>
+<p>We’ll also use Zapier’s “copilot” agents along the way to help us
+make the table and agent!</p>
+</section>
+<section id="homework" class="slide level3">
+<h3>Homework</h3>
+<div style="font-size: 0.65em;">
+<ul>
+<li>Try ChatGPT’s <strong>Think longer</strong> (reasoning) mode:
+<ul>
+<li>“Make a plan to increase visitors to my website”</li>
+<li>Compare level of detail with/without reasoning</li>
+</ul></li>
+<li>Try ChatGPT’s <strong>Deep Research</strong> agent:
+<ul>
+<li>“Find a cheap washing machine for a family of four”</li>
+<li>Searches the web and summarises in a few minutes</li>
+</ul></li>
+<li>Extend your <em>Desserts</em> agent into a <strong>multi-agent
+system</strong>:
+<ul>
+<li>Make a new <em>Recipe</em> agent that takes a dessert description
+and generates a recipe for it</li>
+<li>Use the <em>Call an agent</em> tool from your <em>Desserts</em>
+agent to call the <em>Recipe</em> agent for each dessert
+description</li>
+<li>Add a <code>Recipe</code> long-text column to your table so that the
+<em>Desserts</em> agent can include the recipe in each row
+<ul>
+<li>Remove and re-add the <em>Zapier Tables</em> tool to see the new
+column</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="../revealjs/dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="../revealjs/plugin/notes/notes.js"></script>
+  <script src="../revealjs/plugin/search/search.js"></script>
+  <script src="../revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../revealjs/plugin/mermaid/mermaid.js"></script>
+
+  <script>
+
+     document.querySelectorAll('.top-fragment-only .fragment .fragment').forEach(function(el) {
+         el.classList.remove('fragment');
+     });
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom,
+          RevealMermaid
+        ]
+      });
+    </script>
+    </body>
+</html>
