@@ -15,7 +15,7 @@ title: GitNoon Lesson X
 * Fire escapes
 * Toilets
 * Cleaning up after ourselves
-* WiFi
+* Wi-Fi
 
 ### Lunch Talk:
 

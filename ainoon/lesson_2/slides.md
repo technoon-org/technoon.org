@@ -17,7 +17,7 @@ title: AINoon Lesson 2
 * Fire escapes
 * Toilets
 * Cleaning up after ourselves
-* WiFi
+* Wi-Fi
 
 ### Demystifying AI
 

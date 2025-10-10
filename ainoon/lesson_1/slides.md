@@ -17,7 +17,7 @@ title: AINoon Lesson 1
 * Fire escapes
 * Toilets
 * Cleaning up after ourselves
-* WiFi
+* Wi-Fi
 
 
 ### Welcome to AINoon!

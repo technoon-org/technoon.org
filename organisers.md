@@ -21,7 +21,7 @@ To run a TechNoon training course - here's what you need:
   * Check out our [ready-to-go course material](#course-materials)
   * Because corporate network restrictions may interfere with some
     websites and package installations - check that all material that
-    you intend to use will be accessible from the WiFi
+    you intend to use will be accessible from the Wi-Fi
   * Please consider sharing any material you create so others can use
     it. If you created a course we recommend using a [Creative Commons
     Attribution-ShareAlike 4.0 International
@@ -156,9 +156,9 @@ To run a TechNoon training course - here's what you need:
       would be too smelly for a shared space
   * It should be easy to find/access the meeting room (this should be
     an easier requirement during the day)
-  * WiFi - because some corporate network restrictions may interfere
+  * Wi-Fi - because some corporate network restrictions may interfere
     with some websites and package installations - check that all
-    material that you intend to use will be accessible from the WiFi
+    material that you intend to use will be accessible from the Wi-Fi
   * Microphone if there is a large number of attendees e.g. a lapel
     mic for the speaker and a run-around hand mic for questions
     (helpers can take it to people with questions)
@@ -202,7 +202,7 @@ Here are the next steps:
 2. If you can commit to the full course, please reply to this email to let us know and help us confirm numbers.
 3. <Replace this step with any prep attendees need to perform, this is an example for PyNoon> Please test that the laptop you will be bringing to the course is able to access https://colab.research.google.com/ that we will be using for coding in the course. If you have any issues, please send us an email.
 4. We look forward to seeing you for the first session on <date and time of first session>! The venue is <venue info, including how to get there>
-5. Your time is valuable, and there's a lot to cover, so we're going to hit the ground running in the first session. Please make sure you're there at 11:30 sharp for the first session - we'll be helping make sure everyone is connected to the WiFi and set up to follow along with the live-coding lessons.
+5. Your time is valuable, and there's a lot to cover, so we're going to hit the ground running in the first session. Please make sure you're there at 11:30 sharp for the first session - we'll be helping make sure everyone is connected to the Wi-Fi and set up to follow along with the live-coding lessons.
 
 All the best,
 <course name> Organisers - <organiser names>

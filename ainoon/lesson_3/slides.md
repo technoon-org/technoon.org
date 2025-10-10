@@ -18,7 +18,7 @@ title: AINoon Lesson 3
 * Fire escapes
 * Toilets
 * Cleaning up after ourselves
-* WiFi
+* Wi-Fi
 
 
 ### Common Patterns for AI Apps

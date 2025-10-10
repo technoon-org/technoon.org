@@ -64,7 +64,7 @@ git config --global alias.graph "log --all --graph --oneline --decorate"
 * Fire escapes
 * Toilets
 * Cleaning up after ourselves
-* WiFi
+* Wi-Fi
 
 
 ### Lunch Talk: Rewriting History

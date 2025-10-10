@@ -53,7 +53,7 @@ git status
 * Fire escapes
 * Toilets
 * Cleaning up after ourselves
-* WiFi
+* Wi-Fi
 
 ### Lunch Talk: Exploring History
 

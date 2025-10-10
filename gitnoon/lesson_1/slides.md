@@ -21,7 +21,7 @@ title: GitNoon Lesson 1
 * Fire escapes
 * Toilets
 * Cleaning up after ourselves
-* WiFi
+* Wi-Fi
 
 ### Lunch Talk: Intro to Git
 
