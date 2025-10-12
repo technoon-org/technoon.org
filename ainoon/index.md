@@ -98,7 +98,7 @@ AI and seeking assistance with your own use-cases.
     <li>
         <div class="col col-1">ainoon-4</div>
         <div class="col col-2">AI risks and challenges</div>
-        <div class="col col-3">"Vibe-coding" an app with <a href="https://replit.com/" target="_blank" rel="noopener">Replit</a></div>
+        <div class="col col-3">"Vibe-coding" an app with <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a></div>
         <div class="col col-4 markdown-content">
             <ul>
                 <li>Slides (coming soon)</li>
@@ -119,12 +119,13 @@ any similar service:
 * Tutorial 1: [chatgpt.com](https://chatgpt.com){:target="_blank"}{:rel="noopener"}
 * Tutorial 2: [chatbase.co](https://chatbase.co){:target="_blank"}{:rel="noopener"}
 * Tutorial 3: [zapier.com](https://zapier.com){:target="_blank"}{:rel="noopener"}
-* Tutorial 4: [replit.com](https://replit.com){:target="_blank"}{:rel="noopener"}
+* Tutorial 4: [gemini.google.com](https://gemini.google.com){:target="_blank"}{:rel="noopener"}
 
 ## Resources
 
 <ul>
     <li><a download href="https://technoon.org/ainoon/lesson_1/washing_machine_reviews.csv" target="_blank" rel="noopener" download><code>washing_machine_reviews.csv</code></a> for lesson 1 - (fake AI-generated data).</li>
     <li><a download href="https://technoon.org/ainoon/lesson_2/technoon_knowledge.txt" target="_blank" rel="noopener" download><code>technoon_knowledge.txt</code></a> for lesson 2.</li>
+    <li><a download href="https://technoon.org/ainoon/lesson_4/cooper.jpg" target="_blank" rel="noopener" download><code>technoon_knowledge.txt</code></a> for lesson 2.</li>
     <li>Instructors can find tips for presenting in the <a href="https://technoon.org/ainoon/course-material" target="_blank" rel="noopener">full course material listing</a>.</li>
 </ul>

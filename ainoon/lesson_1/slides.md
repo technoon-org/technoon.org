@@ -95,7 +95,7 @@ Get all the slides, tutorials, and homework from:
   * *Tutorial:* Building an agent with [Zapier](https://zapier.com/)
 * **Lesson 4:**
   * *Presentation:* AI risks and challenges
-  * *Tutorial:* "Vibe-coding" an app with [Replit](https://replit.com/)
+  * *Tutorial:* "Vibe-coding" an app with [Gemini](https://gemini.google.com/)
 
 <span style="font-size: 0.7em;">We'll use convenient tools in tutorials, but the focus is on principles that will apply in any tool</span>
 
