@@ -171,7 +171,7 @@ Get all the slides, tutorials, and homework from:
 <h4>Deep Learning (DL) ~2000s</h4>
 <ul>
 <li>Approach to ML based on very large (artificial) "neural networks"</li>
-<li>E.g. Recognising objects in images, topic-labelling of text</li>
+<li>E.g. Recognising objects in images, text translation</li>
 </ul>
 <div class="venn fragment">
 <h4>Generative AI (GenAI) ~2020s</h4>
