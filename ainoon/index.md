@@ -101,9 +101,9 @@ AI and seeking assistance with your own use-cases.
         <div class="col col-3">"Vibe-coding" an app with <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a></div>
         <div class="col col-4 markdown-content">
             <ul>
-                <li>Slides (coming soon)</li>
+                <li><a href="https://technoon.org/ainoon/lesson_4/slides.html" target="_blank" rel="noopener">Slides</a></li>
                 <li><a href="https://technoon.org/ainoon/lesson_4/tutorial.html" target="_blank" rel="noopener">Tutorial</a></li>
-                <li>Homework (coming soon)</li>
+                <li><a href="https://technoon.org/ainoon/lesson_4/slides.html#/homework" target="_blank" rel="noopener">Homework</a></li>
             </ul>
         </div>
     </li>

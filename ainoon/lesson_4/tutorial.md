@@ -2,15 +2,15 @@
 title: AINoon Tutorial 4
 ---
 
-The goal of this tutorial is to **vibe-code a simple web application**.
+The goal of this tutorial is to **vibe code a simple web application**.
 
 
-## What is Vibe-coding?
+## What is vibe coding?
 
-*Refer to **What is Vibe-coding?** and **Uses of Vibe-coding** slides*
+*Refer to **What is wibe coding?** and **What is vibe coding useful for?** slides*
 
 
-## Vibe-coding an app
+## Vibe coding an app
 
 * Let's say you're responsible for writing a weekly newsletter at your
   company.
@@ -157,7 +157,7 @@ The same warning goes for not being sure of the correctness
 
 ## Conclusion
 
-In this tutorial, we've seen how vibe-coding is a powerful tool for
+In this tutorial, we've seen how vibe coding is a powerful tool for
 **rapid prototyping** and **simple, low-stakes apps**.
 
 However, we've also seen the risks to **security** and **correctness**

@@ -170,7 +170,9 @@ document
 * Re-test all questions **after any change**
   * Changes to instructions, knowledge, or model
   * Using a system to automate testing helps!
-* **Test edge cases** - How does it respond to off-topic questions?
+* **Test edge cases**
+  * How does it respond to off-topic questions?
+  * If a user reports a failure, add a new test!
 
 :::
 

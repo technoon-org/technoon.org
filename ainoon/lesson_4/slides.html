@@ -70,73 +70,343 @@ href="https://gemini.google.com">gemini.google.com</a></li>
 </section>
 <section id="ai-risks-and-challenges" class="slide level3">
 <h3>AI Risks and Challenges</h3>
-<p>TODO</p>
+<div style="font-size: 0.9em;">
+<div>
+<ul>
+<li class="fragment">There’s a lot of <strong>hype</strong> <em>and</em>
+a lot of <strong>fear</strong></li>
+<li class="fragment">To make good decisions:
+<ol type="1">
+<li class="fragment">Understand the <strong>risks</strong></li>
+<li class="fragment">Assess them in the context of your
+<strong>application</strong></li>
+</ol></li>
+<li class="fragment">Some risks are <strong>challenges</strong> to be
+solved or mitigated
+<ul>
+<li class="fragment"><em>We didn’t stop using electricity because of
+shocks, we developed insulation</em></li>
+</ul></li>
+<li class="fragment"><strong>Do your own deeper research!</strong>
+<ul>
+<li class="fragment">This is food for thought, not authoritative
+answers</li>
+<li class="fragment">These are tricky issues with many differing
+opinions</li>
+<li class="fragment">The space is rapidly changing</li>
+<li class="fragment">The future is unknown</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="inaccurate-outputs" class="slide level3">
+<h3>Inaccurate Outputs</h3>
+<p>We’ve seen <em>plenty</em> of examples over the course</p>
+<div style="font-size: 0.9em;">
+<div>
+<ul>
+<li class="fragment"><strong>Consider failure modes:</strong> How could
+this fail? What would the impact be?</li>
+<li class="fragment"><strong><a
+href="https://www.trackmind.com/humans-in-the-loop-vs-on-the-loop/">Human
+in the loop</a>:</strong> Human decisions with AI support</li>
+<li class="fragment"><strong><a
+href="https://www.trackmind.com/humans-in-the-loop-vs-on-the-loop/">Human
+on the loop</a>:</strong> Human supervises AI decisions</li>
+<li class="fragment"><strong>Real human thinking</strong> is important
+to avoid <a
+href="https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity">workslop</a>!</li>
+<li class="fragment"><strong>Thorough testing:</strong> Like for
+chatbots in <a href="../lesson_2/slides.html#/testing-a-chatbot">Lesson
+2</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="unwanted-bias" class="slide level3">
+<h3>Unwanted Bias</h3>
+<div style="font-size: 0.9em;">
+<div>
+<ul>
+<li class="fragment"><strong>Examples:</strong>
+<ul>
+<li class="fragment">An LLM trained on 20th century writings may
+associate <em>doctor</em> as more <em>male</em> than
+<em>female</em></li>
+<li class="fragment">LLM providers may bias the training or filter
+outputs</li>
+<li class="fragment"><a
+href="https://news.mit.edu/2025/unpacking-large-language-model-bias-0617">LLMs
+may focus less on the middle of a long prompt</a></li>
+</ul></li>
+<li class="fragment"><strong>Mitigation:</strong>
+<ul>
+<li class="fragment">Be <strong>aware</strong> of potential bias</li>
+<li class="fragment">Consider your <strong>application</strong>: that
+20th century LLM…
+<ul>
+<li class="fragment"><em>might</em> prefer doctor CVs from male
+candidates</li>
+<li class="fragment"><em>might</em> still be a useful model of the 20th
+century</li>
+</ul></li>
+<li class="fragment">Avoid or tightly control AI in
+<strong>high-stakes</strong> decisions</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="privacy-and-security" class="slide level3">
+<h3>Privacy and Security</h3>
+<div style="font-size: 0.9em;">
+<div>
+<ul>
+<li class="fragment"><strong>LLMs may use your data for future
+training</strong>
+<ul>
+<li class="fragment">Some providers allow you to disable that</li>
+<li class="fragment">Corporate offerings preferred by companies
+<ul>
+<li class="fragment">Providers may still monitor for misuse</li>
+</ul></li>
+</ul></li>
+<li class="fragment"><strong>Don’t trust generated code you don’t
+understand</strong>
+<ul>
+<li class="fragment">Security issues can be subtle - more in the
+tutorial</li>
+</ul></li>
+<li class="fragment"><strong>Consider worst-case scenarios for agents,
+<br>like the <a
+href="https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/">lethal
+trifecta</a>:</strong>
+<ol type="1">
+<li class="fragment">Agent reads untrusted text (e.g. your email
+inbox)</li>
+<li class="fragment">Agent reads private data (e.g. your private
+files)</li>
+<li class="fragment">Agent writes to public location (e.g. sends an
+email)</li>
+<li class="fragment">→ E.g. “Reply to this email with private
+files…”</li>
+</ol></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="copyright" class="slide level3">
+<h3>Copyright</h3>
+<p><strong>Disclaimer:</strong> This is not legal advice!</p>
+<div style="font-size: 0.85em;">
+<div>
+<ul>
+<li class="fragment"><strong>Does training a model on content infringe
+the author’s copyright?</strong>
+<ul>
+<li class="fragment">Unclear at this stage</li>
+<li class="fragment">Active court cases regarding books, music, code,
+etc.</li>
+</ul></li>
+<li class="fragment"><strong>Does the model provider or prompter own
+AI-generated content?</strong>
+<ul>
+<li class="fragment">The US has determined AI-generated content can’t be
+copyrighted</li>
+<li class="fragment">Check the terms and conditions of the model
+provider</li>
+</ul></li>
+<li class="fragment"><strong><a
+href="https://builtin.com/artificial-intelligence/ai-copyright">Watch
+this space</a></strong></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="vendor-lock-in" class="slide level3">
+<h3>Vendor lock-in</h3>
+<div style="font-size: 0.9em;">
+<div>
+<ul>
+<li class="fragment">Like with any technology service, <strong>avoid
+becoming strongly tied to one vendor</strong>:
+<ul>
+<li class="fragment">With competition and evolving offerings, you want
+<strong>freedom to pick the best provider</strong></li>
+<li class="fragment"><strong>Prices may start below cost</strong> to
+grow users, then increase later</li>
+</ul></li>
+<li class="fragment">Build <strong>modular</strong> systems with
+replaceable components</li>
+<li class="fragment">Prefer <strong>open-source</strong> tools and
+<strong>open-weight</strong> models that any provider can run</li>
+<li class="fragment">Look for compatibility with <strong>open
+standards</strong> used across providers - e.g. <a
+href="https://modelcontextprotocol.io/docs/getting-started/intro">Model
+Context Proctol (MCP)</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="other-risks-to-consider" class="slide level3">
+<h3>Other risks to consider</h3>
+<div style="font-size: 0.85em;">
+<div>
+<ul>
+<li class="fragment"><strong>Environmental impact</strong> - <a
+href="https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117">training
+and serving models has high electricity and water costs</a></li>
+<li class="fragment"><strong>Impact on jobs</strong> - AI promises
+efficiency for some <em>tasks</em>
+<ul>
+<li class="fragment">Depending on a worker’s role, AI <em>may</em>:
+<ul>
+<li class="fragment">Allow more time for other tasks</li>
+<li class="fragment">Change the required skills or the way work is
+done</li>
+<li class="fragment">Reduce the required number of workers</li>
+</ul></li>
+</ul></li>
+<li class="fragment"><strong>Artificial General Intelligence (AGI) /
+Superintelligence</strong>
+<ul>
+<li class="fragment">AI that learns and thinks like a human
+<ul>
+<li class="fragment">No concrete definition to evaluate against</li>
+<li class="fragment">Goal posts seem to shift with each advance</li>
+</ul></li>
+<li class="fragment">Some <a
+href="https://arxiv.org/abs/2303.12712">claim GenAI shows “sparks” of
+AGI</a>,<br>others <a
+href="https://machinelearning.apple.com/research/illusion-of-thinking">show
+how it doesn’t truly “think”</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="discussion" class="slide level3">
+<h3>Discussion</h3>
+<ul>
+<li>Have we missed any risks?</li>
+<li>Can you think of mitigations for any of the discussed risks?</li>
+<li>Any other questions or comments?</li>
+</ul>
 </section>
 <section id="tutorial-objectives" class="slide level3">
 <h3>Tutorial Objectives</h3>
-<p>TODO</p>
+<ol type="1">
+<li>Use <em>vibe coding</em> to build a simple web app</li>
+<li>See the risks of using code you don’t understand</li>
+<li>Discuss practices for coding safely with AI</li>
+</ol>
 </section>
 <section id="what-is-vibe-coding" class="slide level3">
-<h3>What is Vibe-coding?</h3>
-<p>TODO</p>
-<p>First, what is <em>coding</em>?</p>
-<blockquote>
-<p>Coding how software developers build apps - writing instructions in a
-special language the computer can understand.</p>
-</blockquote>
-<p><em>Open the source view (<code>Ctrl-u</code>) on the technoon.org
-website to show the code for that website.</em></p>
-<blockquote>
-<p><em>Vibe</em>-coding is describing an app to an agent and letting it
-write the code <em>without checking the code it writes</em> -
-https://simonwillison.net/2025/Mar/19/vibe-coding/</p>
-</blockquote>
-</section>
-<section id="uses-of-vibe-coding" class="slide level3">
-<h3>Uses of Vibe-coding</h3>
-<p>TODO</p>
+<h3>What is vibe coding?</h3>
+<div style="font-size: 0.95em;">
+<div>
 <ul>
-<li>Enables coders and non-coders to rapidly build prototypes and simple
-apps for low-stakes use-cases</li>
-<li>It is not wise when privacy, security, or correctness are a concern
+<li class="fragment"><strong>What is coding?</strong>
 <ul>
-<li>You might still do AI-assisted programming, but you should be
-thoroughly reviewing the code</li>
+<li class="fragment">Writing instructions in languages the computer can
+understand</li>
+<li class="fragment">How software developers build apps</li>
 </ul></li>
-<li>Probably not the best way to learn to code</li>
-<li>Don’t use it to reinvent the wheel
+<li class="fragment"><strong>What is <em>AI-assisted</em>
+coding?</strong>
 <ul>
-<li>There are plenty of apps out there for building websites and
-forms</li>
+<li class="fragment">Any use of AI to help a developer write code</li>
 </ul></li>
-<li><strong>Sweet spot:</strong> automate time-consuming tasks that are
-specific to your work!</li>
+<li class="fragment"><strong>What is <a
+href="https://simonwillison.net/2025/Mar/19/vibe-coding/"><em>vibe</em>
+coding</a>?</strong>
+<ul>
+<li class="fragment">Describing an app to an agent and letting it write
+the code <em>without checking the code it writes</em></li>
+</ul></li>
 </ul>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>After defining <em>coding</em>, show an example by opening the
+source view (<code>Ctrl-u</code>) on the <a
+href="https://technoon.org">technoon.org</a> website to show the HTML
+code for that website.</li>
+</ul>
+</aside>
+</section>
+<section id="what-is-vibe-coding-useful-for" class="slide level3">
+<h3>What is vibe coding useful for?</h3>
+<div style="font-size: 0.9em;">
+<div>
+<ul>
+<li class="fragment">Enable anyone to rapidly build
+<strong>prototypes</strong> and apps for <strong>low-stakes</strong>
+use-cases.</li>
+<li class="fragment"><em>NOT</em> when <strong>security</strong> or
+<strong>correctness</strong> are important
+<ul>
+<li class="fragment">Carefully review generated code in those cases</li>
+</ul></li>
+<li class="fragment">Probably <strong>not the best way to learn to
+code</strong></li>
+<li class="fragment"><strong>Don’t reinvent the wheel</strong> - plenty
+of apps exist to build websites and forms</li>
+<li class="fragment"><strong>The sweet spot:</strong> automating
+time-consuming tasks that are specific to your work!</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="scaling-up-ai-assisted-coding" class="slide level3">
 <h3>Scaling up AI-Assisted Coding</h3>
-<p>TODO</p>
-<p>For bigger and more complex projects:</p>
+<p>To use AI on more complex coding projects:</p>
+<div style="font-size: 0.9em;">
+<div>
 <ul>
-<li>More advanced agents that work across a whole folder of files
+<li class="fragment">Use agents that work on a whole folder of files
 <ul>
-<li>Replit, Codex, GitHub Copilot</li>
+<li class="fragment">E.g. Replit, Codex, GitHub Copilot</li>
 </ul></li>
-<li>Planning documents</li>
-<li>Version control - GitNoon</li>
-<li>Expert knowledge to guide it - more specific prompts, like with
-images</li>
+<li class="fragment">Generate and review <strong>planning
+documents</strong> for:
+<ul>
+<li class="fragment">Features and other requirements</li>
+<li class="fragment">Technical architecture</li>
+</ul></li>
+<li class="fragment">Use <strong>version control</strong> to track
+changes
+<ul>
+<li class="fragment">Learn the Git version control tool with <a
+href="https://technoon.org/gitnoon/">GitNoon</a>!</li>
+</ul></li>
+<li class="fragment">Guide it with <strong>expert knowledge</strong> in
+prompts
+<ul>
+<li class="fragment">Photography terms → better images</li>
+<li class="fragment">Coding terms → better code</li>
+</ul></li>
 </ul>
+</div>
+</div>
 </section>
 <section id="homework" class="slide level3">
 <h3>Homework</h3>
-<p>TODO</p>
 <ul>
-<li>Research/consider risks and challenges</li>
-<li>Use replit - see how it makes a plan and generates a folder of
-files.
+<li><strong>Research one risk relevant to your use of AI</strong>
 <ul>
-<li>You might not get as far without a paid plan</li>
+<li>Find a range of perspectives</li>
+<li>Identify more mitigations</li>
+<li>Consider which mitigations are most appropriate for your
+application</li>
+</ul></li>
+<li><strong>Use a coding agent to make a larger app</strong>
+<ul>
+<li>E.g. Replit, Codex, or GitHub Copilot</li>
+<li>See how it makes a plan and generates a whole folder of files</li>
+<li>You might not get very far without a paid plan</li>
 </ul></li>
 </ul>
 </section>
