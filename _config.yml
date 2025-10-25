@@ -51,6 +51,10 @@ defaults:
       type: "assignments"
     values:
       layout: "assignment"
+  - scope:
+      path: "*/revealjs/**"
+    values:
+      sitemap: false
 
 
 plugins:
