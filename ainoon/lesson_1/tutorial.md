@@ -198,7 +198,7 @@ What is the average rating?
   * It's just a tool
   * It doesn't actually "think"
   * You need to do the thinking!
-  * That's why the logo for this course is a just a hat
+  * That's why the logo for this course is just a hat
   * **Refer to "Golden Rule" slide in the slide deck.**
 * Next week, we'll learn more about how a chatbot generates responses,
   which will help us better understand these limitations

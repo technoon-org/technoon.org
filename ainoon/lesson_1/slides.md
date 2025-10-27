@@ -278,7 +278,7 @@ You can run ***open* chatbots** on your own computers
   * Though it won't always follow instructions exactly!
 * **Seek more tips** online for specific use-cases
   * It's all art/craft, not science/engineering
-  * Advice will likely change as models change
+  * Advice will likely change as chatbots change
 
 :::
 
@@ -296,7 +296,7 @@ You can run ***open* chatbots** on your own computers
 
 <div style="font-size: 0.75em;">
 
-**Remember:** Don't use private data with public models!
+**Remember:** Don't use private data with public services!
 
 * **Practice prompting**
   * Describe a photo with text to prompt ChatGPT to replicate it

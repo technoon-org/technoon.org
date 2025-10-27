@@ -142,7 +142,7 @@ We've seen *plenty* of examples over the course
 * Prefer **open-source** tools and **open-weight** models that any
   provider can run
 * Look for compatibility with **open standards** used across
-  providers - e.g. [Model Context Proctol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro)
+  providers - e.g. [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro)
 
 :::
 
