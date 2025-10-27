@@ -145,6 +145,8 @@ How generative AI works and how that informs how to best use it
 * It might not consistently give the same answer
 * Different models (or model versions) can give very different
   responses to the same prompt
+* It only "knows" whats in its training data (usually 1-2 years old)
+  * Pairing it with web search mitigates this
 
 </div>
 

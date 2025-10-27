@@ -150,11 +150,14 @@ We've seen *plenty* of examples over the course
 
 ### Other risks to consider
 
-<div style="font-size: 0.85em;">
+<div style="font-size: 0.7em;">
 
 ::: incremental
 
 * **Environmental impact** - [training and serving models has high electricity and water costs](https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117)
+* **Identifying AI-generated content is difficult**
+  * It may "drown out" useful content on the Internet
+  * How will we find trustworthy training data for future models?
 * **Impact on jobs** - AI promises efficiency for some *tasks*
   * Depending on a worker's role, AI *may*:
     * Allow more time for other tasks
@@ -231,9 +234,9 @@ We've seen *plenty* of examples over the course
 
 ### Scaling up AI-Assisted Coding
 
-To use AI on more complex coding projects:
+<div style="font-size: 0.8em;">
 
-<div style="font-size: 0.9em;">
+To use AI on more complex coding projects:
 
 ::: incremental
 
@@ -248,6 +251,7 @@ To use AI on more complex coding projects:
 * Guide it with **expert knowledge** in prompts
   * Photography terms → better images
   * Coding terms  → better code
+* **AI code-completion** is also popular with experienced developers
 
 :::
 
