@@ -43,7 +43,7 @@ How generative AI works and how that informs how to best use it
 <img src="assets/neural-network-5.png" class="fragment">
 <img src="assets/neural-network-6.png" class="fragment">
 <img src="assets/neural-network-7.png" class="fragment">
-<img src="assets/neural-network.png" class="fragment">
+<!-- <img src="assets/neural-network.png" class="fragment">-->
 </div>
 
 <aside class="notes">
@@ -109,13 +109,13 @@ How generative AI works and how that informs how to best use it
 <tr><td><strong>Transformer</strong></td><td>The kind of neural network architecture used</td></tr>
 </table>
 
-<div style="font-size: 0.78em;">
+### <span style="font-size: 0.8em;">What does this teach us about using GenAI?</span>
 
-### What does this teach us about using GenAI?
+<div style="font-size: 0.7em;">
 
 <ul>
 <li class="fragment">The generation process is **not magic, just simple maths!**</li>
-<li class="fragment">We know *how* AI works, but **no-one truly knows *why* it works**
+<li class="fragment">We know *how* AI works, but **we can't interpret its decision-making**
   <ul>
   <li>The billions of calculations across neurons are too complex</li>
   </ul>

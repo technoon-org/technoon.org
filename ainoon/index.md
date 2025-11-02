@@ -126,6 +126,6 @@ any similar service:
 <ul>
     <li><a download href="https://technoon.org/ainoon/lesson_1/hotel_reviews.csv" target="_blank" rel="noopener" download><code>hotel_reviews.csv</code></a> for lesson 1 - (fake AI-generated data).</li>
     <li><a download href="https://technoon.org/ainoon/lesson_2/technoon_knowledge.txt" target="_blank" rel="noopener" download><code>technoon_knowledge.txt</code></a> for lesson 2.</li>
-    <li><a download href="https://technoon.org/ainoon/lesson_4/cooper.jpg" target="_blank" rel="noopener" download><code>cooper.jpg</code></a> for lesson 2. Photo by Kristina D.C. Hoeppner, CC BY-SA 2.0.</li>
+    <li><a download href="https://technoon.org/ainoon/lesson_4/cooper.jpg" target="_blank" rel="noopener" download><code>cooper.jpg</code></a> for lesson 4. Photo by Kristina D.C. Hoeppner, CC BY-SA 2.0.</li>
     <li>Instructors can find tips for presenting in the <a href="https://technoon.org/ainoon/course-material" target="_blank" rel="noopener">full course material listing</a>.</li>
 </ul>

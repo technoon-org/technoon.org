@@ -5,6 +5,9 @@ title: AINoon Tutorial 3
 The goal of this tutorial is to **make your own agent to come up with
 movie-themed dessert ideas for a restaurant.**
 
+We'll use Zapier, a website for automating workflows, which makes it
+easy to build AI agents.
+
 
 ## Set up a table to store the ideas
 

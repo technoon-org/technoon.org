@@ -69,43 +69,59 @@ href="https://gemini.google.com">gemini.google.com</a></li>
 </ul>
 </section>
 <section id="ai-risks-and-challenges" class="slide level3">
-<h3>AI Risks and Challenges</h3>
+<h3><span style="1.5em;">AI Risks and Challenges</span></h3>
 <div style="font-size: 0.9em;">
-<div>
+
 <ul>
-<li class="fragment">There’s a lot of <strong>hype</strong> <em>and</em>
-a lot of <strong>fear</strong></li>
-<li class="fragment">To make good decisions:
-<ol type="1">
-<li class="fragment">Understand the <strong>risks</strong></li>
-<li class="fragment">Assess them in the context of your
-<strong>application</strong></li>
-</ol></li>
-<li class="fragment">Some risks are <strong>challenges</strong> to be
-solved or mitigated
+<li class="fragment">
+There’s a lot of <strong>hype</strong> <em>and</em> a lot of
+<strong>fear</strong>
+</li>
+<li class="fragment">
+To make good decisions:
+<ol>
+<li>
+Understand the <strong>risks</strong>
+</li>
+<li>
+Assess them in the context of your <strong>application</strong>
+</li>
+</ol>
+</li>
+<li class="fragment">
+Some risks are <strong>challenges</strong> to be solved or mitigated
 <ul>
-<li class="fragment"><em>We didn’t stop using electricity because of
-shocks, we developed insulation</em></li>
-</ul></li>
-<li class="fragment"><strong>Do your own deeper research!</strong>
-<ul>
-<li class="fragment">This is food for thought, not authoritative
-answers</li>
-<li class="fragment">These are tricky issues with many differing
-opinions</li>
-<li class="fragment">The space is rapidly changing</li>
-<li class="fragment">The future is unknown</li>
-</ul></li>
+<li>
+<em>We didn’t stop using electricity because of shocks, we developed
+insulation</em>
+</li>
 </ul>
-</div>
+</li>
+<li class="fragment">
+<strong>Do your own deeper research!</strong>
+<ul>
+<li>
+This is food for thought, not authoritative answers
+</li>
+<li>
+These are tricky issues with many differing opinions
+</li>
+<li>
+AI is rapidly changing and the future is unknown
+</li>
+</ul>
+</li>
 </div>
 </section>
 <section id="inaccurate-outputs" class="slide level3">
 <h3>Inaccurate Outputs</h3>
 <p>We’ve seen <em>plenty</em> of examples over the course</p>
+<p>How can inaccuracy be mitigated?</p>
 <div style="font-size: 0.9em;">
 <div>
 <ul>
+<li class="fragment"><strong>Golden Rule of AI:</strong> Don’t trust
+outputs you can’t verify</li>
 <li class="fragment"><strong>Consider failure modes:</strong> How could
 this fail? What would the impact be?</li>
 <li class="fragment"><strong><a
@@ -113,10 +129,11 @@ href="https://www.trackmind.com/humans-in-the-loop-vs-on-the-loop/">Human
 in the loop</a>:</strong> Human decisions with AI support</li>
 <li class="fragment"><strong><a
 href="https://www.trackmind.com/humans-in-the-loop-vs-on-the-loop/">Human
-on the loop</a>:</strong> Human supervises AI decisions</li>
-<li class="fragment"><strong>Real human thinking</strong> is important
-to avoid <a
-href="https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity">workslop</a>!</li>
+on the loop</a>:</strong> Human supervises AI decisions
+<ul>
+<li class="fragment">But apathetic supervision can lead to <a
+href="https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity">workslop</a></li>
+</ul></li>
 <li class="fragment"><strong>Thorough testing:</strong> Like for
 chatbots in <a href="../lesson_2/slides.html#/testing-a-chatbot">Lesson
 2</a></li>
@@ -127,101 +144,130 @@ chatbots in <a href="../lesson_2/slides.html#/testing-a-chatbot">Lesson
 <section id="unwanted-bias" class="slide level3">
 <h3>Unwanted Bias</h3>
 <div style="font-size: 0.9em;">
-<div>
 <ul>
-<li class="fragment"><strong>Examples:</strong>
+<li>
+<strong>Examples:</strong>
 <ul>
-<li class="fragment">An LLM trained on 20th century writings may
-associate <em>doctor</em> as more <em>male</em> than
-<em>female</em></li>
-<li class="fragment">LLM providers may bias the training or filter
-outputs</li>
-<li class="fragment"><a
+<li class="fragment">
+An LLM trained on 20th century writings <strong>might</strong> associate
+<em>doctor</em> as more <em>male</em> than <em>female</em>
+</li>
+<li class="fragment">
+LLM providers may bias the training or filter outputs
+</li>
+<li class="fragment">
+<a
 href="https://news.mit.edu/2025/unpacking-large-language-model-bias-0617">LLMs
-may focus less on the middle of a long prompt</a></li>
-</ul></li>
-<li class="fragment"><strong>Mitigation:</strong>
-<ul>
-<li class="fragment">Be <strong>aware</strong> of potential bias</li>
-<li class="fragment">Consider your <strong>application</strong>: that
-20th century LLM…
-<ul>
-<li class="fragment"><em>might</em> prefer doctor CVs from male
-candidates</li>
-<li class="fragment"><em>might</em> still be a useful model of the 20th
-century</li>
-</ul></li>
-<li class="fragment">Avoid or tightly control AI in
-<strong>high-stakes</strong> decisions</li>
-</ul></li>
+may focus less on the middle of a long prompt</a>
+</li>
 </ul>
-</div>
+</li>
+<li class="fragment">
+<strong>Mitigation:</strong>
+<ul>
+<li class="fragment">
+Be <strong>aware</strong> of potential bias
+</li>
+<li class="fragment">
+Consider your <strong>application</strong>: that 20th century LLM…
+<ul>
+<li>
+<em>might</em> prefer doctor CVs from male candidates
+</li>
+<li>
+<em>might</em> still be a useful model of the 20th century
+</li>
+</ul>
+</li>
+<li class="fragment">
+Avoid or tightly control AI in <strong>high-stakes</strong> decisions
+</li>
+</ul>
+</li>
+</ul>
 </div>
 </section>
 <section id="privacy-and-security" class="slide level3">
 <h3>Privacy and Security</h3>
 <div style="font-size: 0.9em;">
-<div>
 <ul>
-<li class="fragment"><strong>LLMs may use your data for future
-training</strong>
+<li class="fragment">
+<strong>LLMs may use your data for future training</strong>
 <ul>
-<li class="fragment">Some providers allow you to disable that</li>
-<li class="fragment">Corporate offerings preferred by companies
+<li>
+Some providers allow you to disable that
+</li>
+<li>
+Corporate offerings preferred by companies,<br>but providers may still
+monitor for misuse
+</li>
+</ul>
+</li>
+<li class="fragment">
+<strong>Don’t trust generated code you don’t understand</strong>
 <ul>
-<li class="fragment">Providers may still monitor for misuse</li>
-</ul></li>
-</ul></li>
-<li class="fragment"><strong>Don’t trust generated code you don’t
-understand</strong>
-<ul>
-<li class="fragment">Security issues can be subtle - more in the
-tutorial</li>
-</ul></li>
-<li class="fragment"><strong>Consider worst-case scenarios for agents,
-<br>like the <a
+<li>
+Security issues can be subtle - more in the tutorial
+</li>
+</ul>
+</li>
+<li class="fragment">
+<strong>Consider worst-case scenarios for agents, <br>like the <a
 href="https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/">lethal
 trifecta</a>:</strong>
-<ol type="1">
-<li class="fragment">Agent reads untrusted text (e.g. your email
-inbox)</li>
-<li class="fragment">Agent reads private data (e.g. your private
-files)</li>
-<li class="fragment">Agent writes to public location (e.g. sends an
-email)</li>
-<li class="fragment">→ E.g. “Reply to this email with private
-files…”</li>
-</ol></li>
+<ol>
+<li>
+Agent reads untrusted source (e.g. your email inbox)
+</li>
+<li>
+Agent reads private data (e.g. your private files)
+</li>
+<li>
+Agent writes to public location (e.g. sends an email)
+</li>
+<li>
+→ E.g. “Reply to this email with private files…”
+</li>
+</ol>
+</li>
 </ul>
-</div>
 </div>
 </section>
 <section id="copyright" class="slide level3">
 <h3>Copyright</h3>
 <p><strong>Disclaimer:</strong> This is not legal advice!</p>
-<div style="font-size: 0.85em;">
-<div>
+<div style="font-size: 0.8em;">
 <ul>
-<li class="fragment"><strong>Does training a model on content infringe
-the author’s copyright?</strong>
+<li class="fragment">
+<strong>Does training a model on some content infringe the author’s
+copyright?</strong>
 <ul>
-<li class="fragment">Unclear at this stage</li>
-<li class="fragment">Active court cases regarding books, music, code,
-etc.</li>
-</ul></li>
-<li class="fragment"><strong>Does the model provider or prompter own
-AI-generated content?</strong>
-<ul>
-<li class="fragment">The US has determined AI-generated content can’t be
-copyrighted</li>
-<li class="fragment">Check the terms and conditions of the model
-provider</li>
-</ul></li>
-<li class="fragment"><strong><a
-href="https://builtin.com/artificial-intelligence/ai-copyright">Watch
-this space</a></strong></li>
+<li>
+Unclear at this stage
+</li>
+<li>
+Active court cases regarding books, music, code, etc.
+</li>
 </ul>
-</div>
+</li>
+<li class="fragment">
+<strong>Does the model provider or prompter own AI-generated
+content?</strong>
+<ul>
+<li>
+The US has determined AI-generated content can’t be copyrighted
+</li>
+<li>
+Check the terms and conditions of the model provider
+</li>
+</ul>
+</li>
+<li class="fragment">
+<strong><a
+href="https://builtin.com/artificial-intelligence/ai-copyright">Watch
+this space as court cases continue</a></strong>
+</li>
+</ul>
 </div>
 </section>
 <section id="vendor-lock-in" class="slide level3">
@@ -252,46 +298,62 @@ Context Protocol (MCP)</a></li>
 <section id="other-risks-to-consider" class="slide level3">
 <h3>Other risks to consider</h3>
 <div style="font-size: 0.7em;">
-<div>
 <ul>
-<li class="fragment"><strong>Environmental impact</strong> - <a
+<li class="fragment">
+<strong>Environmental impact</strong> - <a
 href="https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117">training
-and serving models has high electricity and water costs</a></li>
-<li class="fragment"><strong>Identifying AI-generated content is
-difficult</strong>
+and serving models has high electricity and water costs</a>
+</li>
+<li class="fragment">
+<strong>Identifying AI-generated content is difficult</strong>
 <ul>
-<li class="fragment">It may “drown out” useful content on the
-Internet</li>
-<li class="fragment">How will we find trustworthy training data for
-future models?</li>
-</ul></li>
-<li class="fragment"><strong>Impact on jobs</strong> - AI promises
-efficiency for some <em>tasks</em>
+<li>
+It may “drown out” useful content on the Internet
+</li>
+<li>
+How will we find trustworthy training data for future models?
+</li>
+</ul>
+</li>
+<li class="fragment">
+<strong>Impact on jobs</strong> - Depending on a worker’s role,
+efficiency gains <em>may</em>:
 <ul>
-<li class="fragment">Depending on a worker’s role, AI <em>may</em>:
-<ul>
-<li class="fragment">Allow more time for other tasks</li>
-<li class="fragment">Change the required skills or the way work is
-done</li>
-<li class="fragment">Reduce the required number of workers</li>
-</ul></li>
-</ul></li>
-<li class="fragment"><strong>Artificial General Intelligence (AGI) /
+<li class="fragment">
+Allow more time for other important tasks
+</li>
+<li class="fragment">
+Change the required skills or the way work is done
+</li>
+<li class="fragment">
+Reduce the required number of workers
+</li>
+</ul>
+</li>
+<li class="fragment">
+<strong>Artificial General Intelligence (AGI) /
 Superintelligence</strong>
 <ul>
-<li class="fragment">AI that learns and thinks like a human
+<li>
+“AI that learns and thinks like a human”
 <ul>
-<li class="fragment">No concrete definition to evaluate against</li>
-<li class="fragment">Goal posts seem to shift with each advance</li>
-</ul></li>
-<li class="fragment">Some <a
-href="https://arxiv.org/abs/2303.12712">claim GenAI shows “sparks” of
-AGI</a>,<br>others <a
-href="https://machinelearning.apple.com/research/illusion-of-thinking">show
-how it doesn’t truly “think”</a></li>
-</ul></li>
+<li>
+No concrete definition to evaluate against
+</li>
+<li>
+Goal posts seem to shift with each advance
+</li>
 </ul>
-</div>
+</li>
+<li class="fragment">
+Some <a href="https://arxiv.org/abs/2303.12712">claim GenAI shows
+“sparks” of AGI</a>,<br>others <a
+href="https://machinelearning.apple.com/research/illusion-of-thinking">claim
+GenAI doesn’t truly “think”</a>
+</li>
+</ul>
+</li>
+</ul>
 </div>
 </section>
 <section id="discussion" class="slide level3">
@@ -313,28 +375,38 @@ how it doesn’t truly “think”</a></li>
 <section id="what-is-vibe-coding" class="slide level3">
 <h3>What is vibe coding?</h3>
 <div style="font-size: 0.95em;">
-<div>
+
 <ul>
-<li class="fragment"><strong>What is coding?</strong>
+<li class="fragment">
+<strong>Coding:</strong>
 <ul>
-<li class="fragment">Writing instructions in languages the computer can
-understand</li>
-<li class="fragment">How software developers build apps</li>
-</ul></li>
-<li class="fragment"><strong>What is <em>AI-assisted</em>
-coding?</strong>
-<ul>
-<li class="fragment">Any use of AI to help a developer write code</li>
-</ul></li>
-<li class="fragment"><strong>What is <a
-href="https://simonwillison.net/2025/Mar/19/vibe-coding/"><em>vibe</em>
-coding</a>?</strong>
-<ul>
-<li class="fragment">Describing an app to an agent and letting it write
-the code <em>without checking the code it writes</em></li>
-</ul></li>
+<li>
+Writing instructions in languages the computer can understand
+</li>
+<li>
+How software developers build apps
+</li>
 </ul>
-</div>
+</li>
+<li class="fragment">
+<strong><em>AI-assisted</em> coding:</strong>
+<ul>
+<li>
+Any use of AI to help a developer write code
+</li>
+</ul>
+</li>
+<li class="fragment">
+<strong><a
+href="https://simonwillison.net/2025/Mar/19/vibe-coding/"><em>Vibe</em>
+coding</a>:</strong>
+<ul>
+<li>
+Describing an app to an AI agent and letting it write the code
+<em>without checking the code it writes</em>
+</li>
+</ul>
+</li>
 </div>
 <aside class="notes">
 <ul>
@@ -372,34 +444,51 @@ time-consuming tasks that are specific to your work!</li>
 <h3>Scaling up AI-Assisted Coding</h3>
 <div style="font-size: 0.8em;">
 <p>To use AI on more complex coding projects:</p>
-<div>
 <ul>
-<li class="fragment">Use agents that work on a whole folder of files
+<li class="fragment">
+Use agents that work on a whole folder of files
 <ul>
-<li class="fragment">E.g. Replit, Codex, GitHub Copilot</li>
-</ul></li>
-<li class="fragment">Generate and review <strong>planning
-documents</strong> for:
-<ul>
-<li class="fragment">Features and other requirements</li>
-<li class="fragment">Technical architecture</li>
-</ul></li>
-<li class="fragment">Use <strong>version control</strong> to track
-changes
-<ul>
-<li class="fragment">Learn the Git version control tool with <a
-href="https://technoon.org/gitnoon/">GitNoon</a>!</li>
-</ul></li>
-<li class="fragment">Guide it with <strong>expert knowledge</strong> in
-prompts
-<ul>
-<li class="fragment">Photography terms → better images</li>
-<li class="fragment">Coding terms → better code</li>
-</ul></li>
-<li class="fragment"><strong>AI code-completion</strong> is also popular
-with experienced developers</li>
+<li>
+E.g. Replit, Codex, GitHub Copilot
+</li>
 </ul>
-</div>
+</li>
+<li class="fragment">
+Generate and review <strong>planning documents</strong> for:
+<ul>
+<li>
+Features and other requirements
+</li>
+<li>
+Technical architecture
+</li>
+</ul>
+</li>
+<li class="fragment">
+Use <strong>version control</strong> to track changes
+<ul>
+<li>
+Learn the Git version control tool with <a
+href="https://technoon.org/gitnoon/">GitNoon</a>!
+</li>
+</ul>
+</li>
+<li class="fragment">
+Guide it with <strong>expert knowledge</strong> in prompts
+<ul>
+<li>
+Photography terms → better images
+</li>
+<li>
+Coding terms → better code
+</li>
+</ul>
+</li>
+<li class="fragment">
+<strong>AI code-completion</strong> is popular with experienced
+developers
+</li>
+</ul>
 </div>
 </section>
 <section id="homework" class="slide level3">

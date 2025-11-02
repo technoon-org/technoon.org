@@ -21,7 +21,7 @@ title: AINoon Lesson 3
 * Wi-Fi
 
 
-### Common Patterns for AI Apps
+### <span style="1.5em;">Common Patterns for AI Apps</span>
 
 * Retrieval Augmented Generation (RAG)
 * Tools
@@ -128,7 +128,7 @@ GenAI model to generate text, images, etc.
 <img src="assets/tools-5.png" class="fragment">
 <img src="assets/tools-6.png" class="fragment">
 <img src="assets/tools-7.png" class="fragment">
-<img src="assets/tools.png" class="fragment">
+<!-- <img src="assets/tools.png" class="fragment"> -->
 </div>
 
 <p class="fragment">**Key idea:** The LLM decides when to call a tool</p>
@@ -208,13 +208,13 @@ Vague term with lots of meanings, but one useful definition is:
 <img src="assets/agent-7.png" class="fragment">
 <img src="assets/agent-8.png" class="fragment">
 <img src="assets/agent-9.png" class="fragment">
-<img src="assets/agent.png" class="fragment">
+<!-- <img src="assets/agent.png" class="fragment"> -->
 </div>
 
 <aside class="notes">
 
-Let's say we're a restaurant who wants to attract diners with desserts
-themed for upcoming movie releases.
+Let's say we run a restaurant and we want to attract diners with
+desserts themed for upcoming movie releases.
 
 1. We'll call the LLM with instructions for the agent's task
    * *Talk through each step, including the overall goal*
@@ -241,7 +241,7 @@ Some things to note about this pattern:
      *chain-of-thought*
    * It basically "talks to itself"
 3. You can expand this into a **multi-agent** system
-   * A top-level coordinator LLM calls other agents like they are
+   * A top-level coordinator agent calls other agents like they are
      tools
    * Each agent has instructions and tools to perform a specific task
 
@@ -255,7 +255,7 @@ Some things to note about this pattern:
 * **NotebookLM** for research and study (Google)
 * **Copilots** that automate tasks in apps (e.g. Outlook, Excel)
 * **GitHub Copilot**, **Claude Code**, and **Aider** for writing code
-* As one part in an automation workflow (e.g. **n8n** workflows)
+* As one part in an automation workflow (e.g. **n8n**, **Zapier** workflows)
 
 </div>
 

@@ -20,26 +20,30 @@ title: AINoon Lesson 4
 * Wi-Fi
 
 
-### AI Risks and Challenges
+### <span style="1.5em;">AI Risks and Challenges</span>
 
 <div style="font-size: 0.9em;">
 
-::: incremental
-
-* There's a lot of **hype** *and* a lot of **fear**
-* To make good decisions:
-  1. Understand the **risks**
-  2. Assess them in the context of your **application**
-* Some risks are **challenges** to be solved or mitigated
-  * *We didn't stop using electricity because of shocks, we developed
-    insulation*
-* **Do your own deeper research!**
-  * This is food for thought, not authoritative answers
-  * These are tricky issues with many differing opinions
-  * The space is rapidly changing
-  * The future is unknown
-
-:::
+<ul>
+<li class="fragment">There's a lot of **hype** *and* a lot of **fear**</li>
+<li class="fragment">To make good decisions:
+  <ol>
+  <li>Understand the **risks**</li>
+  <li>Assess them in the context of your **application**</li>
+  </ol>
+</li>
+<li class="fragment">Some risks are **challenges** to be solved or mitigated
+  <ul>
+  <li>*We didn't stop using electricity because of shocks, we developed insulation*</li>
+  </ul>
+</li>
+<li class="fragment">**Do your own deeper research!**
+  <ul>
+  <li>This is food for thought, not authoritative answers</li>
+  <li>These are tricky issues with many differing opinions</li>
+  <li>AI is rapidly changing and the future is unknown</li>
+  </ul>
+</li>
 
 </div>
 
@@ -47,14 +51,17 @@ title: AINoon Lesson 4
 
 We've seen *plenty* of examples over the course
 
+How can inaccuracy be mitigated?
+
 <div style="font-size: 0.9em;">
 
 ::: incremental
 
+* **Golden Rule of AI:** Don’t trust outputs you can't verify
 * **Consider failure modes:** How could this fail? What would the impact be?
 * **[Human in the loop](https://www.trackmind.com/humans-in-the-loop-vs-on-the-loop/):** Human decisions with AI support
 * **[Human on the loop](https://www.trackmind.com/humans-in-the-loop-vs-on-the-loop/):** Human supervises AI decisions
-* **Real human thinking** is important to avoid [workslop](https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity)!
+  * But apathetic supervision can lead to [workslop](https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity)
 * **Thorough testing:** Like for chatbots in [Lesson 2](../lesson_2/slides.html#/testing-a-chatbot)
 
 :::
@@ -65,21 +72,27 @@ We've seen *plenty* of examples over the course
 
 <div style="font-size: 0.9em;">
 
-::: incremental
-
-* **Examples:**
-  * An LLM trained on 20th century writings may associate *doctor* as
-    more *male* than *female*
-  * LLM providers may bias the training or filter outputs
-  * [LLMs may focus less on the middle of a long prompt](https://news.mit.edu/2025/unpacking-large-language-model-bias-0617)
-* **Mitigation:**
-  * Be **aware** of potential bias
-  * Consider your **application**: that 20th century LLM...
-    * *might* prefer doctor CVs from male candidates
-    * *might* still be a useful model of the 20th century
-  * Avoid or tightly control AI in **high-stakes** decisions
-
-:::
+<ul>
+<li>**Examples:**
+  <ul>
+  <li class="fragment">An LLM trained on 20th century writings **might** associate *doctor* as more *male* than *female*</li>
+  <li class="fragment">LLM providers may bias the training or filter outputs</li>
+  <li class="fragment">[LLMs may focus less on the middle of a long prompt](https://news.mit.edu/2025/unpacking-large-language-model-bias-0617)</li>
+  </ul>
+</li>
+<li class="fragment">**Mitigation:**
+  <ul>
+  <li class="fragment">Be **aware** of potential bias</li>
+  <li class="fragment">Consider your **application**: that 20th century LLM...
+    <ul>
+    <li>*might* prefer doctor CVs from male candidates</li>
+    <li>*might* still be a useful model of the 20th century</li>
+    </ul>
+  </li>
+  <li class="fragment">Avoid or tightly control AI in **high-stakes** decisions</li>
+  </ul>
+</li>
+</ul>
 
 </div>
 
@@ -87,22 +100,28 @@ We've seen *plenty* of examples over the course
 
 <div style="font-size: 0.9em;">
 
-::: incremental
-
-* **LLMs may use your data for future training**
-  * Some providers allow you to disable that
-  * Corporate offerings preferred by companies
-    * Providers may still monitor for misuse
-* **Don't trust generated code you don't understand**
-  * Security issues can be subtle - more in the tutorial
-* **Consider worst-case scenarios for agents,
+<ul>
+<li class="fragment">**LLMs may use your data for future training**
+  <ul>
+  <li>Some providers allow you to disable that</li>
+  <li>Corporate offerings preferred by companies,<br>but providers may still monitor for misuse</li>
+  </ul>
+</li>
+<li class="fragment">**Don't trust generated code you don't understand**
+  <ul>
+  <li>Security issues can be subtle - more in the tutorial</li>
+  </ul>
+</li>
+<li class="fragment">**Consider worst-case scenarios for agents,
   <br>like the [lethal trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/):**
-  1. Agent reads untrusted text (e.g. your email inbox)
-  2. Agent reads private data (e.g. your private files)
-  3. Agent writes to public location (e.g. sends an email)
-  4. → E.g. "Reply to this email with private files..."
-
-:::
+  <ol>
+  <li>Agent reads untrusted source (e.g. your email inbox)</li>
+  <li>Agent reads private data (e.g. your private files)</li>
+  <li>Agent writes to public location (e.g. sends an email)</li>
+  <li>→ E.g. "Reply to this email with private files..."</li>
+  </ol>
+</li>
+</ul>
 
 </div>
 
@@ -110,20 +129,23 @@ We've seen *plenty* of examples over the course
 
 **Disclaimer:** This is not legal advice!
 
-<div style="font-size: 0.85em;">
+<div style="font-size: 0.8em;">
 
-::: incremental
-
-* **Does training a model on content infringe the author's
-  copyright?**
-  * Unclear at this stage
-  * Active court cases regarding books, music, code, etc.
-* **Does the model provider or prompter own AI-generated content?**
-  * The US has determined AI-generated content can't be copyrighted
-  * Check the terms and conditions of the model provider
-* **[Watch this space](https://builtin.com/artificial-intelligence/ai-copyright)**
-
-:::
+<ul>
+<li class="fragment">**Does training a model on some content infringe the author's copyright?**
+  <ul>
+  <li>Unclear at this stage</li>
+  <li>Active court cases regarding books, music, code, etc.</li>
+  </ul>
+</li>
+<li class="fragment">**Does the model provider or prompter own AI-generated content?**
+  <ul>
+  <li>The US has determined AI-generated content can't be copyrighted</li>
+  <li>Check the terms and conditions of the model provider</li>
+  </ul>
+</li>
+<li class="fragment">**[Watch this space as court cases continue](https://builtin.com/artificial-intelligence/ai-copyright)**</li>
+</ul>
 
 </div>
 
@@ -152,24 +174,33 @@ We've seen *plenty* of examples over the course
 
 <div style="font-size: 0.7em;">
 
-::: incremental
-
-* **Environmental impact** - [training and serving models has high electricity and water costs](https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117)
-* **Identifying AI-generated content is difficult**
-  * It may "drown out" useful content on the Internet
-  * How will we find trustworthy training data for future models?
-* **Impact on jobs** - AI promises efficiency for some *tasks*
-  * Depending on a worker's role, AI *may*:
-    * Allow more time for other tasks
-    * Change the required skills or the way work is done
-    * Reduce the required number of workers
-* **Artificial General Intelligence (AGI) / Superintelligence**
-  * AI that learns and thinks like a human
-    * No concrete definition to evaluate against
-    * Goal posts seem to shift with each advance
-  * Some [claim GenAI shows "sparks" of AGI](https://arxiv.org/abs/2303.12712),<br>others [show how it doesn't truly "think"](https://machinelearning.apple.com/research/illusion-of-thinking)
-
-:::
+<ul>
+<li class="fragment">**Environmental impact** - [training and serving models has high electricity and water costs](https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117)</li>
+<li class="fragment">**Identifying AI-generated content is difficult**
+  <ul>
+  <li>It may "drown out" useful content on the Internet</li>
+  <li>How will we find trustworthy training data for future models?</li>
+  </ul>
+</li>
+<li class="fragment">**Impact on jobs** - Depending on a worker's role, efficiency gains *may*:
+  <ul>
+  <li class="fragment">Allow more time for other important tasks</li>
+  <li class="fragment">Change the required skills or the way work is done</li>
+  <li class="fragment">Reduce the required number of workers</li>
+  </ul>
+</li>
+<li class="fragment">**Artificial General Intelligence (AGI) / Superintelligence**
+  <ul>
+  <li>"AI that learns and thinks like a human"
+    <ul>
+    <li>No concrete definition to evaluate against</li>
+    <li>Goal posts seem to shift with each advance</li>
+    </ul>
+  </li>
+  <li class="fragment">Some [claim GenAI shows "sparks" of AGI](https://arxiv.org/abs/2303.12712),<br>others [claim GenAI doesn't truly "think"](https://machinelearning.apple.com/research/illusion-of-thinking)</li>
+  </ul>
+</li>
+</ul>
 
 </div>
 
@@ -189,18 +220,23 @@ We've seen *plenty* of examples over the course
 
 <div style="font-size: 0.95em;">
 
-::: incremental
-
-* **What is coding?**
-  * Writing instructions in languages the computer can understand
-  * How software developers build apps
-* **What is *AI-assisted* coding?**
-  * Any use of AI to help a developer write code
-* **What is [*vibe* coding](https://simonwillison.net/2025/Mar/19/vibe-coding/)?**
-  * Describing an app to an agent and letting it write the code
-    *without checking the code it writes*
-
-:::
+<ul>
+<li class="fragment">**Coding:**
+  <ul>
+  <li>Writing instructions in languages the computer can understand</li>
+  <li>How software developers build apps</li>
+  </ul>
+</li>
+<li class="fragment">***AI-assisted* coding:**
+  <ul>
+  <li>Any use of AI to help a developer write code</li>
+  </ul>
+</li>
+<li class="fragment">**[*Vibe* coding](https://simonwillison.net/2025/Mar/19/vibe-coding/):**
+  <ul>
+  <li>Describing an app to an AI agent and letting it write the code *without checking the code it writes*</li>
+  </ul>
+</li>
 
 </div>
 
@@ -238,22 +274,31 @@ We've seen *plenty* of examples over the course
 
 To use AI on more complex coding projects:
 
-::: incremental
-
-* Use agents that work on a whole folder of files
-  * E.g. Replit, Codex, GitHub Copilot
-* Generate and review **planning documents** for:
-  * Features and other requirements
-  * Technical architecture
-* Use **version control** to track changes
-  * Learn the Git version control tool with
-    [GitNoon](https://technoon.org/gitnoon/)!
-* Guide it with **expert knowledge** in prompts
-  * Photography terms → better images
-  * Coding terms  → better code
-* **AI code-completion** is also popular with experienced developers
-
-:::
+<ul>
+<li class="fragment">Use agents that work on a whole folder of files
+  <ul>
+  <li>E.g. Replit, Codex, GitHub Copilot</li>
+  </ul>
+</li>
+<li class="fragment">Generate and review **planning documents** for:
+  <ul>
+  <li>Features and other requirements</li>
+  <li>Technical architecture</li>
+  </ul>
+</li>
+<li class="fragment">Use **version control** to track changes
+  <ul>
+  <li>Learn the Git version control tool with [GitNoon](https://technoon.org/gitnoon/)!</li>
+  </ul>
+</li>
+<li class="fragment">Guide it with **expert knowledge** in prompts
+  <ul>
+  <li>Photography terms → better images</li>
+  <li>Coding terms  → better code</li>
+  </ul>
+</li>
+<li class="fragment">**AI code-completion** is popular with experienced developers</li>
+</ul>
 
 </div>
 
