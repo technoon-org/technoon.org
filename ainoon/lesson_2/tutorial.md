@@ -22,8 +22,9 @@ courses, like AINoon.
 1. Open [chatbase.co](https://chatbase.co)
 2. Go to the **Dashboard**
 3. Click **New AI agent**
-   * If you already have one, select **Create agent** from the agent
-     list dropdown.
+   * If you already have one:
+     1. Delete it (free accounts can only have one chatbot)
+     2. Select **Create agent** from the agent list dropdown
 3. *If it forces you to upload a source:*
    * We're going to skip uploading files for now
    * Select **Text** from the sidebar, and fill in:
@@ -64,7 +65,7 @@ Now let's look at the options we have to configure our chatbot:
 * We can customise the **Instructions** to the chatbot:
   * Every time a message is sent to the chatbot, the instructions will
     be included in the prompt to the underlying model.
-  * You can choose from
+  * You can choose from a list of predefined instructions
     * e.g. "Customer Service Agent"
   * Or write your own! Include instructions like:
     * Some services might refer to these as a **role** or **persona**
@@ -135,7 +136,9 @@ Let's share our chatbot with the world!
       * We should make it clear to our users that this isn't a human
         they're chatting with.
 2. Open **Deploy** from the sidebar
-   * Lots of options for places we could deploy it
+   * Lots of options for places we could deploy it, e.g.
+     * As an account you can chat with on Slack
+     * To reply to messages sent to your company's Facebook page
 3. Select **Help Page**
    * This will let us serve the chatbot on a web page
    * There are lots of options to customise how the page looks

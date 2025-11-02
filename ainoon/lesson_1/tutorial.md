@@ -5,14 +5,16 @@ title: AINoon Tutorial 1
 The goal of this tutorial is to:
 
 * Get you using a chatbot for common business use cases
-* Identify important issues you should keep in mind while using GenAI
+* Identify common issues with accuracy you should keep in mind while
+  using GenAI
 * Provide some tips for effective prompting
 
 ## Data Security and Privacy
 
 Before we begin, it is **very important** to remember:
 
-* Public chatbots may use data you upload
+* Public chatbots may use data you upload in responses from future
+  chatbots
 * You shouldn't upload any data to an AI service without company
   approval, especially:
   * Internal company data
@@ -39,7 +41,7 @@ Write an agenda for a project planning meeting
 * **AUDIENCE QUESTION:** Have a quick skim, any feedback on the
   response?
 
-Some observations:
+Some possible observations to discuss:
 
 * It might provide suggestions for follow-up prompts at the end of the
   response.
@@ -59,33 +61,52 @@ Chatbots can be a great source of inspiration when brainstorming:
 
 * They can draw from ideas in a massive amount of text scraped from
   the internet and other sources.
-* Still need to review the content and decide whether the ideas are
-  relevant.
+* You still need to review the content and decide whether the ideas
+  are relevant.
 * Sometimes coming up with your own ideas first helps you better think
   through a topic.
   * You can use a chatbot to provide a second opinion to see if
     there's anything you've missed.
 
-Similar to brainstorming, chatbot's can also be a good way to make a
+Similar to brainstorming, chatbots can also be a good way to make a
 first draft of a document:
 
 ```
 Turn this into a meeting invite
 ```
 
-Chatbot's are also quite good at mixing ideas together, like applying
-a style of writing to a piece of text:
+Chatbots are also quite good at mixing ideas together, like applying a
+style of writing to a piece of text:
 
 ```
 Say it like a pirate
 ```
 
+## Generating images
+
+Many chatbots now also have built-in capabilities to generate images,
+try asking it to draw a city skyline you know well:
+
+```
+Generate an image of the {city} skyline
+```
+
+This might take a while, so let's come back to this later
+
+
 ## Automating web searches
 
-We can also use chatbot's to search the web and summarise results for
+We can also use chatbots to search the web and summarise results for
 us.
 
-Enable the **web search** option in the chat (sometimes chatbot's will
+**Let's start a new chat for this** so that:
+
+1. You can easily revisit specific chats in the history along the
+   sidebar.
+2. You avoid the chatbot getting confused by previous messages in the
+   chat.
+
+Enable the **web search** option in the chat (sometimes chatbots will
 do this automatically if needed), then prompt it to find out about
 upcoming events you're interested in:
 
@@ -101,24 +122,14 @@ What {event type e.g. tech conferences} are coming soon in {your city}?
   * Probably not, it's only used a source or two.
   * You can use **Deep research** (as a homework exercise) to get it
     to search more thoroughly.
-  * But if it's important, you should do your own thorough review.
+  * These days, there is a risk that the sources themselves are
+    AI-generated web pages!
+  * If it's important, you should do your own thorough review.
 
-Note that we started discussing a new topic here in the same chat,
-sometimes it's helpful to start a new chat so that:
 
-1. You can easily revisit specific chats in the history along the
-   sidebar.
-2. You avoid the chatbot getting confused by previous messages in the
-   chat.
+## Reviewing the generated image
 
-## Generating Images
-
-Many chatbots now also have built-in capabilities to generate images,
-try asking it to draw a city skyline you know well:
-
-```
-Generate an image of the {city} skyline
-```
+Go back to your first chat with the skyline image.
 
 * **AUDIENCE QUESTION:** How well did it do?
 * Overall, usually a pretty good approximation
@@ -128,6 +139,7 @@ Generate an image of the {city} skyline
 ## Summarising Documents
 
 * Now let's try using the chatbot to summarise a document.
+* **Start a new chat for this**
 * We can upload word docs, PDFs, and more.
 * **Again, it is important to not upload company data into unapproved systems**
 * Let's use a spreadsheet (as a CSV file) of hotel reviews:

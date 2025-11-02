@@ -20,9 +20,10 @@ title: AINoon Lesson 1
 * Wi-Fi
 
 
-### Welcome to AINoon!
+### <span style="font-size: 2em;">Welcome to AINoon!</span>
 
-Hands up if you've ever:
+
+### Hands up if you've ever:
 
 ::: incremental
 
@@ -35,72 +36,61 @@ Hands up if you've ever:
 
 <aside class="notes">
 
-* Introduce yourself and your background with AI
+* *Introduce yourself and your background with AI*
 
 </aside>
-
-### Why AINoon?
-
-::: incremental
-
-* **Generative AI is a powerful tool**
-  <br>- It unlocks new opportunities for productivity
-* **It has limitations we're not used to**
-  <br>- Risk of misuse and over-trusting
-* **There are many valid concerns**
-  <br>- Important to understand risks and issues
-* **There's a lot of hype**
-  <br>- It's hard to know where to start!
-
-:::
 
 ### What we'll cover in AINoon
 
 ::: incremental
 
-* **Hands-on practice** with Generative AI
 * **Leading applications** of Generative AI
-  <br>- Be equipped to spot opportunities
+  <br>- Spot opportunities to increase productivity
+* **Hands-on practice** in follow-along tutorials
 * **Demystifying** how Generative AI works
-  <br>- Understand its strengths and limitations
+  <br>- Understand strengths and limitations
 * **Risks and issues** to consider when using AI
 * **Providing a forum** for questions and assistance
 
 :::
 
-### What to expect from AINoon
+### How to get the most out of AINoon
 
-Four lessons, each including:
+::: incremental
 
-* **Presentation** on important AI concepts
-* **Follow-along tutorial** to get hands-on with AI
-* *Optional homework* if you want to go further
+* As much as possible, **don't do emails and work**
+* **Follow along with the tutorials**
+  * We have a mix of experience levels
+  * If you've used a tool before, consider the results in
+    the context of ideas we're discussing
+  * You might still learn a new tip or trick!
 
-Get all the slides, tutorials, and homework from:
-
-[**technoon.org/ainoon**](https://technoon.org/ainoon)
+:::
 
 ### AINoon Structure
 
-<div style="font-size: 0.8em;">
+<div style="font-size: 0.7em;">
 
 * **Lesson 1:**
-  * *Presentation:* Intro to AI: terminology and business use-cases
-  * *Tutorial:* Using a chatbot for business use-cases
+  * *Presentation:* Terminology and business use-cases
+  * *Tutorial:* Chatbots for business
 * **Lesson 2:**
   * *Presentation:* How AI works
-  * *Tutorial:* Building a chatbot on your documents with [Chatbase](https://chatbase.co/)
+  * *Tutorial:* Build a chatbot on your documents with [Chatbase](https://chatbase.co/)
 * **Lesson 3:**
   * *Presentation:* Common patterns: RAG, tools, and agents
-  * *Tutorial:* Building an agent with [Zapier](https://zapier.com/)
+  * *Tutorial:* Build an agent with [Zapier](https://zapier.com/)
 * **Lesson 4:**
   * *Presentation:* AI risks and challenges
   * *Tutorial:* "Vibe-coding" an app with [Gemini](https://gemini.google.com/)
 
-<span style="font-size: 0.7em;">We'll use convenient tools in tutorials, but the focus is on principles that will apply in any tool</span>
+All slides, tutorials, and optional homework on [**technoon.org/ainoon**](https://technoon.org/ainoon)
 
 <aside class="notes">
 
+* Each lesson includes a presentation and a follow-along tutorial
+* We'll use convenient tools in tutorials, but the focus is on
+  principles that will apply in any tool
 * We're leaving AI risks quite late, given I'm sure you'll have a lot
   of questions relating to that.
 * However, it will be easier to have a more grounded conversation
@@ -113,21 +103,12 @@ Get all the slides, tutorials, and homework from:
 
 </div>
 
-### How to get the most out of AINoon
-
-* As much as possible, **don't do emails and work**
-  * A lot of the value comes from carefully considering ideas and
-    engaging in the conversation
-* **Follow along with the tutorials**
-  * Even if you've used a tool before, look at the results in light of
-    the ideas we're discussing
-
-### Questions?
+### <span style="font-size: 2em;">Questions?</span>
 
 
-### Intro to AI
+### <span style="font-size: 1.5em;">Intro to Generative AI</span>
 
-* Establish a common vocabulary
+* Establishing a common vocabulary
 * Who's who in the zoo: companies and services
 * How generative AI is being used by businesses
 
@@ -211,18 +192,26 @@ Get all the slides, tutorials, and homework from:
 
 <div style="font-size: 0.8em;">
 
-* **Drafting** emails and documents
-* **Summarising** documents and meetings
-* **Brainstorming** a wide variety of ideas
-* **Personalised tutoring** for learning new subjects
-* **Generating code** to assist programmers
-* **Data extraction and transformation**
-  * Turn unstructured text and images into structured data
-  * E.g. Identify which team an IT ticket should go to
-* **Custom agents**: chatbots that retrieve info and take action
-  * Answering questions from organisation knowledge bases
-  * Personalised customer service
-  * Automated handling of events - e.g. IT tickets
+<ul>
+<li>**Drafting** emails and documents</li>
+<li>**Summarising** documents and meetings</li>
+<li>**Brainstorming** a wide variety of ideas</li>
+<li class="fragment">**Generating code** to assist programmers</li>
+<li class="fragment">**Data extraction and transformation**
+  <ul>
+  <li>Turn unstructured text and images into structured data</li>
+  <li>E.g. Identify which team an IT ticket should go to</li>
+  </ul>
+</li>
+<li class="fragment">**Custom agents**: chatbots that retrieve info and take action
+  <ul>
+  <li>Answering questions from organisation knowledge bases</li>
+  <li>Personalised customer service</li>
+  <li>Automated handling of events - e.g. IT tickets</li>
+  </ul>
+</li>
+</ul>
+
 
 </div>
 
@@ -243,11 +232,13 @@ Companies deploy **internal chatbots** to protect data
 </li>
 <li class="fragment">
 You can run ***open* chatbots** on your own computers
+<!--
 <ul>
 <li>E.g. Llama (Meta), gpt-oss (OpenAI), DeepSeek</li>
 <li>Most require specialised hardware, but less powerful chatbots can run on a laptop</li>
 <li>Check whether licenses allow commercial use</li>
 </ul>
+-->
 </li>
 </ul>
 
@@ -259,7 +250,7 @@ You can run ***open* chatbots** on your own computers
    * Brainstorming and drafting
    * Automating web searches
    * Summarising documents
-2. Identifying important issues to keep in mind
+2. Common accuracy issues to be aware of
 3. Tips for effective prompting
 
 
@@ -271,14 +262,14 @@ You can run ***open* chatbots** on your own computers
 
 * Each prompt should request **one thing**
 * Start prompts with a **persona**
-  * E.g. "You are an expert in project management..."
+  <br>- E.g. "You are an expert in project management..."
 * Ask it to "explain **step-by-step**"
-  * Can get better answers to more complex questions
+  <br>- Can get better answers to more complex questions
 * When it's not doing what you want, **be more specific**
-  * Though it won't always follow instructions exactly!
+  <br>- Though it won't always follow instructions exactly!
 * **Seek more tips** online for specific use-cases
-  * It's all art/craft, not science/engineering
-  * Advice will likely change as chatbots change
+  <br>- It's all art/craft, not science/engineering
+  <br>- Advice will likely change as chatbots change
 
 :::
 
@@ -298,13 +289,13 @@ You can run ***open* chatbots** on your own computers
 
 **Remember:** Don't use private data with public services!
 
-* **Practice prompting**
-  * Describe a photo with text to prompt ChatGPT to replicate it
-  * Keep refining your prompt to more closely match the photo
 * **Generate a video** with Google's [Flow](https://labs.google/fx/tools/flow)
   * Look at the gallery on
     [Midjourney](https://www.midjourney.com/explore) - note the detail
     in the prompts
+* **Practice prompting**
+  * Describe a photo with text to prompt ChatGPT to replicate it
+  * Keep refining your prompt to more closely match the photo
 * **Generate speech from text** with [ElevenLabs](https://elevenlabs.io/)
 
 </div>
