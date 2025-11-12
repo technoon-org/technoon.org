@@ -43,7 +43,7 @@ How generative AI works and how that informs how to best use it
 <img src="assets/neural-network-5.png" class="fragment">
 <img src="assets/neural-network-6.png" class="fragment">
 <img src="assets/neural-network-7.png" class="fragment">
-<!-- <img src="assets/neural-network.png" class="fragment">-->
+<img src="assets/neural-network.png" class="fragment">
 </div>
 
 <aside class="notes">
