@@ -61,10 +61,10 @@ How generative AI works and how that informs how to best use it
   * Some chatbots let you choose a temperature - a lower temperature is less random
   * i.e. The highest probability is more likely to be picked with a lower temperature
 * The chosen token is added to the prompt, and the whole process is repeated to get the next token
-* Each neuron multiplies each input by a weight, sum the result, and applies a transformation to produce a single output number
+* Each neuron multiplies each input by a weight, sums the results, and applies a transformation to produce a single output number
   * Loosely inspired by a neuron in the brain
   * It's just primary school maths!
-  * You may have heard AI needs special pieces of hardware Graphic Processing Units or GPUs
+  * You may have heard AI needs special pieces of hardware: Graphic Processing Units or GPUs
     * It's because they can do lots of this maths very fast
 * The layers are connected in a special pattern called a "transformer"
 * The transformer architecture from Google in 2017 was the breakthrough that led to ChatGPT
@@ -87,7 +87,7 @@ How generative AI works and how that informs how to best use it
 * Weights start as random numbers
 * Weights are updated by a process called **pre-training**:
   * Uses millions of *training examples* from **general sources**,
-    like the internet and books
+    like the Internet and books
   * E.g. Leave-one-word-out examples:
     <br><span style="font-size: 0.9em;">`The Beatles were a ____ from England` → `band`</span>
   * For each example, weights are updated *slightly* to get closer to
@@ -115,9 +115,9 @@ How generative AI works and how that informs how to best use it
 
 <ul>
 <li class="fragment">The generation process is **not magic, just simple maths!**</li>
-<li class="fragment">We know *how* AI works, but **we can't interpret its decision-making**
+<li class="fragment">We know *how* AI works, but its **decision-making is inscrutable**
   <ul>
-  <li>The billions of calculations across neurons are too complex</li>
+  <li>The billions of calculations in neurons are too complex to interpret</li>
   </ul>
 </li>
 <li class="fragment">**AI doesn't "think" with logic** - it's predicting the best answer based on its training sources

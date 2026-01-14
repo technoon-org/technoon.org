@@ -270,14 +270,15 @@ How can inaccuracy be mitigated?
 
 ### Scaling up AI-Assisted Coding
 
-<div style="font-size: 0.8em;">
+<div style="font-size: 0.7em;">
 
 To use AI on more complex coding projects:
 
 <ul>
-<li class="fragment">Use agents that work on a whole folder of files
+<li class="fragment">Use **coding agents** that work on a whole folder of files:
   <ul>
-  <li>E.g. Replit, Codex, GitHub Copilot</li>
+  <li>Services, e.g. Replit, Codex, Claude Code, GitHub Copilot</li>
+  <li>Open source tools, e.g. OpenCode, Cline, Aider</li>
   </ul>
 </li>
 <li class="fragment">Generate and review **planning documents** for:
@@ -286,6 +287,7 @@ To use AI on more complex coding projects:
   <li>Technical architecture</li>
   </ul>
 </li>
+<li class="fragment">Write **skills** to give specific instructions for common development tasks</li>
 <li class="fragment">Use **version control** to track changes
   <ul>
   <li>Learn the Git version control tool with [GitNoon](https://technoon.org/gitnoon/)!</li>
@@ -297,7 +299,7 @@ To use AI on more complex coding projects:
   <li>Coding terms  → better code</li>
   </ul>
 </li>
-<li class="fragment">**AI code-completion** is popular with experienced developers</li>
+<li class="fragment">**AI code-completion** is also popular with experienced developers</li>
 </ul>
 
 </div>

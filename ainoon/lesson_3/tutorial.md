@@ -46,6 +46,7 @@ You should now see three fields:
 * If you see those columns your table is ready to go!
 * Otherwise add them or change the field types manually
   * *Demonstrate this if anyone had issues with the copilot*
+  * *In particular, it often seems to add the requested columns twice*
 
 
 ## Create the agent

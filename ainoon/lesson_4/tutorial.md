@@ -7,7 +7,7 @@ The goal of this tutorial is to **vibe code a simple web application**.
 
 ## What is vibe coding?
 
-*Refer to **What is wibe coding?** and **What is vibe coding useful for?** slides*
+*Refer to **What is vibe coding?** and **What is vibe coding useful for?** slides*
 
 
 ## Vibe coding an app
@@ -30,12 +30,12 @@ Build an app that lets me upload an image and crops that image to 200 x 200 and 
 
 What did that do?
 
-1. It explains to us what its doing
+1. It explains to us what it's doing
    * It's going to build a web app that will run in a web browser
    * This is the only kind of app it can run
 2. It generates a lot of code
    * This looks quite similar to the web app code we saw before
-3. Its running the app for us to try!
+3. It's running the app for us to try!
 
 
 ## Does it work?
@@ -77,13 +77,13 @@ What did that do?
 Ask the agent to make some changes to the app, like:
 
 1. ```
-   Allow me to select the cropped region of the image
+Allow me to select the cropped region of the image
    ```
 2. ```
-   Add the image filename as a watermark to the image
+Add the image filename as a watermark to the image
    ```
 3. ```
-   Change the title of the app to "Image Cropper 2000"
+Change the title of the app to "Image Cropper 2000"
    ```
 
 * It's important to make sure key functionality is working after each

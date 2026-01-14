@@ -135,7 +135,7 @@ GenAI model to generate text, images, etc.
 
 <aside class="notes">
 
-1. Users asks for something the LLMs can't answer by itself
+1. User asks for something the LLM can't answer by itself
    * E.g. training data is old, and won't include upcoming concerts
 2. A set of available tools is described in the prompt
    * Includes what the tool does and how to call it
@@ -156,7 +156,7 @@ GenAI model to generate text, images, etc.
   * Web or document search (RAG tools)
   * Run code (e.g. to analyse a spreadsheet)
   * Fetch data from a system (e.g. task management)
-  * Ask human for input (e.g. review a decision)
+  * Ask a human for input (e.g. review a decision)
 * **Take action:**
   * Write to a file
   * Send a message

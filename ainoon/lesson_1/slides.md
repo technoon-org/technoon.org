@@ -22,6 +22,11 @@ title: AINoon Lesson 1
 
 ### <span style="font-size: 2em;">Welcome to AINoon!</span>
 
+<aside class="notes">
+
+* *Introduce yourself and your background with AI*
+
+</aside>
 
 ### Hands up if you've ever:
 
@@ -33,12 +38,6 @@ title: AINoon Lesson 1
 * Used AI to build an app or write code?
 
 :::
-
-<aside class="notes">
-
-* *Introduce yourself and your background with AI*
-
-</aside>
 
 ### What we'll cover in AINoon
 
@@ -92,7 +91,7 @@ All slides, tutorials, and optional homework on [**technoon.org/ainoon**](https:
 * We'll use convenient tools in tutorials, but the focus is on
   principles that will apply in any tool
 * We're leaving AI risks quite late, given I'm sure you'll have a lot
-  of questions relating to that.
+  of questions relating to that
 * However, it will be easier to have a more grounded conversation
   about the risks once we have a shared understanding of:
   * What AI actually is
@@ -293,9 +292,9 @@ You can run ***open* chatbots** on your own computers
   * Look at the gallery on
     [Midjourney](https://www.midjourney.com/explore) - note the detail
     in the prompts
-* **Practice prompting**
-  * Describe a photo with text to prompt ChatGPT to replicate it
-  * Keep refining your prompt to more closely match the photo
+* **Practice prompting** with the [Say What You See](https://artsandculture.google.com/experiment/say-what-you-see/jwG3m7wQShZngw) game
+  * Write a prompt to replicate a provided picture
+  * Keep refining your prompts to more closely match the pictures
 * **Generate speech from text** with [ElevenLabs](https://elevenlabs.io/)
 
 </div>

@@ -13,8 +13,8 @@ The goal of this tutorial is to:
 
 Before we begin, it is **very important** to remember:
 
-* Public chatbots may use data you upload in responses from future
-  chatbots
+* Public chatbots may use your chats and data you upload to inform
+  responses from future chatbots
 * You shouldn't upload any data to an AI service without company
   approval, especially:
   * Internal company data

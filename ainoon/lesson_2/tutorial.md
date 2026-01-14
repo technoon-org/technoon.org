@@ -53,7 +53,7 @@ What is TechNoon?
 Now let's look at the options we have to configure our chatbot:
 
 * We can choose what **Model** it uses
-  * Lot's of options from different providers
+  * Lots of options from different providers
   * You can see a brief description of each model
   * Some are only available for a paid account
 * We can set the **temperature**
@@ -80,18 +80,20 @@ Now let's look at the options we have to configure our chatbot:
 
 ## Providing more knowledge
 
-What if we ask it for information about TechNoon it doesn't have the
-answer for?
+What if we ask it for information about TechNoon that it doesn't have
+the answer for?
 
 ```
 List the available TechNoon courses
 ```
 
+It won't give a very helpful response.
+
 Let's give it more detailed knowledge!
 
 1. In a new tab, open [technoon.org/ainoon](https://technoon.org/ainoon)
 2. Download the [`technoon_knowledge.txt`](https://technoon.org/ainoon/lesson_2/technoon_knowledge.txt)
-   * Or share it with everyone in chat.
+   * *Or share it with everyone in chat*
 3. Open the file and have a quick read
    * It contains lots of information about TechNoon courses
 4. From Chatbase, open **Sources -> Files** from the sidebar
