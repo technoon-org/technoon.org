@@ -68,8 +68,8 @@ Industry needs training in technical skills that is:
     their staff.
   * Furthermore, the overheads of running a paid course (managing
     payment, tax obligations, implication of some kind of
-    certification) mean that TechNoon would be practical if it wasn't
-    free.
+    certification) mean that TechNoon would not be practical if it
+    wasn't free.
 * **With custom courses**
   * The flexibility of TechNoon encourages delivery of specialist
     courses for smaller numbers of learners. Some courses will be
