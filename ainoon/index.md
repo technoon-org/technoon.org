@@ -6,6 +6,12 @@ permalink: /ainoon/
 
 # <img src="https://technoon.org/ainoon/ainoon-logo.svg" alt="AINoon logo" height="100"> AINoon - From Hype to Productivity
 
+<div class="register-block" style="margin-bottom: 30px;">
+  <h3 style="margin-bottom: 0;">AINoon will be running in the Auckland CBD from 11:15am to 12:45pm for five Tuesdays starting Feb 24. <a target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSfTyjYFBuMzr2F3HXcmYPHLq_qh1lwP3houWUrG80JOat3QBw/viewform?usp=publish-editor">Apply Now!</a></h3>
+</div>
+
+> "TechNoon provided us hands-on experience, for people at all levels, which benefits everyone resulting in a better comprehensive understanding of AI"
+
 Generative AI is a powerful tool that individuals and businesses can
 leverage through services like ChatGPT, Microsoft Copilot, and
 Google's Gemini. However, AI has limitations we're not used to in
