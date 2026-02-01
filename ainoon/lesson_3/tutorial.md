@@ -15,7 +15,7 @@ easy to build AI agents.
 2. Open **Tables** from the sidebar
    * It's possible to integrate Zapier to work with tables and
      spreadsheets in other systems
-   * But we'll using a table in Zapier itself so that we don't have to
+   * But we'll use a table in Zapier itself so that we don't have to
      set up any integrations
 3. Click the **Create** button
 4. Select **Blank table**
