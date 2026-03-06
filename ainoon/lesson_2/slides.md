@@ -162,7 +162,7 @@ How generative AI works and how that informs how to best use it
 <li class="fragment">It might not always "pay attention" to everything in the prompt</li>
 <li class="fragment">It might not consistently give the same answer</li>
 <li class="fragment">Different models (or model versions) can give very different responses to the same prompt</li>
-<li class="fragment">It only "knows" whats in its training data (usually 1-2 years old)
+<li class="fragment">It only "knows" what's in its training data (usually 1-2 years old)
   <ul>
   <li>Pairing it with web search mitigates this</li>
   </ul>

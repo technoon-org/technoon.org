@@ -179,6 +179,7 @@ All slides, tutorials, and optional homework on [**technoon.org/ainoon**](https:
 * Gemini (Google)
 * Microsoft Copilot (based on OpenAI tech)
 * Grok (X)
+* Perplexity
 * DeepSeek
 
 <aside class="notes">
