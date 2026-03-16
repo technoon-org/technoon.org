@@ -53,7 +53,7 @@ We've seen *plenty* of examples over the course
 
 How can inaccuracy be mitigated?
 
-<div style="font-size: 0.9em;">
+<div style="font-size: 0.85em;">
 
 ::: incremental
 
@@ -62,7 +62,9 @@ How can inaccuracy be mitigated?
 * **[Human in the loop](https://www.trackmind.com/humans-in-the-loop-vs-on-the-loop/):** Human decisions with AI support
 * **[Human on the loop](https://www.trackmind.com/humans-in-the-loop-vs-on-the-loop/):** Human supervises AI decisions
   * But apathetic supervision can lead to [workslop](https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity)
-* **Thorough testing:** Like for chatbots in [Lesson 2](../lesson_2/slides.html#/testing-a-chatbot)
+* Techniques that *reduce* but don't eliminate risks:
+  * **Thorough testing:** Like for chatbots in [Lesson 2](../lesson_2/slides.html#/testing-a-chatbot)
+  * **Guardrails:** Checking outputs with AI or simple logic
 
 :::
 
@@ -151,7 +153,7 @@ How can inaccuracy be mitigated?
 
 ### Vendor lock-in
 
-<div style="font-size: 0.9em;">
+<div style="font-size: 0.73em;">
 
 ::: incremental
 
@@ -161,6 +163,7 @@ How can inaccuracy be mitigated?
     pick the best provider**
   * **Prices may start below cost** to grow users, then increase later
 * Build **modular** systems with replaceable components
+  * **LLM gateways** (e.g. LiteLLM) make it easier to swap providers while controlling access and spending
 * Prefer **open-source** tools and **open-weight** models that any
   provider can run
 * Look for compatibility with **open standards** used across

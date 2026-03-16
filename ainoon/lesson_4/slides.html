@@ -117,7 +117,7 @@ AI is rapidly changing and the future is unknown
 <h3>Inaccurate Outputs</h3>
 <p>We’ve seen <em>plenty</em> of examples over the course</p>
 <p>How can inaccuracy be mitigated?</p>
-<div style="font-size: 0.9em;">
+<div style="font-size: 0.85em;">
 <div>
 <ul>
 <li class="fragment"><strong>Golden Rule of AI:</strong> Don’t trust
@@ -134,9 +134,15 @@ on the loop</a>:</strong> Human supervises AI decisions
 <li class="fragment">But apathetic supervision can lead to <a
 href="https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity">workslop</a></li>
 </ul></li>
+<li class="fragment">Techniques that <em>reduce</em> but don’t eliminate
+risks:
+<ul>
 <li class="fragment"><strong>Thorough testing:</strong> Like for
 chatbots in <a href="../lesson_2/slides.html#/testing-a-chatbot">Lesson
 2</a></li>
+<li class="fragment"><strong>Guardrails:</strong> Checking outputs with
+AI or simple logic</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -272,7 +278,7 @@ this space as court cases continue</a></strong>
 </section>
 <section id="vendor-lock-in" class="slide level3">
 <h3>Vendor lock-in</h3>
-<div style="font-size: 0.9em;">
+<div style="font-size: 0.73em;">
 <div>
 <ul>
 <li class="fragment">Like with any technology service, <strong>avoid
@@ -284,7 +290,11 @@ becoming strongly tied to one vendor</strong>:
 grow users, then increase later</li>
 </ul></li>
 <li class="fragment">Build <strong>modular</strong> systems with
-replaceable components</li>
+replaceable components
+<ul>
+<li class="fragment"><strong>LLM gateways</strong> (e.g. LiteLLM) make
+it easier to swap providers while controlling access and spending</li>
+</ul></li>
 <li class="fragment">Prefer <strong>open-source</strong> tools and
 <strong>open-weight</strong> models that any provider can run</li>
 <li class="fragment">Look for compatibility with <strong>open
