@@ -113,6 +113,16 @@ AI and seeking assistance with your own use-cases.
             </ul>
         </div>
     </li>
+    <li>
+        <div class="col col-1">ainoon-5</div>
+        <div class="col col-2">Course recap and discussion</div>
+        <div class="col col-3"></div>
+        <div class="col col-4 markdown-content">
+            <ul>
+                <li><a href="https://technoon.org/ainoon/lesson_5/slides.html" target="_blank" rel="noopener">Slides</a></li>
+            </ul>
+        </div>
+    </li>
 </ul>
 
 

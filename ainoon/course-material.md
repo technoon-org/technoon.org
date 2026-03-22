@@ -88,3 +88,8 @@ Instruct attendees to set up a free Google account on
 
 * [Slides](https://technoon.org/ainoon/lesson_4/slides.html)
 * [Tutorial Speaker Notes](https://technoon.org/ainoon/lesson_4/tutorial.html)
+
+### Lesson 5
+
+
+* [Slides](https://technoon.org/ainoon/lesson_5/slides.html)

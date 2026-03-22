@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>AINoon Discussion</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="shortcut icon" type="image/x-icon" href="../revealjs/favicon.ico">
+  <link rel="stylesheet" href="../revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../revealjs/dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../revealjs/dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="../revealjs/dist/theme/white.css">
+  <link rel="stylesheet" href="../revealjs/custom.css">
+  <base target="_blank">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">AINoon Discussion</h1>
+</section>
+
+<section id="thanks" class="slide level3">
+<h3>Thanks</h3>
+<ul>
+<li>To the host for the great venue!</li>
+<li>To our sponsors</li>
+</ul>
+</section>
+<section id="administrivia" class="slide level3">
+<h3>Administrivia</h3>
+<ul>
+<li>Fire escapes</li>
+<li>Toilets</li>
+<li>Cleaning up after ourselves</li>
+<li>Wi-Fi</li>
+</ul>
+</section>
+<section id="ainoon-discussion" class="slide level3">
+<h3>AINoon Discussion</h3>
+<ol type="1">
+<li>Recap the key points from previous lessons</li>
+<li>Questions and deeper discussion</li>
+</ol>
+</section>
+<section id="genai-for-business" class="slide level3">
+<h3><a href="https://technoon.org/ainoon/lesson_1/slides.html">GenAI for
+Business</a></h3>
+<div style="font-size: 0.85em;">
+<div>
+<ul>
+<li class="fragment"><strong>AI Terminology and History</strong>
+<ul>
+<li class="fragment">Artificial Intelligence
+<ul>
+<li class="fragment">Machine Learning
+<ul>
+<li class="fragment">Deep Learning
+<ul>
+<li class="fragment">Generative AI</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="fragment"><strong>Chatbot Use Cases</strong>
+<ul>
+<li class="fragment">Drafting, Brainstorming</li>
+<li class="fragment">Summarising, Extracting, Transforming</li>
+</ul></li>
+<li class="fragment"><strong>The Golden Rule of AI</strong>
+<ul>
+<li class="fragment"><em>Don’t trust the output of an AI unless you can
+verify it</em></li>
+<li class="fragment">E.g. Inconsistent results summarising the hotel
+reviews</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="demystifying-ai" class="slide level3">
+<h3><a href="https://technoon.org/ainoon/lesson_2/slides.html">Demystifying
+AI</a></h3>
+<div style="font-size: 0.8em;">
+<div>
+<ul>
+<li class="fragment"><strong>Simple maths, but at a scale that makes it
+inscrutable</strong>
+<ul>
+<li class="fragment">A lot of “why” questions can’t be answered
+definitively</li>
+</ul></li>
+<li class="fragment"><strong>Models trained on general sources and human
+feedback</strong>
+<ul>
+<li class="fragment">Training is expensive and slow - any
+personalisation is from adding to the prompt</li>
+</ul></li>
+<li class="fragment"><strong>“Everything is a hallucination”</strong>
+<ul>
+<li class="fragment">It predicts what <em>sounds right</em>, it isn’t
+“thinking” with logic</li>
+</ul></li>
+<li class="fragment"><strong>Even the same model can return different
+responses to the same prompt</strong></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="common-ai-patterns" class="slide level3">
+<h3><a href="https://technoon.org/ainoon/lesson_3/slides.html">Common AI
+Patterns</a></h3>
+<div style="font-size: 0.8em;">
+<div>
+<ul>
+<li class="fragment"><strong>AI App = LLM + Clever inputs + Clever use
+of outputs</strong></li>
+<li class="fragment"><strong>Retrieval Augmented Generation
+(RAG)</strong>
+<ul>
+<li class="fragment">Easily equip a chatbot to answer questions from
+your documents</li>
+<li class="fragment">Separates knowledge searching from answer
+generation</li>
+</ul></li>
+<li class="fragment"><strong>Tools</strong>
+<ul>
+<li class="fragment">Equip the LLM with tools that it decides when to
+use</li>
+<li class="fragment">E.g. Fetching data and taking action</li>
+</ul></li>
+<li class="fragment"><strong>Agents</strong>
+<ul>
+<li class="fragment">“An LLM agent runs tools in a loop to achieve a
+goal”</li>
+<li class="fragment">Easy to build with just a prompt and some
+tools</li>
+<li class="fragment">E.g. Copilots in Zapier didn’t work reliably</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="risks-challenges" class="slide level3">
+<h3><a href="https://technoon.org/ainoon/lesson_4/slides.html">Risks
+&amp; Challenges</a></h3>
+<div style="font-size: 0.7em;">
+<div>
+<ul>
+<li class="fragment"><strong>Inaccurate Outputs</strong>
+<ul>
+<li class="fragment">Consider failure modes; human in/on the loop;
+testing; guardrails</li>
+</ul></li>
+<li class="fragment"><strong>Unwanted Bias</strong>
+<ul>
+<li class="fragment">From training sources; provider intervention; LLM
+tendencies</li>
+</ul></li>
+<li class="fragment"><strong>Privacy &amp; Security</strong>
+<ul>
+<li class="fragment">Public chatbots training on your data; lethal
+trifecta</li>
+</ul></li>
+<li class="fragment"><strong>Copyright</strong>
+<ul>
+<li class="fragment">Does AI training infringe copyright? Who owns the
+outputs?</li>
+</ul></li>
+<li class="fragment"><strong>Vendor Lock-in</strong>
+<ul>
+<li class="fragment">Build modularly (LLM gateways) and with standards
+(MCP) to retain freedom to pick the best provider</li>
+</ul></li>
+<li class="fragment"><strong>Other risks</strong>
+<ul>
+<li class="fragment">Environmental impact; identifying AI outputs;
+impact on jobs, AGI</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="vibe-coding" class="slide level3">
+<h3>Vibe Coding</h3>
+<div style="font-size: 0.8em;">
+
+<div>
+<ul>
+<li class="fragment">Describing an app for AI to build and not reading
+the code</li>
+<li class="fragment">Build prototypes and low-stakes apps</li>
+<li class="fragment">Automate time-consuming tasks specific to your
+work</li>
+<li class="fragment">When security or correctness are important - verify
+the code</li>
+</ul>
+</div>
+</section>
+<section id="discussion-starters" class="slide level3">
+<h3>Discussion Starters</h3>
+<div style="font-size: 0.8em;">
+<ul>
+<li>Do you have any questions on topics covered in the course?</li>
+<li>What surprised you most about AI from the course?</li>
+<li>Is there anything you’re interested in that we didn’t cover?</li>
+<li>How are you using (or planning to use) AI?</li>
+<li>What would you consider when weighing up if/how to use AI for a use
+case?
+<ul>
+<li>E.g. Describe a process where a human could follow each step to
+check that you aren’t expecting the AI to do “magic” that even a human
+couldn’t even do</li>
+</ul></li>
+</ul>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="../revealjs/dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="../revealjs/plugin/notes/notes.js"></script>
+  <script src="../revealjs/plugin/search/search.js"></script>
+  <script src="../revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../revealjs/plugin/mermaid/mermaid.js"></script>
+
+  <script>
+
+     document.querySelectorAll('.top-fragment-only .fragment .fragment').forEach(function(el) {
+         el.classList.remove('fragment');
+     });
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom,
+          RevealMermaid
+        ]
+      });
+    </script>
+    </body>
+</html>
