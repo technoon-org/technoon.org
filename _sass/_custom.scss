@@ -55,7 +55,7 @@ h2 {
 }
 
 .register-block {
-    background: $primary-color;
+    background: $accent-color;
     color: white;
     padding: 1em;
     border-radius: 1em;
@@ -75,4 +75,9 @@ h2 {
         margin-top: 0;
         margin-bottom: 0;
     }
+}
+
+
+a {
+    text-decoration: underline;
 }
