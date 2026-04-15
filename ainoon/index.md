@@ -10,8 +10,6 @@ permalink: /ainoon/
 <!--   <h3 style="margin-bottom: 0;">AINoon will be running in the Auckland CBD from 11:15am to 12:45pm for five Tuesdays starting Feb 24. <a target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSfTyjYFBuMzr2F3HXcmYPHLq_qh1lwP3houWUrG80JOat3QBw/viewform?usp=publish-editor">Apply Now!</a></h3> -->
 <!-- </div> -->
 
-> "TechNoon provided us hands-on experience, for people at all levels, which benefits everyone resulting in a better comprehensive understanding of AI"
-
 Generative AI is a powerful tool that individuals and businesses can
 leverage through services like ChatGPT, Microsoft Copilot, and
 Google's Gemini. However, AI has limitations we're not used to in
@@ -41,6 +39,25 @@ AI and seeking assistance with your own use-cases.
 * A presentation
 * A hands-on tutorial
 * Optional homework exercises
+
+## AINoon Testimonials
+
+Attendees have come from Fisher & Paykel Appliances, Kiwibank, Tower Insurance, and a variety of other NZ companies.
+
+We've heard from attendees how:
+
+* They feel more confident in using AI at work
+* They have a better understanding of AI, allowing them to make more informed decisions
+* The memorable insights from the lessons often get referenced in meetings
+* The lessons directly led them to change their plans for AI adoption
+
+Here's what attendees have said:
+
+> "TechNoon provided us hands-on experience, for people at all levels, which benefits everyone resulting in a better comprehensive understanding of AI"
+
+> "The content was easy to digest, interesting and informative. I'll definitely attend future courses and workshops and would recommend to everyone!"
+
+> "Super interesting and no question too hard for the team"
 
 ## AINoon Lessons
 
